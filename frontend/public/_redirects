@@ -1,0 +1,12 @@
+# Netlify redirects file for React Router (SPA)
+# This file should be placed in the public folder
+
+# Redirect all routes to index.html for client-side routing
+/*    /index.html   200
+
+# Optional: Redirect www to non-www (or vice versa)
+# https://www.alphamediassist.com/*  https://alphamediassist.com/:splat  301!
+
+# Optional: Force HTTPS
+# http://alphamediassist.com/*  https://alphamediassist.com/:splat  301!
+

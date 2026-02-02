@@ -1,0 +1,3 @@
+# This file ensures .htaccess and other config files are tracked
+# (Normally .htaccess files might be ignored, but we want to track this one)
+
