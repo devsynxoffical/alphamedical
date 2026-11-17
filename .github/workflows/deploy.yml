@@ -69,3 +69,25 @@ jobs:
             **/.git*
             **/.git*/**
             **/node_modules/**
+
+      - name: Verify live site
+        run: |
+          sleep 5
+          B=https://www.alphamediassist.com
+          fail=0
+          check() { code=$(curl -s -o /tmp/body -w '%{http_code}' "$B$1"); echo "$1 -> HTTP $code"; [ "$code" = "$2" ] || fail=1; }
+          check / 200
+          check /medical-billing-services 200
+          check /medical-billing-services-florida 200
+          check /blog/how-much-does-medical-billing-cost 200
+          check /sitemap.xml 200
+          check /llms.txt 200
+          check /robots.txt 200
+          check /c89d9636854147c59b95ff08cb40c0e8.txt 200
+          check /this-page-does-not-exist 404
+          echo "--- redirect /about ---"; curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}\n' "$B/about"
+          echo "--- prerendered content check ---"
+          curl -s "$B/medical-billing-services" | grep -o '<h1[^>]*>[^<]*' | head -1 || fail=1
+          curl -s "$B/" | grep -c 'google-site-verification' || fail=1
+          curl -s "$B/" | grep -o '<link data-seo rel="canonical"[^>]*>' || fail=1
+          exit $fail
