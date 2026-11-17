@@ -58,6 +58,18 @@ jobs:
           timeout 15 bash -c "exec 3<>/dev/tcp/ftp.alphaahead.com/21 && timeout 5 head -c 200 <&3" && echo "PORT 21 REACHABLE" || echo "PORT 21 NOT REACHABLE from GitHub (firewall/blocked or FTP not running)"
           echo "--- TCP port 22 (SFTP, 10s) ---"
           timeout 10 bash -c "exec 3<>/dev/tcp/ftp.alphaahead.com/22 && timeout 5 head -c 100 <&3" && echo "PORT 22 REACHABLE" || echo "port 22 not reachable"
+          echo "--- Candidate hosts (where the website and mail actually live) ---"
+          for h in alphamediassist.com www.alphamediassist.com ftp.alphamediassist.com mail.alphamediassist.com alphaahead.com www.alphaahead.com; do
+            ips=$(getent ahostsv4 "$h" | awk '{print $1}' | sort -u | tr '\n' ' ')
+            if [ -z "$ips" ]; then echo "$h -> (no DNS)"; continue; fi
+            for ip in $ips; do
+              if timeout 8 bash -c "exec 3<>/dev/tcp/$ip/21 && timeout 5 head -c 120 <&3" > /tmp/banner 2>/dev/null; then
+                echo "$h -> $ip : PORT 21 OPEN, banner: $(tr -d '\r\n' < /tmp/banner)"
+              else
+                echo "$h -> $ip : port 21 closed"
+              fi
+            done
+          done
 
       - name: Upload to server (FTPS)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
