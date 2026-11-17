@@ -53,6 +53,8 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
           protocol: ftps # explicit FTPS on port 21 (encrypted)
+          timeout: 120000 # ms; shared hosts can be slow to answer
+          log-level: verbose
           local-dir: ./frontend/dist/
           # Folder on the server that the domain serves. Must end with "/".
           server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
