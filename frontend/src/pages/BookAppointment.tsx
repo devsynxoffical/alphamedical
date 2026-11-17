@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowLeft, User, Mail, Phone, MapPin, Check } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import { sendFormSubmission } from '../api/sendFormSubmission'
 
 const BookAppointment: React.FC = () => {
   const [step, setStep] = useState(1) // 1: Select date, 2: Select time, 3: User details, 4: Confirmation
@@ -9,6 +10,8 @@ const BookAppointment: React.FC = () => {
   const [selectedTime, setSelectedTime] = useState('')
   const [timezone, setTimezone] = useState('America/Los Angeles')
   const [isEditingTimezone, setIsEditingTimezone] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
   const [userDetails, setUserDetails] = useState({
     name: '',
     email: '',
@@ -66,10 +69,26 @@ const BookAppointment: React.FC = () => {
     })
   }
 
-  const handleSubmit = () => {
-    // Handle form submission
-    console.log('Booking submitted:', { selectedDate, selectedTime, userDetails })
-    setStep(4)
+  const handleSubmit = async () => {
+    setSubmitError('')
+    setIsSubmitting(true)
+
+    try {
+      await sendFormSubmission({
+        source: 'Book Appointment Form',
+        payload: {
+          ...userDetails,
+          selectedDate,
+          selectedTime,
+          timezone,
+        },
+      })
+      setStep(4)
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : 'Failed to submit the form.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -308,8 +327,9 @@ const BookAppointment: React.FC = () => {
                     />
                   </div>
 
-                  <button type="submit" className="book-button">
-                    BOOK THIS APPOINTMENT
+                  {submitError && <p className="form-error-message">{submitError}</p>}
+                  <button type="submit" className="book-button" disabled={isSubmitting}>
+                    {isSubmitting ? 'SENDING...' : 'BOOK THIS APPOINTMENT'}
                   </button>
                 </form>
               </div>

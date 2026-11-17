@@ -12,13 +12,27 @@ dist
 dist-ssr
 *.local
 
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+
+# Archives & Large files
+*.zip
+*.tar.gz
+
+# Apple / OS metadata
+._*
+.DS_Store
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+css_append.txt
+

@@ -147,24 +147,24 @@ export const specialties: Specialty[] = [
     id: 'orthopedics',
     name: 'Orthopedics',
     description: 'Medical Billing for Orthopedics',
-    heroDescription: 'Orthopedic surgeons and specialists require efficient preoperative and postoperative documentation, imaging coordination, and insurance handling. Alpha Medi Assist offers end-to-end RCM and virtual assistance to streamline orthopedic workflows.',
+    heroDescription: 'Efficient billing is essential for orthopedic practices to maintain smooth operations and maximize revenue. At Alpha Medi Assist, we specialize in orthopedic medical billing services to streamline claims, coding, and revenue cycle management (RCM).',
     testimonial: {
       rating: '5/5',
-      doctor: 'Dr. Lissa Jenn',
+      doctor: 'Dr. Jenn',
       years: '6 Years working with Alpha Medi Assist'
     },
     supportSections: [
       {
-        title: 'Comprehensive Allergy Test & Immunotherapy Documentation',
-        description: 'We assist in documenting skin prick tests, serum IgE analysis, and immunotherapy plans, ensuring accurate coding and streamlined EHR management.'
+        title: 'Streamlined Pre-Op & Post-Op Documentation',
+        description: 'Our virtual assistants handle surgical scheduling, EHR documentation, and SOAP notes for smooth pre-op, intraoperative, and post-op workflows.'
       },
       {
-        title: 'Billing & Insurance Support for Allergy Clinics',
-        description: 'Our experts handle prior authorizations, claim submissions, and reimbursement tracking for allergy treatments such as biologics, allergy shots, and immunomodulators.'
+        title: 'Seamless Billing & Prior Authorization',
+        description: 'We manage insurance verification, prior authorizations, and claims submissions for elective and emergency orthopedic procedures, optimizing reimbursements.'
       },
       {
-        title: 'Enhanced Patient Coordination & Follow-Ups',
-        description: 'From patient education to follow-up scheduling, our virtual assistants help manage allergy management plans, prescription renewals, and telehealth consultations.'
+        title: '24/7 Support for Orthopedic Practices',
+        description: 'From urgent procedures to routine follow-ups, our trained team manages patient communication, referrals, and EHR updates to improve efficiency and patient satisfaction.'
       }
     ],
     whyChoose: [
@@ -206,24 +206,24 @@ export const specialties: Specialty[] = [
     id: 'pain-management',
     name: 'Pain Management',
     description: 'Medical Billing for Pain Management',
-    heroDescription: 'Chronic pain specialists navigate complex treatment plans requiring accurate documentation, prescription management, and prior authorizations. Alpha Medi Assist simplifies medical billing, patient scheduling, and EHR updates for pain management clinics.',
+    heroDescription: 'Efficient billing is essential for pain management practices to maintain smooth operations and consistent cash flow. At Alpha Medi Assist, we specialize in pain management medical billing services that streamline claims, coding, and revenue cycle management.',
     testimonial: {
       rating: '5/5',
-      doctor: 'Dr. Lissa Jenn',
-      years: '6 Years working with Alpha Medi Assist'
+      doctor: 'Dr. Lissa',
+      years: '6 Years working with AlphaMedi Assist'
     },
     supportSections: [
       {
-        title: 'Accurate Treatment & Procedure Documentation',
-        description: 'Our virtual assistants document trigger point injections, nerve blocks, and opioid management plans, ensuring compliance with ICD-10 and CPT coding.'
+        title: 'Streamlined Pre-Procedure & Post-Procedure Documentation',
+        description: 'Our virtual assistants support documentation for evaluations, procedures, and follow-up visits, ensuring accuracy and continuity across all encounters.'
       },
       {
-        title: 'Insurance & Prior Authorization Optimization',
-        description: 'We streamline pre-approvals for pain relief therapies such as spinal cord stimulators and epidural steroid injections, reducing claim denials and delays.'
+        title: 'Seamless Billing & Prior Authorization',
+        description: 'We manage insurance verification, prior authorizations, and claims submission for diagnostic and interventional pain treatments, reducing payment delays.'
       },
       {
-        title: 'Enhanced Patient Communication & Follow-Ups',
-        description: 'From scheduling follow-ups to managing medication refills, our virtual assistants support seamless patient engagement and adherence monitoring.'
+        title: '24/7 Support for Pain Clinics',
+        description: 'From urgent pain cases to scheduled procedures, our team supports patient communication, referral coordination, and EHR updates to improve workflow efficiency.'
       }
     ],
     whyChoose: [
@@ -265,24 +265,24 @@ export const specialties: Specialty[] = [
     id: 'neurology',
     name: 'Neurology',
     description: 'Medical Billing for Neurology',
-    heroDescription: 'Neurologists require precise documentation and streamlined workflows for complex neurological conditions such as epilepsy, stroke, and neurodegenerative diseases. Alpha Medi Assist provides expert medical billing, patient data management, and virtual scribing services to enhance efficiency.',
+    heroDescription: 'Efficient billing is essential for neurology practices to maintain smooth operations and consistent revenue. At AlphaMedi Assist, we specialize in neurology medical billing services to streamline claims, coding, and revenue cycle management.',
     testimonial: {
       rating: '5/5',
-      doctor: 'Dr. Lissa Jenn',
-      years: '6 Years working with Alpha Medi Assist'
+      doctor: 'Dr. Lissa William',
+      years: '6 Years working with AlphaMedi Assist'
     },
     supportSections: [
       {
-        title: 'Comprehensive Neurological Documentation',
-        description: 'Our virtual assistants help document EEG reports, neuroimaging interpretations, and follow-up notes while ensuring accurate coding for ICD-10 and CPT compliance.'
+        title: 'Streamlined Diagnostic & Follow-Up Documentation',
+        description: 'Our virtual assistants support documentation for consultations, diagnostic testing, and follow-up care to maintain consistency across all encounters.'
       },
       {
-        title: 'Seamless RCM & Prior Authorizations',
-        description: 'We handle insurance claims, prior authorizations for MRIs and CT scans, and billing for neurological procedures, reducing administrative strain and boosting collections.'
+        title: 'Seamless Billing & Prior Authorization',
+        description: 'We manage insurance verification, authorizations, and claim submissions for neurological diagnostics and treatments, reducing delays and denials.'
       },
       {
-        title: 'Improved Patient Engagement',
-        description: 'Through virtual assistants, neurologists can efficiently manage telemedicine consultations, patient follow-ups, and EHR updates while focusing on patient care.'
+        title: '24/7 Support for Neurology Clinics',
+        description: 'From urgent neurological cases to routine follow-ups, our team assists with patient communication, referral coordination, and EHR updates.'
       }
     ],
     whyChoose: [
@@ -324,7 +324,7 @@ export const specialties: Specialty[] = [
     id: 'gastroenterology',
     name: 'Gastroenterology',
     description: 'Medical Billing for Gastroenterology',
-    heroDescription: 'Gastroenterologists deal with complex GI disorders, requiring a combination of diagnostic imaging, lab tests, and procedural documentation. Alpha Medi Assist helps gastroenterology clinics manage administrative tasks efficiently with expert billing, scribing, and RCM services.',
+    heroDescription: 'Efficient billing is essential for gastroenterology practices to maintain smooth operations and consistent revenue. At Alpha Medi Assist, we specialize in gastroenterology medical billing services to streamline claims, coding, and revenue cycle management.',
     testimonial: {
       rating: '5/5',
       doctor: 'Dr. Lissa Jenn',
@@ -332,16 +332,16 @@ export const specialties: Specialty[] = [
     },
     supportSections: [
       {
-        title: 'Accurate Procedure Documentation & Coding',
-        description: 'Our EHR-trained virtual assistants assist with colonoscopy, endoscopy, and GI disorder documentation, ensuring accurate coding (CPT, ICD-10) and compliance with payer requirements for higher reimbursement rates.'
+        title: 'Streamlined Procedure & Diagnostic Documentation',
+        description: 'Our virtual assistants help manage documentation for consultations, procedures, and follow-ups to ensure consistency across all encounters.'
       },
       {
-        title: 'Insurance & Authorization Management',
-        description: 'We streamline insurance verification, prior authorizations, and medical claim submissions for diagnostic tests, treatments, and GI procedures.'
+        title: 'Seamless Billing & Prior Authorization',
+        description: 'We handle insurance verification, authorizations, and claim submissions for GI procedures, helping practices avoid unnecessary delays.'
       },
       {
-        title: 'Efficient Patient Data Management',
-        description: 'Quickly access allergies, medications, lab results, and imaging reports with customized EHR updates to support clinical decision-making.'
+        title: '24/7 Support for Gastroenterology Clinics',
+        description: 'From routine visits to advanced procedures, our team manages patient communication, referrals, and EHR updates efficiently.'
       }
     ],
     whyChoose: [
@@ -442,24 +442,24 @@ export const specialties: Specialty[] = [
     id: 'anesthesiology',
     name: 'Anesthesiology',
     description: 'Medical Billing for Anesthesiology',
-    heroDescription: 'Anesthesiologists require precise documentation of perioperative care, pain management procedures, and critical care services. Alpha Medi Assist provides specialized medical billing, coding, and RCM services tailored to anesthesiology practices, ensuring accurate reimbursement for complex procedures.',
+    heroDescription: 'Efficient billing is essential for anesthesiology practices to maintain financial stability and uninterrupted clinical operations. At Alpha Medi Assist, we specialize in anesthesiology medical billing services to manage claims, coding, and revenue cycle workflows with precision.',
     testimonial: {
       rating: '5/5',
-      doctor: 'Dr. Lissa Jenn',
-      years: '6 Years working with Alpha Medi Assist'
+      doctor: 'Dr. Emma Jenn',
+      years: '6 Years working with AlphaMedi Assist'
     },
     supportSections: [
       {
-        title: 'Accurate Anesthesia Documentation & Time Tracking',
-        description: 'Our virtual assistants document anesthesia start and stop times, base units, and modifiers accurately, ensuring proper CPT coding and compliance with anesthesia billing guidelines for optimal reimbursement.'
+        title: 'Accurate Time-Based Billing & Documentation',
+        description: 'Our team ensures accurate start and stop time documentation, concurrency tracking, and compliance with anesthesia billing standards.'
       },
       {
-        title: 'Complex Procedure Coding & Billing',
-        description: 'We handle billing for general anesthesia, regional blocks, pain management procedures, and critical care services, ensuring accurate coding for both surgical and non-surgical anesthesia services.'
+        title: 'Seamless Billing & Prior Authorization',
+        description: 'We manage insurance verification, authorizations, and claims for scheduled and emergency procedures, supporting reliable cash flow.'
       },
       {
-        title: 'Streamlined Pre-Op & Post-Op Coordination',
-        description: 'Our team manages pre-anesthesia evaluations, consent documentation, and post-operative follow-ups, reducing administrative burden and improving patient care coordination.'
+        title: '24/7 Support for Anesthesia Providers',
+        description: 'From hospital shifts to outpatient procedures, our staff supports communication, documentation updates, and workflow coordination.'
       }
     ],
     whyChoose: [
@@ -619,24 +619,24 @@ export const specialties: Specialty[] = [
     id: 'emergency-medicine',
     name: 'Emergency Medicine',
     description: 'Medical Billing for Emergency Medicine',
-    heroDescription: 'Emergency medicine physicians work in fast-paced environments requiring rapid documentation and accurate coding for urgent care services. Alpha Medi Assist provides specialized medical billing, coding, and RCM services for emergency departments, ensuring timely reimbursement for critical care services.',
+    heroDescription: 'Efficient billing is critical for emergency medicine practices where high patient volume, rapid care delivery, and complex payer rules intersect. At AlphaMedi Assist, we specialize in emergency medicine medical billing services to manage claims, coding accuracy, and complete revenue cycle management.',
     testimonial: {
       rating: '5/5',
-      doctor: 'Dr. Lissa Jenn',
-      years: '6 Years working with Alpha Medi Assist'
+      doctor: 'Dr. Michal',
+      years: '6 Years working with AlphaMedi Assist'
     },
     supportSections: [
       {
-        title: 'Rapid Documentation & Critical Care Coding',
-        description: 'Our virtual assistants document emergency visits, critical care services, and procedures accurately, ensuring proper E&M coding and compliance with emergency medicine billing guidelines.'
+        title: 'Accurate Critical Care Billing',
+        description: 'We specialize in critical care billing emergency medicine, ensuring time-based services are documented and coded correctly.'
       },
       {
-        title: 'Efficient Claim Processing & Denial Management',
-        description: 'We handle high-volume claim submissions, manage denials quickly, and ensure compliance with CMS guidelines for emergency department services, optimizing revenue cycle performance.'
+        title: 'Seamless Billing & Compliance Support',
+        description: 'Our team manages payer requirements, audits, and appeals related to emergency medicine critical care billing.'
       },
       {
-        title: 'Real-Time Patient Data Management',
-        description: 'Our team manages patient registration, insurance verification, and documentation in real-time, supporting efficient emergency department operations and accurate billing.'
+        title: '24/7 Support for Emergency Departments',
+        description: 'Emergency services operate around the clock, and our billing support matches that pace with continuous monitoring and follow-ups.'
       }
     ],
     whyChoose: [
@@ -678,24 +678,24 @@ export const specialties: Specialty[] = [
     id: 'gynecology-obstetrics',
     name: 'Gynecology/Obstetrics',
     description: 'Medical Billing for Gynecology/Obstetrics',
-    heroDescription: 'OB/GYN specialists require comprehensive documentation of prenatal care, deliveries, gynecological procedures, and ongoing patient management. Alpha Medi Assist provides specialized medical billing, coding, and RCM services for OB/GYN practices, ensuring accurate reimbursement for women\'s health services.',
+    heroDescription: 'Efficient billing is crucial for OB-GYN practices to maintain smooth operations, maximize revenue, and focus on patient care. At AlphaMedi Assist, we specialize in OB-GYN medical billing services that streamline claims, coding, and revenue cycle management (RCM) for gynecology and obstetrics practices.',
     testimonial: {
       rating: '5/5',
-      doctor: 'Dr. Lissa Jenn',
-      years: '6 Years working with Alpha Medi Assist'
+      doctor: 'Dr. Emily',
+      years: '6 Years working with AlphaMedi Assist'
     },
     supportSections: [
       {
-        title: 'Comprehensive OB/GYN Documentation',
-        description: 'Our virtual assistants document prenatal visits, deliveries, gynecological procedures, and routine care, ensuring accurate CPT and ICD-10 coding for optimal reimbursement.'
+        title: 'Streamlined Pre- and Post-Procedure Documentation',
+        description: 'Our virtual assistants handle prenatal and postnatal scheduling, EHR charting, and SOAP notes to ensure smooth workflows for pre-op, intraoperative, and post-op obstetrics procedures.'
       },
       {
-        title: 'Prior Authorization & Insurance Management',
-        description: 'We handle prior authorizations for procedures, manage insurance verification for maternity care, and ensure compliance with OB/GYN-specific billing requirements.'
+        title: 'Seamless Billing & Prior Authorization',
+        description: 'We manage insurance verification, prior authorizations, and claims submissions for routine gynecologic care, obstetrics, and elective procedures, ensuring optimized reimbursements for your practice.'
       },
       {
-        title: 'Patient Scheduling & Follow-Up Care',
-        description: 'Our team manages appointment scheduling, prenatal care coordination, and postpartum follow-ups, supporting comprehensive women\'s health services and accurate billing.'
+        title: '24/7 Support for OB-GYN Practices',
+        description: 'Our trained team manages patient communication, referrals, and EHR updates, providing support around the clock. This enhances workflow efficiency and patient satisfaction.'
       }
     ],
     whyChoose: [
@@ -737,24 +737,24 @@ export const specialties: Specialty[] = [
     id: 'hematology-oncology',
     name: 'Hematology/Oncology',
     description: 'Medical Billing for Hematology/Oncology',
-    heroDescription: 'Hematologists and oncologists manage complex cancer treatments requiring detailed documentation of chemotherapy, immunotherapy, and ongoing patient care. Alpha Medi Assist provides specialized medical billing, coding, and RCM services for oncology practices, ensuring accurate reimbursement for cancer care services.',
+    heroDescription: 'Efficient billing is critical for hematology and oncology practices to maintain smooth operations, maximize revenue, and provide high-quality patient care. At Alpha Medi Assist, we specialize in hematology oncology medical billing services to streamline claims, coding, and revenue cycle management (RCM).',
     testimonial: {
       rating: '5/5',
-      doctor: 'Dr. Lissa Jenn',
-      years: '6 Years working with Alpha Medi Assist'
+      doctor: 'Dr. William',
+      years: '6 Years working with AlphaMedi Assist'
     },
     supportSections: [
       {
-        title: 'Complex Treatment Documentation & Coding',
-        description: 'Our virtual assistants document chemotherapy administration, immunotherapy treatments, and infusion services, ensuring accurate CPT coding and compliance with oncology billing guidelines.'
+        title: 'Streamlined Pre- and Post-Treatment Documentation',
+        description: 'Our virtual assistants handle pre-treatment scheduling, infusion documentation, lab results, and post-treatment follow-ups for a seamless workflow across hematology and oncology care.'
       },
       {
-        title: 'Prior Authorization & Insurance Management',
-        description: 'We handle prior authorizations for expensive cancer treatments, manage insurance verification, and ensure compliance with payer requirements for oncology services.'
+        title: 'Seamless Billing & Prior Authorization',
+        description: 'We manage insurance verification, prior authorizations, and claims submission for chemotherapy, immunotherapy, radiation, and other oncology procedures to optimize reimbursements for your practice.'
       },
       {
-        title: 'Patient Care Coordination & Follow-Ups',
-        description: 'Our team manages treatment scheduling, side effect monitoring, and follow-up care documentation, supporting comprehensive cancer care and accurate billing.'
+        title: '24/7 Support for Hematology & Oncology Practices',
+        description: 'From urgent treatments to routine follow-ups, our team manages patient communication, referrals, and EHR updates, enhancing workflow efficiency and patient satisfaction.'
       }
     ],
     whyChoose: [
@@ -855,24 +855,24 @@ export const specialties: Specialty[] = [
     id: 'pediatrics',
     name: 'Pediatrics',
     description: 'Medical Billing for Pediatrics',
-    heroDescription: 'Pediatricians require comprehensive documentation of child health services, well-child visits, and developmental care. Alpha Medi Assist provides specialized medical billing, coding, and RCM services for pediatric practices, ensuring accurate reimbursement for children\'s health services.',
+    heroDescription: 'Efficient billing is essential for pediatric practices to maintain smooth operations, maximize revenue, and deliver exceptional patient care. At Alpha Medi Assist, we specialize in pediatrics medical billing services to streamline claims, coding, and revenue cycle management (RCM). Our solutions reduce administrative burdens, improve reimbursements, and ensure HIPAA-compliant workflows, allowing pediatricians to focus entirely on their young patients’ health and well-being.',
     testimonial: {
       rating: '5/5',
-      doctor: 'Dr. Lissa Jenn',
-      years: '6 Years working with Alpha Medi Assist'
+      doctor: 'Dr. Emma Joe',
+      years: '6 Years working with AlphaMedi Assist'
     },
     supportSections: [
       {
-        title: 'Comprehensive Pediatric Documentation',
-        description: 'Our virtual assistants document well-child visits, immunizations, developmental screenings, and acute care visits, ensuring accurate CPT and ICD-10 coding for pediatric services.'
+        title: 'Streamlined Patient Visit Documentation',
+        description: 'Our virtual assistants manage scheduling, EHR documentation, and visit notes for routine and specialty pediatric appointments, ensuring smooth workflows and accurate recordkeeping.'
       },
       {
-        title: 'Insurance Verification & Prior Authorizations',
-        description: 'We handle insurance verification for pediatric services, manage prior authorizations for specialty referrals, and ensure compliance with pediatric billing requirements.'
+        title: 'Seamless Billing & Prior Authorization',
+        description: 'We manage insurance verification, prior authorizations, and claims submission for pediatric visits, vaccinations, and specialty procedures, optimizing reimbursements for your practice.'
       },
       {
-        title: 'Patient Scheduling & Care Coordination',
-        description: 'Our team manages appointment scheduling, immunization tracking, and follow-up care, supporting comprehensive pediatric care and accurate billing.'
+        title: '24/7 Support for Pediatric Practices',
+        description: 'From urgent care visits to routine wellness appointments, our team handles patient communication, referrals, and EHR updates to improve operational efficiency and patient satisfaction.'
       }
     ],
     whyChoose: [
@@ -914,24 +914,24 @@ export const specialties: Specialty[] = [
     id: 'plastic-surgery',
     name: 'Plastic Surgery',
     description: 'Medical Billing for Plastic Surgery',
-    heroDescription: 'Plastic surgeons require detailed documentation of reconstructive and cosmetic procedures, ensuring accurate coding for both medical and aesthetic services. Alpha Medi Assist provides specialized medical billing, coding, and RCM services for plastic surgery practices, ensuring accurate reimbursement.',
+    heroDescription: 'Efficient billing is essential for plastic surgery practices to maintain smooth operations, protect cash flow, and maximize reimbursements. At AlphaMedi Assist, we specialize in plastic surgery medical billing services designed to streamline claims, improve coding accuracy, and optimize revenue cycle management (RCM). Our expert-driven solutions reduce administrative workload, minimize denials, and ensure HIPAA-compliant financial operations, allowing plastic surgeons to focus on patient care and aesthetic outcomes.',
     testimonial: {
       rating: '5/5',
-      doctor: 'Dr. Lissa Jenn',
-      years: '6 Years working with Alpha Medi Assist'
+      doctor: 'Dr. Joe',
+      years: '6 Years working with AlphaMedi Assist'
     },
     supportSections: [
       {
-        title: 'Procedure Documentation & Coding',
-        description: 'Our virtual assistants document reconstructive and cosmetic procedures, ensuring accurate CPT coding and compliance with plastic surgery billing guidelines for both medical and aesthetic services.'
+        title: 'Streamlined Pre-Op & Post-Op Documentation',
+        description: 'Our virtual assistants support surgical scheduling, EHR documentation, operative notes, and post-procedure records to ensure accurate plastic surgery medical billing services.'
       },
       {
-        title: 'Insurance Verification & Prior Authorizations',
-        description: 'We handle insurance verification for reconstructive procedures, manage prior authorizations, and ensure proper documentation for medical necessity to maximize reimbursement.'
+        title: 'Seamless Billing & Prior Authorization',
+        description: 'We manage insurance verification, prior authorizations, and claims submissions for reconstructive and medically necessary plastic surgery procedures.'
       },
       {
-        title: 'Patient Consultation & Follow-Up Care',
-        description: 'Our team manages consultation documentation, preoperative evaluations, and postoperative follow-ups, supporting comprehensive plastic surgery care and accurate billing.'
+        title: '24/7 Support for Plastic Surgery Practices',
+        description: 'From consultations to post-operative follow-ups, our team assists with patient communication, referrals, and documentation updates, enhancing operational efficiency and patient trust.'
       }
     ],
     whyChoose: [
@@ -973,24 +973,24 @@ export const specialties: Specialty[] = [
     id: 'psychiatry',
     name: 'Psychiatry',
     description: 'Medical Billing for Psychiatry',
-    heroDescription: 'Psychiatrists require comprehensive documentation of mental health evaluations, medication management, and therapy services. Alpha Medi Assist provides specialized medical billing, coding, and RCM services for psychiatry practices, ensuring accurate reimbursement for mental health services.',
+    heroDescription: 'Efficient billing is essential for psychiatry practices to maintain consistent cash flow, reduce administrative stress, and ensure uninterrupted patient care. At AlphaMedi Assist, we provide specialized psychiatry medical billing services designed to streamline claims processing, improve coding accuracy, and optimize revenue cycle management (RCM). Our solutions help psychiatric practices reduce denials, improve reimbursements, and maintain full HIPAA compliance, so providers can focus on delivering high-quality mental health care.',
     testimonial: {
       rating: '5/5',
       doctor: 'Dr. Lissa Jenn',
-      years: '6 Years working with Alpha Medi Assist'
+      years: '6 Years working with AlphaMedi Assist'
     },
     supportSections: [
       {
-        title: 'Mental Health Documentation & Coding',
-        description: 'Our virtual assistants document psychiatric evaluations, medication management visits, and therapy sessions, ensuring accurate CPT and ICD-10 coding for mental health services.'
+        title: 'Streamlined Clinical Documentation',
+        description: 'Our virtual assistants help manage intake forms, SOAP notes, time documentation, and EHR updates, supporting compliant psychiatry medical billing.'
       },
       {
-        title: 'Insurance Verification & Prior Authorizations',
-        description: 'We handle insurance verification for mental health services, manage prior authorizations for medications and treatments, and ensure compliance with mental health parity laws.'
+        title: 'Seamless Billing & Prior Authorization',
+        description: 'We handle insurance verification, authorizations, and claims submissions for therapy, medication management, and behavioral health services.'
       },
       {
-        title: 'Patient Scheduling & Care Coordination',
-        description: 'Our team manages appointment scheduling, medication refill requests, and follow-up care, supporting comprehensive psychiatric care and accurate billing.'
+        title: '24/7 Support for Psychiatry Practices',
+        description: 'From telepsychiatry visits to in-person care, our team manages patient communication, referrals, and documentation updates efficiently.'
       }
     ],
     whyChoose: [
@@ -1032,24 +1032,24 @@ export const specialties: Specialty[] = [
     id: 'mental-health-counseling',
     name: 'Mental Health Counseling',
     description: 'Medical Billing for Mental Health Counseling',
-    heroDescription: 'Mental health counselors require accurate documentation of therapy sessions, treatment plans, and patient progress. Alpha Medi Assist provides specialized medical billing, coding, and RCM services for counseling practices, ensuring accurate reimbursement for mental health counseling services.',
+    heroDescription: 'Efficient billing is essential for mental health counseling practices to maintain financial stability, reduce administrative strain, and ensure uninterrupted patient care. At AlphaMedi Assist, we provide specialized mental health medical billing services designed to streamline claims processing, improve coding accuracy, and optimize revenue cycle management (RCM). Our solutions minimize denials, increase reimbursements, and ensure full HIPAA compliance, allowing counselors and therapists to focus on supporting patient well-being.',
     testimonial: {
       rating: '5/5',
-      doctor: 'Dr. Lissa Jenn',
-      years: '6 Years working with Alpha Medi Assist'
+      doctor: 'Dr. Danial',
+      years: '6 Years working with AlphaMedi Assist'
     },
     supportSections: [
       {
-        title: 'Therapy Session Documentation & Coding',
-        description: 'Our virtual assistants document individual, group, and family therapy sessions, ensuring accurate CPT coding and compliance with mental health counseling billing guidelines.'
+        title: 'Streamlined Clinical Documentation',
+        description: 'Our virtual assistants support session notes, treatment plans, and documentation accuracy, ensuring billing aligns with billing code mental health counseling requirements.'
       },
       {
-        title: 'Insurance Verification & Prior Authorizations',
-        description: 'We handle insurance verification for counseling services, manage prior authorizations when required, and ensure compliance with mental health parity requirements.'
+        title: 'Seamless Billing & Prior Authorization',
+        description: 'We manage insurance verification, authorizations, and claims submission for individual, group, and family counseling services.'
       },
       {
-        title: 'Treatment Plan Management & Follow-Ups',
-        description: 'Our team manages treatment plan documentation, progress notes, and patient scheduling, supporting comprehensive mental health counseling and accurate billing.'
+        title: '24/7 Support for Counseling Practices',
+        description: 'From intake coordination to follow-up documentation, our team assists practices with scheduling, referrals, and billing inquiries efficiently.'
       }
     ],
     whyChoose: [
@@ -1091,24 +1091,24 @@ export const specialties: Specialty[] = [
     id: 'radiology',
     name: 'Radiology',
     description: 'Medical Billing for Radiology',
-    heroDescription: 'Radiologists require efficient documentation of imaging studies, interpretations, and diagnostic reports. Alpha Medi Assist provides specialized medical billing, coding, and RCM services for radiology practices, ensuring accurate reimbursement for imaging services.',
+    heroDescription: 'Efficient billing is essential for radiology practices to maintain operational efficiency, reduce claim denials, and ensure consistent revenue flow. At AlphaMedi Assist, we provide specialized radiology medical billing services that streamline claims processing, improve coding accuracy, and strengthen revenue cycle management (RCM). Our solutions reduce administrative workload, accelerate reimbursements, and maintain full HIPAA compliance so radiologists can focus on delivering accurate diagnostic care.',
     testimonial: {
       rating: '5/5',
-      doctor: 'Dr. Lissa Jenn',
-      years: '6 Years working with Alpha Medi Assist'
+      doctor: 'Dr. Samuel',
+      years: '6 Years working with AlphaMedi Assist'
     },
     supportSections: [
       {
-        title: 'Imaging Study Documentation & Coding',
-        description: 'Our virtual assistants document CT scans, MRIs, X-rays, ultrasounds, and other imaging studies, ensuring accurate CPT and ICD-10 coding for radiology services.'
+        title: 'Streamlined Imaging Documentation',
+        description: 'Our virtual assistants support order verification, report documentation, and workflow accuracy to ensure claims align with payer requirements for medical billing for radiology services.'
       },
       {
-        title: 'Prior Authorization & Insurance Management',
-        description: 'We handle prior authorizations for advanced imaging studies, manage insurance verification, and ensure compliance with radiology-specific billing requirements.'
+        title: 'Seamless Billing and Prior Authorization',
+        description: 'We manage insurance verification, authorizations, and claims submission for outpatient and inpatient imaging services.'
       },
       {
-        title: 'Report Management & Follow-Up Coordination',
-        description: 'Our team manages radiology report documentation, patient communication, and follow-up scheduling, supporting comprehensive radiology services and accurate billing.'
+        title: '24/7 Support for Radiology Providers',
+        description: 'From urgent diagnostic imaging to scheduled procedures, our team supports scheduling coordination, billing inquiries, and documentation updates efficiently.'
       }
     ],
     whyChoose: [
@@ -1150,24 +1150,24 @@ export const specialties: Specialty[] = [
     id: 'reproductive-endocrinology',
     name: 'Reproductive Endocrinology',
     description: 'Medical Billing for Reproductive Endocrinology',
-    heroDescription: 'Reproductive endocrinologists require detailed documentation of fertility treatments, IVF procedures, and hormonal therapies. Alpha Medi Assist provides specialized medical billing, coding, and RCM services for reproductive endocrinology practices, ensuring accurate reimbursement for fertility services.',
+    heroDescription: 'Efficient billing is essential for reproductive endocrinology and fertility practices to ensure uninterrupted patient care and consistent revenue growth. At AlphaMedi Assist, we specialize in endocrinology medical billing services designed to simplify claims processing, coding accuracy, and revenue cycle management. Our expert-driven solutions reduce administrative workload, improve reimbursements, and maintain full HIPAA compliance for fertility clinics and endocrinology practices nationwide.',
     testimonial: {
       rating: '5/5',
-      doctor: 'Dr. Lissa Jenn',
-      years: '6 Years working with Alpha Medi Assist'
+      doctor: 'Dr. Amanda Lewis',
+      years: '6 Years working with AlphaMedi Assist'
     },
     supportSections: [
       {
-        title: 'Fertility Treatment Documentation & Coding',
-        description: 'Our virtual assistants document IVF cycles, fertility medications, diagnostic procedures, and hormonal therapies, ensuring accurate CPT and ICD-10 coding for reproductive services.'
+        title: 'Streamlined Treatment Cycle Documentation',
+        description: 'Our virtual assistants support IVF cycle tracking, treatment scheduling, and EHR documentation to ensure accurate records across each stage of fertility care.'
       },
       {
-        title: 'Insurance Verification & Prior Authorizations',
-        description: 'We handle insurance verification for fertility treatments, manage prior authorizations for procedures and medications, and ensure compliance with reproductive medicine billing requirements.'
+        title: 'Prior Authorization and Pre-Treatment Billing',
+        description: 'Many fertility treatments require prior authorization. Our endocrinology billing services include authorization management to prevent claim rejections and treatment delays.'
       },
       {
-        title: 'Treatment Cycle Management & Follow-Ups',
-        description: 'Our team manages treatment cycle documentation, medication scheduling, and follow-up care, supporting comprehensive fertility services and accurate billing.'
+        title: 'Patient Communication Support',
+        description: 'We assist with billing inquiries, insurance explanations, and follow-ups, improving patient satisfaction and reducing front-desk workload.'
       }
     ],
     whyChoose: [
@@ -1209,24 +1209,24 @@ export const specialties: Specialty[] = [
     id: 'rheumatology',
     name: 'Rheumatology',
     description: 'Medical Billing for Rheumatology',
-    heroDescription: 'Rheumatologists require comprehensive documentation of autoimmune conditions, joint treatments, and biologic therapies. Alpha Medi Assist provides specialized medical billing, coding, and RCM services for rheumatology practices, ensuring accurate reimbursement for autoimmune and musculoskeletal care.',
+    heroDescription: 'Efficient billing is essential for rheumatology practices to maintain smooth operations and ensure consistent revenue growth. At AlphaMedi Assist, we specialize in rheumatology medical billing services to streamline claims processing, coding accuracy, and revenue cycle management. Our expert solutions reduce administrative burdens, improve reimbursements, and ensure HIPAA-compliant billing for rheumatology clinics and specialty practices across the United States.',
     testimonial: {
       rating: '5/5',
-      doctor: 'Dr. Lissa Jenn',
-      years: '6 Years working with Alpha Medi Assist'
+      doctor: 'Dr. Sophia Reynolds',
+      years: '6 Years working with AlphaMedi Assist'
     },
     supportSections: [
       {
-        title: 'Autoimmune Condition Documentation & Coding',
-        description: 'Our virtual assistants document rheumatoid arthritis, lupus, and other autoimmune conditions, ensuring accurate CPT and ICD-10 coding for rheumatology services and treatments.'
+        title: 'Streamlined Chronic Care Documentation',
+        description: 'Our virtual assistants support documentation for long-term rheumatologic care, infusion scheduling, and follow-up visits to ensure accuracy across patient records.'
       },
       {
-        title: 'Prior Authorization & Insurance Management',
-        description: 'We handle prior authorizations for expensive biologic medications, manage insurance verification, and ensure compliance with rheumatology-specific billing requirements.'
+        title: 'Prior Authorization and Infusion Billing',
+        description: 'We manage prior authorizations and claims for biologics, injections, and infusion services, helping reduce delays and denials.'
       },
       {
-        title: 'Treatment Management & Follow-Up Care',
-        description: 'Our team manages medication documentation, infusion services, and follow-up care, supporting comprehensive rheumatology services and accurate billing.'
+        title: 'Patient Communication Support',
+        description: 'Our billing specialists assist with patient inquiries related to coverage, balances, and statements, reducing front-desk workload.'
       }
     ],
     whyChoose: [
@@ -1268,24 +1268,24 @@ export const specialties: Specialty[] = [
     id: 'urology',
     name: 'Urology',
     description: 'Medical Billing for Urology',
-    heroDescription: 'Urologists require efficient documentation of urological procedures, diagnostic tests, and ongoing patient care. Alpha Medi Assist provides specialized medical billing, coding, and RCM services for urology practices, ensuring accurate reimbursement for urological services.',
+    heroDescription: 'Efficient billing is essential for urology practices to maintain smooth operations and maximize revenue. At Alpha Medi Assist, we specialize in urology medical billing services to streamline claims processing, coding accuracy, and revenue cycle management. Our tailored solutions reduce administrative burdens, improve reimbursements, and ensure HIPAA-compliant billing for urology clinics, surgical centers, and specialty practices across the United States.',
     testimonial: {
       rating: '5/5',
-      doctor: 'Dr. Lissa Jenn',
+      doctor: 'Dr. Mark Williams',
       years: '6 Years working with Alpha Medi Assist'
     },
     supportSections: [
       {
-        title: 'Urological Procedure Documentation & Coding',
-        description: 'Our virtual assistants document cystoscopies, prostate procedures, kidney stone treatments, and other urological procedures, ensuring accurate CPT and ICD-10 coding for optimal reimbursement.'
+        title: 'Streamlined Procedure and Diagnostic Documentation',
+        description: 'Our virtual assistants support documentation for urology procedures, imaging, and follow-up visits to ensure compliance and accuracy.'
       },
       {
-        title: 'Prior Authorization & Insurance Management',
-        description: 'We handle prior authorizations for urological procedures, manage insurance verification, and ensure compliance with urology-specific billing requirements.'
+        title: 'Prior Authorization and Surgical Billing',
+        description: 'We handle insurance verification and prior authorizations for urology surgeries and diagnostic services to reduce delays and denials.'
       },
       {
-        title: 'Patient Scheduling & Follow-Up Care',
-        description: 'Our team manages appointment scheduling, procedure coordination, and follow-up care, supporting comprehensive urological services and accurate billing.'
+        title: 'Patient Communication Support',
+        description: 'Our billing specialists manage patient inquiries related to billing, coverage, and statements, reducing staff workload.'
       }
     ],
     whyChoose: [
@@ -1327,24 +1327,24 @@ export const specialties: Specialty[] = [
     id: 'nurse-practitioner',
     name: 'Nurse Practitioner',
     description: 'Medical Billing for Nurse Practitioner',
-    heroDescription: 'Nurse practitioners require comprehensive documentation of patient visits, procedures, and care coordination across various specialties. Alpha Medi Assist provides specialized medical billing, coding, and RCM services for nurse practitioner practices, ensuring accurate reimbursement for advanced practice nursing services.',
+    heroDescription: 'Efficient billing is essential for nurse practitioner practices to maintain smooth operations and maximize revenue. At Alpha Medi Assist, we specialize in nurse practitioner medical billing services to streamline claims processing, coding accuracy, and revenue cycle management. Our customized solutions reduce administrative workload, improve reimbursement rates, and ensure HIPAA-compliant billing for independent nurse practitioners, group practices, and multi-specialty clinics across the United States.',
     testimonial: {
       rating: '5/5',
-      doctor: 'Dr. Lissa Jenn',
+      doctor: 'Sarah Mitchell, NP',
       years: '6 Years working with Alpha Medi Assist'
     },
     supportSections: [
       {
-        title: 'Comprehensive NP Documentation & Coding',
-        description: 'Our virtual assistants document patient visits, procedures, and care coordination, ensuring accurate CPT and ICD-10 coding for nurse practitioner services across all specialties.'
+        title: 'Streamlined Documentation and Charge Capture',
+        description: 'Our virtual assistants support EHR documentation, SOAP notes, and charge capture to ensure accuracy and compliance.'
       },
       {
-        title: 'Insurance Verification & Prior Authorizations',
-        description: 'We handle insurance verification for NP services, manage prior authorizations when required, and ensure compliance with state-specific billing requirements for advanced practice nurses.'
+        title: 'Incident-To and Direct Billing Support',
+        description: 'We help practices apply correct billing rules based on state regulations and payer guidelines.'
       },
       {
-        title: 'Patient Care Coordination & Follow-Ups',
-        description: 'Our team manages appointment scheduling, care coordination, and follow-up documentation, supporting comprehensive nurse practitioner services and accurate billing.'
+        title: 'Telehealth Billing Assistance',
+        description: 'Our team manages telehealth billing and coding for nurse practitioners, ensuring compliance with evolving reimbursement policies.'
       }
     ],
     whyChoose: [

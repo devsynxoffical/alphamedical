@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import logo from '../Images/ALPHA-MEDI-ASSIST-LOGO-PNG.png'
@@ -11,24 +11,40 @@ const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const location = useLocation()
 
+  const servicesRef = useRef<HTMLDivElement>(null)
+  const specialtiesRef = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY
       setIsScrolled(scrollTop > 50)
     }
 
+    const handleClickOutside = (event: MouseEvent) => {
+      if (servicesRef.current && !servicesRef.current.contains(event.target as Node)) {
+        setIsServicesOpen(false)
+      }
+      if (specialtiesRef.current && !specialtiesRef.current.contains(event.target as Node)) {
+        setIsSpecialtiesOpen(false)
+      }
+    }
+
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
   }, [])
 
   const services = [
-    { id: 'medical-billing', name: 'Medical Billing Services', path: '/services/medical-billing' },
-    { id: 'virtual-assistant', name: 'Virtual Medical Assistant', path: '/services/virtual-assistant' },
-    { id: 'medical-coding', name: 'Medical Coding Services', path: '/services/medical-coding' },
-    { id: 'payment-posting', name: 'Medical Payment Posting Services', path: '/services/payment-posting' },
-    { id: 'virtual-receptionist', name: 'Virtual Medical Receptionist Services', path: '/services/virtual-receptionist' },
-    { id: 'healthcare-seo', name: 'Healthcare SEO', path: '/services/healthcare-seo' },
-    { id: 'credentialing', name: 'Medical Credentialing Services', path: '/services/credentialing' }
+    { id: 'medical-billing-specialties', name: 'Medical Billing Specialties', path: '/medical-billing-specialities' },
+    { id: 'virtual-assistant', name: 'Virtual Medical Assistant', path: '/virtual-medical-assistant-services' },
+    { id: 'medical-coding', name: 'Medical Coding Services', path: '/medical-coding-services' },
+    { id: 'payment-posting', name: 'Medical Payment Posting Services', path: '/medical-payment-posting-services' },
+    { id: 'virtual-receptionist', name: 'Virtual Medical Receptionist Services', path: '/virtual-medical-receptionist-services' },
+    { id: 'healthcare-seo', name: 'Healthcare SEO', path: '/healthcare-seo-services' },
+    { id: 'credentialing', name: 'Medical Credentialing Services', path: '/medical-credentialing-service' }
   ]
 
   // Map specialties to dropdown format
@@ -65,7 +81,7 @@ const Header: React.FC = () => {
               Home
             </Link>
 
-            <div className="dropdown">
+            <div className="dropdown" ref={servicesRef}>
               <button
                 className={`nav-link dropdown-toggle ${isServicesOpen ? 'active' : ''}`}
                 onClick={() => {
@@ -104,7 +120,7 @@ const Header: React.FC = () => {
               </div>
             </div>
 
-            <div className="dropdown">
+            <div className="dropdown" ref={specialtiesRef}>
               <button
                 className={`nav-link dropdown-toggle ${isSpecialtiesOpen ? 'active' : ''}`}
                 onClick={() => {
@@ -118,7 +134,7 @@ const Header: React.FC = () => {
               </button>
               <div className={`dropdown-menu specialties-dropdown ${isSpecialtiesOpen ? 'show' : ''}`}>
                 <Link
-                  to="/specialties"
+                  to="/medical-billing-specialities"
                   className="dropdown-item dropdown-header"
                   onClick={() => {
                     setIsSpecialtiesOpen(false)
@@ -147,8 +163,8 @@ const Header: React.FC = () => {
             </div>
 
             <Link
-              to="/about"
-              className={`nav-link ${isActive('/about') ? 'active' : ''}`}
+              to="/about-us"
+              className={`nav-link ${isActive('/about-us') ? 'active' : ''}`}
               onClick={() => setIsMenuOpen(false)}
             >
               About Us

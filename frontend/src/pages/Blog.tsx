@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { CheckCircle } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import PageTitle from '../components/PageTitle'
+import { blogPosts, type BlogPost } from '../data/blogPosts.ts'
 
 const Blog: React.FC = () => {
-  const blogPosts: Array<never> = []
   const [email, setEmail] = useState('')
   const [showSuccessModal, setShowSuccessModal] = useState(false)
 
@@ -37,12 +38,15 @@ const Blog: React.FC = () => {
         <section className="blog-section section">
           <div className="container">
             <div className="blog-grid">
-              {blogPosts.length === 0 && (
-                <div className="card text-center" style={{ padding: '2rem' }}>
-                  <h3>Blog posts coming soon</h3>
-                  <p>Stay tuned for expert insights on healthcare billing, compliance, and practice management.</p>
-                </div>
-              )}
+              {blogPosts.map((post: BlogPost) => (
+                <article key={post.slug} className="card blog-card">
+                  <h2 className="blog-title">{post.title}</h2>
+                  <p className="blog-excerpt">{post.excerpt}</p>
+                  <Link to={`/blog/${post.slug}`} className="blog-link">
+                    Read Full Article
+                  </Link>
+                </article>
+              ))}
             </div>
           </div>
         </section>

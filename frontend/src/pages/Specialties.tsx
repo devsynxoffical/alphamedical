@@ -5,6 +5,7 @@ import { specialties } from '../data/specialties'
 import PageTitle from '../components/PageTitle'
 
 // Import specialty images
+import defaultSpecialtyImg from '../Images/optimized_medical_coding.png'
 import internalMedicineImg from '../Images/Internal Medicine.jpg'
 import allergyImmunologyImg from '../Images/Allergy & Immunology.png'
 import orthopedicsImg from '../Images/Orthopedics.jpg'
@@ -13,37 +14,38 @@ import neurologyImg from '../Images/Neurology.jpg'
 import gastroenterologyImg from '../Images/Gastroenterology.jpg'
 import generalSurgeryImg from '../Images/General Surgery1.jpg'
 import anesthesiologyImg from '../Images/closeup-syringe-with-anesthesia-dental-clinic.jpg'
-import cardiologyImg from '../Images/view-anatomic-heart-model-educational-purpose-with-stethoscope.jpg'
+import cardiologyImg from '../Images/optimized_cardiology.png'
 import dermatologyImg from '../Images/skin-allergy-person-s-arm.jpg'
-import emergencyMedicineImg from '../Images/flat-lay-frame-with-pills.jpg'
-import gynecologyObstetricsImg from '../Images/young-handsome-physician-medical-robe-with-stethoscope.jpg'
+import emergencyMedicineImg from '../Images/young-handsome-physician-medical-robe-with-stethoscope.jpg'
+import obgynImg from '../Images/AdobeStock_566596170.jpeg'
 import hematologyOncologyImg from '../Images/doctor-with-blood-samples-making-medical-report.jpg'
-import mentalHealthCounselingImg from '../Images/psychology-depression-happy-smile-asian-600nw-2533816059.webp'
-import nursePractitionerImg from '../Images/nurse.png'
-import orthopedicSurgeryImg from '../Images/side-view-nurse-looking-radiography.jpg'
-import pediatricsImg from '../Images/pediatrician-holding-toddler-consulation.jpg'
-import plasticSurgeryImg from '../Images/side-view-doctor-checking-patient-before-rhinoplasty.jpg'
-import psychiatryImg from '../Images/african-american-medical-assistant-scrubs-reflects-loss-burnout.jpg'
-import radiologyImg from '../Images/dr-reading-image.png'
-import reproductiveEndocrinologyImg from '../Images/AdobeStock_566596170.jpeg'
+import orthopedicSurgeryImg from '../Images/optimized_orthopedic_surgery.png'
+import pediatricsImg from '../Images/optimized_pediatrics.png'
+import plasticSurgeryImg from '../Images/optimized_plastic_surgery.png'
+import psychiatryImg from '../Images/psychology-depression-happy-smile-asian-600nw-2533816059.webp'
+import mentalHealthCounselingImg from '../Images/doctor-suggesting-hospital-program-patient.jpg'
+import radiologyImg from '../Images/side-view-nurse-looking-radiography.jpg'
+import reproductiveEndocrinologyImg from '../Images/doctors-discussing-laptop-meeting.jpg'
 import rheumatologyImg from '../Images/rheumatology.webp'
 import urologyImg from '../Images/urologist.webp'
+import nursePractitionerImg from '../Images/nurse-hospital-office-reading-pacient-treatment-laptop-health-care-practitioner-sitting-desk-using-computer-modern-clinic-looking-monitor-medicine.jpg'
 
 // Memoized Specialty Card Component
-const SpecialtyCard = memo(({ specialty, getSpecialtyIcon, getSpecialtyImage, isLazy = false }: {
+const SpecialtyCard = memo(({ specialty, getSpecialtyIcon, getSpecialtyImage, priority = false
+}: {
   specialty: typeof specialties[0],
   getSpecialtyIcon: (id: string) => React.ReactNode,
   getSpecialtyImage: (id: string) => string,
-  isLazy?: boolean
+  priority?: boolean
 }) => (
   <div className="specialty-card-enhanced">
     <div className="specialty-image">
-      <img 
-        src={getSpecialtyImage(specialty.id)} 
+      <img
+        src={getSpecialtyImage(specialty.id)}
         alt={specialty.name}
-        loading={isLazy ? "lazy" : "eager"}
+        loading={priority ? "eager" : "lazy"}
         decoding="async"
-        fetchPriority={isLazy ? "low" : "high"}
+        {...(priority ? { fetchpriority: "high" } : {})}
       />
       <div className="specialty-overlay">
         <div className="specialty-icon">
@@ -51,11 +53,11 @@ const SpecialtyCard = memo(({ specialty, getSpecialtyIcon, getSpecialtyImage, is
         </div>
       </div>
     </div>
-    
+
     <div className="specialty-content">
       <h3 className="specialty-name">{specialty.name}</h3>
       <p className="specialty-description">{specialty.heroDescription}</p>
-      
+
       <Link to={`/specialties/${specialty.id}`} className="btn btn-primary specialty-btn">
         Learn More <ArrowRight size={16} />
       </Link>
@@ -68,12 +70,12 @@ SpecialtyCard.displayName = 'SpecialtyCard'
 const Specialties: React.FC = () => {
   // Memoize icon map
   const iconMap = useMemo(() => ({
-      'internal-medicine': <Heart size={48} />,
-      'allergy-immunology': <Shield size={48} />,
-      'orthopedics': <Target size={48} />,
-      'pain-management': <Zap size={48} />,
-      'neurology': <Brain size={48} />,
-      'gastroenterology': <Users size={48} />,
+    'internal-medicine': <Heart size={48} />,
+    'allergy-immunology': <Shield size={48} />,
+    'orthopedics': <Target size={48} />,
+    'pain-management': <Zap size={48} />,
+    'neurology': <Brain size={48} />,
+    'gastroenterology': <Users size={48} />,
     'general-surgery': <Stethoscope size={48} />,
     'anesthesiology': <Activity size={48} />,
     'cardiology': <Heart size={48} />,
@@ -95,18 +97,18 @@ const Specialties: React.FC = () => {
 
   // Memoize image map
   const imageMap = useMemo(() => ({
-      'internal-medicine': internalMedicineImg,
-      'allergy-immunology': allergyImmunologyImg,
-      'orthopedics': orthopedicsImg,
-      'pain-management': painManagementImg,
-      'neurology': neurologyImg,
-      'gastroenterology': gastroenterologyImg,
+    'internal-medicine': internalMedicineImg,
+    'allergy-immunology': allergyImmunologyImg,
+    'orthopedics': orthopedicsImg,
+    'pain-management': painManagementImg,
+    'neurology': neurologyImg,
+    'gastroenterology': gastroenterologyImg,
     'general-surgery': generalSurgeryImg,
     'anesthesiology': anesthesiologyImg,
     'cardiology': cardiologyImg,
     'dermatology': dermatologyImg,
     'emergency-medicine': emergencyMedicineImg,
-    'gynecology-obstetrics': gynecologyObstetricsImg,
+    'gynecology-obstetrics': obgynImg,
     'hematology-oncology': hematologyOncologyImg,
     'orthopedic-surgery': orthopedicSurgeryImg,
     'pediatrics': pediatricsImg,
@@ -127,7 +129,7 @@ const Specialties: React.FC = () => {
 
   // Get specialty-specific images
   const getSpecialtyImage = useCallback((specialtyId: string) => {
-    return imageMap[specialtyId as keyof typeof imageMap] || internalMedicineImg
+    return imageMap[specialtyId as keyof typeof imageMap] || defaultSpecialtyImg
   }, [imageMap])
 
   // Separate featured specialties (Urology and Nurse Practitioner)
@@ -142,109 +144,109 @@ const Specialties: React.FC = () => {
   return (
     <>
       <PageTitle title="Medical Specialties - Billing & RCM Services | Alpha Medi Assist" />
-    <div className="specialties-page">
-      {/* Page Header */}
-      <section className="specialties-header section">
-        <div className="container">
-          <div className="specialties-header-content">
+      <div className="specialties-page">
+        {/* Page Header */}
+        <section className="specialties-header section">
+          <div className="container">
+            <div className="specialties-header-content">
               <h1 className="specialties-title">MEDICAL SPECIALTIES</h1>
               <p className="specialties-subtitle">Specialized billing and coding support</p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Specialties Grid */}
-      <section className="specialties-grid-section-enhanced section">
-        <div className="container">
-          <div className="specialties-grid-enhanced">
-            {otherSpecialties.map((specialty, index) => (
-              <SpecialtyCard
-                key={specialty.id}
-                specialty={specialty}
-                getSpecialtyIcon={getSpecialtyIcon}
-                getSpecialtyImage={getSpecialtyImage}
-                isLazy={index > 5}
-              />
-            ))}
-                    </div>
-                  </div>
-      </section>
-                
-      {/* Featured Specialties - Centered at the end */}
-      <section className="featured-specialties-section section">
-        <div className="container">
-          <div className="featured-specialties-grid">
-            {featuredSpecialties.map(specialty => (
-              <SpecialtyCard
-                key={specialty.id}
-                specialty={specialty}
-                getSpecialtyIcon={getSpecialtyIcon}
-                getSpecialtyImage={getSpecialtyImage}
-                isLazy={false}
-              />
-            ))}
+        {/* Specialties Grid */}
+        <section className="specialties-grid-section-enhanced section">
+          <div className="container">
+            <div className="specialties-grid-enhanced">
+              {otherSpecialties.map((specialty, index) => (
+                <SpecialtyCard
+                  key={specialty.id}
+                  specialty={specialty}
+                  getSpecialtyIcon={getSpecialtyIcon}
+                  getSpecialtyImage={getSpecialtyImage}
+                  priority={index < 3}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Why Choose Section */}
-      <section className="why-choose-specialties section bg-light">
-        <div className="container">
-          <div className="why-choose-header">
-            <h2>Why Choose Alpha Medi Assist?</h2>
-            <p>Comprehensive medical billing solutions tailored to your specialty</p>
-          </div>
-          <div className="why-choose-grid">
-            <div className="why-choose-item">
-              <div className="why-choose-icon">
-                <Users size={32} />
-              </div>
-              <h4>Specialty-Specific Virtual Assistants</h4>
-              <p>trained in urgent care, OB/GYN, pathology, radiology, and anesthesiology</p>
-            </div>
-            <div className="why-choose-item">
-              <div className="why-choose-icon">
-                <Shield size={32} />
-              </div>
-              <h4>Comprehensive RCM Solutions</h4>
-              <p>including Medical billing Services, coding, and denial management</p>
-            </div>
-            <div className="why-choose-item">
-              <div className="why-choose-icon">
-                <Clock size={32} />
-              </div>
-              <h4>HIPAA-Compliant services</h4>
-              <p>ensuring data security & patient confidentiality</p>
-            </div>
-            <div className="why-choose-item">
-              <div className="why-choose-icon">
-                <Zap size={32} />
-              </div>
-              <h4>24/7 Administrative Support</h4>
-              <p>to improve workflow efficiency & patient experience</p>
+        {/* Featured Specialties - Centered at the end */}
+        <section className="featured-specialties-section section">
+          <div className="container">
+            <div className="featured-specialties-grid">
+              {featuredSpecialties.map(specialty => (
+                <SpecialtyCard
+                  key={specialty.id}
+                  specialty={specialty}
+                  getSpecialtyIcon={getSpecialtyIcon}
+                  getSpecialtyImage={getSpecialtyImage}
+                  priority={false}
+                />
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="specialties-cta-enhanced section">
-        <div className="container">
-          <div className="cta-content-enhanced">
-            <h2>Ready to speak with a Medical Billing Expert?</h2>
-            <p>Partner with Alpha Medi Assist to eliminate administrative stress and focus on delivering quality patient care. Schedule a free consultation today!</p>
-            <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary btn-large">
-                Get Free Consultation
-              </Link>
-              <Link to="/book-appointment" className="btn btn-outline btn-large">
-                Talk to Billing Expert
-              </Link>
+        {/* Why Choose Section */}
+        <section className="why-choose-specialties section bg-light">
+          <div className="container">
+            <div className="why-choose-header">
+              <h2>Why Choose Alpha Medi Assist?</h2>
+              <p>Comprehensive medical billing solutions tailored to your specialty</p>
+            </div>
+            <div className="why-choose-grid">
+              <div className="why-choose-item">
+                <div className="why-choose-icon">
+                  <Users size={32} />
+                </div>
+                <h4>Specialty-Specific Virtual Assistants</h4>
+                <p>trained in urgent care, OB/GYN, pathology, radiology, and anesthesiology</p>
+              </div>
+              <div className="why-choose-item">
+                <div className="why-choose-icon">
+                  <Shield size={32} />
+                </div>
+                <h4>Comprehensive RCM Solutions</h4>
+                <p>including Medical billing Services, coding, and denial management</p>
+              </div>
+              <div className="why-choose-item">
+                <div className="why-choose-icon">
+                  <Clock size={32} />
+                </div>
+                <h4>HIPAA-Compliant services</h4>
+                <p>ensuring data security & patient confidentiality</p>
+              </div>
+              <div className="why-choose-item">
+                <div className="why-choose-icon">
+                  <Zap size={32} />
+                </div>
+                <h4>24/7 Administrative Support</h4>
+                <p>to improve workflow efficiency & patient experience</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="specialties-cta-enhanced section">
+          <div className="container">
+            <div className="cta-content-enhanced">
+              <h2>Ready to speak with a Medical Billing Expert?</h2>
+              <p>Partner with Alpha Medi Assist to eliminate administrative stress and focus on delivering quality patient care. Schedule a free consultation today!</p>
+              <div className="cta-actions">
+                <Link to="/contact" className="btn btn-primary btn-large">
+                  Get Free Consultation
+                </Link>
+                <Link to="/book-appointment" className="btn btn-outline btn-large">
+                  Talk to Billing Expert
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   )
 }

@@ -163,7 +163,7 @@ const Home: React.FC = () => {
                   <span className="feature-tag">General Surgery</span>
                 </div>
 
-                <Link to="/services/medical-billing" className="btn btn-primary service-card-btn">
+                <Link to="/medical-billing-specialities" className="btn btn-primary service-card-btn">
                   Explore Medical Billing Services
                 </Link>
               </div>
@@ -177,19 +177,19 @@ const Home: React.FC = () => {
                     style={{ width: '45px', height: '45px', objectFit: 'contain' }}
                   />
                 </div>
-                <h3>Payment Posting in Medical Billing</h3>
-                <p>Keep your financial records transparent and accurate with professional payment posting in medical billing. Our team ensures every payment is properly recorded and reconciled, providing a clear audit trail.</p>
+                <h3>Medical Payment Posting Services</h3>
+                <p>Reliable and accurate medical payment posting for clean financial records and consistent cash flow. We manage insurance and patient payments with complete accuracy and HIPAA compliance.</p>
 
                 <h4 style={{ fontSize: '1rem', marginBottom: '0.75rem', color: '#1a1a1a', fontWeight: 600 }}>Specialties We Serve:</h4>
                 <div className="service-features">
-                  <span className="feature-tag">Emergency Medicine</span>
-                  <span className="feature-tag">Pediatrics</span>
-                  <span className="feature-tag">Gynecology</span>
-                  <span className="feature-tag">Oncology</span>
-                  <span className="feature-tag">Anesthesiology</span>
+                  <span className="feature-tag">Cardiology</span>
+                  <span className="feature-tag">Orthopedics</span>
+                  <span className="feature-tag">Urology</span>
+                  <span className="feature-tag">Lab Billing</span>
+                  <span className="feature-tag">General Surgery</span>
                 </div>
 
-                <Link to="/services/payment-posting" className="btn btn-primary service-card-btn">
+                <Link to="/medical-payment-posting-services" className="btn btn-primary service-card-btn">
                   Explore Payment Posting Services
                 </Link>
               </div>
@@ -203,19 +203,19 @@ const Home: React.FC = () => {
                     style={{ width: '45px', height: '45px', objectFit: 'contain' }}
                   />
                 </div>
-                <h3>Healthcare SEO & Marketing Services</h3>
-                <p>Our healthcare SEO services help practices grow online visibility, attract new patients, and improve online reputation. We provide content, local SEO, and digital marketing solutions.</p>
+                <h3>Healthcare SEO Services</h3>
+                <p>Increase online visibility, attract new patients, and grow your practice with professional healthcare SEO. We optimize websites, manage local SEO, and create targeted digital strategies.</p>
 
                 <h4 style={{ fontSize: '1rem', marginBottom: '0.75rem', color: '#1a1a1a', fontWeight: 600 }}>Specialties We Serve:</h4>
                 <div className="service-features">
-                  <span className="feature-tag">Dermatology</span>
-                  <span className="feature-tag">Cardiology</span>
-                  <span className="feature-tag">Plastic Surgery</span>
-                  <span className="feature-tag">Pediatrics</span>
-                  <span className="feature-tag">Urology</span>
+                  <span className="feature-tag">Private Practices</span>
+                  <span className="feature-tag">Specialty Clinics</span>
+                  <span className="feature-tag">Hospital Systems</span>
+                  <span className="feature-tag">Urgent Care</span>
+                  <span className="feature-tag">Behavioral Health</span>
                 </div>
 
-                <Link to="/services/healthcare-seo" className="btn btn-primary service-card-btn">
+                <Link to="/healthcare-seo-services" className="btn btn-primary service-card-btn">
                   Explore Healthcare SEO Services
                 </Link>
               </div>
@@ -241,7 +241,7 @@ const Home: React.FC = () => {
                   <span className="feature-tag">Internal Medicine</span>
                 </div>
 
-                <Link to="/services/medical-coding" className="btn btn-primary service-card-btn">
+                <Link to="/medical-coding-services" className="btn btn-primary service-card-btn">
                   Explore Medical Coding Services
                 </Link>
               </div>
@@ -255,46 +255,46 @@ const Home: React.FC = () => {
                     style={{ width: '45px', height: '45px', objectFit: 'contain' }}
                   />
                 </div>
-                <h3>Medical Billing and Credentialing Services</h3>
-                <p>Expand your network and secure timely reimbursements with medical billing and credentialing services. We guide you through payer enrollment, verification, and compliance processes.</p>
+                <h3>Medical Credentialing Services</h3>
+                <p>Professional medical credentialing services designed to simplify the complex process of credentialing for healthcare providers. Secure proper credentials with insurance companies and regulatory bodies efficiently.</p>
 
                 <h4 style={{ fontSize: '1rem', marginBottom: '0.75rem', color: '#1a1a1a', fontWeight: 600 }}>Specialties We Serve:</h4>
                 <div className="service-features">
-                  <span className="feature-tag">Endocrinology</span>
-                  <span className="feature-tag">Rheumatology</span>
-                  <span className="feature-tag">Dermatology</span>
-                  <span className="feature-tag">Psychiatry</span>
-                  <span className="feature-tag">Counseling</span>
+                  <span className="feature-tag">Cardiology</span>
+                  <span className="feature-tag">Orthopedics</span>
+                  <span className="feature-tag">Urology</span>
+                  <span className="feature-tag">Lab Billing</span>
+                  <span className="feature-tag">General Surgery</span>
                 </div>
 
-                <Link to="/services/credentialing" className="btn btn-primary service-card-btn">
+                <Link to="/medical-credentialing-service" className="btn btn-primary service-card-btn">
                   Explore Credentialing Services
                 </Link>
               </div>
 
-              {/* 5. Virtual Assistant Services */}
+              {/* 5. Virtual Medical Receptionist Services */}
               <div className="service-card">
                 <div className="service-icon">
                   <img
                     src={efficiencyIcon}
-                    alt="Virtual Assistant"
+                    alt="Virtual Medical Receptionist"
                     style={{ width: '45px', height: '45px', objectFit: 'contain' }}
                   />
                 </div>
-                <h3>Virtual Medical Assistant Services</h3>
-                <p>Boost operational efficiency with our virtual medical assistant services. Remote solutions reduce overhead, streamline workflow, and allow your staff to focus on patient care.</p>
+                <h3>Virtual Medical Receptionist Services</h3>
+                <p>Manage patient communications efficiently while reducing administrative overhead. Our virtual receptionists handle calls, scheduling, and inquiries with professional care and HIPAA compliance.</p>
 
                 <h4 style={{ fontSize: '1rem', marginBottom: '0.75rem', color: '#1a1a1a', fontWeight: 600 }}>Specialties We Serve:</h4>
                 <div className="service-features">
-                  <span className="feature-tag">Lab Billing</span>
-                  <span className="feature-tag">Orthopedic Surgery</span>
                   <span className="feature-tag">Cardiology</span>
-                  <span className="feature-tag">Pain Mgmt</span>
-                  <span className="feature-tag">Internal Med</span>
+                  <span className="feature-tag">Orthopedics</span>
+                  <span className="feature-tag">Urology</span>
+                  <span className="feature-tag">Primary Care</span>
+                  <span className="feature-tag">Urgent Care</span>
                 </div>
 
-                <Link to="/services/virtual-assistant" className="btn btn-primary service-card-btn">
-                  Explore Virtual Assistant Services
+                <Link to="/virtual-medical-receptionist-services" className="btn btn-primary service-card-btn">
+                  Explore Virtual Medical Receptionist
                 </Link>
               </div>
 
@@ -478,7 +478,7 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-              <Link to="/specialties" className="btn btn-secondary">View All Specialties</Link>
+              <Link to="/medical-billing-specialities" className="btn btn-secondary">View All Specialties</Link>
             </div>
           </div>
         </section>

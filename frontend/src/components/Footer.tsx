@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
               <img src={logo} alt="Alpha Medi Assist" className="footer-logo-img" />
             </Link>
             <p className="footer-mission">
-              Alpha Medi Assist empowers healthcare providers with innovative billing solutions 
+              Alpha Medi Assist empowers healthcare providers with innovative billing solutions
               designed to simplify practice management and enhance revenue performance.
             </p>
             <div className="social-links">
@@ -34,12 +34,12 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h4>Our Services</h4>
             <ul className="footer-links">
-              <li><Link to="/services/medical-billing">Medical Billing</Link></li>
-              <li><Link to="/services/medical-coding">Medical Coding</Link></li>
-              <li><Link to="/services/credentialing">Credentialing</Link></li>
-              <li><Link to="/services/payment-posting">Payment Posting</Link></li>
-              <li><Link to="/services/virtual-assistant">Virtual Assistance</Link></li>
-              <li><Link to="/services/healthcare-seo">Healthcare SEO</Link></li>
+              <li><Link to="/medical-billing-specialities">Medical Billing</Link></li>
+              <li><Link to="/medical-coding-services">Medical Coding</Link></li>
+              <li><Link to="/medical-credentialing-service">Credentialing</Link></li>
+              <li><Link to="/medical-payment-posting-services">Payment Posting</Link></li>
+              <li><Link to="/virtual-medical-receptionist-services">Virtual Assistance</Link></li>
+              <li><Link to="/healthcare-seo-services">Healthcare SEO</Link></li>
             </ul>
           </div>
 
@@ -54,15 +54,40 @@ const Footer: React.FC = () => {
                 <Phone size={18} />
                 <a href="tel:+14245427170">+1 424-542-7170</a>
               </div>
-              <div className="contact-item">
-                <MapPin size={18} />
-                <a 
-                  href="https://www.google.com/maps/search/?api=1&query=7901+4th+ST+N+Ste+23684+St.+Petersburg+Florida+33702" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  7901 4th ST N Ste 23684<br />St. Petersburg, Florida 33702
-                </a>
+              <div className="footer-locations-wrapper">
+                <div className="footer-locations-header">
+                  <MapPin size={18} className="location-header-pin" />
+                  <span>Our Locations</span>
+                </div>
+                <div className="footer-locations-cards">
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=7313+Cloverhill+Road+Spotsylvania+Virginia+22551"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-location-card"
+                  >
+                    <div className="location-card-number">1</div>
+                    <div className="location-card-info">
+                      <strong className="location-city">Spotsylvania, VA</strong>
+                      <span className="location-line">7313 Cloverhill Road</span>
+                      <span className="location-line">Virginia 22551</span>
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=7901+4th+ST+N+Ste+23684+St.+Petersburg+Florida+33702"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-location-card"
+                  >
+                    <div className="location-card-number">2</div>
+                    <div className="location-card-info">
+                      <strong className="location-city">St. Petersburg, FL</strong>
+                      <span className="location-line">7901 4th ST N Ste 23684</span>
+                      <span className="location-line">Florida 33702</span>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -70,19 +95,23 @@ const Footer: React.FC = () => {
 
         <div className="footer-bottom">
           <div className="footer-badges">
-            <img 
-              src={hipaaIcon} 
+            <img
+              src={hipaaIcon}
               alt="HIPAA Compliant"
               className="footer-badge-image"
             />
-            <img 
-              src={accreditedIcon} 
+            <img
+              src={accreditedIcon}
               alt="BBB Accredited"
               className="footer-badge-image"
             />
           </div>
           <div className="footer-legal">
             <p>&copy; 2025 Alpha Medi Assist. All Rights Reserved. Project by Alpha Ahead</p>
+            <div className="footer-legal-links" style={{ marginTop: '0.5rem', display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
+              <Link to="/terms-and-conditions" style={{ color: 'var(--sleek-text-muted)', fontSize: '0.875rem', textDecoration: 'none' }}>Terms and Conditions</Link>
+              <Link to="/privacy-policy" style={{ color: 'var(--sleek-text-muted)', fontSize: '0.875rem', textDecoration: 'none' }}>Privacy Policy</Link>
+            </div>
           </div>
         </div>
       </div>

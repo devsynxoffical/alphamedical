@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin, Send, ArrowRight, CheckCircle } from 'lucide-react'
 import contactHeroImg from '../Images/computer-1149148_1280.jpg'
 import PageTitle from '../components/PageTitle'
+import { sendFormSubmission } from '../api/sendFormSubmission'
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +15,8 @@ const Contact: React.FC = () => {
     smsConsent: false
   })
   const [showSuccessModal, setShowSuccessModal] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
 
   const timeSlots = [
     '9:00 AM - 10:00 AM',
@@ -33,20 +36,30 @@ const Contact: React.FC = () => {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    setShowSuccessModal(true)
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      preferredDate: '',
-      preferredTime: '',
-      smsConsent: false
-    })
+    setSubmitError('')
+    setIsSubmitting(true)
+
+    try {
+      await sendFormSubmission({
+        source: 'Contact Form',
+        payload: formData,
+      })
+      setShowSuccessModal(true)
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        preferredDate: '',
+        preferredTime: '',
+        smsConsent: false
+      })
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : 'Failed to submit the form.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -110,14 +123,31 @@ const Contact: React.FC = () => {
                   <div className="contact-item">
                     <MapPin size={20} className="text-primary" />
                     <div>
-                      <h4>Address</h4>
-                      <a
-                        href="https://www.google.com/maps/search/?api=1&query=7901+4th+ST+N+Ste+23684+St.+Petersburg+Florida+33702"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        7901 4th ST N Ste 23684<br />St. Petersburg, Florida 33702
-                      </a>
+                      <h4>Locations</h4>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginTop: '0.25rem' }}>
+                        <div>
+                          <strong>Spotsylvania, VA</strong>
+                          <br />
+                          <a
+                            href="https://www.google.com/maps/search/?api=1&query=7313+Cloverhill+Road+Spotsylvania+Virginia+22551"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            7313 Cloverhill Road<br />Virginia 22551
+                          </a>
+                        </div>
+                        <div>
+                          <strong>St. Petersburg, FL</strong>
+                          <br />
+                          <a
+                            href="https://www.google.com/maps/search/?api=1&query=7901+4th+ST+N+Ste+23684+St.+Petersburg+Florida+33702"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            7901 4th ST N Ste 23684<br />Florida 33702
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -246,9 +276,10 @@ const Contact: React.FC = () => {
                     </label>
                   </div>
 
-                  <button type="submit" className="btn btn-primary btn-submit">
+                  {submitError && <p className="form-error-message">{submitError}</p>}
+                  <button type="submit" className="btn btn-primary btn-submit" disabled={isSubmitting}>
                     <Send size={18} />
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
 
                   <p className="form-footer">

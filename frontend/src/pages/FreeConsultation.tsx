@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { CheckCircle, Send } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import { sendFormSubmission } from '../api/sendFormSubmission'
 
 const FreeConsultation: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +14,8 @@ const FreeConsultation: React.FC = () => {
     state: ''
   })
   const [showSuccessModal, setShowSuccessModal] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -22,20 +25,31 @@ const FreeConsultation: React.FC = () => {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Free Consultation Form submitted:', formData)
-    setShowSuccessModal(true)
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      countryCode: '+1',
-      questionsComments: '',
-      city: '',
-      state: ''
-    })
+    setSubmitError('')
+    setIsSubmitting(true)
+
+    try {
+      await sendFormSubmission({
+        source: 'Free Consultation Form',
+        payload: formData,
+      })
+      setShowSuccessModal(true)
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        countryCode: '+1',
+        questionsComments: '',
+        city: '',
+        state: ''
+      })
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : 'Failed to submit the form.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -191,9 +205,10 @@ const FreeConsultation: React.FC = () => {
                 </div>
               </div>
 
-                <button type="submit" className="btn btn-primary btn-submit">
+                {submitError && <p className="form-error-message">{submitError}</p>}
+                <button type="submit" className="btn btn-primary btn-submit" disabled={isSubmitting}>
                   <Send size={18} />
-                  Request Free Consultation
+                  {isSubmitting ? 'Sending...' : 'Request Free Consultation'}
                 </button>
                 
                 <p className="form-footer">

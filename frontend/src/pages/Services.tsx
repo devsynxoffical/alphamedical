@@ -14,10 +14,10 @@ import PageTitle from '../components/PageTitle'
 // Import service images
 import medicalBillingImg from '../Images/stomatolog-nurse-tooth-clinic-checking-patient-appointment-looking-computer-monitor-stomatology-assistant-teeth-doctor-discussing-reception-dental-office.jpg'
 import virtualAssistantImg from '../Images/nurse-hospital-office-reading-pacient-treatment-laptop-health-care-practitioner-sitting-desk-using-computer-modern-clinic-looking-monitor-medicine.jpg'
-import medicalCodingImg from '../Images/doctors-discussing-laptop-meeting.jpg'
+import medicalCodingImg from '../Images/optimized_medical_coding.png'
 import paymentPostingImg from '../Images/nurse-typing-computer-keyboard-consultation.jpg'
 import virtualReceptionistImg from '../Images/medical-practitioner-answering-phone-calls.jpg'
-import healthcareSeoImg from '../Images/doctor-suggesting-hospital-program-patient.jpg'
+import healthcareSeoImg from '../Images/optimized_healthcare_seo.png'
 import credentialingImg from '../Images/medicall credentialing.jpg'
 
 // Service image map
@@ -38,7 +38,8 @@ const ServiceRoom = memo(({
   description,
   benefits,
   link,
-  isLeft
+  isLeft,
+  priority = false
 }: {
   serviceId: string
   title: string
@@ -46,6 +47,7 @@ const ServiceRoom = memo(({
   benefits: string[]
   link: string
   isLeft: boolean
+  priority?: boolean
 }) => {
   const imageSrc = serviceImages[serviceId as keyof typeof serviceImages] || medicalBillingImg
 
@@ -56,8 +58,9 @@ const ServiceRoom = memo(({
           src={imageSrc}
           alt={title}
           className="service-image"
-          loading={isLeft ? "eager" : "lazy"}
+          loading={priority ? "eager" : "lazy"}
           decoding="async"
+          {...(priority ? { fetchpriority: "high" } : {})}
         />
       </div>
       <div className="service-content">
@@ -86,17 +89,6 @@ ServiceRoom.displayName = 'ServiceRoom'
 const Services: React.FC = () => {
   const servicesData = useMemo(() => [
     {
-      id: 'medical-billing',
-      title: 'Medical Billing Services',
-      description: 'Our certified specialists handle end-to-end medical billing services, ensuring accurate claims, faster reimbursements, and reduced denials.',
-      benefits: [
-        'Optimize revenue cycle management',
-        'Reduce claim denials and follow-ups',
-        'Improve first-pass claim approval rates'
-      ],
-      link: '/services/medical-billing'
-    },
-    {
       id: 'medical-coding',
       title: 'Medical Coding Services',
       description: 'Accurate coding is essential for compliance and proper reimbursement. Our medical coding services cover CPT, ICD-10, and HCPCS coding standards.',
@@ -105,51 +97,62 @@ const Services: React.FC = () => {
         'Reduced risk of audits',
         'Faster reimbursement cycles'
       ],
-      link: '/services/medical-coding'
+      link: '/medical-coding-services'
+    },
+    {
+      id: 'medical-billing-specialties',
+      title: 'Medical Billing Specialties',
+      description: 'Comprehensive medical billing solutions for over 90 medical specialties, including cardiology, orthopedics, urology, and more.',
+      benefits: [
+        'Specialty-specific billing & coding',
+        'Reduced administrative burden',
+        'Maximzed revenue for custom practices'
+      ],
+      link: '/medical-billing-specialities'
     },
     {
       id: 'payment-posting',
-      title: 'Payment Posting Services',
-      description: 'Maintain clear, accurate financial records with our payment posting services. We ensure every transaction is recorded, reconciled, and tracked for transparency and efficiency.',
+      title: 'Medical Payment Posting Services',
+      description: 'Maintain clean financial records and consistent cash flow with our reliable medical payment posting services. We handle insurance and patient payments with complete accuracy and HIPAA compliance.',
       benefits: [
-        'Track payments and adjustments easily',
-        'Reduce errors and financial discrepancies',
-        'Enhance accounting accuracy for audits'
+        'Accurate reconciliation of insurance and patient payments',
+        'Improved accuracy and compliance with payer contracts',
+        'Transparent reporting for better financial decision making'
       ],
-      link: '/services/payment-posting'
+      link: '/medical-payment-posting-services'
     },
     {
       id: 'virtual-receptionist',
-      title: 'Virtual Receptionist Services',
-      description: 'Improve patient experience with our virtual receptionist services. Our trained professionals manage calls, appointment scheduling, and patient inquiries, allowing your front desk to operate more efficiently.',
+      title: 'Virtual Medical Receptionist Services',
+      description: 'Professional virtual receptionist services for healthcare practices. Our trained team handles call answering, appointment management, and patient inquiries with full HIPAA compliance.',
       benefits: [
-        'Enhanced patient communication',
-        'Efficient appointment scheduling services',
-        'Reduced administrative burden for staff'
+        'Improve patient experience and communication',
+        'Reliable virtual front desk for practice operations',
+        'Secure and HIPAA-compliant call handling'
       ],
-      link: '/services/virtual-receptionist'
+      link: '/virtual-medical-receptionist-services'
     },
     {
       id: 'healthcare-seo',
       title: 'Healthcare SEO Services',
-      description: 'Boost your online visibility and attract new patients with specialized healthcare SEO services. Our team helps practices grow digitally through local SEO, content marketing, and website optimization.',
+      description: 'Professional Healthcare SEO Services to increase online visibility and attract more patients. We provide website audits, on-page optimization, and local SEO strategies for medical practices.',
       benefits: [
-        'Improve local search visibility',
-        'Increase patient inquiries and appointments',
-        'Strengthen digital presence for specialty clinics'
+        'Higher search engine rankings for your practice',
+        'Increased patient inquiries and scheduling',
+        'Expert medical digital marketing strategies'
       ],
-      link: '/services/healthcare-seo'
+      link: '/healthcare-seo-services'
     },
     {
       id: 'medical-credentialing',
       title: 'Medical Credentialing Services',
-      description: 'Join payer networks and secure provider privileges with our medical credentialing services. We handle documentation, submissions, and follow-ups to streamline the process.',
+      description: 'Professional medical credentialing services designed to simplify the complex process of credentialing for healthcare providers. We ensure that physicians and clinics secure proper credentials with insurance companies efficiently.',
       benefits: [
-        'Faster enrollment with insurance networks',
-        'Reduced errors in credentialing documentation',
-        'Support for multiple specialties'
+        'Secure proper credentials with insurance carriers',
+        'Streamline provider enrollment and renewals',
+        'Ensure compliance with state and federal regulations'
       ],
-      link: '/services/credentialing'
+      link: '/medical-credentialing-service'
     }
   ], [])
 
@@ -293,6 +296,7 @@ const Services: React.FC = () => {
                 benefits={service.benefits}
                 link={service.link}
                 isLeft={index % 2 === 0}
+                priority={index < 2}
               />
             ))}
           </div>
