@@ -1,0 +1,62 @@
+name: Build & deploy to FTP
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch: # allows a manual "Run workflow" button in the Actions tab
+
+concurrency:
+  group: ftp-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history: sitemap.xml <lastmod> is taken from git
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (client + prerender + sitemap + llms.txt)
+        run: npm run build
+        env:
+          # URL of the form/mail API (server.js). Set it under
+          # Settings > Secrets and variables > Actions > Variables.
+          VITE_MAIL_API_URL: ${{ vars.VITE_MAIL_API_URL }}
+
+      - name: Check build output
+        run: |
+          test -f dist/index.html
+          test -f dist/sitemap.xml
+          test -f dist/llms.txt
+          ls -la dist
+
+      - name: Upload to server (FTPS)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          protocol: ftps # explicit FTPS on port 21 (encrypted)
+          local-dir: ./frontend/dist/
+          # Folder on the server that the domain serves. Must end with "/".
+          server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
