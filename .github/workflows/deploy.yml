@@ -45,36 +45,17 @@ jobs:
           test -f dist/llms.txt
           ls -la dist
 
-      - name: Diagnose FTP connectivity
-        env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+      - name: Check FTP server is reachable
         run: |
-          echo "Secret length: ${#FTP_SERVER} characters (expected 18 for ftp.alphaahead.com)"
-          [ "$FTP_SERVER" = "ftp.alphaahead.com" ] && echo "FTP_SERVER matches ftp.alphaahead.com" || echo "WARNING: FTP_SERVER is not exactly 'ftp.alphaahead.com' (check for spaces, ftp:// prefix or typos)"
-          echo "--- DNS ---"
-          getent hosts "$FTP_SERVER" || echo "DNS lookup FAILED"
-          getent hosts ftp.alphaahead.com || echo "DNS lookup for ftp.alphaahead.com FAILED"
-          echo "--- TCP port 21 (15s) ---"
-          timeout 15 bash -c "exec 3<>/dev/tcp/ftp.alphaahead.com/21 && timeout 5 head -c 200 <&3" && echo "PORT 21 REACHABLE" || echo "PORT 21 NOT REACHABLE from GitHub (firewall/blocked or FTP not running)"
-          echo "--- TCP port 22 (SFTP, 10s) ---"
-          timeout 10 bash -c "exec 3<>/dev/tcp/ftp.alphaahead.com/22 && timeout 5 head -c 100 <&3" && echo "PORT 22 REACHABLE" || echo "port 22 not reachable"
-          echo "--- Candidate hosts (where the website and mail actually live) ---"
-          for h in alphamediassist.com www.alphamediassist.com ftp.alphamediassist.com mail.alphamediassist.com alphaahead.com www.alphaahead.com; do
-            ips=$(getent ahostsv4 "$h" | awk '{print $1}' | sort -u | tr '\n' ' ')
-            if [ -z "$ips" ]; then echo "$h -> (no DNS)"; continue; fi
-            for ip in $ips; do
-              if timeout 8 bash -c "exec 3<>/dev/tcp/$ip/21 && timeout 5 head -c 120 <&3" > /tmp/banner 2>/dev/null; then
-                echo "$h -> $ip : PORT 21 OPEN, banner: $(tr -d '\r\n' < /tmp/banner)"
-              else
-                echo "$h -> $ip : port 21 closed"
-              fi
-            done
-          done
+          getent hosts ftp.alphamediassist.com
+          timeout 15 bash -c "exec 3<>/dev/tcp/ftp.alphamediassist.com/21 && timeout 5 head -c 80 <&3" && echo && echo "FTP port 21 reachable"
 
       - name: Upload to server (FTPS)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          # Verified host: ftp.alphamediassist.com (209.42.21.37, Pure-FTPd with TLS).
+          # Not a secret; ftp.alphaahead.com points to parking servers and does not work.
+          server: ftp.alphamediassist.com
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
