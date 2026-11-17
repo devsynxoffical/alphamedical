@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drAdam from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -44,7 +46,7 @@ const Cardiology: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drAdam} alt="Dr. Adam" />
+                                            <img loading="lazy" decoding="async" src={drAdam} alt="Dr. Adam" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -387,27 +389,27 @@ const Cardiology: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are cardiology medical billing services?",
+                                    q: "What are cardiology medical billing services?",
                                     a: "They include coding, claims submission, insurance verification, patient billing, and revenue cycle management for cardiology practices."
                                 },
                                 {
-                                    q: "2. Do you support hospital-based cardiologists?",
+                                    q: "Do you support hospital-based cardiologists?",
                                     a: "Yes, we support hospital, private, and multi-provider cardiology practices."
                                 },
                                 {
-                                    q: "3. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Absolutely. All workflows meet strict HIPAA standards."
                                 },
                                 {
-                                    q: "4. Can you manage high-volume cardiology practices?",
+                                    q: "Can you manage high-volume cardiology practices?",
                                     a: "Yes, our services scale for practices of any size."
                                 },
                                 {
-                                    q: "5. How fast can services be implemented?",
+                                    q: "How fast can services be implemented?",
                                     a: "Most practices are onboarded within a few days after assessment."
                                 },
                                 {
-                                    q: "6. Do you provide detailed financial reporting?",
+                                    q: "Do you provide detailed financial reporting?",
                                     a: "Yes, we offer transparent reports on claims, reimbursements, and balances."
                                 }
                             ].map((item, index) => (
@@ -444,6 +446,8 @@ const Cardiology: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

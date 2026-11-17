@@ -4,8 +4,9 @@
 //  - <PageTitle> (breadcrumbs + page-type structured data)
 import { specialties } from '../data/specialties'
 import { blogPosts } from '../data/blogPosts'
+import { landingPages } from '../data/landingPages'
 
-export type RouteKind = 'home' | 'page' | 'service' | 'specialty' | 'hub' | 'blog-index' | 'blog-post' | 'legal' | 'conversion'
+export type RouteKind = 'home' | 'page' | 'service' | 'location' | 'specialty' | 'hub' | 'blog-index' | 'blog-post' | 'legal' | 'conversion'
 
 export interface SiteRoute {
   path: string
@@ -14,11 +15,23 @@ export interface SiteRoute {
   label: string
   /** Service type for Service schema */
   serviceType?: string
+  /** Schema areaServed override (e.g. a state for location pages) */
+  areaServed?: string
   priority: number
   changefreq: 'weekly' | 'monthly' | 'yearly'
 }
 
 export const SPECIALTY_HUB_PATH = '/medical-billing-specialities'
+
+export const landingRoutes: SiteRoute[] = landingPages.map((p) => ({
+  path: p.path,
+  kind: p.kind,
+  label: p.label,
+  serviceType: p.serviceType,
+  areaServed: p.areaServed,
+  priority: p.path === '/medical-billing-services' ? 1.0 : 0.9,
+  changefreq: 'monthly',
+}))
 
 export const serviceRoutes: SiteRoute[] = [
   { path: '/medical-coding-services', kind: 'service', label: 'Medical Coding Services', serviceType: 'Medical coding', priority: 0.9, changefreq: 'monthly' },
@@ -51,6 +64,7 @@ export const blogRoutes: SiteRoute[] = blogPosts.map((p) => ({
 export const siteRoutes: SiteRoute[] = [
   { path: '/', kind: 'home', label: 'Home', serviceType: 'Medical billing services', priority: 1.0, changefreq: 'weekly' },
   { path: '/services', kind: 'hub', label: 'Services', priority: 0.9, changefreq: 'monthly' },
+  ...landingRoutes,
   ...serviceRoutes,
   { path: SPECIALTY_HUB_PATH, kind: 'hub', label: 'Medical Billing Specialties', serviceType: 'Specialty medical billing', priority: 0.9, changefreq: 'monthly' },
   ...specialtyRoutes,
@@ -68,7 +82,7 @@ export const siteRoutes: SiteRoute[] = [
 export const redirects: Record<string, string> = {
   '/about': '/about-us',
   '/specialties': SPECIALTY_HUB_PATH,
-  '/services/medical-billing': SPECIALTY_HUB_PATH,
+  '/services/medical-billing': '/medical-billing-services',
   '/services/virtual-assistant': '/virtual-medical-assistant-services',
   '/services/medical-coding': '/medical-coding-services',
   '/services/payment-posting': '/medical-payment-posting-services',
@@ -87,6 +101,7 @@ export const breadcrumbTrail = (path: string): { name: string; path: string }[] 
   if (!route || route.kind === 'home') return []
   const trail = [{ name: 'Home', path: '/' }]
   if (route.kind === 'service') trail.push({ name: 'Services', path: '/services' })
+  if (route.kind === 'location') trail.push({ name: 'Medical Billing Services', path: '/medical-billing-services' })
   if (route.kind === 'specialty') trail.push({ name: 'Medical Billing Specialties', path: SPECIALTY_HUB_PATH })
   if (route.kind === 'blog-post') trail.push({ name: 'Blog', path: '/blog' })
   trail.push({ name: route.label, path: route.path })

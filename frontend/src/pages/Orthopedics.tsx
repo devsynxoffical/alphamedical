@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drJenn from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -44,7 +46,7 @@ const Orthopedics: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drJenn} alt="Dr. Jenn" />
+                                            <img loading="lazy" decoding="async" src={drJenn} alt="Dr. Jenn" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -378,27 +380,27 @@ const Orthopedics: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are orthopedic medical billing services?",
+                                    q: "What are orthopedic medical billing services?",
                                     a: "Services that handle coding, claims submission, insurance verification, patient billing, and revenue cycle management for orthopedic practices."
                                 },
                                 {
-                                    q: "2. Can you manage multi-provider orthopedic clinics?",
+                                    q: "Can you manage multi-provider orthopedic clinics?",
                                     a: "Yes, our services scale for practices of all sizes."
                                 },
                                 {
-                                    q: "3. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Absolutely. All processes adhere to strict HIPAA guidelines to protect patient data."
                                 },
                                 {
-                                    q: "4. How quickly can services be implemented?",
+                                    q: "How quickly can services be implemented?",
                                     a: "Services typically start within a few days after assessment and system integration."
                                 },
                                 {
-                                    q: "5. Do you provide detailed reporting?",
+                                    q: "Do you provide detailed reporting?",
                                     a: "Yes, detailed reports provide insights into claims, reimbursements, and outstanding balances."
                                 },
                                 {
-                                    q: "6. Can you handle orthopedic surgery billing services?",
+                                    q: "Can you handle orthopedic surgery billing services?",
                                     a: "Yes, we specialize in both routine procedures and complex orthopedic surgery billing."
                                 }
                             ].map((item, index) => (
@@ -435,6 +437,8 @@ const Orthopedics: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

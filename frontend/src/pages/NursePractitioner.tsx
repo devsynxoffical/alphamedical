@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drJoe from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -44,7 +46,7 @@ const NursePractitioner: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drJoe} alt="Sarah Mitchell, NP" />
+                                            <img loading="lazy" decoding="async" src={drJoe} alt="Sarah Mitchell, NP" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -396,27 +398,27 @@ const NursePractitioner: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are nurse practitioner medical billing services?",
+                                    q: "What are nurse practitioner medical billing services?",
                                     a: "They include coding, claims submission, insurance verification, patient billing, and revenue cycle management for nurse practitioners."
                                 },
                                 {
-                                    q: "2. Do you provide medical billing and coding for nurse practitioners?",
+                                    q: "Do you provide medical billing and coding for nurse practitioners?",
                                     a: "Yes, we specialize in accurate medical billing and coding for nurse practitioners across multiple specialties."
                                 },
                                 {
-                                    q: "3. Can you support independent nurse practitioners?",
+                                    q: "Can you support independent nurse practitioners?",
                                     a: "Absolutely. Our services scale for solo NPs and group practices."
                                 },
                                 {
-                                    q: "4. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Yes, all nurse practitioner medical billing services follow strict HIPAA guidelines."
                                 },
                                 {
-                                    q: "5. How quickly can services begin?",
+                                    q: "How quickly can services begin?",
                                     a: "Most practices can start within a few days after assessment and system integration."
                                 },
                                 {
-                                    q: "6. Do you offer credentialing support?",
+                                    q: "Do you offer credentialing support?",
                                     a: "Yes, we assist with payer enrollment and credentialing for nurse practitioners."
                                 }
                             ].map((item, index) => (
@@ -453,6 +455,8 @@ const NursePractitioner: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

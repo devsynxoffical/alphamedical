@@ -41,6 +41,8 @@ import NursePractitioner from './pages/NursePractitioner'
 import './App.css'
 import ChatWidgetEmbed from './components/ChatWidgetEmbed'
 import NotFound from './pages/NotFound'
+import LandingPage from './pages/LandingPage'
+import { landingPages } from './data/landingPages'
 import { redirects } from './seo/routes'
 
 function App() {
@@ -55,6 +57,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<About />} />
             <Route path="/services" element={<Services />} />
+            {landingPages.map((page) => (
+              <Route key={page.path} path={page.path} element={<LandingPage page={page} />} />
+            ))}
             <Route path="/medical-coding-services" element={<ServiceDetail serviceId="medical-coding" />} />
             <Route path="/virtual-medical-assistant-services" element={<ServiceDetail serviceId="virtual-assistant" />} />
             <Route path="/medical-payment-posting-services" element={<ServiceDetail serviceId="payment-posting" />} />

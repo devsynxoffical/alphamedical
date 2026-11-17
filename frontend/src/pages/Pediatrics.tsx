@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drEmma from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -44,7 +46,7 @@ const Pediatrics: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drEmma} alt="Dr. Emma Joe" />
+                                            <img loading="lazy" decoding="async" src={drEmma} alt="Dr. Emma Joe" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -442,6 +444,8 @@ const Pediatrics: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

@@ -121,7 +121,9 @@ export const pageSchema = ({ path, title, description, image, article }: PageSch
       description,
       url,
       provider: { '@id': ORG_ID },
-      areaServed: { '@type': 'Country', name: BRAND.areaServed },
+      areaServed: route.areaServed
+        ? { '@type': 'State', name: route.areaServed, containedInPlace: { '@type': 'Country', name: BRAND.areaServed } }
+        : { '@type': 'Country', name: BRAND.areaServed },
       audience: { '@type': 'BusinessAudience', audienceType: 'Physician practices, clinics and healthcare providers' },
     })
     webPage.mainEntity = { '@id': `${url}#service` }

@@ -25,8 +25,8 @@ const About: React.FC = () => {
   return (
     <>
       <PageTitle
-        title="About AlphaMedi Assist | Trusted Medical Billing Experts"
-        description="Learn about AlphaMedi Assist, a trusted medical billing and revenue cycle management company helping healthcare practices improve efficiency and compliance."
+        title="About Alpha Medi Assist | Medical Billing & RCM Company"
+        description="Alpha Medi Assist is a U.S. medical billing and revenue cycle management company with offices in Virginia and Florida, serving practices in 90+ specialties."
       />
 
       <div className="about-sleek-container">
@@ -41,7 +41,7 @@ const About: React.FC = () => {
               </div>
               <div className="hero-image">
                 <div className="sleek-image-wrapper">
-                  <img src={aboutHeroImg} alt="Professional Medical Office" />
+                  <img loading="lazy" decoding="async" src={aboutHeroImg} alt="Professional Medical Office" />
                 </div>
               </div>
             </div>

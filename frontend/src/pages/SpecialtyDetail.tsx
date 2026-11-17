@@ -34,7 +34,7 @@ const SpecialtyDetail: React.FC = () => {
                 
                 <div className="testimonial-badge">
                   <div className="doctor-image">
-                    <img src={drLissaJenn} alt="Dr. Lissa Jenn" />
+                    <img loading="lazy" decoding="async" src={drLissaJenn} alt="Dr. Lissa Jenn" />
                   </div>
                   <div className="rating">
                     <Star size={20} />

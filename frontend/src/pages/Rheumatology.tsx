@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drJoe from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -44,7 +46,7 @@ const Rheumatology: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drJoe} alt="Dr. Sophia Reynolds" />
+                                            <img loading="lazy" decoding="async" src={drJoe} alt="Dr. Sophia Reynolds" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -396,27 +398,27 @@ const Rheumatology: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are rheumatology medical billing services?",
+                                    q: "What are rheumatology medical billing services?",
                                     a: "They include coding, claims submission, insurance verification, patient billing, and revenue cycle management for rheumatology clinics."
                                 },
                                 {
-                                    q: "2. Do you offer rheumatology billing and coding services?",
+                                    q: "Do you offer rheumatology billing and coding services?",
                                     a: "Yes, we specialize in rheumatology billing and coding services for evaluations, infusions, diagnostics, and chronic care."
                                 },
                                 {
-                                    q: "3. Can you handle infusion and biological billing?",
+                                    q: "Can you handle infusion and biological billing?",
                                     a: "Absolutely. Our team has extensive experience with infusion therapy and specialty drug billing."
                                 },
                                 {
-                                    q: "4. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Yes, all rheumatology medical billing services follow strict HIPAA and data security standards."
                                 },
                                 {
-                                    q: "5. Can you support multi-provider rheumatology clinics?",
+                                    q: "Can you support multi-provider rheumatology clinics?",
                                     a: "Yes, our services scale for solo practices and large multi-location clinics."
                                 },
                                 {
-                                    q: "6. How quickly can services be implemented?",
+                                    q: "How quickly can services be implemented?",
                                     a: "Most clinics can begin within a few days after assessment and system integration."
                                 }
                             ].map((item, index) => (
@@ -453,6 +455,8 @@ const Rheumatology: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

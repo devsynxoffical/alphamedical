@@ -3,6 +3,13 @@ import { Link, useParams } from 'react-router-dom'
 import PageTitle from '../components/PageTitle'
 import { blogPosts } from '../data/blogPosts'
 import NotFound from './NotFound'
+import '../styles/landing.css'
+
+const defaultRelated = [
+  { label: 'Outsourced medical billing services', path: '/medical-billing-services' },
+  { label: 'Revenue cycle management services', path: '/revenue-cycle-management-services' },
+  { label: 'Common denial codes and how to fix them', path: '/blog/common-claim-denial-codes-and-how-to-fix-them' },
+]
 
 const BlogPostDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>()
@@ -43,9 +50,14 @@ const BlogPostDetail: React.FC = () => {
             {post.sections.map((section) => (
               <section key={section.heading} className="blog-post-section">
                 <h2>{section.heading}</h2>
-                {section.paragraphs.map((paragraph, index) => (
+                {section.paragraphs?.map((paragraph, index) => (
                   <p key={`${section.heading}-${index}`} className="blog-post-paragraph">{paragraph}</p>
                 ))}
+                {section.bullets && (
+                  <ul className="blog-post-list">
+                    {section.bullets.map((item) => <li key={item}>{item}</li>)}
+                  </ul>
+                )}
               </section>
             ))}
 
@@ -62,6 +74,21 @@ const BlogPostDetail: React.FC = () => {
             {post.closing.map((paragraph, index) => (
               <p key={`closing-${index}`} className="blog-post-paragraph">{paragraph}</p>
             ))}
+
+            <section className="blog-post-section">
+              <h2>Related services and guides</h2>
+              <ul className="blog-post-list">
+                {(post.related ?? defaultRelated).map((link) => (
+                  <li key={link.path}><Link to={link.path}>{link.label}</Link></li>
+                ))}
+                {blogPosts
+                  .filter((p) => p.slug !== post.slug)
+                  .slice(0, 3)
+                  .map((p) => (
+                    <li key={p.slug}><Link to={`/blog/${p.slug}`}>{p.title}</Link></li>
+                  ))}
+              </ul>
+            </section>
           </article>
         </div>
       </div>

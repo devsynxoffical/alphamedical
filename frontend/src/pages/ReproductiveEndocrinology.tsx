@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drJoe from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -44,7 +46,7 @@ const ReproductiveEndocrinology: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drJoe} alt="Dr. Amanda Lewis" />
+                                            <img loading="lazy" decoding="async" src={drJoe} alt="Dr. Amanda Lewis" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -396,27 +398,27 @@ const ReproductiveEndocrinology: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are endocrinology medical billing services?",
+                                    q: "What are endocrinology medical billing services?",
                                     a: "They include coding, claims submission, insurance verification, patient billing, and revenue cycle management for endocrinology and fertility practices."
                                 },
                                 {
-                                    q: "2. Do you support fertility clinic billing?",
+                                    q: "Do you support fertility clinic billing?",
                                     a: "Yes, we specialize in fertility clinic billing, including IVF, IUI, diagnostics, and hormone therapy services."
                                 },
                                 {
-                                    q: "3. Are your billing services HIPAA-compliant?",
+                                    q: "Are your billing services HIPAA-compliant?",
                                     a: "Absolutely. All endocrinology billing services follow strict HIPAA and data security standards."
                                 },
                                 {
-                                    q: "4. Can you handle multi-location fertility practices?",
+                                    q: "Can you handle multi-location fertility practices?",
                                     a: "Yes, our services are scalable for single clinics and multi-provider, multi-location practices."
                                 },
                                 {
-                                    q: "5. How quickly can billing services begin?",
+                                    q: "How quickly can billing services begin?",
                                     a: "Most practices can be onboard within a few days after assessment and system integration."
                                 },
                                 {
-                                    q: "6. Do you provide financial reporting?",
+                                    q: "Do you provide financial reporting?",
                                     a: "Yes, we provide detailed reports covering claims, reimbursements, denials, and outstanding balances."
                                 }
                             ].map((item, index) => (
@@ -453,6 +455,8 @@ const ReproductiveEndocrinology: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

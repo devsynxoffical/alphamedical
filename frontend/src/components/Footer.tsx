@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         <div className="footer-content">
           <div className="footer-section">
             <Link to="/" className="footer-logo">
-              <img src={logo} alt="Alpha Medi Assist" className="footer-logo-img" />
+              <img loading="lazy" decoding="async" src={logo} alt="Alpha Medi Assist" className="footer-logo-img" />
             </Link>
             <p className="footer-mission">
               Alpha Medi Assist empowers healthcare providers with innovative billing solutions
@@ -34,12 +34,27 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h4>Our Services</h4>
             <ul className="footer-links">
-              <li><Link to="/medical-billing-specialities">Medical Billing</Link></li>
+              <li><Link to="/medical-billing-services">Medical Billing Services</Link></li>
+              <li><Link to="/revenue-cycle-management-services">Revenue Cycle Management</Link></li>
+              <li><Link to="/medical-billing-specialities">Billing by Specialty</Link></li>
               <li><Link to="/medical-coding-services">Medical Coding</Link></li>
               <li><Link to="/medical-credentialing-service">Credentialing</Link></li>
               <li><Link to="/medical-payment-posting-services">Payment Posting</Link></li>
-              <li><Link to="/virtual-medical-receptionist-services">Virtual Assistance</Link></li>
+              <li><Link to="/virtual-medical-assistant-services">Virtual Medical Assistants</Link></li>
+              <li><Link to="/virtual-medical-receptionist-services">Virtual Receptionists</Link></li>
               <li><Link to="/healthcare-seo-services">Healthcare SEO</Link></li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h4>Locations &amp; Resources</h4>
+            <ul className="footer-links">
+              <li><Link to="/medical-billing-services-florida">Medical Billing in Florida</Link></li>
+              <li><Link to="/medical-billing-services-virginia">Medical Billing in Virginia</Link></li>
+              <li><Link to="/medical-billing-for-small-practices">Billing for Small Practices</Link></li>
+              <li><Link to="/blog/how-much-does-medical-billing-cost">Medical Billing Cost Guide</Link></li>
+              <li><Link to="/blog/common-claim-denial-codes-and-how-to-fix-them">Denial Codes Guide</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
             </ul>
           </div>
 
@@ -95,19 +110,19 @@ const Footer: React.FC = () => {
 
         <div className="footer-bottom">
           <div className="footer-badges">
-            <img
+            <img loading="lazy" decoding="async"
               src={hipaaIcon}
               alt="HIPAA Compliant"
               className="footer-badge-image"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src={accreditedIcon}
               alt="BBB Accredited"
               className="footer-badge-image"
             />
           </div>
           <div className="footer-legal">
-            <p>&copy; 2025 Alpha Medi Assist. All Rights Reserved. Project by Alpha Ahead</p>
+            <p>&copy; {new Date().getFullYear()} Alpha Medi Assist. All Rights Reserved. Project by Alpha Ahead</p>
             <div className="footer-legal-links" style={{ marginTop: '0.5rem', display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
               <Link to="/terms-and-conditions" style={{ color: 'var(--sleek-text-muted)', fontSize: '0.875rem', textDecoration: 'none' }}>Terms and Conditions</Link>
               <Link to="/privacy-policy" style={{ color: 'var(--sleek-text-muted)', fontSize: '0.875rem', textDecoration: 'none' }}>Privacy Policy</Link>

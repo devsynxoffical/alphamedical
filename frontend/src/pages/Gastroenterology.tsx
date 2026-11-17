@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drLissa from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -44,7 +46,7 @@ const Gastroenterology: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drLissa} alt="Dr. Lissa Jenn" />
+                                            <img loading="lazy" decoding="async" src={drLissa} alt="Dr. Lissa Jenn" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -387,27 +389,27 @@ const Gastroenterology: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are gastroenterology medical billing services?",
+                                    q: "What are gastroenterology medical billing services?",
                                     a: "They include coding, claims submission, insurance verification, patient billing, and revenue cycle management for GI practices."
                                 },
                                 {
-                                    q: "2. Do you support endoscopy and procedure billing?",
+                                    q: "Do you support endoscopy and procedure billing?",
                                     a: "Yes, we manage billing for endoscopic procedures, diagnostics, and follow-up care."
                                 },
                                 {
-                                    q: "3. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Yes. All workflows meet strict HIPAA security and privacy standards."
                                 },
                                 {
-                                    q: "4. Can you support multi-provider GI practices?",
+                                    q: "Can you support multi-provider GI practices?",
                                     a: "Absolutely. Our services scale to support practices of all sizes."
                                 },
                                 {
-                                    q: "5. How fast can onboarding begin?",
+                                    q: "How fast can onboarding begin?",
                                     a: "Most practices can begin within a few days after assessment and integration."
                                 },
                                 {
-                                    q: "6. Do you provide financial reporting?",
+                                    q: "Do you provide financial reporting?",
                                     a: "Yes, we provide detailed reports covering claims, reimbursements, and outstanding balances."
                                 }
                             ].map((item, index) => (
@@ -444,6 +446,8 @@ const Gastroenterology: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drMichal from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -44,7 +46,7 @@ const EmergencyMedicine: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drMichal} alt="Dr. Michal" />
+                                            <img loading="lazy" decoding="async" src={drMichal} alt="Dr. Michal" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -387,27 +389,27 @@ const EmergencyMedicine: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are emergency medicine medical billing services?",
+                                    q: "What are emergency medicine medical billing services?",
                                     a: "They include coding, claims submission, patient billing, and revenue cycle management for emergency departments and physician groups."
                                 },
                                 {
-                                    q: "2. Do you handle critical care billing?",
+                                    q: "Do you handle critical care billing?",
                                     a: "Yes, we specialize in emergency medicine critical care billing and time-based services."
                                 },
                                 {
-                                    q: "3. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Yes, all workflows meet strict HIPAA standards."
                                 },
                                 {
-                                    q: "4. Can you support hospital-based emergency departments?",
+                                    q: "Can you support hospital-based emergency departments?",
                                     a: "Absolutely. Our services scale for hospitals and freestanding emergency facilities."
                                 },
                                 {
-                                    q: "5. How quickly can services start?",
+                                    q: "How quickly can services start?",
                                     a: "Most emergency practices are onboarded within a few days."
                                 },
                                 {
-                                    q: "6. Do you provide detailed reporting?",
+                                    q: "Do you provide detailed reporting?",
                                     a: "Yes, we provide transparent financial and operational reports."
                                 }
                             ].map((item, index) => (
@@ -444,6 +446,8 @@ const EmergencyMedicine: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

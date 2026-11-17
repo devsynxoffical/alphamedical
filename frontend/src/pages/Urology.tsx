@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drJoe from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -44,7 +46,7 @@ const Urology: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drJoe} alt="Dr. Mark Williams" />
+                                            <img loading="lazy" decoding="async" src={drJoe} alt="Dr. Mark Williams" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -396,27 +398,27 @@ const Urology: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are urology medical billing services?",
+                                    q: "What are urology medical billing services?",
                                     a: "They include coding, claims submission, insurance verification, patient billing, and urology revenue cycle management."
                                 },
                                 {
-                                    q: "2. Do you provide urology billing and coding services?",
+                                    q: "Do you provide urology billing and coding services?",
                                     a: "Yes, we offer comprehensive urology coding and billing services for procedures, diagnostics, and surgeries."
                                 },
                                 {
-                                    q: "3. Can you handle multi-provider urology clinics?",
+                                    q: "Can you handle multi-provider urology clinics?",
                                     a: "Yes, our urology billing services scale for solo practitioners and large group practices."
                                 },
                                 {
-                                    q: "4. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Absolutely. All urology medical billing services follow strict HIPAA standards."
                                 },
                                 {
-                                    q: "5. How quickly can services begin?",
+                                    q: "How quickly can services begin?",
                                     a: "Most practices can start within a few days after assessment and system integration."
                                 },
                                 {
-                                    q: "6. Do you offer full urology RCM support?",
+                                    q: "Do you offer full urology RCM support?",
                                     a: "Yes, we provide complete urology RCM solutions from patient intake to final reimbursement."
                                 }
                             ].map((item, index) => (
@@ -453,6 +455,8 @@ const Urology: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

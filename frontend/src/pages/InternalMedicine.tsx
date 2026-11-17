@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowLeft, Star, CheckCircle, Shield, Quote, TrendingUp, Users, FileText, Lock, Activity, BarChart } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drLissaJenn from '../Images/doc lessa jenn.jpg'
 
 const InternalMedicine: React.FC = () => {
@@ -33,7 +35,7 @@ const InternalMedicine: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drLissaJenn} alt="Dr. Lissa Jenn" />
+                                            <img loading="lazy" decoding="async" src={drLissaJenn} alt="Dr. Lissa Jenn" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -339,32 +341,34 @@ const InternalMedicine: React.FC = () => {
                         </div>
                         <div className="faq-grid">
                             <div className="faq-item">
-                                <h3 data-faq-q>1. What are Internal Medicine Medical Billing Services?</h3>
+                                <h3 data-faq-q>What are Internal Medicine Medical Billing Services?</h3>
                                 <p data-faq-a>Services that handle coding, claims, insurance verification, patient billing, and revenue cycle management for internal medicine practices.</p>
                             </div>
                             <div className="faq-item">
-                                <h3 data-faq-q>2. Can you manage multi-provider practices?</h3>
+                                <h3 data-faq-q>Can you manage multi-provider practices?</h3>
                                 <p data-faq-a>Yes, our outsourced internal medicine billing scales for practices of all sizes.</p>
                             </div>
                             <div className="faq-item">
-                                <h3 data-faq-q>3. Are your services HIPAA compliant?</h3>
+                                <h3 data-faq-q>Are your services HIPAA compliant?</h3>
                                 <p data-faq-a>Absolutely. All processes follow strict HIPAA guidelines for data security.</p>
                             </div>
                             <div className="faq-item">
-                                <h3 data-faq-q>4. How quickly can services be implemented?</h3>
+                                <h3 data-faq-q>How quickly can services be implemented?</h3>
                                 <p data-faq-a>Services can start within a few days after practice assessment and integration.</p>
                             </div>
                             <div className="faq-item">
-                                <h3 data-faq-q>5. Do you provide detailed reporting?</h3>
+                                <h3 data-faq-q>Do you provide detailed reporting?</h3>
                                 <p data-faq-a>Yes. We provide comprehensive insights into revenues, claims, and outstanding balances.</p>
                             </div>
                             <div className="faq-item">
-                                <h3 data-faq-q>6. How are denied claims handled?</h3>
+                                <h3 data-faq-q>How are denied claims handled?</h3>
                                 <p data-faq-a>Our team monitors denials, corrects errors, and submits appeals for maximum reimbursement.</p>
                             </div>
                         </div>
                     </div>
                 </section>
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* CTA Section */}
                 <section className="specialty-cta-enhanced section">

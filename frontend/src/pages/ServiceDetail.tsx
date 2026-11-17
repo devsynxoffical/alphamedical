@@ -4,6 +4,8 @@ import { ArrowLeft, TrendingUp, Star, Shield, Clock, Users, Target, Zap, Award, 
 import { services } from '../data/services'
 import PageTitle from '../components/PageTitle'
 import NotFound from './NotFound'
+import RelatedLinks from '../components/RelatedLinks'
+import { serviceRelatedLinks } from '../data/relatedLinks'
 
 interface ServiceDetailProps {
   serviceId?: string
@@ -411,6 +413,8 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ serviceId: propServiceId 
               return null
           }
         })}
+
+        <RelatedLinks links={serviceRelatedLinks.filter((l) => !l.path.includes(serviceId ?? '__'))} />
 
         {/* 11. Enhanced CTA Section (Always Last) */}
         <section className="service-cta-enhanced section" style={{ background: `linear-gradient(135deg, ${serviceColor} 0%, ${serviceColor}CC 100%)` }}>

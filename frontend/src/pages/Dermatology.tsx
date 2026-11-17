@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drJohn from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -44,7 +46,7 @@ const Dermatology: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drJohn} alt="Dr. John" />
+                                            <img loading="lazy" decoding="async" src={drJohn} alt="Dr. John" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -387,27 +389,27 @@ const Dermatology: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are dermatology medical billing services?",
+                                    q: "What are dermatology medical billing services?",
                                     a: "They include coding, claims submission, patient billing, and revenue cycle management for dermatology practices."
                                 },
                                 {
-                                    q: "2. Do you support cosmetic and aesthetic billing?",
+                                    q: "Do you support cosmetic and aesthetic billing?",
                                     a: "Yes, we manage billings dermatology & aesthetics and medical dermatology services."
                                 },
                                 {
-                                    q: "3. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Yes, all workflows meet strict HIPAA guidelines."
                                 },
                                 {
-                                    q: "4. Can you support multi-provider dermatology clinics?",
+                                    q: "Can you support multi-provider dermatology clinics?",
                                     a: "Absolutely. Our services scale to any practice size."
                                 },
                                 {
-                                    q: "5. How quickly can services start?",
+                                    q: "How quickly can services start?",
                                     a: "Most practices are onboarded within a few days."
                                 },
                                 {
-                                    q: "6. Do you provide detailed reporting?",
+                                    q: "Do you provide detailed reporting?",
                                     a: "Yes, we provide transparent financial and performance reports."
                                 }
                             ].map((item, index) => (
@@ -444,6 +446,8 @@ const Dermatology: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

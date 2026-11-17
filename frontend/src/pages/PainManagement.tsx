@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drLissa from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -44,7 +46,7 @@ const PainManagement: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drLissa} alt="Dr. Lissa" />
+                                            <img loading="lazy" decoding="async" src={drLissa} alt="Dr. Lissa" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -387,27 +389,27 @@ const PainManagement: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are pain management medical billing services?",
+                                    q: "What are pain management medical billing services?",
                                     a: "These services manage coding, claims submission, insurance verification, patient billing, and revenue cycle management for pain management practices."
                                 },
                                 {
-                                    q: "2. Do you support interventional pain procedures?",
+                                    q: "Do you support interventional pain procedures?",
                                     a: "Yes, we handle billing for injections, nerve blocks, and advanced interventional pain treatments."
                                 },
                                 {
-                                    q: "3. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Absolutely. All workflows comply with strict HIPAA privacy and security standards."
                                 },
                                 {
-                                    q: "4. Can you support multi-provider pain clinics?",
+                                    q: "Can you support multi-provider pain clinics?",
                                     a: "Yes, our solutions scale to support both small practices and large pain management centers."
                                 },
                                 {
-                                    q: "5. How quickly can services begin?",
+                                    q: "How quickly can services begin?",
                                     a: "Most practices can start within a few days after assessment and system integration."
                                 },
                                 {
-                                    q: "6. Do you provide reporting and analytics?",
+                                    q: "Do you provide reporting and analytics?",
                                     a: "Yes, we deliver detailed financial and operational reports to support informed decision-making."
                                 }
                             ].map((item, index) => (
@@ -444,6 +446,8 @@ const PainManagement: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

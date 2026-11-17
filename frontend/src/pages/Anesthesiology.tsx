@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drEmma from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -44,7 +46,7 @@ const Anesthesiology: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drEmma} alt="Dr. Emma Jenn" />
+                                            <img loading="lazy" decoding="async" src={drEmma} alt="Dr. Emma Jenn" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -387,27 +389,27 @@ const Anesthesiology: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are anesthesiology medical billing services?",
+                                    q: "What are anesthesiology medical billing services?",
                                     a: "They include anesthesia coding, claims submission, insurance verification, patient billing, and revenue cycle management."
                                 },
                                 {
-                                    q: "2. Do you support hospital-based anesthesiologists?",
+                                    q: "Do you support hospital-based anesthesiologists?",
                                     a: "Yes, we work with hospitals, surgery centers, and private anesthesia practices."
                                 },
                                 {
-                                    q: "3. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Yes, all workflows meet strict HIPAA security standards."
                                 },
                                 {
-                                    q: "4. Can you manage large anesthesia groups?",
+                                    q: "Can you manage large anesthesia groups?",
                                     a: "Yes, our anesthesiology billing services scale for practices of any size."
                                 },
                                 {
-                                    q: "5. How fast can services begin?",
+                                    q: "How fast can services begin?",
                                     a: "Onboarding typically starts within a few days after assessment."
                                 },
                                 {
-                                    q: "6. Do you provide detailed financial reporting?",
+                                    q: "Do you provide detailed financial reporting?",
                                     a: "Yes, we provide comprehensive reports on claims, reimbursements, and outstanding balances."
                                 }
                             ].map((item, index) => (
@@ -444,6 +446,8 @@ const Anesthesiology: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

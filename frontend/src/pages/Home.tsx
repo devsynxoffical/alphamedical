@@ -30,7 +30,7 @@ import heartbeatVideo from '../Images/heartbeat.mp4'
 import brokenBoneVideo from '../Images/broken-bone.mp4'
 import healthcareVideo from '../Images/healthcare.mp4'
 import experimentVideo from '../Images/experiment.mp4'
-import generalSurgeryGif from '../Images/tools_17405975.gif'
+import generalSurgeryGif from '../Images/tools_17405975.webp'
 
 const Home: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -75,7 +75,9 @@ const Home: React.FC = () => {
                   <span className="highlight-split">Services</span> for Healthcare Practices
                 </h1>
                 <p className="hero-subtext-split">
-                  Maximize revenue and streamline operations with expert medical billing services and medical coding services.
+                  Maximize revenue and streamline operations with expert{' '}
+                  <Link to="/medical-billing-services" className="hero-inline-link">medical billing services</Link> and{' '}
+                  <Link to="/medical-coding-services" className="hero-inline-link">medical coding services</Link>.
                 </p>
                 <p className="hero-description-split">
                   Focus on patient care while our specialists handle claims and payments efficiently.
@@ -91,6 +93,8 @@ const Home: React.FC = () => {
               <div className="doctor-image-container">
                 <video
                   src={heroVideo}
+                  poster="/hero-poster.jpg"
+                  aria-label="Medical billing specialist working at a laptop"
                   autoPlay
                   muted
                   loop
@@ -145,7 +149,7 @@ const Home: React.FC = () => {
               {/* 1. Medical Billing Services */}
               <div className="service-card">
                 <div className="service-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={medicalExpanseIcon}
                     alt="Medical Billing"
                     style={{ width: '45px', height: '45px', objectFit: 'contain' }}
@@ -171,7 +175,7 @@ const Home: React.FC = () => {
               {/* 3. Payment Posting */}
               <div className="service-card">
                 <div className="service-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={cardPaymentIcon}
                     alt="Payment Posting"
                     style={{ width: '45px', height: '45px', objectFit: 'contain' }}
@@ -197,7 +201,7 @@ const Home: React.FC = () => {
               {/* 6. Healthcare SEO */}
               <div className="service-card">
                 <div className="service-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={growthIcon}
                     alt="Healthcare SEO"
                     style={{ width: '45px', height: '45px', objectFit: 'contain' }}
@@ -223,7 +227,7 @@ const Home: React.FC = () => {
               {/* 2. Medical Coding Services */}
               <div className="service-card">
                 <div className="service-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={brainIcon}
                     alt="Medical Coding"
                     style={{ width: '45px', height: '45px', objectFit: 'contain' }}
@@ -249,7 +253,7 @@ const Home: React.FC = () => {
               {/* 4. Credentialing Services */}
               <div className="service-card">
                 <div className="service-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={credentialIcon}
                     alt="Credentialing"
                     style={{ width: '45px', height: '45px', objectFit: 'contain' }}
@@ -275,7 +279,7 @@ const Home: React.FC = () => {
               {/* 5. Virtual Medical Receptionist Services */}
               <div className="service-card">
                 <div className="service-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={efficiencyIcon}
                     alt="Virtual Medical Receptionist"
                     style={{ width: '45px', height: '45px', objectFit: 'contain' }}
@@ -471,7 +475,7 @@ const Home: React.FC = () => {
               </div>
               <div className="specialty-card">
                 <div className="specialty-icon">
-                  <img src={generalSurgeryGif} alt="General Surgery" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '50%' }} />
+                  <img loading="lazy" decoding="async" src={generalSurgeryGif} alt="General Surgery" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '50%' }} />
                 </div>
                 <h3>General Surgery</h3>
                 <p>Precise coding for surgical procedures, including minimally invasive surgeries, laparoscopic procedures, and complex inpatient surgeries. We reduce claim errors and improve reimbursement rates for surgical practices.</p>
@@ -493,7 +497,7 @@ const Home: React.FC = () => {
             <div className="benefits-grid">
               <div className="benefit-card">
                 <div className="benefit-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={growthIcon}
                     alt="Maximize Revenue"
                     style={{ width: '60px', height: '60px', objectFit: 'contain' }}
@@ -504,7 +508,7 @@ const Home: React.FC = () => {
               </div>
               <div className="benefit-card">
                 <div className="benefit-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={performanceIcon}
                     alt="Faster Reimbursements"
                     style={{ width: '60px', height: '60px', objectFit: 'contain' }}
@@ -515,7 +519,7 @@ const Home: React.FC = () => {
               </div>
               <div className="benefit-card">
                 <div className="benefit-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={leftRightArrowsIcon}
                     alt="Minimize Denials"
                     style={{ width: '60px', height: '60px', objectFit: 'contain' }}
@@ -526,7 +530,7 @@ const Home: React.FC = () => {
               </div>
               <div className="benefit-card">
                 <div className="benefit-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={efficiencyIcon}
                     alt="Operational Efficiency"
                     style={{ width: '60px', height: '60px', objectFit: 'contain' }}
@@ -537,7 +541,7 @@ const Home: React.FC = () => {
               </div>
               <div className="benefit-card">
                 <div className="benefit-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={governanceIcon}
                     alt="Compliance & Accuracy"
                     style={{ width: '60px', height: '60px', objectFit: 'contain' }}
@@ -548,7 +552,7 @@ const Home: React.FC = () => {
               </div>
               <div className="benefit-card">
                 <div className="benefit-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={scalableIcon}
                     alt="Scalability"
                     style={{ width: '60px', height: '60px', objectFit: 'contain' }}
@@ -754,7 +758,7 @@ const Home: React.FC = () => {
                     <span className="stat-desc">Clean Claim Rate</span>
                   </div>
                 </div>
-                <img
+                <img loading="lazy" decoding="async"
                   src={ctaImage}
                   alt="Professional billing support"
                   className="cta-main-img"

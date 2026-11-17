@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drLissa from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -44,7 +46,7 @@ const GeneralSurgery: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drLissa} alt="Dr. Sara" />
+                                            <img loading="lazy" decoding="async" src={drLissa} alt="Dr. Sara" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -387,27 +389,27 @@ const GeneralSurgery: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are general surgery medical billing services?",
+                                    q: "What are general surgery medical billing services?",
                                     a: "They include coding, claims submission, insurance verification, patient billing, and revenue cycle management for surgical practices."
                                 },
                                 {
-                                    q: "2. Do you support hospital-based and outpatient surgeons?",
+                                    q: "Do you support hospital-based and outpatient surgeons?",
                                     a: "Yes, we support hospital settings, surgery centers, and private practices."
                                 },
                                 {
-                                    q: "3. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Absolutely. All workflows follow strict HIPAA security standards."
                                 },
                                 {
-                                    q: "4. Can you manage multi-provider surgery groups?",
+                                    q: "Can you manage multi-provider surgery groups?",
                                     a: "Yes, our services scale for practices of any size."
                                 },
                                 {
-                                    q: "5. How fast can onboarding begin?",
+                                    q: "How fast can onboarding begin?",
                                     a: "Most practices can begin within a few days after assessment and integration."
                                 },
                                 {
-                                    q: "6. Do you provide detailed financial reports?",
+                                    q: "Do you provide detailed financial reports?",
                                     a: "Yes, we provide clear reporting on claims, reimbursements, and outstanding balances."
                                 }
                             ].map((item, index) => (
@@ -444,6 +446,8 @@ const GeneralSurgery: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

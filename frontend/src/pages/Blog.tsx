@@ -20,15 +20,15 @@ const Blog: React.FC = () => {
   return (
     <>
       <PageTitle
-        title="Healthcare Insights & Updates - Blog | Alpha Medi Assist"
-        description="Stay informed with the latest healthcare billing insights, industry trends, and best practices from the Alpha Medi Assist blog."
+        title="Medical Billing & RCM Blog | Alpha Medi Assist"
+        description="Practical guides on medical billing costs, claim denial codes, credentialing timelines, coding and revenue cycle management for U.S. practices."
       />
       <div className="blog-page">
         {/* Hero Section */}
         <section className="page-hero">
           <div className="container">
             <div className="hero-content">
-              <h1>Healthcare Insights & Updates</h1>
+              <h1>Medical Billing &amp; RCM Insights</h1>
               <p>Stay informed with the latest trends, tips, and best practices in healthcare revenue management</p>
             </div>
           </div>

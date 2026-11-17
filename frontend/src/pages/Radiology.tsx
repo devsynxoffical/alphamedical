@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drJoe from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -44,7 +46,7 @@ const Radiology: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drJoe} alt="Dr. Samuel" />
+                                            <img loading="lazy" decoding="async" src={drJoe} alt="Dr. Samuel" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -391,27 +393,27 @@ const Radiology: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1 What are radiology medical billing services",
+                                    q: "What are radiology medical billing services?",
                                     a: "They include coding, claims submission, insurance verification, denial management, patient billing, and revenue cycle management for radiology practices."
                                 },
                                 {
-                                    q: "2 Do you support imaging centers and hospital radiology departments",
+                                    q: "Do you support imaging centers and hospital radiology departments?",
                                     a: "Yes, our services scale for independent imaging centers and hospital-based radiology groups."
                                 },
                                 {
-                                    q: "3 Are your services HIPAA-compliant",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Yes, all radiology medical billing services strictly follow HIPAA regulations."
                                 },
                                 {
-                                    q: "4 Can you manage interventional and diagnostic radiology billing",
+                                    q: "Can you manage interventional and diagnostic radiology billing?",
                                     a: "Yes, we specialize in both diagnostic imaging and interventional radiology billing."
                                 },
                                 {
-                                    q: "5 How quickly can services be implemented",
+                                    q: "How quickly can services be implemented?",
                                     a: "Most practices onboard within a few days after assessment and system integration."
                                 },
                                 {
-                                    q: "6 Do you provide detailed reporting",
+                                    q: "Do you provide detailed reporting?",
                                     a: "Yes, we deliver comprehensive financial and performance reports."
                                 }
                             ].map((item, index) => (
@@ -448,6 +450,8 @@ const Radiology: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

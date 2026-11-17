@@ -12,14 +12,19 @@ export type BlogPost = {
   intro: string[]
   sections: Array<{
     heading: string
-    paragraphs: string[]
+    paragraphs?: string[]
+    bullets?: string[]
   }>
+  /** Internal links shown at the end of the article (service / specialty pages). */
+  related?: Array<{ label: string; path: string }>
   faqs: Array<{
     question: string
     answer: string
   }>
   closing: string[]
 }
+
+import { newPosts } from './blogPostsNew'
 
 export const blogPosts: BlogPost[] = [
   {
@@ -28,7 +33,7 @@ export const blogPosts: BlogPost[] = [
     datePublished: '2026-11-17',
     seoTitle: 'Top 10 Reasons for Medical Claim Denials & How to Fix Them',
     seoDescription:
-      "Discover the top 10 reasons for medical claim denials and learn proven fixes to protect your practice's revenue. Expert billing insights for Florida healthcare providers.",
+      "The top 10 reasons medical claims are denied and the proven fix for each, from eligibility errors to missing prior authorization and coding mistakes.",
     excerpt:
       'Learn the top denial triggers, practical fixes for each, and how to improve clean-claim performance across your revenue cycle.',
     intro: [
@@ -268,4 +273,5 @@ export const blogPosts: BlogPost[] = [
       'Alpha Medi Assist helps practices implement full-cycle billing, credentialing, denial management, and revenue optimization workflows.',
     ],
   },
+  ...newPosts,
 ]

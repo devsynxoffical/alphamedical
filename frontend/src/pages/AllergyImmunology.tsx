@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drWilliam from '../Images/young-handsome-physician-medical-robe-with-stethoscope.jpg' // Using valid image from directory
 import '../App.css'
 
@@ -47,7 +49,7 @@ const AllergyImmunology: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drWilliam} alt="Dr. William" />
+                                            <img loading="lazy" decoding="async" src={drWilliam} alt="Dr. William" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -356,23 +358,23 @@ const AllergyImmunology: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are allergy & immunology medical billing services?",
+                                    q: "What are allergy & immunology medical billing services?",
                                     a: "Services that manage claims, coding, patient billing, and revenue cycle management for allergy and immunology practices."
                                 },
                                 {
-                                    q: "2. Can you manage multi-provider clinics?",
+                                    q: "Can you manage multi-provider clinics?",
                                     a: "Yes, our services scale to practices of any size."
                                 },
                                 {
-                                    q: "3. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Absolutely. All processes follow strict HIPAA guidelines."
                                 },
                                 {
-                                    q: "4. How fast can we get started?",
+                                    q: "How fast can we get started?",
                                     a: "Services typically begin within a few days after assessment and system integration."
                                 },
                                 {
-                                    q: "5. Do you provide reporting?",
+                                    q: "Do you provide reporting?",
                                     a: "Yes, detailed reports give insights into claims, reimbursements, and outstanding balances."
                                 }
                             ].map((item, index) => (
@@ -409,6 +411,8 @@ const AllergyImmunology: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

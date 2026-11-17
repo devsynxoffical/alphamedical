@@ -141,7 +141,7 @@ ${loc}
 - Free consultation: ${SITE_URL}/free-consultation
 
 ${section('Core pages', ['home', 'hub', 'page'])}
-${section('Services', ['service'])}
+${section('Services and locations', ['service', 'location'])}
 ${section('Medical billing by specialty', ['specialty'])}
 ${section('Articles', ['blog-index', 'blog-post'])}
 ## Optional

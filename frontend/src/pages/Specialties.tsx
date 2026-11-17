@@ -42,7 +42,7 @@ const SpecialtyCard = memo(({ specialty, getSpecialtyIcon, getSpecialtyImage, pr
     <div className="specialty-image">
       <img
         src={getSpecialtyImage(specialty.id)}
-        alt={specialty.name}
+        alt={`${specialty.name} medical billing`}
         loading={priority ? "eager" : "lazy"}
         decoding="async"
         {...(priority ? { fetchPriority: "high" as const } : {})}
@@ -152,8 +152,8 @@ const Specialties: React.FC = () => {
         <section className="specialties-header section">
           <div className="container">
             <div className="specialties-header-content">
-              <h1 className="specialties-title">MEDICAL SPECIALTIES</h1>
-              <p className="specialties-subtitle">Specialized billing and coding support</p>
+              <h1 className="specialties-title">Medical Billing Services by Specialty</h1>
+              <p className="specialties-subtitle">Specialty-specific billing, coding and RCM support for 90+ specialties</p>
             </div>
           </div>
         </section>
