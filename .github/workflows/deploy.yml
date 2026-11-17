@@ -45,6 +45,20 @@ jobs:
           test -f dist/llms.txt
           ls -la dist
 
+      - name: Diagnose FTP connectivity
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        run: |
+          echo "Secret length: ${#FTP_SERVER} characters (expected 18 for ftp.alphaahead.com)"
+          [ "$FTP_SERVER" = "ftp.alphaahead.com" ] && echo "FTP_SERVER matches ftp.alphaahead.com" || echo "WARNING: FTP_SERVER is not exactly 'ftp.alphaahead.com' (check for spaces, ftp:// prefix or typos)"
+          echo "--- DNS ---"
+          getent hosts "$FTP_SERVER" || echo "DNS lookup FAILED"
+          getent hosts ftp.alphaahead.com || echo "DNS lookup for ftp.alphaahead.com FAILED"
+          echo "--- TCP port 21 (15s) ---"
+          timeout 15 bash -c "exec 3<>/dev/tcp/ftp.alphaahead.com/21 && timeout 5 head -c 200 <&3" && echo "PORT 21 REACHABLE" || echo "PORT 21 NOT REACHABLE from GitHub (firewall/blocked or FTP not running)"
+          echo "--- TCP port 22 (SFTP, 10s) ---"
+          timeout 10 bash -c "exec 3<>/dev/tcp/ftp.alphaahead.com/22 && timeout 5 head -c 100 <&3" && echo "PORT 22 REACHABLE" || echo "port 22 not reachable"
+
       - name: Upload to server (FTPS)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
