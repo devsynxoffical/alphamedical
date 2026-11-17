@@ -21,7 +21,7 @@ const ReproductiveEndocrinology: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Endocrinology Medical Billing Services | AlphaMedi Assist"
+                title="Endocrinology Medical Billing Services | Alpha Medi Assist"
                 description="Expert endocrinology medical billing services for fertility clinics. Accurate coding, claims management, and RCM by AlphaMedi Assist."
             />
 
@@ -30,7 +30,7 @@ const ReproductiveEndocrinology: React.FC = () => {
                 <section className="specialty-hero-enhanced">
                     <div className="container">
                         <div className="specialty-hero-content">
-                            <Link to="/specialties" className="back-link-enhanced">
+                            <Link to="/medical-billing-specialities" className="back-link-enhanced">
                                 <ArrowLeft size={16} />
                                 Back to Specialties
                             </Link>
@@ -72,7 +72,7 @@ const ReproductiveEndocrinology: React.FC = () => {
                                     Alpha Medi Assist is a trusted provider of endocrinology medical billing services across the United States, supporting reproductive endocrinologists, fertility specialists, and IVF clinics. Our experienced billing professionals deliver end-to-end billing, coding, and revenue cycle solutions tailored specifically to the complexities of fertility treatments and hormonal care.
                                 </p>
                                 <div className="about-cta-wrapper">
-                                    <Link to="/about" className="btn btn-primary">Learn more</Link>
+                                    <Link to="/about-us" className="btn btn-primary">Learn more</Link>
                                 </div>
                             </div>
 
@@ -423,6 +423,8 @@ const ReproductiveEndocrinology: React.FC = () => {
                                 <div key={index} className="faq-item" style={{ marginBottom: '1rem', border: '1px solid #e0e0e0', borderRadius: '8px', overflow: 'hidden', background: 'white' }}>
                                     <button
                                         onClick={() => toggleFaq(index)}
+                                        aria-expanded={openFaq === index}
+                                        data-faq-q
                                         style={{
                                             width: '100%',
                                             display: 'flex',
@@ -441,8 +443,8 @@ const ReproductiveEndocrinology: React.FC = () => {
                                         {item.q}
                                         {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                     </button>
-                                    {openFaq === index && (
-                                        <div style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
+                                    {(
+                                        <div data-faq-a hidden={openFaq !== index} style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
                                             {item.a}
                                         </div>
                                     )}

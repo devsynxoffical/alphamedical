@@ -21,7 +21,7 @@ const NursePractitioner: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Nurse Practitioner Medical Billing Services | AlphaMedi Assist"
+                title="Nurse Practitioner Billing Services | Alpha Medi Assist"
                 description="Expert nurse practitioner medical billing services with accurate coding, claims management, and revenue cycle support nationwide."
             />
 
@@ -30,7 +30,7 @@ const NursePractitioner: React.FC = () => {
                 <section className="specialty-hero-enhanced">
                     <div className="container">
                         <div className="specialty-hero-content">
-                            <Link to="/specialties" className="back-link-enhanced">
+                            <Link to="/medical-billing-specialities" className="back-link-enhanced">
                                 <ArrowLeft size={16} />
                                 Back to Specialties
                             </Link>
@@ -72,7 +72,7 @@ const NursePractitioner: React.FC = () => {
                                     AlphaMedi Assist is a trusted provider of nurse practitioner billing solutions serving healthcare providers nationwide. Our expert team delivers complete medical billing and coding services designed specifically for nurse practitioners working in primary care, family medicine, urgent care, specialty clinics, and independent practices.
                                 </p>
                                 <div className="about-cta-wrapper">
-                                    <Link to="/about" className="btn btn-primary">Learn more</Link>
+                                    <Link to="/about-us" className="btn btn-primary">Learn more</Link>
                                 </div>
                             </div>
 
@@ -423,6 +423,8 @@ const NursePractitioner: React.FC = () => {
                                 <div key={index} className="faq-item" style={{ marginBottom: '1rem', border: '1px solid #e0e0e0', borderRadius: '8px', overflow: 'hidden', background: 'white' }}>
                                     <button
                                         onClick={() => toggleFaq(index)}
+                                        aria-expanded={openFaq === index}
+                                        data-faq-q
                                         style={{
                                             width: '100%',
                                             display: 'flex',
@@ -441,8 +443,8 @@ const NursePractitioner: React.FC = () => {
                                         {item.q}
                                         {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                     </button>
-                                    {openFaq === index && (
-                                        <div style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
+                                    {(
+                                        <div data-faq-a hidden={openFaq !== index} style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
                                             {item.a}
                                         </div>
                                     )}

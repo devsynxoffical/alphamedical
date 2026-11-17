@@ -60,7 +60,7 @@ const ServiceRoom = memo(({
           className="service-image"
           loading={priority ? "eager" : "lazy"}
           decoding="async"
-          {...(priority ? { fetchpriority: "high" } : {})}
+          {...(priority ? { fetchPriority: "high" as const } : {})}
         />
       </div>
       <div className="service-content">
@@ -215,7 +215,7 @@ const Services: React.FC = () => {
   return (
     <>
       <PageTitle
-        title="Digital Medical Services | Medical Billing & Coding Solutions"
+        title="Medical Billing & RCM Services | Alpha Medi Assist"
         description="Maximize revenue with Alpha Medi Assist digital medical services, including billing, coding, virtual reception, and credentialing."
       />
 
@@ -368,8 +368,8 @@ const Services: React.FC = () => {
             <div className="faq-list">
               {faqs.map((faq, index) => (
                 <div key={index} className="faq-item card">
-                  <h4>{faq.q}</h4>
-                  <p>{faq.a}</p>
+                  <h4 data-faq-q>{faq.q}</h4>
+                  <p data-faq-a>{faq.a}</p>
                 </div>
               ))}
             </div>

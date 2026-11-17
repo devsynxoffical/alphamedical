@@ -60,8 +60,8 @@ const Home: React.FC = () => {
   return (
     <>
       <PageTitle
-        title="Medical Billing Services & Healthcare Virtual Assistants"
-        description="Boost revenue with AlphaMedi Assist’s medical billing, coding, and virtual healthcare solutions. Streamline operations and maximize efficiency."
+        title="Medical Billing Services for Practices | Alpha Medi Assist"
+        description="Outsourced medical billing, coding, credentialing and RCM for U.S. practices in 90+ specialties. HIPAA-compliant, 98% net collection rate. Free consultation."
       />
       <div className="home">
         {/* Split-Screen Hero Section */}

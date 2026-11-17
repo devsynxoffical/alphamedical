@@ -1022,7 +1022,7 @@ export const services: Service[] = [
     shortDescription: 'Grow online visibility for clinics and practitioners.',
     description: 'At AlphaMedi Assist, we provide professional Healthcare SEO Services designed to help medical practices, clinics, and healthcare organizations increase their online visibility, attract new patients, and grow their practice. In today’s digital age, a strong online presence is essential for healthcare providers looking to reach potential patients, enhance credibility, and stay ahead of competitors.\n\nOur Healthcare SEO Services focus on optimizing websites, creating targeted strategies, and ensuring your practice ranks high on search engines. Whether you are a private practice, multi-specialty clinic, or hospital system, we deliver customized solutions tailored to your specific needs.',
     icon: '/src/Images/growth.png',
-    metaTitle: 'Healthcare SEO Services | AlphaMedi Assist',
+    metaTitle: 'Healthcare SEO Services | Alpha Medi Assist',
     metaDescription: 'Boost your medical practice online with expert Healthcare SEO Services. Improve visibility, attract patients, and grow your practice with AlphaMedi Assist.',
     aboutSection: {
       title: 'About AlphaMedi Assist',
@@ -1294,7 +1294,7 @@ export const services: Service[] = [
       'faqs'
     ],
     icon: '/src/Images/credential.png',
-    metaTitle: 'Medical Credentialing Services | AlphaMedi Assist',
+    metaTitle: 'Medical Credentialing Services | Alpha Medi Assist',
     metaDescription: 'Professional medical credentialing services for healthcare providers. Streamline provider insurance verification, and compliance with AlphaMedi Assist.',
     aboutSection: {
       title: 'About AlphaMedi Assist',
@@ -1537,7 +1537,7 @@ export const services: Service[] = [
     description: 'Alpha Medi Assist provides comprehensive medical billing specialties services designed to help healthcare providers maximize revenue, reduce administrative burdens, and maintain compliance. From primary care to complex surgical practices, our expert team ensures accurate claims, precise coding, and optimized revenue cycles tailored to your specialty.',
     icon: '/src/Images/Internal Medicine.jpg',
     heroCtaText: 'Get Your Free Consultation',
-    metaTitle: 'Medical Billing Specialties | AlphaMedi Assist',
+    metaTitle: 'Medical Billing Specialties | Alpha Medi Assist',
     metaDescription: 'Medical billing specialties services for 90+ practices. Accurate billing, coding, and RCM solutions to maximize revenue and reduce denials.',
     sectionOrder: [
       'why-choose',

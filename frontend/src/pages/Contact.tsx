@@ -79,7 +79,7 @@ const Contact: React.FC = () => {
                 Whether you have a question about our services, need assistance with medical billing,
                 or want to discuss how Alpha Medi Assist can support your practice, we’re ready to connect.
               </p>
-              <Link to="/about" className="btn btn-primary split-btn">
+              <Link to="/about-us" className="btn btn-primary split-btn">
                 Learn More <ArrowRight size={18} />
               </Link>
             </div>

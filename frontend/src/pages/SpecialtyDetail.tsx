@@ -4,23 +4,14 @@ import { ArrowLeft, CheckCircle, Star, Shield, Quote } from 'lucide-react'
 import { specialties } from '../data/specialties'
 import drLissaJenn from '../Images/doc lessa jenn.jpg'
 import PageTitle from '../components/PageTitle'
+import NotFound from './NotFound'
 
 const SpecialtyDetail: React.FC = () => {
   const { specialtyId } = useParams<{ specialtyId: string }>()
   const specialty = specialties.find(s => s.id === specialtyId)
 
   if (!specialty) {
-    return (
-      <div className="container">
-        <div className="error-page">
-          <h1>Specialty Not Found</h1>
-          <p>The specialty you're looking for doesn't exist.</p>
-          <Link to="/specialties" className="btn btn-primary">
-            View All Specialties
-          </Link>
-        </div>
-      </div>
-    )
+    return <NotFound />
   }
 
   return (
@@ -31,7 +22,7 @@ const SpecialtyDetail: React.FC = () => {
       <section className="specialty-hero-enhanced">
         <div className="container">
           <div className="specialty-hero-content">
-            <Link to="/specialties" className="back-link-enhanced">
+            <Link to="/medical-billing-specialities" className="back-link-enhanced">
               <ArrowLeft size={16} />
               Back to Specialties
             </Link>

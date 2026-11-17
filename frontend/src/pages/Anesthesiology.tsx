@@ -21,7 +21,7 @@ const Anesthesiology: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Anesthesiology Medical Billing Services | AlphaMedi Assist"
+                title="Anesthesiology Medical Billing Services | Alpha Medi Assist"
                 description="Expert anesthesiology medical billing services by AlphaMedi Assist. Accurate anesthesia coding, faster claims, and optimized revenue cycle management."
             />
 
@@ -30,7 +30,7 @@ const Anesthesiology: React.FC = () => {
                 <section className="specialty-hero-enhanced">
                     <div className="container">
                         <div className="specialty-hero-content">
-                            <Link to="/specialties" className="back-link-enhanced">
+                            <Link to="/medical-billing-specialities" className="back-link-enhanced">
                                 <ArrowLeft size={16} />
                                 Back to Specialties
                             </Link>
@@ -72,7 +72,7 @@ const Anesthesiology: React.FC = () => {
                                     AlphaMedi Assist is a trusted partner for anesthesia providers across the United States, delivering specialized anesthesiology medical billing services tailored to hospital-based anesthesiologists, ambulatory surgery centers, and private anesthesia groups. Our experienced team understands the time-based nature of anesthesia billing and the documentation precision required for compliance.
                                 </p>
                                 <div className="about-cta-wrapper">
-                                    <Link to="/about" className="btn btn-primary">Learn more</Link>
+                                    <Link to="/about-us" className="btn btn-primary">Learn more</Link>
                                 </div>
                             </div>
 
@@ -414,6 +414,8 @@ const Anesthesiology: React.FC = () => {
                                 <div key={index} className="faq-item" style={{ marginBottom: '1rem', border: '1px solid #e0e0e0', borderRadius: '8px', overflow: 'hidden', background: 'white' }}>
                                     <button
                                         onClick={() => toggleFaq(index)}
+                                        aria-expanded={openFaq === index}
+                                        data-faq-q
                                         style={{
                                             width: '100%',
                                             display: 'flex',
@@ -432,8 +434,8 @@ const Anesthesiology: React.FC = () => {
                                         {item.q}
                                         {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                     </button>
-                                    {openFaq === index && (
-                                        <div style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
+                                    {(
+                                        <div data-faq-a hidden={openFaq !== index} style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
                                             {item.a}
                                         </div>
                                     )}

@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft, TrendingUp, Star, Shield, Clock, Users, Target, Zap, Award, CheckCircle } from 'lucide-react'
 import { services } from '../data/services'
 import PageTitle from '../components/PageTitle'
+import NotFound from './NotFound'
 
 interface ServiceDetailProps {
   serviceId?: string
@@ -14,17 +15,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ serviceId: propServiceId 
   const service = services.find(s => s.id === serviceId)
 
   if (!service) {
-    return (
-      <div className="container">
-        <div className="error-page">
-          <h1>Service Not Found</h1>
-          <p>The service you're looking for doesn't exist.</p>
-          <Link to="/services" className="btn btn-primary">
-            View All Services
-          </Link>
-        </div>
-      </div>
-    )
+    return <NotFound />
   }
 
   // Get service-specific icon and color scheme
@@ -405,10 +396,10 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ serviceId: propServiceId 
                     <div style={{ marginTop: '4rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                       {service.faqs.map((faq, index) => (
                         <div key={index} style={{ background: '#f8fafc', padding: '2rem', borderRadius: '16px', border: '1px solid #f1f5f9' }}>
-                          <h4 style={{ marginBottom: '1rem', display: 'flex', gap: '1rem', color: '#0f172a' }}>
+                          <h4 data-faq-q style={{ marginBottom: '1rem', display: 'flex', gap: '1rem', color: '#0f172a' }}>
                             <span style={{ color: serviceColor }}>Q:</span> {faq.question}
                           </h4>
-                          <p style={{ margin: 0, color: '#64748b', lineHeight: '1.7', paddingLeft: '2.4rem' }}>{faq.answer}</p>
+                          <p data-faq-a style={{ margin: 0, color: '#64748b', lineHeight: '1.7', paddingLeft: '2.4rem' }}>{faq.answer}</p>
                         </div>
                       ))}
                     </div>

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
@@ -40,10 +40,12 @@ import Urology from './pages/Urology'
 import NursePractitioner from './pages/NursePractitioner'
 import './App.css'
 import ChatWidgetEmbed from './components/ChatWidgetEmbed'
+import NotFound from './pages/NotFound'
+import { redirects } from './seo/routes'
 
 function App() {
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <ChatWidgetEmbed siteId="alpha-medi-assist" />
       <div className="App">
@@ -85,18 +87,21 @@ function App() {
             <Route path="/specialties/nurse-practitioner" element={<NursePractitioner />} />
             <Route path="/specialties/:specialtyId" element={<SpecialtyDetail />} />
             <Route path="/book-appointment" element={<BookAppointment />} />
-            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPostDetail />} />
             <Route path="/free-consultation" element={<FreeConsultation />} />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            {Object.entries(redirects).map(([from, to]) => (
+              <Route key={from} path={from} element={<Navigate to={to} replace />} />
+            ))}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
       </div>
-    </Router>
+    </>
   )
 }
 

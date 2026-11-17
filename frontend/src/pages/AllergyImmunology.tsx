@@ -22,7 +22,7 @@ const AllergyImmunology: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Allergy & Immunology Medical Billing Services | AlphaMedi Assist"
+                title="Allergy & Immunology Billing Services | Alpha Medi Assist"
                 description="Streamline allergy & immunology medical billing services with AlphaMedi Assist. Efficient claims, coding, and RCM for your practice."
             />
 
@@ -31,7 +31,7 @@ const AllergyImmunology: React.FC = () => {
                 <section className="specialty-hero-enhanced">
                     <div className="container">
                         <div className="specialty-hero-content">
-                            <Link to="/specialties" className="back-link-enhanced">
+                            <Link to="/medical-billing-specialities" className="back-link-enhanced">
                                 <ArrowLeft size={16} />
                                 Back to Specialties
                             </Link>
@@ -75,7 +75,7 @@ const AllergyImmunology: React.FC = () => {
                                     Alpha Medi Assist is a trusted provider of medical billing allergy immunology solutions across the United States. Our team of experts offers end-to-end billing, coding, and revenue cycle management services specifically designed for allergy and immunology practices.
                                 </p>
                                 <div className="about-cta-wrapper">
-                                    <Link to="/about" className="btn btn-primary">Learn more</Link>
+                                    <Link to="/about-us" className="btn btn-primary">Learn more</Link>
                                 </div>
                             </div>
 
@@ -379,6 +379,8 @@ const AllergyImmunology: React.FC = () => {
                                 <div key={index} className="faq-item" style={{ marginBottom: '1rem', border: '1px solid #e0e0e0', borderRadius: '8px', overflow: 'hidden', background: 'white' }}>
                                     <button
                                         onClick={() => toggleFaq(index)}
+                                        aria-expanded={openFaq === index}
+                                        data-faq-q
                                         style={{
                                             width: '100%',
                                             display: 'flex',
@@ -397,8 +399,8 @@ const AllergyImmunology: React.FC = () => {
                                         {item.q}
                                         {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                     </button>
-                                    {openFaq === index && (
-                                        <div style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
+                                    {(
+                                        <div data-faq-a hidden={openFaq !== index} style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
                                             {item.a}
                                         </div>
                                     )}

@@ -21,7 +21,7 @@ const HematologyOncology: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Hematology & Oncology Billing Services | AlphaMedi Assist"
+                title="Hematology & Oncology Billing Services | Alpha Medi Assist"
                 description="Expert hematology & oncology billing services. Streamline claims, coding, and revenue cycle management for your practice."
             />
 
@@ -30,7 +30,7 @@ const HematologyOncology: React.FC = () => {
                 <section className="specialty-hero-enhanced">
                     <div className="container">
                         <div className="specialty-hero-content">
-                            <Link to="/specialties" className="back-link-enhanced">
+                            <Link to="/medical-billing-specialities" className="back-link-enhanced">
                                 <ArrowLeft size={16} />
                                 Back to Specialties
                             </Link>
@@ -72,7 +72,7 @@ const HematologyOncology: React.FC = () => {
                                     AlphaMedi Assist is a trusted provider of hematology medical billing services and oncology billing solutions across the United States. Our team of experienced professionals delivers end-to-end billing, coding, and oncology revenue cycle management services tailored specifically for hematology and oncology clinics.
                                 </p>
                                 <div className="about-cta-wrapper">
-                                    <Link to="/about" className="btn btn-primary">Learn more</Link>
+                                    <Link to="/about-us" className="btn btn-primary">Learn more</Link>
                                 </div>
                             </div>
 
@@ -412,6 +412,8 @@ const HematologyOncology: React.FC = () => {
                                 <div key={index} className="faq-item" style={{ marginBottom: '1rem', border: '1px solid #e0e0e0', borderRadius: '8px', overflow: 'hidden', background: 'white' }}>
                                     <button
                                         onClick={() => toggleFaq(index)}
+                                        aria-expanded={openFaq === index}
+                                        data-faq-q
                                         style={{
                                             width: '100%',
                                             display: 'flex',
@@ -430,8 +432,8 @@ const HematologyOncology: React.FC = () => {
                                         Q{index + 1}: {item.q}
                                         {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                     </button>
-                                    {openFaq === index && (
-                                        <div style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
+                                    {(
+                                        <div data-faq-a hidden={openFaq !== index} style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
                                             {item.a}
                                         </div>
                                     )}

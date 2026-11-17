@@ -54,7 +54,10 @@ const FreeConsultation: React.FC = () => {
 
   return (
     <>
-      <PageTitle title="Get Free Consultation - Alpha Medi Assist" />
+      <PageTitle
+        title="Free Medical Billing Consultation | Alpha Medi Assist"
+        description="Request a free medical billing consultation. We review your claims, denials and A/R and show where your practice is losing revenue. No obligation."
+      />
       <div className="free-consultation-page">
       {/* Hero Section */}
       <section className="consultation-hero-section">

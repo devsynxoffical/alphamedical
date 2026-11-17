@@ -2,33 +2,39 @@ import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import PageTitle from '../components/PageTitle'
 import { blogPosts } from '../data/blogPosts'
+import NotFound from './NotFound'
 
 const BlogPostDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>()
   const post = blogPosts.find((item) => item.slug === slug)
 
   if (!post) {
-    return (
-      <div className="section">
-        <div className="container">
-          <div className="card text-center" style={{ padding: '2rem' }}>
-            <h2>Article Not Found</h2>
-            <p>The blog post you are looking for is not available.</p>
-            <Link to="/blog" className="btn btn-primary">Back to Blog</Link>
-          </div>
-        </div>
-      </div>
-    )
+    return <NotFound />
   }
 
   return (
     <>
-      <PageTitle title={post.seoTitle} description={post.seoDescription} />
+      <PageTitle
+        title={post.seoTitle}
+        description={post.seoDescription}
+        article={{
+          headline: post.title,
+          datePublished: post.datePublished,
+          dateModified: post.dateModified,
+          author: post.author,
+        }}
+      />
       <div className="blog-post-page section">
         <div className="container blog-post-container">
           <Link to="/blog" className="blog-back-link">Back to all posts</Link>
           <article className="card blog-post-card">
             <h1>{post.title}</h1>
+            <p className="blog-post-meta" style={{ color: 'var(--sleek-text-muted, #64748b)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
+              By {post.author ?? 'the Alpha Medi Assist billing team'} ·{' '}
+              <time dateTime={post.dateModified ?? post.datePublished}>
+                Updated {new Date(`${post.dateModified ?? post.datePublished}T12:00:00Z`).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}
+              </time>
+            </p>
 
             {post.intro.map((paragraph, index) => (
               <p key={`intro-${index}`} className="blog-post-paragraph">{paragraph}</p>
@@ -47,8 +53,8 @@ const BlogPostDetail: React.FC = () => {
               <h2>Frequently Asked Questions</h2>
               {post.faqs.map((faq) => (
                 <div key={faq.question} className="blog-faq-item">
-                  <h3>{faq.question}</h3>
-                  <p className="blog-post-paragraph">{faq.answer}</p>
+                  <h3 data-faq-q>{faq.question}</h3>
+                  <p data-faq-a className="blog-post-paragraph">{faq.answer}</p>
                 </div>
               ))}
             </section>

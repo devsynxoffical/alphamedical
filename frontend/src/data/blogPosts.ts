@@ -3,6 +3,11 @@ export type BlogPost = {
   title: string
   seoTitle: string
   seoDescription: string
+  /** ISO date (YYYY-MM-DD). Update dateModified whenever the article is revised. */
+  datePublished: string
+  dateModified?: string
+  /** Named, credentialed author improves E-E-A-T. Falls back to the organization. */
+  author?: string
   excerpt: string
   intro: string[]
   sections: Array<{
@@ -20,6 +25,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'top-10-reasons-for-medical-claim-denials-and-how-to-fix-them',
     title: 'Top 10 Reasons for Medical Claim Denials and How to Fix Them',
+    datePublished: '2026-11-17',
     seoTitle: 'Top 10 Reasons for Medical Claim Denials & How to Fix Them',
     seoDescription:
       "Discover the top 10 reasons for medical claim denials and learn proven fixes to protect your practice's revenue. Expert billing insights for Florida healthcare providers.",
@@ -167,6 +173,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'how-to-reduce-medical-claim-denials-complete-guide',
     title: 'How to Reduce Medical Claim Denials: A Complete Guide for Practices',
+    datePublished: '2026-11-17',
     seoTitle: 'How to Reduce Medical Claim Denials | Complete Guide',
     seoDescription:
       "Struggling with denied claims? Learn proven strategies to reduce medical claim denials, boost reimbursements, and streamline your practice's revenue cycle.",
