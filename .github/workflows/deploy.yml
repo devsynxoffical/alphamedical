@@ -50,18 +50,6 @@ jobs:
           getent hosts ftp.alphamediassist.com
           timeout 15 bash -c "exec 3<>/dev/tcp/ftp.alphamediassist.com/21 && timeout 5 head -c 80 <&3" && echo && echo "FTP port 21 reachable"
 
-      - name: List FTP folders (find web root)
-        env:
-          FTP_USER: ${{ secrets.FTP_USERNAME }}
-          FTP_PASS: ${{ secrets.FTP_PASSWORD }}
-        run: |
-          for d in "" "public_html/" "www/" "htdocs/" "alphamediassist.com/" "public_html/alphamediassist.com/"; do
-            echo "=== /$d ==="
-            curl -s --ssl-reqd --list-only --max-time 20 -u "$FTP_USER:$FTP_PASS" "ftp://ftp.alphamediassist.com/$d" | sort | head -40 || echo "(not found)"
-          done
-          echo "=== PWD ==="
-          curl -s --ssl-reqd --max-time 20 -u "$FTP_USER:$FTP_PASS" "ftp://ftp.alphamediassist.com/" -Q "PWD" -o /dev/null -v 2>&1 | grep -i '257' || true
-
       - name: Upload to server (FTPS)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -103,3 +91,16 @@ jobs:
           curl -s "$B/" | grep -c 'google-site-verification' || fail=1
           curl -s "$B/" | grep -o '<link data-seo rel="canonical"[^>]*>' || fail=1
           exit $fail
+
+      - name: List FTP folders (find web root)
+        if: always()
+        env:
+          FTP_USER: ${{ secrets.FTP_USERNAME }}
+          FTP_PASS: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          for d in "" "public_html/" "www/" "htdocs/" "alphamediassist.com/" "public_html/alphamediassist.com/"; do
+            echo "=== /$d ==="
+            curl -s --ssl-reqd --list-only --max-time 20 -u "$FTP_USER:$FTP_PASS" "ftp://ftp.alphamediassist.com/$d" | sort | head -40 || echo "(not found)"
+          done
+          echo "=== PWD ==="
+          curl -s --ssl-reqd --max-time 20 -u "$FTP_USER:$FTP_PASS" "ftp://ftp.alphamediassist.com/" -Q "PWD" -o /dev/null -v 2>&1 | grep -i '257' || true
