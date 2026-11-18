@@ -47,7 +47,7 @@ jobs:
 
       - name: Check FTP server is reachable
         env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_SERVER: ${{ secrets.FTP_SERVER || vars.FTP_SERVER || 's4549.lon1.stableserver.net' }}
         run: |
           getent hosts "$FTP_SERVER"
           timeout 15 bash -c "exec 3<>/dev/tcp/$FTP_SERVER/21 && timeout 5 head -c 80 <&3" && echo && echo "FTP port 21 reachable"
@@ -57,7 +57,7 @@ jobs:
         with:
           # Server hostname from the FTP_SERVER secret (e.g. s4549.lon1.stableserver.net,
           # whose TLS certificate matches). Do not use ftp.alphaahead.com (parking servers).
-          server: ${{ secrets.FTP_SERVER }}
+          server: ${{ secrets.FTP_SERVER || vars.FTP_SERVER || 's4549.lon1.stableserver.net' }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
