@@ -9,11 +9,13 @@ ErrorDocument 404 /404.html
   RewriteEngine On
   RewriteBase /
 
-  # Force HTTPS + www (canonical host). Uncomment once you have confirmed
-  # that both http:// and the bare domain point at this server.
-  # RewriteCond %{HTTPS} off [OR]
-  # RewriteCond %{HTTP_HOST} !^www\. [NC]
-  # RewriteRule ^ https://www.alphamediassist.com%{REQUEST_URI} [R=301,L]
+  # Canonical host: https://alphamediassist.com (no www). Google indexes this
+  # host and it is the verified Search Console property.
+  RewriteCond %{HTTP_HOST} ^www\.alphamediassist\.com$ [NC]
+  RewriteRule ^ https://alphamediassist.com%{REQUEST_URI} [R=301,L]
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP_HOST} ^alphamediassist\.com$ [NC]
+  RewriteRule ^ https://alphamediassist.com%{REQUEST_URI} [R=301,L]
 
   # 301 redirects for old / duplicate URLs (generated from src/seo/routes.ts)
 # @@REDIRECTS@@

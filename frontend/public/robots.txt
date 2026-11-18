@@ -1,4 +1,4 @@
-# robots.txt for https://www.alphamediassist.com
+# robots.txt for https://alphamediassist.com
 User-agent: *
 Allow: /
 Disallow: /api/
@@ -39,4 +39,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://www.alphamediassist.com/sitemap.xml
+Sitemap: https://alphamediassist.com/sitemap.xml

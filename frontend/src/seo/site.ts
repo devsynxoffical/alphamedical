@@ -3,7 +3,9 @@
 // Google Business Profile and directory listings - consistency is a ranking
 // signal for local SEO and helps AI engines resolve the entity.
 
-export const SITE_URL = 'https://www.alphamediassist.com'
+// Canonical host is the bare domain: it is the host Google has indexed and the
+// verified Search Console property (https://alphamediassist.com/). www 301s here.
+export const SITE_URL = 'https://alphamediassist.com'
 
 export const BRAND = {
   name: 'Alpha Medi Assist',
