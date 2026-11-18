@@ -96,7 +96,7 @@ jobs:
         if: always()
         continue-on-error: true
         run: |
-          grep -rhoE "https://[a-zA-Z0-9./?=_%:+&-]+" frontend/src/data | grep -v alphamediassist | sort -u | while read -r u; do
+          grep -rhoE "https://[a-zA-Z0-9./?=_%:+&-]+" src/data | grep -v alphamediassist | sort -u | while read -r u; do
             code=$(curl -s -o /dev/null -L --max-time 20 -A "Mozilla/5.0 (link check)" -w '%{http_code}' "$u")
             echo "$code $u"
           done
