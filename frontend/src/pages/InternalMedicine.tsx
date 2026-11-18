@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ArrowLeft, Star, CheckCircle, Shield, Quote, TrendingUp, Users, FileText, Lock, Activity, BarChart } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
 import RelatedLinks from '../components/RelatedLinks'
+import SpecialtyInsights from '../components/SpecialtyInsights'
 import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drLissaJenn from '../Images/doc lessa jenn.jpg'
 
@@ -367,6 +368,8 @@ const InternalMedicine: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <SpecialtyInsights id="internal-medicine" name="Internal medicine" />
 
                 <RelatedLinks links={specialtyRelatedLinks} />
 

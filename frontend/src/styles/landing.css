@@ -92,3 +92,25 @@
 
 .lp .lp-body { padding-top: 3.5rem; }
 .lp .lp-body > .lp-section:first-child { margin-top: 1rem; }
+
+/* Specialty billing guide block */
+.si { padding: 4rem 0; background: #fff; border-top: 1px solid #e2e8f0; }
+.si-inner { max-width: 1100px; }
+.si h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0 0 0.75rem; }
+.si-intro { color: #475569; line-height: 1.75; max-width: 860px; margin: 0 0 2rem; font-size: 1.05rem; }
+.si-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.si-card { border: 1px solid #e2e8f0; border-radius: 14px; padding: 1.5rem; background: #f8fafc; }
+.si-card-wide { grid-column: 1 / -1; background: #fff; }
+.si-card h3 { display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; margin: 0 0 1rem; }
+.si-card h3 svg { color: #2563eb; flex-shrink: 0; }
+.si-dl { margin: 0; display: grid; gap: 0.85rem; }
+.si-dl dt { font-weight: 700; color: #1d4ed8; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.95rem; }
+.si-dl dd { margin: 0.15rem 0 0; color: #475569; line-height: 1.6; font-size: 0.95rem; }
+.si-list { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.6rem; color: #334155; line-height: 1.6; font-size: 0.95rem; }
+.si .lp-table th[scope="row"] { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #1d4ed8; }
+.si-faq-title { font-size: 1.35rem; margin: 2.5rem 0 1rem; }
+.si .lp-faq h4 { margin: 0 0 0.5rem; font-size: 1.05rem; }
+.si-seealso { margin: 1.75rem 0 0; padding: 1rem 1.25rem; background: #eff6ff; border-radius: 12px; color: #1e3a8a; line-height: 1.6; }
+.si-seealso a { color: #1d4ed8; font-weight: 700; display: inline-flex; align-items: center; gap: 0.25rem; }
+.si-note { margin: 1.25rem 0 0; font-size: 0.8rem; color: #64748b; line-height: 1.5; }
+@media (max-width: 900px) { .si-grid { grid-template-columns: 1fr; } }

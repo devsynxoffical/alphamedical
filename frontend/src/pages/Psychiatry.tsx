@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
 import RelatedLinks from '../components/RelatedLinks'
+import SpecialtyInsights from '../components/SpecialtyInsights'
 import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drLissa from '../Images/doc lessa jenn.jpg'
 import '../App.css'
@@ -24,7 +25,7 @@ const Psychiatry: React.FC = () => {
         <div className="internal-medicine-page">
             <PageTitle
                 title="Psychiatry Medical Billing Services | Alpha Medi Assist"
-                description="Expert psychiatry medical billing services by AlphaMedi Assist. Accurate coding, efficient claims, and optimized RCM for psychiatry practices."
+                description="Psychiatry billing for prescribers: psychiatric evaluations, E/M with psychotherapy add-on codes, telepsychiatry and prior authorizations coded correctly."
             />
 
             <div className="specialty-detail-page internal-medicine-page">
@@ -450,6 +451,8 @@ const Psychiatry: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <SpecialtyInsights id="psychiatry" name="Psychiatry" />
 
                 <RelatedLinks links={specialtyRelatedLinks} />
 

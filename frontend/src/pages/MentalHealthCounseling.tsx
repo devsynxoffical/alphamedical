@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
 import RelatedLinks from '../components/RelatedLinks'
+import SpecialtyInsights from '../components/SpecialtyInsights'
 import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drJoe from '../Images/doc lessa jenn.jpg'
 import '../App.css'
@@ -23,8 +24,8 @@ const MentalHealthCounseling: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Mental Health Medical Billing Services | Alpha Medi Assist"
-                description="Professional mental health medical billing services by AlphaMedi Assist. Accurate coding, efficient claims, and optimized RCM for counseling practices."
+                title="Mental Health & Therapy Billing Services | Alpha Medi Assist"
+                description="Billing for therapists and counseling practices (LCSW, LPC, LMFT, psychologists): psychotherapy time codes, telehealth, authorizations and credentialing."
             />
 
             <div className="specialty-detail-page internal-medicine-page">
@@ -39,7 +40,7 @@ const MentalHealthCounseling: React.FC = () => {
 
                             <div className="specialty-hero-main">
                                 <div className="specialty-hero-text">
-                                    <h1 className="specialty-title">Mental Health Medical Billing Services</h1>
+                                    <h1 className="specialty-title">Mental Health &amp; Therapy Billing Services</h1>
                                     <p className="specialty-description">
                                         Efficient billing is essential for mental health counseling practices to maintain financial stability, reduce administrative strain, and ensure uninterrupted patient care. At AlphaMedi Assist, we provide specialized mental health medical billing services designed to streamline claims processing, improve coding accuracy, and optimize revenue cycle management (RCM). Our solutions minimize denials, increase reimbursements, and ensure full HIPAA compliance, allowing counselors and therapists to focus on supporting patient well-being.
                                     </p>
@@ -450,6 +451,8 @@ const MentalHealthCounseling: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <SpecialtyInsights id="mental-health-counseling" name="Mental health" />
 
                 <RelatedLinks links={specialtyRelatedLinks} />
 

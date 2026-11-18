@@ -6,6 +6,7 @@ import type { LandingPageData } from '../data/landingPages'
 import { breadcrumbTrail } from '../seo/routes'
 import { BRAND } from '../seo/site'
 import '../styles/landing.css'
+import '../styles/blog.css'
 
 const LandingPage: React.FC<{ page: LandingPageData }> = ({ page }) => {
   const crumbs = breadcrumbTrail(page.path)
@@ -108,6 +109,19 @@ const LandingPage: React.FC<{ page: LandingPageData }> = ({ page }) => {
               ))}
             </div>
           </section>
+
+          {page.references && page.references.length > 0 && (
+            <section className="lp-section bp-sources">
+              <h2>Sources</h2>
+              <ol>
+                {page.references.map((r) => (
+                  <li key={r.url}>
+                    <a href={r.url} target="_blank" rel="noopener noreferrer">{r.label}</a>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )}
 
           <section className="lp-section">
             <h2>Related services and guides</h2>

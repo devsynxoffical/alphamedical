@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
 import RelatedLinks from '../components/RelatedLinks'
+import SpecialtyInsights from '../components/SpecialtyInsights'
 import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drJenn from '../Images/doc lessa jenn.jpg'
 import '../App.css'
@@ -23,8 +24,8 @@ const Orthopedics: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Orthopedic Medical Billing Services | Alpha Medi Assist"
-                description="Streamline orthopedic medical billing services with Alpha Medi Assist. Efficient claims, coding, and RCM for orthopedic practices."
+                title="Orthopedic Practice Billing Services | Alpha Medi Assist"
+                description="Billing for orthopedic clinics: E/M visits, joint injections, X-rays, casting, DME and laterality modifiers coded and paid correctly. HIPAA-compliant RCM."
             />
 
             <div className="specialty-detail-page internal-medicine-page">
@@ -39,7 +40,7 @@ const Orthopedics: React.FC = () => {
 
                             <div className="specialty-hero-main">
                                 <div className="specialty-hero-text">
-                                    <h1 className="specialty-title">Orthopedic Medical Billing Services</h1>
+                                    <h1 className="specialty-title">Orthopedic Practice Billing Services</h1>
                                     <p className="specialty-description">
                                         Efficient billing is essential for orthopedic practices to maintain smooth operations and maximize revenue. At Alpha Medi Assist, we specialize in orthopedic medical billing services to streamline claims, coding, and revenue cycle management (RCM). Our solutions reduce administrative burdens, improve reimbursements, and ensure HIPAA-compliant patient care.
                                     </p>
@@ -437,6 +438,8 @@ const Orthopedics: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <SpecialtyInsights id="orthopedics" name="Orthopedic" />
 
                 <RelatedLinks links={specialtyRelatedLinks} />
 

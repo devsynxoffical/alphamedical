@@ -17,6 +17,10 @@ export type BlogPost = {
   }>
   /** Internal links shown at the end of the article (service / specialty pages). */
   related?: Array<{ label: string; path: string }>
+  /** Topic label shown on cards and in the article header. */
+  category?: string
+  /** Authoritative sources the article relies on (shown as "Sources", added to schema as citation). */
+  references?: Array<{ label: string; url: string }>
   faqs: Array<{
     question: string
     answer: string
@@ -29,6 +33,12 @@ import { newPosts } from './blogPostsNew'
 export const blogPosts: BlogPost[] = [
   {
     slug: 'top-10-reasons-for-medical-claim-denials-and-how-to-fix-them',
+    category: 'Denial management',
+    references: [
+      { label: 'X12: Claim Adjustment Reason Codes (CARC)', url: 'https://x12.org/codes/claim-adjustment-reason-codes' },
+      { label: 'CMS: Medicare Claims Processing Manual (Pub. 100-04)', url: 'https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912' },
+      { label: 'CMS: National Correct Coding Initiative (NCCI) edits', url: 'https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits' },
+    ],
     title: 'Top 10 Reasons for Medical Claim Denials and How to Fix Them',
     datePublished: '2026-11-17',
     seoTitle: 'Top 10 Reasons for Medical Claim Denials & How to Fix Them',
@@ -177,6 +187,12 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'how-to-reduce-medical-claim-denials-complete-guide',
+    category: 'Denial management',
+    references: [
+      { label: 'CMS: National Correct Coding Initiative (NCCI) edits', url: 'https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits' },
+      { label: 'CMS: Medicare Claims Processing Manual (Pub. 100-04)', url: 'https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912' },
+      { label: 'X12: Remittance Advice Remark Codes (RARC)', url: 'https://x12.org/codes/remittance-advice-remark-codes' },
+    ],
     title: 'How to Reduce Medical Claim Denials: A Complete Guide for Practices',
     datePublished: '2026-11-17',
     seoTitle: 'How to Reduce Medical Claim Denials | Complete Guide',

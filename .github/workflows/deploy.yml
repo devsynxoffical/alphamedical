@@ -92,15 +92,11 @@ jobs:
           curl -s "$B/" | grep -o '<link data-seo rel="canonical"[^>]*>' || fail=1
           exit $fail
 
-      - name: List FTP folders (find web root)
+      - name: Check external citation links
         if: always()
-        env:
-          FTP_USER: ${{ secrets.FTP_USERNAME }}
-          FTP_PASS: ${{ secrets.FTP_PASSWORD }}
+        continue-on-error: true
         run: |
-          for d in "" "public_html/" "www/" "htdocs/" "alphamediassist.com/" "public_html/alphamediassist.com/"; do
-            echo "=== /$d ==="
-            curl -s --ssl-reqd --list-only --max-time 20 -u "$FTP_USER:$FTP_PASS" "ftp://ftp.alphamediassist.com/$d" | sort | head -40 || echo "(not found)"
+          grep -rhoE "https://[a-zA-Z0-9./?=_%:+&-]+" frontend/src/data | grep -v alphamediassist | sort -u | while read -r u; do
+            code=$(curl -s -o /dev/null -L --max-time 20 -A "Mozilla/5.0 (link check)" -w '%{http_code}' "$u")
+            echo "$code $u"
           done
-          echo "=== PWD ==="
-          curl -s --ssl-reqd --max-time 20 -u "$FTP_USER:$FTP_PASS" "ftp://ftp.alphamediassist.com/" -Q "PWD" -o /dev/null -v 2>&1 | grep -i '257' || true

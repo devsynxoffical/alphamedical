@@ -48,6 +48,19 @@ const Home: React.FC = () => {
     setCurrentSlide(index)
   }
 
+  // Load the 1 MB hero video only after the page has finished loading, so it
+  // does not compete with critical resources (the poster frame paints first).
+  const [heroSrc, setHeroSrc] = useState<string | undefined>(undefined)
+  useEffect(() => {
+    const start = () => setHeroSrc(heroVideo)
+    if (document.readyState === 'complete') {
+      const t = window.setTimeout(start, 200)
+      return () => window.clearTimeout(t)
+    }
+    window.addEventListener('load', start, { once: true })
+    return () => window.removeEventListener('load', start)
+  }, [])
+
   // Auto-slide functionality
   useEffect(() => {
     const interval = setInterval(() => {
@@ -60,7 +73,7 @@ const Home: React.FC = () => {
   return (
     <>
       <PageTitle
-        title="Medical Billing Services for Practices | Alpha Medi Assist"
+        title="Medical Billing Company for U.S. Practices | Alpha Medi Assist"
         description="Outsourced medical billing, coding, credentialing and RCM for U.S. practices in 90+ specialties. HIPAA-compliant, 98% net collection rate. Free consultation."
       />
       <div className="home">
@@ -72,7 +85,7 @@ const Home: React.FC = () => {
               <div className="hero-content-left">
                 <h1 className="hero-title-split">
                   Medical Billing<br />
-                  <span className="highlight-split">Services</span> for Healthcare Practices
+                  <span className="highlight-split">Company</span> for Healthcare Practices
                 </h1>
                 <p className="hero-subtext-split">
                   Maximize revenue and streamline operations with expert{' '}
@@ -92,7 +105,7 @@ const Home: React.FC = () => {
             <div className="hero-right-side">
               <div className="doctor-image-container">
                 <video
-                  src={heroVideo}
+                  src={heroSrc}
                   poster="/hero-poster.jpg"
                   aria-label="Medical billing specialist working at a laptop"
                   autoPlay
@@ -439,36 +452,28 @@ const Home: React.FC = () => {
             <div className="specialties-grid">
               <div className="specialty-card">
                 <div className="specialty-icon">
-                  <video autoPlay muted loop playsInline style={{ width: '60px', height: '60px', objectFit: 'contain' }}>
-                    <source src={heartbeatVideo} type="video/mp4" />
-                  </video>
+                  <video autoPlay muted loop playsInline preload="none" src={heroSrc ? heartbeatVideo : undefined} aria-hidden="true" style={{ width: '60px', height: '60px', objectFit: 'contain' }} />
                 </div>
                 <h3>Cardiology</h3>
                 <p>Accurate billing for complex cardiac procedures, including EKGs, echocardiograms, interventional cardiology, and electrophysiology services. Our medical billing specialists ensure timely reimbursements while reducing claim denials for cardiac care providers.</p>
               </div>
               <div className="specialty-card">
                 <div className="specialty-icon">
-                  <video autoPlay muted loop playsInline style={{ width: '60px', height: '60px', objectFit: 'contain' }}>
-                    <source src={brokenBoneVideo} type="video/mp4" />
-                  </video>
+                  <video autoPlay muted loop playsInline preload="none" src={heroSrc ? brokenBoneVideo : undefined} aria-hidden="true" style={{ width: '60px', height: '60px', objectFit: 'contain' }} />
                 </div>
                 <h3>Orthopedics</h3>
                 <p>Efficient coding for musculoskeletal treatments such as joint replacements, arthroscopy, fracture care, and spinal surgeries. Our medical coding services optimize revenue by applying precise CPT, ICD-10, and HCPCS codes.</p>
               </div>
               <div className="specialty-card">
                 <div className="specialty-icon">
-                  <video autoPlay muted loop playsInline style={{ width: '60px', height: '60px', objectFit: 'contain' }}>
-                    <source src={healthcareVideo} type="video/mp4" />
-                  </video>
+                  <video autoPlay muted loop playsInline preload="none" src={heroSrc ? healthcareVideo : undefined} aria-hidden="true" style={{ width: '60px', height: '60px', objectFit: 'contain' }} />
                 </div>
                 <h3>Urology</h3>
                 <p>Streamlined claims for urological care including kidney, bladder, and prostate procedures. Our specialty medical billing handles complex procedures like lithotripsy, cystoscopy, and robotic surgeries with high accuracy.</p>
               </div>
               <div className="specialty-card">
                 <div className="specialty-icon">
-                  <video autoPlay muted loop playsInline style={{ width: '60px', height: '60px', objectFit: 'contain' }}>
-                    <source src={experimentVideo} type="video/mp4" />
-                  </video>
+                  <video autoPlay muted loop playsInline preload="none" src={heroSrc ? experimentVideo : undefined} aria-hidden="true" style={{ width: '60px', height: '60px', objectFit: 'contain' }} />
                 </div>
                 <h3>Laboratory Billing</h3>
                 <p>Customized solutions for lab testing requirements including blood tests, pathology, microbiology, and molecular diagnostics. Our team ensures proper coding, accurate claims, and timely reimbursement for laboratories of all sizes.</p>

@@ -72,7 +72,7 @@ export interface PageSchemaInput {
   title: string
   description?: string
   image?: string
-  article?: { headline: string; datePublished?: string; dateModified?: string; author?: string }
+  article?: { headline: string; datePublished?: string; dateModified?: string; author?: string; citations?: string[]; section?: string }
 }
 
 /** Per-page graph: WebPage + BreadcrumbList + Service / BlogPosting as appropriate. */
@@ -145,6 +145,8 @@ export const pageSchema = ({ path, title, description, image, article }: PageSch
         : { '@id': ORG_ID },
       publisher: { '@id': ORG_ID },
       inLanguage: 'en-US',
+      ...(article.section ? { articleSection: article.section } : {}),
+      ...(article.citations?.length ? { citation: article.citations } : {}),
     })
   }
 

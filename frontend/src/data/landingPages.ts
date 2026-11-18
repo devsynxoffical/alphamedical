@@ -34,6 +34,8 @@ export interface LandingPageData {
   sections: LandingSection[]
   faqs: { question: string; answer: string }[]
   related: { label: string; path: string }[]
+  /** Authoritative sources for factual claims (rendered as "Sources"). */
+  references?: { label: string; url: string }[]
   ctaTitle: string
   ctaText: string
 }
@@ -134,6 +136,10 @@ export const landingPages: LandingPageData[] = [
       { label: 'How much does medical billing cost?', path: '/blog/how-much-does-medical-billing-cost' },
       { label: 'Medical billing for small practices', path: '/medical-billing-for-small-practices' },
     ],
+    references: [
+      { label: 'HHS: HIPAA Business Associate contract provisions', url: 'https://www.hhs.gov/hipaa/for-professionals/covered-entities/sample-business-associate-agreement-provisions/index.html' },
+      { label: 'CMS: Medicare Claims Processing Manual (Pub. 100-04)', url: 'https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912' },
+    ],
     ctaTitle: 'Find out what your practice is leaving uncollected',
     ctaText: 'Get a free billing assessment: we review your denials and aging A/R and show you exactly where revenue is being lost.',
   },
@@ -212,6 +218,10 @@ export const landingPages: LandingPageData[] = [
       { label: 'Common denial codes and how to fix them', path: '/blog/common-claim-denial-codes-and-how-to-fix-them' },
       { label: 'Top 10 reasons for claim denials', path: '/blog/top-10-reasons-for-medical-claim-denials-and-how-to-fix-them' },
       { label: 'Medical credentialing services', path: '/medical-credentialing-service' },
+    ],
+    references: [
+      { label: 'X12: Claim Adjustment Reason Codes (CARC)', url: 'https://x12.org/codes/claim-adjustment-reason-codes' },
+      { label: 'CMS: National Correct Coding Initiative (NCCI) edits', url: 'https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits' },
     ],
     ctaTitle: 'See where your revenue cycle is leaking',
     ctaText: 'Book a free RCM assessment and get a KPI snapshot of your practice: denials, A/R aging and collection rate.',
@@ -350,6 +360,11 @@ export const landingPages: LandingPageData[] = [
       { label: 'Medical billing in Virginia', path: '/medical-billing-services-virginia' },
       { label: 'Contact our St. Petersburg office', path: '/contact' },
     ],
+    references: [
+      { label: 'Florida Statutes §627.6131: Payment of claims', url: 'https://www.flsenate.gov/Laws/Statutes/2024/627.6131' },
+      { label: 'First Coast Service Options: Medicare Jurisdiction N', url: 'https://medicare.fcso.com/' },
+      { label: 'Florida AHCA: Statewide Medicaid Managed Care', url: 'https://ahca.myflorida.com/medicaid/statewide-medicaid-managed-care' },
+    ],
     ctaTitle: 'Talk to a Florida medical billing specialist',
     ctaText: 'Get a free assessment of your claims, denials and A/R from our St. Petersburg team.',
   },
@@ -413,6 +428,10 @@ export const landingPages: LandingPageData[] = [
       { label: 'Medical billing for small practices', path: '/medical-billing-for-small-practices' },
       { label: 'Medical billing in Florida', path: '/medical-billing-services-florida' },
       { label: 'Contact our Virginia office', path: '/contact' },
+    ],
+    references: [
+      { label: 'Palmetto GBA: Medicare Jurisdiction M Part B', url: 'https://www.palmettogba.com/jmb' },
+      { label: 'Virginia DMAS: Cardinal Care', url: 'https://www.dmas.virginia.gov/' },
     ],
     ctaTitle: 'Talk to a Virginia medical billing specialist',
     ctaText: 'Get a free assessment of your claims, denials and A/R from our Spotsylvania team.',

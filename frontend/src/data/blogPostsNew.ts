@@ -6,6 +6,11 @@ import type { BlogPost } from './blogPosts'
 export const newPosts: BlogPost[] = [
   {
     slug: 'how-much-does-medical-billing-cost',
+    category: 'Pricing & outsourcing',
+    references: [
+      { label: 'Software Advice: Outsourcing medical billing (pricing models)', url: 'https://www.softwareadvice.com/resources/outsource-medical-billing' },
+      { label: 'HHS: HIPAA Business Associate contracts', url: 'https://www.hhs.gov/hipaa/for-professionals/covered-entities/sample-business-associate-agreement-provisions/index.html' },
+    ],
     datePublished: '2026-11-17',
     title: 'How Much Does Medical Billing Cost? Outsourced Pricing Explained',
     seoTitle: 'How Much Does Medical Billing Cost? (2026 Pricing Guide)',
@@ -83,6 +88,12 @@ export const newPosts: BlogPost[] = [
   },
   {
     slug: 'how-long-does-medical-credentialing-take',
+    category: 'Credentialing',
+    references: [
+      { label: 'CMS: PECOS Medicare enrollment', url: 'https://pecos.cms.hhs.gov/' },
+      { label: 'CMS: NPPES (National Plan & Provider Enumeration System)', url: 'https://nppes.cms.hhs.gov/' },
+      { label: 'CAQH ProView', url: 'https://proview.caqh.org/' },
+    ],
     datePublished: '2026-11-17',
     title: 'How Long Does Medical Credentialing Take? Timeline by Payer',
     seoTitle: 'How Long Does Medical Credentialing Take? Payer Timelines',
@@ -152,6 +163,12 @@ export const newPosts: BlogPost[] = [
   },
   {
     slug: 'medical-billing-vs-medical-coding',
+    category: 'Coding',
+    references: [
+      { label: 'AAPC: Differences between medical coding and medical billing', url: 'https://aapc.com/resources/understanding-the-differences-between-medical-coding-and-medical-billing' },
+      { label: 'CMS: ICD-10 code sets', url: 'https://www.cms.gov/medicare/coding-billing/icd-10-codes' },
+      { label: 'AMA: CPT® overview', url: 'https://www.ama-assn.org/practice-management/cpt' },
+    ],
     datePublished: '2026-11-17',
     title: 'Medical Billing vs. Medical Coding: What Is the Difference?',
     seoTitle: 'Medical Billing vs. Medical Coding: Key Differences Explained',
@@ -217,6 +234,13 @@ export const newPosts: BlogPost[] = [
   },
   {
     slug: 'common-claim-denial-codes-and-how-to-fix-them',
+    category: 'Denial management',
+    references: [
+      { label: 'X12: Claim Adjustment Reason Codes (CARC)', url: 'https://x12.org/codes/claim-adjustment-reason-codes' },
+      { label: 'X12: Remittance Advice Remark Codes (RARC)', url: 'https://x12.org/codes/remittance-advice-remark-codes' },
+      { label: 'CMS: Medicare Claims Processing Manual, Ch. 1 (timely filing)', url: 'https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912' },
+      { label: 'CMS: National Correct Coding Initiative (NCCI) edits', url: 'https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits' },
+    ],
     datePublished: '2026-11-17',
     title: 'Common Claim Denial Codes (CARC) and How to Fix Each One',
     seoTitle: 'Common Denial Codes: CO-16, CO-50, CO-97, CO-197 & Fixes',

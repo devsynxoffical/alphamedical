@@ -152,7 +152,7 @@ const Specialties: React.FC = () => {
         <section className="specialties-header section">
           <div className="container">
             <div className="specialties-header-content">
-              <h1 className="specialties-title">Medical Billing Services by Specialty</h1>
+              <h1 className="specialties-title">Specialty Medical Billing for 90+ Specialties</h1>
               <p className="specialties-subtitle">Specialty-specific billing, coding and RCM support for 90+ specialties</p>
             </div>
           </div>
