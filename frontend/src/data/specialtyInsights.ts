@@ -435,6 +435,42 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
     ],
   },
 
+  rheumatology: {
+    intro:
+      'Rheumatology billing is dominated by in-office infusions and injections of high-cost biologics, so revenue depends on prior authorization, correct infusion code hierarchy, exact drug units and drug-wastage reporting.',
+    codes: [
+      { code: '96413', desc: 'IV infusion of a complex drug or biologic (chemotherapy administration codes), first hour' },
+      { code: '96365', desc: 'IV infusion for therapy or diagnosis, initial, up to 1 hour' },
+      { code: '96372', desc: 'Therapeutic injection, subcutaneous or intramuscular' },
+      { code: 'J1745', desc: 'Infliximab injection, per 10 mg' },
+      { code: 'J0129', desc: 'Abatacept injection, per 10 mg' },
+      { code: 'J3262', desc: 'Tocilizumab injection, per 1 mg' },
+      { code: '20610 / 20611', desc: 'Major joint injection or aspiration, without / with ultrasound guidance' },
+      { code: '77080', desc: 'DXA bone density study, axial skeleton' },
+    ],
+    modifiers: [
+      { mod: 'JW / JZ', use: 'Medicare drug wastage reporting: JW for discarded amount, JZ when no drug was discarded from a single-dose container' },
+      { mod: '25', use: 'Separate E/M on the day of an infusion or injection' },
+      { mod: 'RT / LT / 50', use: 'Laterality for joint injections' },
+    ],
+    denials: [
+      'Missing or expired prior authorization for biologics, or step-therapy requirements not met',
+      'Drug units or NDC not matching the dose administered',
+      'Infusion codes billed out of hierarchy (initial vs. subsequent vs. concurrent)',
+      'Missing JW/JZ modifier on single-dose drugs for Medicare claims',
+    ],
+    documentation: [
+      'Drug, dose, NDC, lot, and any wasted amount for every administration',
+      'Infusion start and stop times for each drug',
+      'Diagnosis, disease activity and prior therapies supporting the biologic and authorization',
+    ],
+    faqs: [
+      { question: 'Which administration code is used for biologic infusions like infliximab?', answer: 'Complex biologic infusions such as infliximab are commonly reported with the chemotherapy administration code 96413 (first hour) plus 96415 for each additional hour, rather than 96365, when the drug requires that level of monitoring under payer policy. Check each payer\'s policy for the specific drug.' },
+      { question: 'What are the JW and JZ modifiers?', answer: 'For Medicare, drugs from single-dose containers must report wastage: JW on a separate line for the amount discarded, or JZ when no drug was discarded. Missing these modifiers can lead to claim rejections.' },
+      { question: 'Why are biologic claims denied even when the infusion was given?', answer: 'The most common reasons are missing or expired prior authorization, step-therapy requirements not documented, and drug units that do not match the HCPCS dosage descriptor. Verifying authorization before each infusion prevents most of these denials.' },
+    ],
+  },
+
   'internal-medicine': {
     intro:
       'Internal medicine revenue depends on accurate E/M levels plus care-management and preventive services that many practices under-bill: annual wellness visits, chronic care management, transitional care and remote monitoring.',

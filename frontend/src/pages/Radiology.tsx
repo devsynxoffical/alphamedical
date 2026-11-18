@@ -24,8 +24,8 @@ const Radiology: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Radiology Medical Billing Services | Alpha Medi Assist"
-                description="Expert radiology medical billing services by AlphaMedi Assist. Accurate coding, faster claims, and optimized RCM for imaging practices."
+                title="Radiology Billing Services & Outsourcing | Alpha Medi Assist"
+                description="Outsourced radiology billing for radiologists and imaging centers: 26/TC split billing, prior authorization for CT/MRI, coding and denial management."
             />
 
             <div className="specialty-detail-page internal-medicine-page">
@@ -40,7 +40,7 @@ const Radiology: React.FC = () => {
 
                             <div className="specialty-hero-main">
                                 <div className="specialty-hero-text">
-                                    <h1 className="specialty-title">Radiology Medical Billing Services</h1>
+                                    <h1 className="specialty-title">Radiology Billing Services &amp; Outsourcing</h1>
                                     <p className="specialty-description">
                                         Efficient billing is essential for radiology practices to maintain operational efficiency, reduce claim denials, and ensure consistent revenue flow. At AlphaMedi Assist, we provide specialized radiology medical billing services that streamline claims processing, improve coding accuracy, and strengthen revenue cycle management (RCM). Our solutions reduce administrative workload, accelerate reimbursements, and maintain full HIPAA compliance so radiologists can focus on delivering accurate diagnostic care.
                                     </p>

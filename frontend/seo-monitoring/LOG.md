@@ -21,9 +21,19 @@ Console / OpenSEO are recorded here.
 
 ## Tracked keywords: average position
 
-| Keyword | 2026-11-18 |
+| Keyword (page) | 2026-11-18 (impr / avg pos, Aug 1 to Nov 18) |
 |---|---|
-| (no impressions yet) | – |
+| radiology billing services (/specialties/radiology) | 21 / 50.3 |
+| pain management billing company (/specialties/pain-management) | 13 / 79.8 |
+| billing services for radiologist provider (radiology) | 5 / 48.8 |
+| radiology medical billing services (radiology) | 5 / 68.0 |
+| rheumatology billing company (/specialties/rheumatology) | 5 / 68.4 |
+| radiology revenue cycle management services (radiology) | 4 / 27.8 |
+| radiology billing outsourcing company (radiology) | 1 / **3** |
+| outsource radiology billing services (radiology) | 1 / **9** |
+| radiology billing companies (radiology) | 1 / **10** |
+| radiology billing outsourcing solutions (radiology) | 1 / 15 |
+| billing company for radiologist (radiology) | 1 / 17 |
 
 ---
 
@@ -65,3 +75,20 @@ Console / OpenSEO are recorded here.
 **Changes made:** none. No query/position data yet to justify on-page changes; avoiding churn while Google processes the new site.
 
 **Next:** watch for first impressions (about 2026-11-21+), and confirm the discovered pages move to indexed.
+
+## 2026-11-18 ~21:00 UTC: first impressions (on-demand check)
+**Search Console (all data, incl. fresh):** first impressions ever recorded.
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-16 | 60 | 2 | 64.4 |
+| 2026-11-17 | 39 | 1 | 48.7 |
+| 2026-11-18 (partial) | 12 | 0 | 51.2 |
+
+- 44 query/page rows. Radiology dominates (striking distance: "radiology billing outsourcing company" #3, "outsource radiology billing services" #9, "radiology billing companies" #10). Rheumatology, pain management and dermatology also get impressions.
+- **Newly indexed today:** /medical-billing-services (crawl 19:08), /medical-billing-services-florida (16:13), /medical-billing-services-virginia (20:05), /blog/how-much-does-medical-billing-cost (15:43). Breadcrumb rich results detected.
+- Still "Discovered, not indexed": /revenue-cycle-management-services, /medical-credentialing-service. /about-us still the old duplicate (not recrawled).
+
+**Changes (data-justified)**
+1. /specialties/radiology: title, H1 and description retargeted to observed queries ("Radiology Billing Services & Outsourcing").
+2. /specialties/rheumatology: added specialty billing guide (biologic infusion codes, JW/JZ, prior auth; 3 FAQs). The page has impressions but had generic content.
