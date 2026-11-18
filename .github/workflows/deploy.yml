@@ -46,16 +46,18 @@ jobs:
           ls -la dist
 
       - name: Check FTP server is reachable
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
         run: |
-          getent hosts ftp.alphamediassist.com
-          timeout 15 bash -c "exec 3<>/dev/tcp/ftp.alphamediassist.com/21 && timeout 5 head -c 80 <&3" && echo && echo "FTP port 21 reachable"
+          getent hosts "$FTP_SERVER"
+          timeout 15 bash -c "exec 3<>/dev/tcp/$FTP_SERVER/21 && timeout 5 head -c 80 <&3" && echo && echo "FTP port 21 reachable"
 
       - name: Upload to server (FTPS)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          # Verified host: ftp.alphamediassist.com (209.42.21.37, Pure-FTPd with TLS).
-          # Not a secret; ftp.alphaahead.com points to parking servers and does not work.
-          server: ftp.alphamediassist.com
+          # Server hostname from the FTP_SERVER secret (e.g. s4549.lon1.stableserver.net,
+          # whose TLS certificate matches). Do not use ftp.alphaahead.com (parking servers).
+          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
