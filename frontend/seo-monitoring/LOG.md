@@ -40,3 +40,9 @@ Console / OpenSEO are recorded here.
 
 **Next**
 - Re-check index status of new pages and the first impressions in 48–72 h.
+
+## 2026-11-18: Google submissions (service account, one-off)
+- Search Console API: `https://alphamediassist.com/sitemap.xml` submitted, HTTP 204 (accepted).
+- Indexing API `URL_UPDATED`: 50 of 50 sitemap URLs accepted. Note: Google documents this API for JobPosting/BroadcastEvent pages only; acceptance does not guarantee crawling or indexing.
+- Key used temporarily from the session and deleted afterwards; not stored in the repo.
+- Next check: index status of new pages in 48–72 h (12-hour monitor).
