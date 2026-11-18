@@ -363,7 +363,7 @@ export const landingPages: LandingPageData[] = [
     references: [
       { label: 'Florida Statutes §627.6131: Payment of claims', url: 'https://www.flsenate.gov/Laws/Statutes/2024/627.6131' },
       { label: 'First Coast Service Options: Medicare Jurisdiction N', url: 'https://medicare.fcso.com/' },
-      { label: 'Florida AHCA: Statewide Medicaid Managed Care', url: 'https://ahca.myflorida.com/medicaid/statewide-medicaid-managed-care' },
+      { label: 'Florida Agency for Health Care Administration (AHCA), which runs Florida Medicaid', url: 'https://ahca.myflorida.com/' },
     ],
     ctaTitle: 'Talk to a Florida medical billing specialist',
     ctaText: 'Get a free assessment of your claims, denials and A/R from our St. Petersburg team.',
