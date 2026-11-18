@@ -103,3 +103,10 @@ jobs:
             code=$(curl -s -o /dev/null -L --max-time 20 -A "Mozilla/5.0 (link check)" -w '%{http_code}' "$u")
             echo "$code $u"
           done
+
+      - name: Search Console sync (sitemap submit + index status)
+        if: success()
+        continue-on-error: true
+        env:
+          GOOGLE_SA_JSON: ${{ secrets.GOOGLE_SA_JSON }}
+        run: node scripts/gsc-sync.mjs
