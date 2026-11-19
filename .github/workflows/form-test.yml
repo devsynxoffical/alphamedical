@@ -1,0 +1,29 @@
+name: Live form test (sends one TEST email)
+
+# Manual only. Posts one clearly labelled test submission to the live lead
+# endpoint, exactly as the website's form does, and fails if it is rejected.
+on:
+  workflow_dispatch:
+    inputs:
+      source:
+        description: 'Form to test'
+        default: 'Book Appointment Form'
+        type: choice
+        options: ['Book Appointment Form', 'Free Assessment Form', 'Contact Form', 'Free Consultation Form']
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit test lead to live endpoint
+        env:
+          SOURCE: ${{ inputs.source }}
+        run: |
+          B=https://alphamediassist.com
+          echo "healthcheck: $(curl -s "$B/api/form-submission?healthcheck=1")"
+          BODY=$(jq -n --arg s "$SOURCE" --arg t "$(date -u +%FT%TZ)" '{source:$s,payload:{name:"TEST submission (automated check, please ignore)",email:"test@example.com",phone:"5550000000",selectedDate:"TEST",selectedTime:"TEST",timezone:"America/New_York",message:("Automated live form test at " + $t),page:"/book-appointment"}}')
+          CODE=$(curl -s -o resp.json -w '%{http_code}' -X POST "$B/api/form-submission" \
+            -H 'Content-Type: application/json' -H "Origin: $B" -H "Referer: $B/book-appointment" \
+            -A 'Mozilla/5.0 (live form test)' --data "$BODY")
+          echo "HTTP $CODE: $(cat resp.json)"
+          [ "$CODE" = "200" ] && grep -q '"ok":true' resp.json
