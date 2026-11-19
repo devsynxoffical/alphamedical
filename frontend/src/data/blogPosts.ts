@@ -29,6 +29,7 @@ export type BlogPost = {
 }
 
 import { newPosts } from './blogPostsNew'
+import { recoveredPosts } from './blogPostsRecovered'
 
 export const blogPosts: BlogPost[] = [
   {
@@ -290,4 +291,5 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   ...newPosts,
+  ...recoveredPosts,
 ]

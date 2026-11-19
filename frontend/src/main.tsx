@@ -3,6 +3,9 @@ import { createRoot, hydrateRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.tsx'
+import { initAnalytics } from './analytics'
+
+initAnalytics()
 
 const container = document.getElementById('root')!
 const app = (

@@ -17,6 +17,25 @@ ErrorDocument 404 /404.html
   RewriteCond %{HTTP_HOST} ^alphamediassist\.com$ [NC]
   RewriteRule ^ https://alphamediassist.com%{REQUEST_URI} [R=301,L]
 
+  # Old site was compromised (injected casino/spam pages were indexed by Google).
+  # Tell crawlers those URLs are gone for good (410) so they drop out faster.
+  RewriteRule ^[0-9]{6,12}/?$ - [G,L]
+  RewriteRule ^[a-z]+[0-9]{6,}\.html$ - [G,L]
+  RewriteRule ^(boyslove|books|cd|dozin|pcsp|vintagegame|pages)\.(html|php)$ - [G,L]
+  RewriteRule ^(items|shopdetail|cargo|man|product_archives|order|cart|events)(/.*)?$ - [G,L]
+  RewriteRule ^uncategorized/(entdecken-sie|stargames|william-hill)[^/]*/?$ - [G,L]
+  # Old tag pages that had impressions -> the article that now covers the topic
+  RewriteRule ^tag/(icn-meaning|icn-stands-for|icn-number-meaning|icn-in-medical-billing|what-does-dcn-stand-for|dcn-medical|void-meaning-medical|what-does-void-mean-in-medical-terms|what-is-void-claim-in-medical-billing)/?$ /blog/what-is-void-claim-in-medical-billing [R=301,L]
+  RewriteRule ^tag/(recoupment-meaning-in-medical-billing|what-is-a-recoupment|reversal-and-recoupment-in-medical-billing|meaning-of-offset-in-medical-billing|common-causes-of-offset-in-medical-billing|how-offset-works-in-medical-billing|offset-payment-meaning|example-of-offset-in-medical-billing)/?$ /blog/difference-between-reversal-and-recoupment-in-medical-billing [R=301,L]
+  RewriteRule ^tag/(what-is-a-claim-reversal|can-an-insurance-company-make-you-pay-back-money|how-far-back-can-an-insurance-company-recoup-a-payment)/?$ /blog/can-an-health-insurance-company-reverse-a-paid-claim [R=301,L]
+  RewriteRule ^tag/.*$ - [G,L]
+
+  # Old "specialities" spelling -> /specialties/...
+  RewriteRule ^specialities/([a-z-]+)/?$ /specialties/$1 [R=301,L]
+
+  # Lead form endpoint (PHP on this host)
+  RewriteRule ^api/form-submission/?$ api/form-submission.php [L,QSA]
+
   # 301 redirects for old / duplicate URLs (generated from src/seo/routes.ts)
 # @@REDIRECTS@@
 

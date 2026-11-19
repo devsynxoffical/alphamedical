@@ -37,6 +37,8 @@ jobs:
           # URL of the form/mail API (server.js). Set it under
           # Settings > Secrets and variables > Actions > Variables.
           VITE_MAIL_API_URL: ${{ vars.VITE_MAIL_API_URL }}
+          # GA4 measurement ID (G-XXXXXXX); tracking stays off until this variable is set.
+          VITE_GA_MEASUREMENT_ID: ${{ vars.VITE_GA_MEASUREMENT_ID }}
 
       - name: Check build output
         run: |
@@ -90,12 +92,17 @@ jobs:
           echo "--- www -> bare domain redirect ---"; curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}\n' "https://www.alphamediassist.com/medical-billing-services"
           echo "--- legacy /virtual-medical-assistant/ ---"; curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}\n' "$B/virtual-medical-assistant/"
           echo "--- redirect /about ---"; curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}\n' "$B/about"
-          echo "--- lead form endpoint (read-only: no submission) ---"
-          JS=$(curl -s "$B/" | grep -o '/assets/index-[A-Za-z0-9_-]*\.js' | head -1)
-          echo "live bundle: $JS"
-          curl -s "$B$JS" | grep -o 'localhost:8787\|[a-zA-Z0-9:/._-]*api/form-submission' | sort -u | sed 's/^/  endpoint string in bundle: /'
-          echo "GET  /api/form-submission -> $(curl -s -o /dev/null -w '%{http_code}' "$B/api/form-submission")"
-          echo "OPTIONS /api/form-submission -> $(curl -s -o /dev/null -w '%{http_code}' -X OPTIONS "$B/api/form-submission")"
+          echo "--- lead form endpoint (healthcheck only: no email sent) ---"
+          HC=$(curl -s "$B/api/form-submission?healthcheck=1"); echo "healthcheck: $HC"
+          echo "$HC" | grep -q '"ok":true' || { echo "LEAD FORM ENDPOINT DOWN"; fail=1; }
+          echo "--- recovered URLs (expect 200 or 301) ---"
+          for u in /blog/can-an-health-insurance-company-reverse-a-paid-claim/ /blog/what-is-void-claim-in-medical-billing/ /blog/difference-between-reversal-and-recoupment-in-medical-billing/ /uncategorized/rendering-and-referring-providers-explained-who-they-are-and-why-they-matter-in-billing/ /medical-credentialing-services/ /get-free-consultation/ /specialities/internal-medicine/ /healthcare-seo/ /tag/icn-meaning/; do
+            echo "$u -> $(curl -s -o /dev/null -L -w '%{http_code} (final %{url_effective})' "$B$u")"
+          done
+          echo "--- injected spam URLs (expect 410) ---"
+          for u in /boyslove.html /63187604 /uncategorized/stargames-erleben-sie-moderne-slots-mit-klassischen-spielmechaniken/ /tag/icd-11-adhd/; do
+            echo "$u -> $(curl -s -o /dev/null -w '%{http_code}' "$B$u")"
+          done
           echo "--- prerendered content check ---"
           curl -s "$B/medical-billing-services" | grep -o '<h1[^>]*>[^<]*' | head -1 || fail=1
           curl -s "$B/" | grep -c 'google-site-verification' || fail=1
