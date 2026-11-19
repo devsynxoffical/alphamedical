@@ -88,6 +88,7 @@ jobs:
           check /c89d9636854147c59b95ff08cb40c0e8.txt 200
           check /this-page-does-not-exist 404
           echo "--- www -> bare domain redirect ---"; curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}\n' "https://www.alphamediassist.com/medical-billing-services"
+          echo "--- legacy /virtual-medical-assistant/ ---"; curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}\n' "$B/virtual-medical-assistant/"
           echo "--- redirect /about ---"; curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}\n' "$B/about"
           echo "--- prerendered content check ---"
           curl -s "$B/medical-billing-services" | grep -o '<h1[^>]*>[^<]*' | head -1 || fail=1

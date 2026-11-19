@@ -24,8 +24,8 @@ const PainManagement: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Pain Management Medical Billing Services | Alpha Medi Assist"
-                description="Streamline pain management medical billing services with Alpha Medi Assist. Accurate coding, faster claims, and optimized RCM for pain practices."
+                title="Pain Management Billing Company & Services | Alpha Medi Assist"
+                description="Pain management billing company for interventional practices: epidural, facet and RFA coding, LCD documentation, prior authorization and denial follow-up."
             />
 
             <div className="specialty-detail-page internal-medicine-page">
@@ -40,7 +40,7 @@ const PainManagement: React.FC = () => {
 
                             <div className="specialty-hero-main">
                                 <div className="specialty-hero-text">
-                                    <h1 className="specialty-title">Pain Management Medical Billing Services</h1>
+                                    <h1 className="specialty-title">Pain Management Billing Company &amp; Services</h1>
                                     <p className="specialty-description">
                                         Efficient billing is essential for pain management practices to maintain smooth operations and consistent cash flow. At Alpha Medi Assist, we specialize in pain management medical billing services that streamline claims, coding, and revenue cycle management. Our solutions reduce administrative burdens, improve reimbursement accuracy, and ensure HIPAA-compliant patient care.
                                     </p>

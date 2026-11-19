@@ -89,6 +89,8 @@ export const redirects: Record<string, string> = {
   '/services/virtual-receptionist': '/virtual-medical-receptionist-services',
   '/services/healthcare-seo': '/healthcare-seo-services',
   '/services/credentialing': '/medical-credentialing-service',
+  // Legacy URL from the previous site, still shown by Google (Search Console, Nov 2026)
+  '/virtual-medical-assistant': '/virtual-medical-assistant-services',
 }
 
 export const findRoute = (path: string) => {

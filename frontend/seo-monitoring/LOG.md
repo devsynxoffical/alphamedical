@@ -92,3 +92,22 @@ Console / OpenSEO are recorded here.
 **Changes (data-justified)**
 1. /specialties/radiology: title, H1 and description retargeted to observed queries ("Radiology Billing Services & Outsourcing").
 2. /specialties/rheumatology: added specialty billing guide (biologic infusion codes, JW/JZ, prior auth; 3 FAQs). The page has impressions but had generic content.
+
+## 2026-11-19 00:40 UTC: 12-hour monitor run #2
+**Data status:** deploy run #25 succeeded. Search Console data through 2026-11-18 (fresh data included).
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-16 | 60 | 2 | 64.4 |
+| 2026-11-17 | 39 | 1 | 48.7 |
+| 2026-11-18 | 19 (was 12 at last check) | 0 | 49.5 |
+
+**Pages (Nov 1 to 19):** radiology 63 impr / pos 46.8 · pain management 21 / 73.0 · rheumatology 11 / 68.8 · home 10 impr, **3 clicks**, pos 18.7 · dermatology 8 / 85.3 · contact 4 / 76.5 · **legacy /virtual-medical-assistant/ 3 / pos 2.7** · gastroenterology 3 / 88.7 · coding 2 / 36 · specialties hub 1 / 8.
+
+**Index:** rheumatology re-crawled 2026-11-19 00:26 (new guide picked up). /medical-billing-for-small-practices and /blog/common-claim-denial-codes-and-how-to-fix-them newly **indexed**. /revenue-cycle-management-services and /medical-credentialing-service still "Discovered". /services unknown. /about-us still the old duplicate (not recrawled since 2026-09-01).
+
+**Changes (data-justified)**
+1. **Defect fix:** the legacy URL `/virtual-medical-assistant/` (ranking about #3) returned 404 on the new site. Now a 301 to `/virtual-medical-assistant-services`, so the ranking signal is preserved. Added to the deploy live check.
+2. /specialties/pain-management: title, H1 and description retargeted to the observed queries ("pain management billing company/companies/service", 18 impressions).
+
+**Cannibalization check:** each query maps to one URL, except brand queries ("alpha coding experts", "alpha medical coding solutions") split between / and /medical-coding-services. That is acceptable for brand terms.
