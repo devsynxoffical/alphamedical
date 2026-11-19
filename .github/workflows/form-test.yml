@@ -1,8 +1,11 @@
 name: Live form test (sends one TEST email)
 
-# Manual only. Posts one clearly labelled test submission to the live lead
+# Runs when this file changes on main (manual dispatch needs the default branch). Posts one clearly labelled test submission to the live lead
 # endpoint, exactly as the website's form does, and fails if it is rejected.
 on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/form-test.yml']
   workflow_dispatch:
     inputs:
       source:
@@ -17,7 +20,7 @@ jobs:
     steps:
       - name: Submit test lead to live endpoint
         env:
-          SOURCE: ${{ inputs.source }}
+          SOURCE: ${{ inputs.source || 'Book Appointment Form' }}
         run: |
           B=https://alphamediassist.com
           echo "healthcheck: $(curl -s "$B/api/form-submission?healthcheck=1")"
