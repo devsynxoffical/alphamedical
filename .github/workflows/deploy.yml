@@ -49,7 +49,7 @@ jobs:
 
       - name: Check FTP server is reachable
         env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER || vars.FTP_SERVER || 's4549.lon1.stableserver.net' }}
+          FTP_SERVER: ${{ vars.FTP_SERVER || 's4549.lon1.stableserver.net' }}
         run: |
           getent hosts "$FTP_SERVER"
           timeout 15 bash -c "exec 3<>/dev/tcp/$FTP_SERVER/21 && timeout 5 head -c 80 <&3" && echo && echo "FTP port 21 reachable"
@@ -57,9 +57,10 @@ jobs:
       - name: Upload to server (FTPS)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          # Server hostname from the FTP_SERVER secret (e.g. s4549.lon1.stableserver.net,
-          # whose TLS certificate matches). Do not use ftp.alphaahead.com (parking servers).
-          server: ${{ secrets.FTP_SERVER || vars.FTP_SERVER || 's4549.lon1.stableserver.net' }}
+          # Verified working host (deploys #19-#27). Override with the repository
+          # *variable* FTP_SERVER if the host changes. The FTP_SERVER secret is not used:
+          # it was set to a host whose FTP port does not answer (209.42.21.22).
+          server: ${{ vars.FTP_SERVER || 's4549.lon1.stableserver.net' }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
@@ -114,7 +115,7 @@ jobs:
         continue-on-error: true
         run: |
           grep -rhoE "https://[a-zA-Z0-9./?=_%:+&-]+" src/data | grep -v alphamediassist | sort -u | while read -r u; do
-            code=$(curl -s -o /dev/null -L --max-time 20 -A "Mozilla/5.0 (link check)" -w '%{http_code}' "$u")
+            code=$(curl -s -o /dev/null -L --max-time 20 -A "Mozilla/5.0 (link check)" -w '%{http_code}' "$u" || echo "ERR")
             echo "$code $u"
           done
 
