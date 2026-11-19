@@ -111,3 +111,21 @@ Console / OpenSEO are recorded here.
 2. /specialties/pain-management: title, H1 and description retargeted to the observed queries ("pain management billing company/companies/service", 18 impressions).
 
 **Cannibalization check:** each query maps to one URL, except brand queries ("alpha coding experts", "alpha medical coding solutions") split between / and /medical-coding-services. That is acceptable for brand terms.
+
+## 2026-11-19 12:41 UTC: 12-hour monitor run #3
+**Data status:** deploys #29, #30 and #31 all succeeded. Live checks passed: prerendered pages 200, missing page 404, `/about` 301, www→bare 301, H1, canonical and verification tag present. Lead form healthcheck `{"ok":true,"mail":true}`. Recovered and new URLs 200; spam URLs 410. Citation links: all 200 except the 403s from bot-blocking sites (cdc.gov ×2, hhs.gov, palmettogba.com, softwareadvice.com; they open in a browser). One dead CMS link was fixed in #31. Search Console data through 2026-11-18. GA4 not set up yet, so there is no lead or traffic data.
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-16 | 60 | 2 | 64.4 |
+| 2026-11-17 | 40 | 1 | 49.1 |
+| 2026-11-18 | 36 (was 19 at last check) | 0 | 50.8 |
+
+- **Last 28 days by page** (final data to Nov 16): radiology 22 impr / pos 68.6 · pain management 11 / 67.8 · home 9 impr, 2 clicks / pos 20.7 · rheumatology 9 / 69.1 · dermatology 6 / 87.2.
+- **Striking distance:** single impressions only ("outsource radiology billing services" #9, "medical billing service for radiologist" #21). Too little volume to act on.
+- **Index:**
+  - Home, radiology and /medical-billing-services: indexed (breadcrumb rich result PASS).
+  - All 8 restored articles and /denial-management-services: "unknown to Google". They went live today. The sitemap includes them, and IndexNow was sent.
+  - Google lists spam referrers (`/tag290023821.html`, an external spam list page). That URL pattern already returns 410.
+
+**Changes this run:** none to content. There is not yet enough new data to justify edits; the 19 Nov releases need crawl time. (Same day, on request: lead capture on about 30 pages, landing redesign, the Denial Management page, and 4 more restored articles. See RECOVERY.md.)
