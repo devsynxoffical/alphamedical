@@ -90,6 +90,12 @@ jobs:
           echo "--- www -> bare domain redirect ---"; curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}\n' "https://www.alphamediassist.com/medical-billing-services"
           echo "--- legacy /virtual-medical-assistant/ ---"; curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}\n' "$B/virtual-medical-assistant/"
           echo "--- redirect /about ---"; curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}\n' "$B/about"
+          echo "--- lead form endpoint (read-only: no submission) ---"
+          JS=$(curl -s "$B/" | grep -o '/assets/index-[A-Za-z0-9_-]*\.js' | head -1)
+          echo "live bundle: $JS"
+          curl -s "$B$JS" | grep -o 'localhost:8787\|[a-zA-Z0-9:/._-]*api/form-submission' | sort -u | sed 's/^/  endpoint string in bundle: /'
+          echo "GET  /api/form-submission -> $(curl -s -o /dev/null -w '%{http_code}' "$B/api/form-submission")"
+          echo "OPTIONS /api/form-submission -> $(curl -s -o /dev/null -w '%{http_code}' -X OPTIONS "$B/api/form-submission")"
           echo "--- prerendered content check ---"
           curl -s "$B/medical-billing-services" | grep -o '<h1[^>]*>[^<]*' | head -1 || fail=1
           curl -s "$B/" | grep -c 'google-site-verification' || fail=1
