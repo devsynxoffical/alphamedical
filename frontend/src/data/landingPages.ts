@@ -541,7 +541,7 @@ export const landingPages: LandingPageData[] = [
     references: [
       { label: 'X12: Claim Adjustment Reason Codes (CARC)', url: 'https://x12.org/codes/claim-adjustment-reason-codes' },
       { label: 'X12: Remittance Advice Remark Codes (RARC)', url: 'https://x12.org/codes/remittance-advice-remark-codes' },
-      { label: 'CMS: Medicare appeals, first level (redetermination)', url: 'https://www.cms.gov/medicare/appeals-grievances/fee-for-service/first-level-appeal-redetermination-medicare-administrative-contractor' },
+      { label: 'CMS: Original Medicare (fee-for-service) appeals', url: 'https://www.cms.gov/medicare/appeals-grievances/fee-for-service' },
     ],
     ctaTitle: 'Get a free denial assessment',
     ctaText: 'Send us a few details. We will review your denial trends and aging A/R and show you which claims can still be recovered.',
