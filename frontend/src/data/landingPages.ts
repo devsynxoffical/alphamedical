@@ -131,6 +131,7 @@ export const landingPages: LandingPageData[] = [
     ],
     related: [
       { label: 'Revenue cycle management services', path: '/revenue-cycle-management-services' },
+      { label: 'Denial management services', path: '/denial-management-services' },
       { label: 'Medical coding services', path: '/medical-coding-services' },
       { label: 'Medical billing by specialty', path: '/medical-billing-specialities' },
       { label: 'How much does medical billing cost?', path: '/blog/how-much-does-medical-billing-cost' },
@@ -214,6 +215,7 @@ export const landingPages: LandingPageData[] = [
     ],
     related: [
       { label: 'Outsourced medical billing services', path: '/medical-billing-services' },
+      { label: 'Denial management services', path: '/denial-management-services' },
       { label: 'Payment posting services', path: '/medical-payment-posting-services' },
       { label: 'Common denial codes and how to fix them', path: '/blog/common-claim-denial-codes-and-how-to-fix-them' },
       { label: 'Top 10 reasons for claim denials', path: '/blog/top-10-reasons-for-medical-claim-denials-and-how-to-fix-them' },
@@ -435,5 +437,113 @@ export const landingPages: LandingPageData[] = [
     ],
     ctaTitle: 'Talk to a Virginia medical billing specialist',
     ctaText: 'Get a free assessment of your claims, denials and A/R from our Spotsylvania team.',
+  },
+  // ------------------------------------------------------------ denials
+  {
+    path: '/denial-management-services',
+    kind: 'service',
+    label: 'Denial Management Services',
+    serviceType: 'Medical claim denial management',
+    metaTitle: 'Denial Management Services for Medical Practices | Alpha Medi Assist',
+    metaDescription:
+      'Outsourced denial management: root-cause analysis by CARC/RARC code, corrected claims, appeals and prevention. Stop writing off denied claims. Free denial assessment.',
+    eyebrow: 'Denial management company',
+    h1: 'Denial Management Services That Recover Denied Claims and Prevent the Next Ones',
+    answer:
+      'Denial management is the process of finding out why a payer denied a claim, correcting or appealing it before the deadline, and fixing the upstream cause so it does not repeat. Alpha Medi Assist works every denial by reason code, files corrected claims and appeals, and reports the trends back to your practice.',
+    heroBullets: [
+      'Every denial categorized by CARC/RARC reason code and payer',
+      'Corrected claims and written appeals filed within payer deadlines',
+      'Front-end fixes for eligibility, authorization and coding errors',
+      'Monthly denial-trend report you can act on',
+    ],
+    stats: coreStats,
+    sections: [
+      {
+        heading: 'What our denial management service covers',
+        paragraphs: [
+          'A denied claim is not lost revenue yet. It becomes lost revenue when nobody works it before the payer filing or appeal limit. Our team takes ownership of the whole denial workflow, from the remittance to the final payment.',
+        ],
+        bullets: [
+          'Daily review of ERAs/EOBs to catch denials the day they post',
+          'Root-cause coding of each denial (eligibility, authorization, coding, documentation, timely filing, coordination of benefits)',
+          'Corrected and replacement claims for fixable errors',
+          'Written appeals with supporting documentation for medical-necessity and bundling denials',
+          'Payer follow-up by phone and portal until the claim is paid or closed',
+          'Write-off review: no balance is adjusted off without a documented reason',
+          'Prevention: feedback to front desk, coders and providers on repeat denial causes',
+          'Monthly reporting on denial rate, top reasons, recovered dollars and open appeals',
+        ],
+      },
+      {
+        heading: 'Our denial management process',
+        steps: [
+          { title: 'Denial audit', text: 'We pull your last months of remittances and aging A/R and group open denials by reason, payer and dollar value.' },
+          { title: 'Prioritize', text: 'High-value denials and those closest to their filing or appeal deadline are worked first.' },
+          { title: 'Correct or appeal', text: 'Fixable errors go back as corrected claims; medical-necessity and policy denials get a written appeal with records.' },
+          { title: 'Follow up', text: 'We track every reopened claim with the payer until it is paid, and escalate to the next appeal level when needed.' },
+          { title: 'Prevent', text: 'Repeat causes are fixed at the source: eligibility checks, prior authorization, coding edits and documentation.' },
+        ],
+      },
+      {
+        heading: 'Common denial reason codes we work',
+        paragraphs: [
+          'Remittance advice uses standard Claim Adjustment Reason Codes (CARC) from X12, often paired with a Remittance Advice Remark Code (RARC) that explains the problem in more detail. These are some of the codes practices see most often and how we handle them.',
+        ],
+        table: {
+          head: ['Code', 'What it means', 'How we resolve it'],
+          rows: [
+            ['CO-16', 'Claim lacks information or has submission/billing errors', 'Read the paired RARC, fix the missing data and resubmit'],
+            ['CO-197', 'Precertification/authorization/notification absent', 'Check for a retro-authorization option, appeal with records, and tighten the auth workflow'],
+            ['CO-50', 'Not deemed a medical necessity by the payer', 'Appeal with clinical notes and the payer policy criteria'],
+            ['CO-11', 'Diagnosis is inconsistent with the procedure', 'Coding review and corrected claim with the supported diagnosis'],
+            ['CO-4', 'Procedure code inconsistent with the modifier, or modifier missing', 'Correct the modifier (e.g. 25, 59/X{EPSU}, 26/TC) and resubmit'],
+            ['CO-22', 'May be covered by another payer (coordination of benefits)', 'Confirm primary coverage with the patient and bill the correct payer'],
+            ['CO-27', 'Expenses incurred after coverage terminated', 'Re-verify eligibility, find current coverage or move to patient responsibility'],
+            ['CO-29', 'Time limit for filing has expired', 'Appeal only with proof of timely filing; fix the submission lag that caused it'],
+          ],
+        },
+      },
+      {
+        heading: 'Why denials keep coming back in busy practices',
+        paragraphs: [
+          'Most practices do not have a denial problem so much as a follow-up problem. Front-office staff are busy with patients, denials sit in a work queue, and by the time someone looks at them the appeal window is closing. Medicare, for example, allows 120 days from the initial determination to request a redetermination, and commercial payers often allow less. A dedicated denial team changes that: denials are worked while they are still recoverable, and the same mistakes stop repeating.',
+        ],
+      },
+      {
+        heading: 'In-house denial follow-up vs. outsourced denial management',
+        table: {
+          head: ['', 'Typical in-house', 'Alpha Medi Assist'],
+          rows: [
+            ['Speed', 'Worked when staff have time', 'Denials reviewed as remittances post'],
+            ['Deadlines', 'Appeal windows are easy to miss', 'Prioritized by filing and appeal deadline'],
+            ['Root cause', 'Often fixed claim by claim', 'Tracked by reason code and fed back to the source'],
+            ['Appeals', 'Generic letters', 'Payer-specific appeals with documentation'],
+            ['Reporting', 'Little visibility', 'Monthly denial-trend report and review call'],
+          ],
+        },
+      },
+    ],
+    faqs: [
+      { question: 'What is denial management in medical billing?', answer: 'Denial management is the process of identifying why a payer denied a claim, correcting or appealing it within the payer deadline, and fixing the underlying cause so similar claims are paid the first time.' },
+      { question: 'What is the difference between a rejected and a denied claim?', answer: 'A rejected claim failed clearinghouse or payer front-end edits and was never processed, so it can be corrected and resubmitted. A denied claim was processed and adjudicated as unpaid, so it needs a corrected claim, a reopening or a formal appeal.' },
+      { question: 'How long do I have to appeal a denied claim?', answer: 'It depends on the payer. For Medicare Part A and B, a redetermination must be requested within 120 days of receiving the initial determination. Commercial and Medicaid plans set their own limits in the provider manual or contract, and some are shorter.' },
+      { question: 'Can you work old denials that are already in aging A/R?', answer: 'Yes. We start with an audit of open denials and aging A/R, then work the claims that are still within filing or appeal limits, highest value first.' },
+      { question: 'Do I have to outsource all of my billing to use denial management?', answer: 'No. We can manage denials and A/R follow-up on their own while your team keeps charge entry and claim submission, or we can handle the full billing cycle.' },
+    ],
+    related: [
+      { label: 'Outsourced medical billing services', path: '/medical-billing-services' },
+      { label: 'Revenue cycle management services', path: '/revenue-cycle-management-services' },
+      { label: 'Common denial codes and how to fix them', path: '/blog/common-claim-denial-codes-and-how-to-fix-them' },
+      { label: 'Top 10 reasons for claim denials', path: '/blog/top-10-reasons-for-medical-claim-denials-and-how-to-fix-them' },
+      { label: 'What is a void claim in medical billing?', path: '/blog/what-is-void-claim-in-medical-billing' },
+    ],
+    references: [
+      { label: 'X12: Claim Adjustment Reason Codes (CARC)', url: 'https://x12.org/codes/claim-adjustment-reason-codes' },
+      { label: 'X12: Remittance Advice Remark Codes (RARC)', url: 'https://x12.org/codes/remittance-advice-remark-codes' },
+      { label: 'CMS: Medicare appeals, first level (redetermination)', url: 'https://www.cms.gov/medicare/appeals-grievances/fee-for-service/first-level-appeal-redetermination-medicare-administrative-contractor' },
+    ],
+    ctaTitle: 'Get a free denial assessment',
+    ctaText: 'Send us a few details. We will review your denial trends and aging A/R and show you which claims can still be recovered.',
   },
 ]

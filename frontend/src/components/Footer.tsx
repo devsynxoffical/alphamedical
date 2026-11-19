@@ -36,6 +36,7 @@ const Footer: React.FC = () => {
             <ul className="footer-links">
               <li><Link to="/medical-billing-services">Medical Billing Services</Link></li>
               <li><Link to="/revenue-cycle-management-services">Revenue Cycle Management</Link></li>
+              <li><Link to="/denial-management-services">Denial Management</Link></li>
               <li><Link to="/medical-billing-specialities">Billing by Specialty</Link></li>
               <li><Link to="/medical-coding-services">Medical Coding</Link></li>
               <li><Link to="/medical-credentialing-service">Credentialing</Link></li>

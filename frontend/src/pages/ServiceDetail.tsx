@@ -5,6 +5,7 @@ import { services } from '../data/services'
 import PageTitle from '../components/PageTitle'
 import NotFound from './NotFound'
 import RelatedLinks from '../components/RelatedLinks'
+import LeadSection from '../components/LeadSection'
 import { serviceRelatedLinks } from '../data/relatedLinks'
 
 interface ServiceDetailProps {
@@ -413,6 +414,8 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ serviceId: propServiceId 
               return null
           }
         })}
+
+        <LeadSection />
 
         <RelatedLinks links={serviceRelatedLinks.filter((l) => !l.path.includes(serviceId ?? '__'))} />
 

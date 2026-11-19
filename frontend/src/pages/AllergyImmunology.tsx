@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
 import RelatedLinks from '../components/RelatedLinks'
+import LeadSection from '../components/LeadSection'
 import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drWilliam from '../Images/young-handsome-physician-medical-robe-with-stethoscope.jpg' // Using valid image from directory
 import '../App.css'
@@ -411,6 +412,8 @@ const AllergyImmunology: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <LeadSection title="Get a free Allergy & Immunology billing assessment" />
 
                 <RelatedLinks links={specialtyRelatedLinks} />
 

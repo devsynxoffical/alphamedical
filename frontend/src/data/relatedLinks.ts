@@ -7,6 +7,7 @@ export interface RelatedLink {
 export const specialtyRelatedLinks: RelatedLink[] = [
   { label: 'Outsourced medical billing services', path: '/medical-billing-services' },
   { label: 'Revenue cycle management services', path: '/revenue-cycle-management-services' },
+  { label: 'Denial management services', path: '/denial-management-services' },
   { label: 'Medical coding services', path: '/medical-coding-services' },
   { label: 'Medical credentialing services', path: '/medical-credentialing-service' },
   { label: 'Medical billing in Florida', path: '/medical-billing-services-florida' },
@@ -18,6 +19,7 @@ export const specialtyRelatedLinks: RelatedLink[] = [
 export const serviceRelatedLinks: RelatedLink[] = [
   { label: 'Outsourced medical billing services', path: '/medical-billing-services' },
   { label: 'Revenue cycle management services', path: '/revenue-cycle-management-services' },
+  { label: 'Denial management services', path: '/denial-management-services' },
   { label: 'Medical billing by specialty', path: '/medical-billing-specialities' },
   { label: 'Medical billing for small practices', path: '/medical-billing-for-small-practices' },
   { label: 'Medical billing in Florida', path: '/medical-billing-services-florida' },

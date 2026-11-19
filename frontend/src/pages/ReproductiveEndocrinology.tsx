@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
 import RelatedLinks from '../components/RelatedLinks'
+import LeadSection from '../components/LeadSection'
 import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drJoe from '../Images/doc lessa jenn.jpg'
 import '../App.css'
@@ -455,6 +456,8 @@ const ReproductiveEndocrinology: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <LeadSection title="Get a free Reproductive Endocrinology billing assessment" />
 
                 <RelatedLinks links={specialtyRelatedLinks} />
 

@@ -8,7 +8,7 @@
 
 const MAIL_TO = 'web@alphamediassist.com';          // inbox that receives leads
 const MAIL_FROM = 'web@alphamediassist.com';        // must be a mailbox on this domain (SPF)
-const ALLOWED_SOURCES = ['Contact Form', 'Free Consultation Form', 'Book Appointment Form'];
+const ALLOWED_SOURCES = ['Contact Form', 'Free Consultation Form', 'Book Appointment Form', 'Free Assessment Form'];
 const MAX_FIELDS = 30;
 const MAX_VALUE_LENGTH = 4000;
 const RATE_LIMIT = 5;            // submissions per IP...

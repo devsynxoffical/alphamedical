@@ -40,6 +40,7 @@ import Urology from './pages/Urology'
 import NursePractitioner from './pages/NursePractitioner'
 import './App.css'
 import ChatWidgetEmbed from './components/ChatWidgetEmbed'
+import StickyCta from './components/StickyCta'
 import NotFound from './pages/NotFound'
 import LandingPage from './pages/LandingPage'
 import { landingPages } from './data/landingPages'
@@ -105,6 +106,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <StickyCta />
       </div>
     </>
   )

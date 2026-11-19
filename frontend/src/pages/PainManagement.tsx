@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
 import RelatedLinks from '../components/RelatedLinks'
+import LeadSection from '../components/LeadSection'
 import SpecialtyInsights from '../components/SpecialtyInsights'
 import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drLissa from '../Images/doc lessa jenn.jpg'
@@ -449,6 +450,8 @@ const PainManagement: React.FC = () => {
                 </section>
 
                 <SpecialtyInsights id="pain-management" name="Pain management" />
+
+                <LeadSection title="Get a free Pain Management billing assessment" />
 
                 <RelatedLinks links={specialtyRelatedLinks} />
 

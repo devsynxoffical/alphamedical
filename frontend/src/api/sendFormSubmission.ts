@@ -3,7 +3,7 @@ import { trackEvent } from '../analytics'
 type SubmissionPayload = Record<string, string | boolean>
 
 interface SendSubmissionInput {
-  source: 'Contact Form' | 'Free Consultation Form' | 'Book Appointment Form'
+  source: 'Contact Form' | 'Free Consultation Form' | 'Book Appointment Form' | 'Free Assessment Form'
   payload: SubmissionPayload
 }
 

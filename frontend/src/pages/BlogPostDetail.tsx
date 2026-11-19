@@ -6,6 +6,7 @@ import { blogPosts } from '../data/blogPosts'
 import { slugify, readingMinutes, formatDate } from '../utils/blog'
 import { BRAND } from '../seo/site'
 import NotFound from './NotFound'
+import LeadSection from '../components/LeadSection'
 import '../styles/landing.css'
 import '../styles/blog.css'
 
@@ -162,7 +163,7 @@ const BlogPostDetail: React.FC = () => {
             <div className="bp-cta-card">
               <p className="bp-cta-title">Free billing assessment</p>
               <p>We review your denials and aging A/R and show where revenue is leaking. No obligation.</p>
-              <Link to="/free-consultation" className="btn btn-primary">Get Free Consultation</Link>
+              <a href="#free-assessment" className="btn btn-primary">Get Free Assessment</a>
               <a href={`tel:${BRAND.telephone.replace(/-/g, '')}`} className="bp-cta-phone">
                 <Phone size={16} aria-hidden="true" /> {BRAND.telephoneDisplay}
               </a>
@@ -186,16 +187,10 @@ const BlogPostDetail: React.FC = () => {
           </div>
         </section>
 
-        <section className="lp-cta">
-          <div className="container">
-            <h2>Stop losing revenue to denials and slow A/R</h2>
-            <p>Alpha Medi Assist handles billing, coding, credentialing and A/R follow-up for practices across the U.S.</p>
-            <div className="lp-actions lp-actions-center">
-              <Link to="/free-consultation" className="btn btn-primary btn-large">Get Free Consultation</Link>
-              <Link to="/medical-billing-services" className="btn btn-outline btn-large">Our Billing Services</Link>
-            </div>
-          </div>
-        </section>
+        <LeadSection
+          title="Want us to handle this for your practice?"
+          intro="Our billing team works denials, corrections and appeals like the ones in this article every day. Share a few details and we will review where your claims are getting stuck."
+        />
       </div>
     </>
   )

@@ -4,6 +4,7 @@ import { ArrowLeft, CheckCircle, Star, Shield, Quote } from 'lucide-react'
 import { specialties } from '../data/specialties'
 import drLissaJenn from '../Images/doc lessa jenn.jpg'
 import PageTitle from '../components/PageTitle'
+import LeadSection from '../components/LeadSection'
 import NotFound from './NotFound'
 
 const SpecialtyDetail: React.FC = () => {
@@ -117,6 +118,8 @@ const SpecialtyDetail: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <LeadSection title={`Get a free ${specialty.name} billing assessment`} />
 
       {/* CTA Section */}
       <section className="specialty-cta-enhanced section">
