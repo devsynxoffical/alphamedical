@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { AlertTriangle, ClipboardCheck, ArrowRight } from 'lucide-react'
+import { AlertTriangle, ClipboardCheck, ArrowRight, Landmark, FileWarning } from 'lucide-react'
 import { specialtyInsights } from '../data/specialtyInsights'
+import { denialCodes, DENIAL_HUB_PATH } from '../data/denialCodes'
 import '../styles/landing.css'
 
 /**
@@ -62,6 +63,29 @@ const SpecialtyInsights: React.FC<{ id: string; name: string }> = ({ id, name })
             </ul>
           </div>
         </div>
+
+        {data.payerRules && (
+          <div className="si-card si-card-wide si-payer">
+            <h3><Landmark size={18} aria-hidden="true" /> Payer and coverage rules to know</h3>
+            <ul className="si-list">
+              {data.payerRules.map((r) => <li key={r}>{r}</li>)}
+            </ul>
+          </div>
+        )}
+
+        {data.denialCodes && (
+          <div className="si-denials">
+            <p><FileWarning size={18} aria-hidden="true" /> Denial codes {name.toLowerCase()} practices see most often:</p>
+            <ul>
+              {data.denialCodes.map((slug) => {
+                const d = denialCodes.find((c) => c.slug === slug)
+                return d ? (
+                  <li key={slug}><Link to={`${DENIAL_HUB_PATH}/${slug}`}><strong>{d.code}</strong> {d.name}</Link></li>
+                ) : null
+              })}
+            </ul>
+          </div>
+        )}
 
         <h3 className="si-faq-title">{name} billing questions</h3>
         <div className="lp-faqs">

@@ -12,6 +12,8 @@ Rule kept from the recovery plan: nothing is published that needs facts we do no
 | Internal links to the new pages | Footer "Denial Codes Guide", specialty related links, the denial management page and the old denial-codes blog post all point to the new pages | site-wide | Prerender output |
 | Rebuild /medical-billing-services (wk 3-4, partial) | Added: pricing models table, what affects price, monthly metrics with definitions, signs it is time to outsource, first-90-days timeline, 3 new FAQs. Main content is now about 1,700 words | /medical-billing-services | Position for "medical billing services" (4,400/mo, KD 10) and "outsourced medical billing" |
 | FAQ schema on specialty pages | Already on 15 specialty pages via the specialty billing guides | /specialties/* | Rich results test |
+| Specialty page upgrades (wk 5-8, 6 pages) | Dermatology, orthopedics, pain management, internal medicine, urology and radiology each gained a "Payer and coverage rules" card (Medicare global periods, LCDs, prior authorization, frequency rules, 26/TC ownership) and links to the 4 denial-code guides most relevant to that specialty. Orthopedics title and H1 retargeted to "Orthopedic Billing Services" (480/mo). These pages already had codes, modifiers, denial drivers, documentation and FAQ schema. Mini case studies are still blocked (need real client data) | /specialties/dermatology, /orthopedics, /pain-management, /internal-medicine, /urology, /radiology | Positions for each page's keyword-map target over 4–8 weeks |
+| Denial code pages (wk 5-8, 4 more) | CO-4 (modifier), CO-11 (diagnosis vs procedure), CO-18/OA-18 (duplicate), CO-22 (coordination of benefits). Same template as the first 4; the hub now lists 8 guides | /denial-codes/co-4, /co-11, /co-18, /co-22 | GSC impressions per code page |
 
 ## Blocked: needs facts or decisions from the owner
 
@@ -29,7 +31,7 @@ Rule kept from the recovery plan: nothing is published that needs facts we do no
 | Dental billing page | Only if dental billing is offered |
 
 ## Next (per plan timeline)
-- Weeks 5-8: upgrade 6 specialty pages (dermatology, radiology, anesthesiology, orthopedics, pain management, internal medicine); 3 new specialty pages once confirmed; 4 more denial code pages (CO-4, CO-11, CO-18, CO-22).
+- Weeks 5-8 remaining: 3 new specialty pages (waiting for owner confirmation); 6 clean links (need owner accounts and outreach).
 - Weeks 9-12: CO-29, CO-50, CO-109, CO-197 pages; blogs (billing cost by specialty, in-house vs outsourced, credentialing timeline by payer, yearly CPT updates).
 - Clean links: healthcare directories, EHR marketplaces, guest posts. These need owner accounts and outreach.
 

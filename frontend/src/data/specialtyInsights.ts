@@ -16,6 +16,10 @@ export interface SpecialtyInsight {
   denials: string[]
   documentation: string[]
   faqs: { question: string; answer: string }[]
+  /** Payer and coverage rules that shape billing in this specialty */
+  payerRules?: string[]
+  /** Denial code guides most relevant to this specialty (slugs under /denial-codes) */
+  denialCodes?: string[]
   /** Optional cross-link to a closely related specialty page (avoids cannibalization) */
   seeAlso?: { label: string; path: string; note: string }
 }
@@ -84,6 +88,13 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Drug name, dose, lot/NDC where required, and wasted amount for single-dose vials',
       'For DME: medical necessity, fitting details and supplier requirements',
     ],
+    payerRules: [
+      'Major surgeries carry a 90-day Medicare global period; visits for the same condition inside it are included unless modifier 24, 25, 57, 58, 78 or 79 applies and is documented.',
+      'Braces and other DME billed with HCPCS L-codes require DMEPOS supplier enrollment, and many items need written orders and documentation of medical need.',
+      'Commercial payers commonly require prior authorization for MRI and for elective joint surgery, often through a radiology or musculoskeletal benefit manager.',
+      "Workers' compensation and auto-injury claims follow state fee schedules and their own claim forms and deadlines, separate from health insurance.",
+    ],
+    denialCodes: ['co-97', 'co-4', 'co-22', 'co-16'],
     faqs: [
       { question: 'Can I bill an office visit and a joint injection on the same day?', answer: 'Yes, but only if the visit addressed something significant and separately identifiable beyond the routine assessment before the injection, documented in the note and billed with modifier 25. An injection-only visit is billed with the procedure code alone.' },
       { question: 'How do I bill bilateral knee injections?', answer: 'Most payers want 20610 with modifier 50 on one line, while some require separate RT and LT lines. Follow each payer\'s bilateral billing policy and bill drug units for the total dose given.' },
@@ -156,6 +167,13 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Levels and sides treated, imaging used, and medications injected',
       'History of conservative treatment and functional limitations',
     ],
+    payerRules: [
+      'Medicare contractors publish local coverage determinations (LCDs) for epidural steroid injections and facet joint interventions that limit frequency and require documented conservative care and response to prior injections.',
+      'Since July 2023, Medicare requires prior authorization for facet joint interventions performed in hospital outpatient departments.',
+      'Fluoroscopic or CT guidance is included in many spinal injection codes and cannot be billed separately for them.',
+      'Commercial payers often require prior authorization for radiofrequency ablation and spinal cord stimulator trials.',
+    ],
+    denialCodes: ['co-97', 'co-11', 'co-16', 'co-18'],
     faqs: [
       { question: 'Why are facet joint and RFA procedures denied so often?', answer: 'Coverage policies for facet interventions require specific steps, typically documented diagnostic medial branch blocks with a significant percentage of pain relief before ablation, plus limits on how often procedures can be repeated. Missing pain-relief documentation is the most common cause of denial.' },
       { question: 'Is fluoroscopic guidance billed separately for epidural injections?', answer: 'For most current epidural and facet injection codes, imaging guidance is included in the procedure code and is not billed separately.' },
@@ -260,6 +278,13 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Symptoms or clinical concern that make treatment medically necessary',
       'Pathology result linked before coding excisions',
     ],
+    payerRules: [
+      'Medicare covers removal of benign skin lesions only when medical necessity is documented (for example bleeding, itching, inflammation, or suspicion of malignancy); purely cosmetic removal is excluded.',
+      'Lesion excisions carry a Medicare global surgical period, so related follow-up visits inside it are not paid separately; Mohs surgery codes have a 0-day global period.',
+      'Excision codes are selected by the excised diameter including margins and by the pathology result, so final coding often waits for the pathology report.',
+      'Many commercial plans require prior authorization for biologics and phototherapy; the approved drug, dose and dates must match the claim.',
+    ],
+    denialCodes: ['co-97', 'co-11', 'co-4', 'co-16'],
     faqs: [
       { question: 'Should excisions be coded before or after pathology?', answer: 'Wait for pathology. Benign (11400–11446) and malignant (11600–11646) excision codes differ, and the code also depends on the excised diameter including margins.' },
       { question: 'When is lesion removal considered cosmetic?', answer: 'Removing a benign lesion without symptoms (such as bleeding, itching, inflammation or a suspicious change) is generally considered cosmetic and not covered. Documenting the clinical reason is essential.' },
@@ -294,6 +319,13 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Indication for each diagnostic study',
       'Procedure notes for each office procedure',
     ],
+    payerRules: [
+      'Medicare covers screening PSA tests (G0103) once every 12 months for men age 50 and older; diagnostic PSA tests are billed with a diagnosis that supports them.',
+      'Office cystoscopy (52000) has a 0-day global period, but procedures done in the same session are frequently bundled under NCCI edits.',
+      'Injectable drugs such as leuprolide (J9217) are billed in units defined by the HCPCS descriptor, and many payers require the NDC on the claim.',
+      "Urodynamic studies performed in the office with the practice's equipment are billed globally; when equipment belongs to a facility, only the professional component (modifier 26) is billed.",
+    ],
+    denialCodes: ['co-97', 'co-4', 'co-16', 'co-11'],
     faqs: [
       { question: 'How are hormone injections like leuprolide billed in urology?', answer: 'Bill the administration code plus the HCPCS drug code with units that match the dose given (J9217 is per 7.5 mg), and include the NDC when the payer requires it.' },
       { question: 'Can cystoscopy be billed with an office visit?', answer: 'Only when a separately identifiable E/M service is documented and billed with modifier 25. The routine pre-procedure assessment is included in the cystoscopy.' },
@@ -361,6 +393,13 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Ordering provider and clinical indication',
       'Authorization numbers matched to the exact CPT code performed',
     ],
+    payerRules: [
+      'Most commercial and Medicare Advantage plans require prior authorization for CT, MRI, PET and nuclear studies, often through a radiology benefit manager; the authorized CPT code must match the study performed.',
+      'Who owns the equipment decides the billing: global billing for practice-owned equipment, modifier 26 for the professional read and TC for the technical component.',
+      'Medicare applies a multiple procedure payment reduction to certain advanced imaging services performed for the same patient in the same session.',
+      'Diagnostic studies need a signed order from the treating practitioner and a diagnosis that supports medical necessity.',
+    ],
+    denialCodes: ['co-16', 'co-11', 'co-97', 'co-4'],
     faqs: [
       { question: 'What do modifiers 26 and TC mean in radiology billing?', answer: 'Modifier 26 bills only the professional component (the radiologist\'s interpretation). Modifier TC bills only the technical component (equipment and staff). When one entity performs both, the study is billed globally without either modifier.' },
       { question: 'Why are MRI and CT claims denied even with an authorization?', answer: 'Frequently because the study performed differs from the one authorized, for example with and without contrast instead of without. The authorization must be updated to match the exact code billed.' },
@@ -498,6 +537,13 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Monthly CCM time logs and care plan',
       'Discharge date and interactive contact date for TCM',
     ],
+    payerRules: [
+      'Medicare pays the initial annual wellness visit (G0438) once per lifetime and subsequent visits (G0439) only after at least 11 full months have passed since the last one.',
+      'Chronic care management requires two or more chronic conditions, a comprehensive care plan and documented patient consent before billing.',
+      'Transitional care management requires interactive contact within two business days of discharge and a face-to-face visit within 7 or 14 days, depending on the code.',
+      'Office E/M levels are chosen by medical decision-making or total time on the date of the encounter; the add-on G2211 applies only to longitudinal care relationships.',
+    ],
+    denialCodes: ['co-16', 'co-11', 'co-18', 'pr-1'],
     faqs: [
       { question: 'Can an annual wellness visit and a sick visit be billed on the same day?', answer: 'Yes. When a significant problem is addressed during the wellness visit, the problem-oriented E/M can be billed with modifier 25 alongside G0438 or G0439. The patient may owe cost-sharing for the problem-oriented portion.' },
       { question: 'What is required to bill chronic care management?', answer: 'The patient needs two or more chronic conditions expected to last at least 12 months, documented consent, a comprehensive care plan, and at least 20 minutes of clinical staff time in the month for 99490.' },
