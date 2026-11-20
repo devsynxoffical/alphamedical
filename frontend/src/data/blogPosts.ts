@@ -31,6 +31,7 @@ export type BlogPost = {
 import { newPosts } from './blogPostsNew'
 import { recoveredPosts } from './blogPostsRecovered'
 import { recoveredPosts2 } from './blogPostsRecovered2'
+import { planPosts } from './blogPostsPlan'
 
 export const blogPosts: BlogPost[] = [
   {
@@ -294,4 +295,5 @@ export const blogPosts: BlogPost[] = [
   ...newPosts,
   ...recoveredPosts,
   ...recoveredPosts2,
+  ...planPosts,
 ]

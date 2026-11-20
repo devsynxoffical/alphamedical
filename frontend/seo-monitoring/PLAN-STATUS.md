@@ -14,6 +14,8 @@ Rule kept from the recovery plan: nothing is published that needs facts we do no
 | FAQ schema on specialty pages | Already on 15 specialty pages via the specialty billing guides | /specialties/* | Rich results test |
 | Specialty page upgrades (wk 5-8, 6 pages) | Dermatology, orthopedics, pain management, internal medicine, urology and radiology each gained a "Payer and coverage rules" card (Medicare global periods, LCDs, prior authorization, frequency rules, 26/TC ownership) and links to the 4 denial-code guides most relevant to that specialty. Orthopedics title and H1 retargeted to "Orthopedic Billing Services" (480/mo). These pages already had codes, modifiers, denial drivers, documentation and FAQ schema. Mini case studies are still blocked (need real client data) | /specialties/dermatology, /orthopedics, /pain-management, /internal-medicine, /urology, /radiology | Positions for each page's keyword-map target over 4–8 weeks |
 | Denial code pages (wk 5-8, 4 more) | CO-4 (modifier), CO-11 (diagnosis vs procedure), CO-18/OA-18 (duplicate), CO-22 (coordination of benefits). Same template as the first 4; the hub now lists 8 guides | /denial-codes/co-4, /co-11, /co-18, /co-22 | GSC impressions per code page |
+| Denial code pages (wk 9-12, 4 more) | CO-29 (timely filing), CO-50 (medical necessity, incl. ABN / PR-50), CO-109 (wrong payer or contractor), CO-197 (authorization absent, vs CO-198). The hub now lists 12 guides. Radiology links to CO-197, pain management to CO-50 and CO-197 | /denial-codes/co-29, /co-50, /co-109, /co-197 | GSC impressions per code page |
+| Blogs (wk 9-12) | New: "In-house vs. outsourced medical billing" and "Annual CPT, ICD-10 & HCPCS updates". Two topics overlapped existing ranking posts, so those posts were expanded instead of creating competing URLs: the billing cost guide gained a "cost by specialty" section, and the credentialing guide gained a "timelines by payer type" section | /blog/in-house-vs-outsourced-medical-billing, /blog/annual-cpt-code-updates-how-practices-should-prepare, /blog/how-much-does-medical-billing-cost, /blog/how-long-does-medical-credentialing-take | GSC impressions; queries per post |
 
 ## Blocked: needs facts or decisions from the owner
 
@@ -32,7 +34,7 @@ Rule kept from the recovery plan: nothing is published that needs facts we do no
 
 ## Next (per plan timeline)
 - Weeks 5-8 remaining: 3 new specialty pages (waiting for owner confirmation); 6 clean links (need owner accounts and outreach).
-- Weeks 9-12: CO-29, CO-50, CO-109, CO-197 pages; blogs (billing cost by specialty, in-house vs outsourced, credentialing timeline by payer, yearly CPT updates).
+- Weeks 9-12: done (see above); review rankings against the targets at day 30.
 - Clean links: healthcare directories, EHR marketplaces, guest posts. These need owner accounts and outreach.
 
 ## Targets (from the plan) vs. measurement

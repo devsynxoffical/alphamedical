@@ -12,6 +12,7 @@ export const newPosts: BlogPost[] = [
       { label: 'HHS: HIPAA Business Associate contracts', url: 'https://www.hhs.gov/hipaa/for-professionals/covered-entities/sample-business-associate-agreement-provisions/index.html' },
     ],
     datePublished: '2026-11-17',
+    dateModified: '2026-11-20',
     title: 'How Much Does Medical Billing Cost? Outsourced Pricing Explained',
     seoTitle: 'How Much Does Medical Billing Cost? (2026 Pricing Guide)',
     seoDescription:
@@ -45,6 +46,19 @@ export const newPosts: BlogPost[] = [
         ],
       },
       {
+        heading: 'Why medical billing cost varies by specialty',
+        paragraphs: [
+          'Billing companies price by specialty because the work behind each claim is very different. The more rules, follow-up and payer back-and-forth a claim needs, the more it costs to collect. Some examples:',
+        ],
+        bullets: [
+          'Anesthesia: claims are built from base units, time units and modifiers that identify who provided the service and how it was supervised. Accurate start and stop times and the right modifiers are essential, and errors are easy to make.',
+          'Surgery: global surgical periods decide which follow-up visits are separately payable, and modifiers for staged procedures, unrelated services, assistants and multiple procedures must be applied correctly or claims are denied or underpaid.',
+          'Behavioral health: psychotherapy codes are time-based, so documentation must support the time billed. Many plans require prior authorization or limit the number of visits, and behavioral health benefits are often managed by a separate company from the medical plan.',
+          'Radiology: many imaging codes are split into a professional component (modifier 26) and a technical component (modifier TC), and advanced imaging frequently needs prior authorization before the study.',
+          'Primary care: coding rules are usually simpler, but practices see many patients and submit many lower-value claims, so the work is about volume, eligibility checks and fast follow-up rather than complex rules.',
+        ],
+      },
+      {
         heading: 'Watch the denominator: net collections vs. gross charges',
         paragraphs: [
           'Always confirm what the percentage is applied to. A rate applied to net collections (the money actually received) is very different from the same rate applied to gross charges, which are usually much higher than what payers pay. Two quotes that both say "6%" can differ dramatically in real cost.',
@@ -74,6 +88,8 @@ export const newPosts: BlogPost[] = [
       { question: 'Is outsourced medical billing cheaper than in-house?', answer: 'For many small and mid-sized practices it is, once salaries, benefits, software, training, turnover and uncollected denials are counted. The answer depends on your volume and how well in-house billing currently performs.' },
       { question: 'Are there hidden fees in medical billing contracts?', answer: 'There can be: setup fees, monthly minimums, separate charges for patient statements, credentialing or old A/R, and percentages calculated on gross charges instead of collections. Ask for every fee in writing.' },
       { question: 'How much does Alpha Medi Assist charge?', answer: 'Alpha Medi Assist gives a fixed quote after a free billing assessment of your specialty, claim volume and payer mix.' },
+      { question: 'Why do billing companies charge different rates for different specialties?', answer: 'Because the work per claim differs. Specialties with time-based codes, modifiers, global surgical periods or frequent prior authorizations (such as anesthesia, surgery, behavioral health and radiology) need more coding review and follow-up than routine, high-volume primary care.' },
+      { question: 'Is in-house billing cheaper than outsourcing?', answer: 'Calculate it with your own numbers: divide your total annual billing cost (staff, benefits, payroll taxes, training, software and management time) by net collections, then compare the result with outsourced quotes. Our in-house vs. outsourced billing guide walks through the formula.' },
     ],
     closing: [
       'The cheapest quote is not always the lowest cost. A billing partner with a high net collection rate and low days in A/R usually pays for itself through revenue you are currently leaving on the table.',
@@ -82,6 +98,10 @@ export const newPosts: BlogPost[] = [
     related: [
       { label: 'Outsourced medical billing services', path: '/medical-billing-services' },
       { label: 'Medical billing for small practices', path: '/medical-billing-for-small-practices' },
+      { label: 'In-house vs. outsourced medical billing', path: '/blog/in-house-vs-outsourced-medical-billing' },
+      { label: 'Anesthesiology billing', path: '/specialties/anesthesiology' },
+      { label: 'Mental health counseling billing', path: '/specialties/mental-health-counseling' },
+      { label: 'Radiology billing', path: '/specialties/radiology' },
       { label: 'Revenue cycle management services', path: '/revenue-cycle-management-services' },
       { label: 'Get a free billing assessment', path: '/free-consultation' },
     ],
@@ -93,8 +113,10 @@ export const newPosts: BlogPost[] = [
       { label: 'CMS: PECOS Medicare enrollment', url: 'https://pecos.cms.hhs.gov/' },
       { label: 'CMS: NPPES (National Plan & Provider Enumeration System)', url: 'https://nppes.cms.hhs.gov/' },
       { label: 'CAQH ProView', url: 'https://proview.caqh.org/' },
+      { label: '42 CFR 424.521: Request for payment by physicians and other suppliers', url: 'https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-424/subpart-P/section-424.521' },
     ],
     datePublished: '2026-11-17',
+    dateModified: '2026-11-20',
     title: 'How Long Does Medical Credentialing Take? Timeline by Payer',
     seoTitle: 'How Long Does Medical Credentialing Take? Payer Timelines',
     seoDescription:
@@ -115,6 +137,19 @@ export const newPosts: BlogPost[] = [
           'Medicare (via PECOS): commonly about 30 to 90 days once a complete application is submitted.',
           'Medicaid and Medicaid managed care plans: commonly about 45 to 120 days, depending on the state and plan.',
           'Commercial payers: commonly about 60 to 180 days, including the payer\'s credentialing committee review and contracting.',
+        ],
+      },
+      {
+        heading: 'Credentialing timelines by payer type: how each process works',
+        paragraphs: [
+          'Each payer type runs its own process, and knowing who does what explains most of the difference in timelines.',
+        ],
+        bullets: [
+          'Medicare: enrollment is done online through PECOS (or on paper forms). Individual practitioners use the CMS-855I, which now also covers reassigning benefits to a group (previously a separate CMS-855R form), and groups and clinics use the CMS-855B. The application is processed by the Medicare Administrative Contractor (MAC) for your state, which may send development requests for missing information; answering them quickly keeps the clock moving.',
+          'Medicare effective dates: for physicians, non-physician practitioners and their groups, the effective date is generally the later of the date the MAC receives an application it later approves, or the date the provider first furnished services at the new location. Under 42 CFR 424.521, Medicare may allow billing for services furnished up to 30 days before the effective date when circumstances prevented enrolling in advance. Submitting early is far safer than relying on that window.',
+          'Medicaid: run by each state, so forms, portals, revalidation rules and processing times vary by state. Many states require an NPI and, for some provider types, Medicare enrollment before Medicaid enrollment. Medicaid managed care plans then credential providers separately, so enrolling with the state program does not automatically make a provider in-network with each plan.',
+          'Commercial payers: most pull credentialing data from the provider\'s CAQH ProView profile, which must be complete and re-attested every 120 days. The payer verifies the information, and its credentialing committee approves the provider. Contracting is a separate step: the provider or group must also sign a participation agreement and receive an effective date before billing as in-network.',
+          'Medicare Advantage plans: these are private plans, so they credential providers through their own process, usually much like their commercial lines. Enrollment in traditional Medicare does not make a provider in-network with any Medicare Advantage plan; each plan must be applied to separately.',
         ],
       },
       {
@@ -150,6 +185,8 @@ export const newPosts: BlogPost[] = [
       { question: 'Can a provider see patients before credentialing is complete?', answer: 'A provider can see patients, but generally cannot bill a payer as an in-network provider until enrollment with that payer is effective. Check each payer\'s rules on effective dates and retroactive billing before scheduling patients.' },
       { question: 'What is CAQH and why does it matter?', answer: 'CAQH ProView is a database most commercial payers use to collect provider credentialing data. Keeping the profile complete and re-attesting every 120 days prevents delays.' },
       { question: 'What is the difference between credentialing and payer enrollment?', answer: 'Credentialing verifies a provider\'s qualifications (license, education, malpractice history). Payer enrollment, or contracting, is the step that makes the provider a participating, billable provider with that insurance company.' },
+      { question: 'Does Medicare enrollment make a provider in-network with Medicare Advantage plans?', answer: 'No. Medicare Advantage plans are run by private insurers that credential and contract with providers separately. Each plan has its own application and contracting process.' },
+      { question: 'Can Medicare be billed for services before the enrollment effective date?', answer: 'In limited cases. Under 42 CFR 424.521, physicians, non-physician practitioners and their groups may bill for services furnished up to 30 days before the effective date when circumstances prevented enrolling in advance. Starting enrollment before the provider sees Medicare patients avoids relying on this.' },
     ],
     closing: [
       'Credentialing is paperwork-heavy, deadline-driven and easy to stall. A dedicated credentialing team that tracks every application weekly is the fastest way to get new providers billing.',
