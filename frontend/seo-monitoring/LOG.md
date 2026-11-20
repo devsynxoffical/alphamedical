@@ -129,3 +129,42 @@ Console / OpenSEO are recorded here.
   - Google lists spam referrers (`/tag290023821.html`, an external spam list page). That URL pattern already returns 410.
 
 **Changes this run:** none to content. There is not yet enough new data to justify edits; the 19 Nov releases need crawl time. (Same day, on request: lead capture on about 30 pages, landing redesign, the Denial Management page, and 4 more restored articles. See RECOVERY.md.)
+
+## 2026-11-20 00:41 UTC: 12-hour monitor run #4
+**Data status:** deploy #34 succeeded. All live checks pass:
+- Missing page 404, `/about` 301, www→bare 301, H1, canonical and verification tag present.
+- Form healthcheck `ok:true`; a live test booking was accepted (HTTP 200, `{"ok":true}`) on 19 Nov.
+- All recovered and new URLs 200; spam 410.
+- Citation 403s are bot blocks only (cdc.gov, hhs.gov, palmettogba.com).
+
+Search Console data through 2026-11-19. GA4 not set up, so there is still no lead or traffic data.
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-16 | 60 | 2 | 64.4 |
+| 2026-11-17 | 40 | 1 | 49.1 |
+| 2026-11-18 | 39 | 0 | 49.7 |
+| 2026-11-19 | 29 (partial) | 0 | 70.1 |
+
+**Tracked keywords (Nov 1–19, position from GSC)**
+
+| Query | Page | Impr | Pos | Previous run |
+|---|---|---|---|---|
+| radiology billing services | /specialties/radiology | 23 | 47.9 | 69.6 (7-day) ↑ |
+| pain management billing company | /specialties/pain-management | 19 | 80.1 | 80.8 → |
+| radiology medical billing services | /specialties/radiology | 8 | 55.0 | 89 ↑ |
+| billing services for radiologist provider | /specialties/radiology | 6 | 47.3 | new |
+| pain management billing service | /specialties/pain-management | 6 | 79.7 | new |
+| radiology revenue cycle management services | /specialties/radiology | 5 | 34.6 | new |
+| rheumatology billing company | /specialties/rheumatology | 5 | 68.4 | 68.4 → |
+| radiologist billing companies | /specialties/radiology | 3 | 27.3 | new |
+| co 216 denial code | /blog/common-claim-denial-codes… | 3 | 75 | new |
+
+- **Movers:** radiology is improving after the 18 Nov retarget, from about pos 70 to 48 on its main query, with several variants now in the 14–30 range. Pain management has not moved yet.
+- **Index:**
+  - The 8 restored articles and /denial-management-services: still "unknown to Google" (live about 18 hours).
+  - /revenue-cycle-management-services: still "Discovered, not indexed".
+- **Cannibalization:** none, apart from brand queries (home vs coding page), which is acceptable.
+
+**Change (data-justified)**
+1. /blog/common-claim-denial-codes-and-how-to-fix-them ranks for "co 216 denial code" (3 impr) and "carc 253" (1) but did not explain either code. Added CO-216 (review-organization findings) and CO-253 (Medicare sequestration) bullets, plus an FAQ for CARC 253 (FAQ schema 314 → 315 Q&As).

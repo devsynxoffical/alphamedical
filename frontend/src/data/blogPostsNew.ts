@@ -319,6 +319,8 @@ export const newPosts: BlogPost[] = [
           'CO-27: services provided after coverage terminated; verify eligibility at every visit.',
           'CO-45: charge exceeds the fee schedule or contracted amount; normally a contractual write-off, not a denial to appeal.',
           'CO-109: claim not covered by this payer; send it to the correct payer or contractor.',
+          'CO-216: based on the findings of a review organization. The payer adjusted the claim after an external or utilization review; request the review findings and appeal with supporting records if you disagree.',
+          'CO-253: sequestration, a reduction in federal payment. This is the mandatory across-the-board cut to Medicare payments. It is a contractual adjustment: post it as a write-off; it cannot be billed to the patient or appealed.',
           'PR-1, PR-2, PR-3: deductible, coinsurance and copay amounts that are billed to the patient.',
         ],
       },
@@ -327,6 +329,7 @@ export const newPosts: BlogPost[] = [
       { question: 'What is a CARC code?', answer: 'A Claim Adjustment Reason Code (CARC) is a standard code on a remittance that explains why a claim or line was paid differently than billed, such as a denial or reduction.' },
       { question: 'What is the difference between a CARC and a RARC?', answer: 'The CARC states the reason for the adjustment; the Remittance Advice Remark Code (RARC) adds detail, such as which piece of information is missing.' },
       { question: 'Should every denial be appealed?', answer: 'No. Many denials, such as CO-16, are fixed faster with a corrected claim. Appeal when the claim was correct and documentation supports it, and fix the process when the denial reflects a workflow gap.' },
+      { question: 'What does CARC 253 mean on a Medicare remittance?', answer: 'CARC 253 means sequestration: a reduction in federal payment. Medicare applies it to most claim payments by law. It is not a denial and cannot be appealed or billed to the patient; post it as a contractual adjustment.' },
       { question: 'What does CO mean on a denial?', answer: 'CO stands for Contractual Obligation: the adjustment is the provider\'s responsibility under the payer contract and cannot be billed to the patient.' },
     ],
     closing: [
