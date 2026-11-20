@@ -168,3 +168,36 @@ Search Console data through 2026-11-19. GA4 not set up, so there is still no lea
 
 **Change (data-justified)**
 1. /blog/common-claim-denial-codes-and-how-to-fix-them ranks for "co 216 denial code" (3 impr) and "carc 253" (1) but did not explain either code. Added CO-216 (review-organization findings) and CO-253 (Medicare sequestration) bullets, plus an FAQ for CARC 253 (FAQ schema 314 → 315 Q&As).
+
+## 2026-11-20 12:41 UTC: 12-hour monitor run #5
+**Data status:** deploy #35 succeeded with all live checks green (same checks as run #4). Search Console data through 2026-11-20 (partial). GA4 not set up.
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-17 | 40 | 1 | 49.1 |
+| 2026-11-18 | 39 | 0 | 49.7 |
+| 2026-11-19 | 54 (was 29 partial) | 0 | 61.5 |
+| 2026-11-20 | 4 (partial) | 0 | 71 |
+
+**Pages, Nov 1–20:** radiology 88 impr / pos 42.8 · pain management 37 / 75.7 · denial-codes blog 12 / 70.1 · rheumatology 12 / 69.1 · dermatology 11 / 78.5 · home 11 impr, 3 clicks / pos 17.1 · anesthesiology 6 / 72.2 (new).
+
+**Tracked keywords, Nov 19–20**
+
+| Query | Pos now | Run #4 (Nov 1–19) |
+|---|---|---|
+| radiology billing services | 27 (1 impr) | 47.9 ↑ |
+| radiology billing company | 33.7 | – (new) |
+| radiology medical billing services | 31.5 | 55 ↑ |
+| radiology medical billing | 8 (1 impr) | 42.5 ↑ |
+| best radiology billing services | 14 | new |
+| pain management billing company | 80.8 | 80.1 → |
+| co 216 denial code | 75 | 75 → (updated page not recrawled yet) |
+| co 253 (4 variants) | 78–83 | new |
+
+**Index (inspect_urls)**
+- **Now indexed** (crawled 20 Nov 10:46–12:22): /blog/what-is-void-claim-in-medical-billing, /blog/can-an-health-insurance-company-reverse-a-paid-claim, /blog/what-is-the-icd-10-code-for-adhd. These are three of the restored articles.
+- **/denial-management-services:** "Discovered, not indexed".
+- **/revenue-cycle-management-services:** still "Discovered, not indexed".
+
+**Change (data-justified)**
+1. /specialties/anesthesiology: title, description and H1 retargeted to the observed query wording ("anesthesia billing company", "best anesthesia billing company", "anesthesia coding services", "anesthesiology billing companies"). This is the same change that moved radiology from about pos 70 to about 30. Before: "Anesthesiology Medical Billing Services". After: "Anesthesia Billing Company & Coding Services". Validate: position for those queries over the next week.

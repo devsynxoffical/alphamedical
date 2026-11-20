@@ -25,8 +25,8 @@ const Anesthesiology: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Anesthesiology Medical Billing Services | Alpha Medi Assist"
-                description="Expert anesthesiology medical billing services by AlphaMedi Assist. Accurate anesthesia coding, faster claims, and optimized revenue cycle management."
+                title="Anesthesia Billing Company & Coding Services | Alpha Medi Assist"
+                description="Outsourced anesthesia billing and coding for anesthesiologists and CRNA groups: time-unit and base-unit billing, modifiers, denial management and A/R follow-up."
             />
 
             <div className="specialty-detail-page internal-medicine-page">
@@ -41,7 +41,7 @@ const Anesthesiology: React.FC = () => {
 
                             <div className="specialty-hero-main">
                                 <div className="specialty-hero-text">
-                                    <h1 className="specialty-title">Anesthesiology Medical Billing Services</h1>
+                                    <h1 className="specialty-title">Anesthesia Billing Company &amp; Coding Services</h1>
                                     <p className="specialty-description">
                                         Efficient billing is essential for anesthesiology practices to maintain financial stability and uninterrupted clinical operations. At Alpha Medi Assist, we specialize in anesthesiology medical billing services to manage claims, coding, and revenue cycle workflows with precision. Our solutions reduce administrative pressure, improve reimbursement accuracy, and ensure HIPAA-compliant billing for anesthesia providers.
                                     </p>
