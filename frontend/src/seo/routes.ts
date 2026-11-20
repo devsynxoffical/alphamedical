@@ -5,8 +5,9 @@
 import { specialties } from '../data/specialties'
 import { blogPosts } from '../data/blogPosts'
 import { landingPages } from '../data/landingPages'
+import { denialCodes, DENIAL_HUB_PATH } from '../data/denialCodes'
 
-export type RouteKind = 'home' | 'page' | 'service' | 'location' | 'specialty' | 'hub' | 'blog-index' | 'blog-post' | 'legal' | 'conversion'
+export type RouteKind = 'home' | 'page' | 'service' | 'location' | 'specialty' | 'hub' | 'blog-index' | 'blog-post' | 'legal' | 'conversion' | 'guide'
 
 export interface SiteRoute {
   path: string
@@ -61,6 +62,14 @@ export const blogRoutes: SiteRoute[] = blogPosts.map((p) => ({
   changefreq: 'monthly',
 }))
 
+export const denialCodeRoutes: SiteRoute[] = denialCodes.map((d) => ({
+  path: `${DENIAL_HUB_PATH}/${d.slug}`,
+  kind: 'guide',
+  label: `${d.code} Denial Code`,
+  priority: 0.7,
+  changefreq: 'monthly',
+}))
+
 export const siteRoutes: SiteRoute[] = [
   { path: '/', kind: 'home', label: 'Home', serviceType: 'Medical billing services', priority: 1.0, changefreq: 'weekly' },
   { path: '/services', kind: 'hub', label: 'Services', priority: 0.9, changefreq: 'monthly' },
@@ -72,6 +81,8 @@ export const siteRoutes: SiteRoute[] = [
   { path: '/contact', kind: 'page', label: 'Contact', priority: 0.7, changefreq: 'monthly' },
   { path: '/blog', kind: 'blog-index', label: 'Blog', priority: 0.7, changefreq: 'weekly' },
   ...blogRoutes,
+  { path: DENIAL_HUB_PATH, kind: 'hub', label: 'Denial Codes', priority: 0.8, changefreq: 'monthly' },
+  ...denialCodeRoutes,
   { path: '/free-consultation', kind: 'conversion', label: 'Free Consultation', priority: 0.6, changefreq: 'yearly' },
   { path: '/book-appointment', kind: 'conversion', label: 'Book a Meeting', priority: 0.5, changefreq: 'yearly' },
   { path: '/privacy-policy', kind: 'legal', label: 'Privacy Policy', priority: 0.2, changefreq: 'yearly' },
@@ -124,6 +135,7 @@ export const breadcrumbTrail = (path: string): { name: string; path: string }[] 
   if (route.kind === 'location') trail.push({ name: 'Medical Billing Services', path: '/medical-billing-services' })
   if (route.kind === 'specialty') trail.push({ name: 'Medical Billing Specialties', path: SPECIALTY_HUB_PATH })
   if (route.kind === 'blog-post') trail.push({ name: 'Blog', path: '/blog' })
+  if (route.kind === 'guide') trail.push({ name: 'Denial Codes', path: DENIAL_HUB_PATH })
   trail.push({ name: route.label, path: route.path })
   return trail
 }

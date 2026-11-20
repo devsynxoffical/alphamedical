@@ -143,6 +143,7 @@ ${loc}
 ${section('Core pages', ['home', 'hub', 'page'])}
 ${section('Services and locations', ['service', 'location'])}
 ${section('Medical billing by specialty', ['specialty'])}
+${section('Denial code guides', ['guide'])}
 ${section('Articles', ['blog-index', 'blog-post'])}
 ## Optional
 

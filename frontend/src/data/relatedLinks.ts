@@ -12,7 +12,7 @@ export const specialtyRelatedLinks: RelatedLink[] = [
   { label: 'Medical credentialing services', path: '/medical-credentialing-service' },
   { label: 'Medical billing in Florida', path: '/medical-billing-services-florida' },
   { label: 'Medical billing in Virginia', path: '/medical-billing-services-virginia' },
-  { label: 'Common denial codes and how to fix them', path: '/blog/common-claim-denial-codes-and-how-to-fix-them' },
+  { label: 'Denial codes: meanings and fixes', path: '/denial-codes' },
   { label: 'How much does medical billing cost?', path: '/blog/how-much-does-medical-billing-cost' },
 ]
 

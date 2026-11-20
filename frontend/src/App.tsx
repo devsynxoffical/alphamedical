@@ -41,6 +41,8 @@ import NursePractitioner from './pages/NursePractitioner'
 import './App.css'
 import ChatWidgetEmbed from './components/ChatWidgetEmbed'
 import StickyCta from './components/StickyCta'
+import DenialCodesHub from './pages/DenialCodesHub'
+import DenialCodePage from './pages/DenialCodePage'
 import NotFound from './pages/NotFound'
 import LandingPage from './pages/LandingPage'
 import { landingPages } from './data/landingPages'
@@ -96,6 +98,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPostDetail />} />
+            <Route path="/denial-codes" element={<DenialCodesHub />} />
+            <Route path="/denial-codes/:code" element={<DenialCodePage />} />
             <Route path="/free-consultation" element={<FreeConsultation />} />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />

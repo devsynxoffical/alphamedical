@@ -109,6 +109,67 @@ export const landingPages: LandingPageData[] = [
         },
       },
       {
+        heading: 'How medical billing services are priced',
+        paragraphs: [
+          'Billing companies use three main pricing models. The right one depends on your claim volume, specialty and how much of the revenue cycle you hand over. Whatever the model, ask exactly which tasks are included: some low quotes leave out denial follow-up, patient billing or old A/R.',
+        ],
+        table: {
+          head: ['Pricing model', 'How it works', 'Best suited to'],
+          rows: [
+            ['Percentage of collections', 'A fee equal to a percentage of what is actually collected, commonly in the 4% to 10% range', 'Most practices: the billing company only earns when you are paid'],
+            ['Per claim', 'A flat fee for each claim submitted', 'High-volume, low-complexity claims with few denials'],
+            ['Flat monthly fee', 'A fixed amount per month or per provider', 'Practices with stable, predictable volume'],
+          ],
+        },
+      },
+      {
+        heading: 'What affects the price of medical billing services',
+        bullets: [
+          'Specialty and coding complexity (surgery, anesthesia and behavioral health take more work per claim than routine office visits)',
+          'Monthly claim volume and number of providers',
+          'Scope: full revenue cycle, or only part of it such as denials and A/R',
+          'Size and age of any A/R backlog to clean up at the start',
+          'Payer mix, including Medicare, Medicaid and commercial plans',
+        ],
+      },
+      {
+        heading: 'Billing metrics we report every month',
+        paragraphs: [
+          'You should never have to guess how your revenue cycle is doing. These are the measures in your monthly report, and what each one tells you.',
+        ],
+        table: {
+          head: ['Metric', 'What it measures', 'Why it matters'],
+          rows: [
+            ['Net collection rate', 'Payments collected as a share of what you could collect after contractual adjustments', 'Shows how much collectible revenue is actually reaching your bank account'],
+            ['First-pass acceptance rate', 'Claims paid or accepted on the first submission', 'Low rates point to registration, coding or scrubbing problems'],
+            ['Days in A/R', 'Average time from date of service to payment', 'Rising days mean cash is waiting longer and follow-up is slipping'],
+            ['Denial rate', 'Share of claims denied, tracked by reason code and payer', 'Shows which fixes will recover the most revenue'],
+            ['A/R over 90 days', 'Share of receivables older than 90 days', 'Older balances are harder to collect and closer to filing limits'],
+          ],
+        },
+      },
+      {
+        heading: 'Signs it is time to outsource your medical billing',
+        bullets: [
+          'Days in A/R keep rising, or a large share of A/R is older than 90 days',
+          'Denials sit in a work queue until filing or appeal deadlines are close',
+          'Billing depends on one person, and work stops when they are out',
+          'Your team spends more time on hold with payers than helping patients',
+          'You are adding providers or locations and enrollment is falling behind',
+          'You do not get a clear monthly report on collections and denials',
+        ],
+      },
+      {
+        heading: 'What happens in the first 90 days',
+        steps: [
+          { title: 'Assessment and agreement', text: 'We review your claims, denials and aging A/R, agree on scope and pricing, and sign a HIPAA Business Associate Agreement.' },
+          { title: 'Access and setup', text: 'We get user access to your EHR / practice-management system and clearinghouse, map your payers and confirm fee schedules.' },
+          { title: 'Clean claim flow', text: 'New charges are coded, scrubbed and submitted on a daily cycle, and rejections are fixed as they appear.' },
+          { title: 'Backlog clean-up', text: 'Older A/R and open denials are worked in priority order: highest value and closest to deadline first.' },
+          { title: 'Review and improve', text: 'Monthly reports and review calls turn denial trends into front-desk, coding and documentation fixes.' },
+        ],
+      },
+      {
         heading: 'Billing for 90+ specialties',
         paragraphs: [
           'Coding rules, modifiers and payer policies differ by specialty. Our billers are assigned by specialty, so your claims are handled by people who know your CPT codes and your most common denial reasons, from E/M levels in internal medicine to time-based psychotherapy codes in behavioral health and global surgical packages in orthopedics.',
@@ -127,11 +188,15 @@ export const landingPages: LandingPageData[] = [
       { question: 'Will I lose control of my billing if I outsource?', answer: 'No. We work inside your existing EHR or practice-management system, you keep access to every claim and report, and you receive monthly KPI reporting and a review call.' },
       { question: 'How quickly can you start?', answer: 'Most practices are onboarded within a few days after the initial assessment, system access and a signed Business Associate Agreement.' },
       { question: 'Do you work with my EHR?', answer: 'Yes. Our team works in the EHR and billing software you already use, so you do not need to switch systems to outsource billing.' },
+      { question: 'What is the difference between medical billing and medical coding?', answer: 'Medical coding turns the clinical documentation into ICD-10-CM, CPT and HCPCS codes. Medical billing uses those codes to create and submit claims, post payments, work denials and follow up on unpaid balances. Alpha Medi Assist provides both.' },
+      { question: 'Can you take over billing from another company or clean up old A/R?', answer: 'Yes. We start with an audit of open claims, denials and aging A/R, then work the balances that are still within payer filing and appeal limits, highest value first, while new claims move to a clean daily cycle.' },
+      { question: 'What reports will I receive?', answer: 'A monthly report on collections, net collection rate, first-pass acceptance rate, denial rate by reason code and payer, days in A/R and A/R over 90 days, plus a review call.' },
       { question: 'Is outsourced medical billing HIPAA-compliant?', answer: 'Yes. We sign a HIPAA Business Associate Agreement and follow role-based access and secure data-handling procedures for all protected health information.' },
     ],
     related: [
       { label: 'Revenue cycle management services', path: '/revenue-cycle-management-services' },
       { label: 'Denial management services', path: '/denial-management-services' },
+      { label: 'Denial codes: meanings and fixes', path: '/denial-codes' },
       { label: 'Medical coding services', path: '/medical-coding-services' },
       { label: 'Medical billing by specialty', path: '/medical-billing-specialities' },
       { label: 'How much does medical billing cost?', path: '/blog/how-much-does-medical-billing-cost' },
@@ -217,7 +282,7 @@ export const landingPages: LandingPageData[] = [
       { label: 'Outsourced medical billing services', path: '/medical-billing-services' },
       { label: 'Denial management services', path: '/denial-management-services' },
       { label: 'Payment posting services', path: '/medical-payment-posting-services' },
-      { label: 'Common denial codes and how to fix them', path: '/blog/common-claim-denial-codes-and-how-to-fix-them' },
+      { label: 'Denial codes: CO-16, CO-97, CO-45, PR-1 and more', path: '/denial-codes' },
       { label: 'Top 10 reasons for claim denials', path: '/blog/top-10-reasons-for-medical-claim-denials-and-how-to-fix-them' },
       { label: 'Medical credentialing services', path: '/medical-credentialing-service' },
     ],

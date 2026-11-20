@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
               <li><Link to="/medical-billing-services-virginia">Medical Billing in Virginia</Link></li>
               <li><Link to="/medical-billing-for-small-practices">Billing for Small Practices</Link></li>
               <li><Link to="/blog/how-much-does-medical-billing-cost">Medical Billing Cost Guide</Link></li>
-              <li><Link to="/blog/common-claim-denial-codes-and-how-to-fix-them">Denial Codes Guide</Link></li>
+              <li><Link to="/denial-codes">Denial Codes Guide</Link></li>
               <li><Link to="/blog">Blog</Link></li>
             </ul>
           </div>
