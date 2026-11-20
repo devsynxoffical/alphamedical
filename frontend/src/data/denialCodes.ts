@@ -46,6 +46,10 @@ export const denialCodeSources: Record<string, { label: string; url: string }[]>
   'co-11': [X12_CARC, X12_RARC, CMS_MANUAL],
   'co-18': [X12_CARC, X12_RARC, CMS_MANUAL],
   'co-22': [X12_CARC, X12_RARC, CMS_MANUAL],
+  'co-29': [X12_CARC, CMS_MANUAL],
+  'co-50': [X12_CARC, X12_RARC, CMS_MANUAL],
+  'co-109': [X12_CARC, X12_RARC, CMS_MANUAL],
+  'co-197': [X12_CARC, X12_RARC, CMS_MANUAL],
 }
 
 export const denialCodes: DenialCode[] = [
@@ -524,15 +528,248 @@ export const denialCodes: DenialCode[] = [
     ],
     relatedCodes: ['co-16', 'co-18', 'pr-1'],
   },
+
+  // ------------------------------------------------------------------ CO-29
+  {
+    slug: 'co-29',
+    code: 'CO-29',
+    carc: '29',
+    group: 'CO',
+    name: 'Time limit for filing has expired',
+    official: 'The time limit for filing has expired.',
+    definition:
+      'Denial code CO-29 means the claim reached the payer after its timely-filing deadline; it can only be overturned with proof that the claim was filed on time or that an exception applies, otherwise the amount is written off and cannot be billed to the patient.',
+    seoTitle: 'CO-29 Denial Code: Timely Filing Limit Expired (What You Can Do)',
+    seoDescription:
+      'CO-29 means the timely filing limit has expired. Learn Medicare and commercial filing limits, what counts as proof of timely filing, exceptions, and how to stop it happening.',
+    glance: [
+      { label: 'Group code', value: 'CO (Contractual Obligation)' },
+      { label: 'Bill the patient?', value: 'No' },
+      { label: 'Usual fix', value: 'Appeal with proof of timely filing, or write off' },
+      { label: 'Appeal needed?', value: 'Yes, if you have proof' },
+    ],
+    intro: [
+      'Every payer sets a deadline for submitting claims. For Medicare Part B, claims must generally be filed within 12 months (one calendar year) of the date of service. Commercial and Medicaid plans set their own limits in provider manuals and contracts, and many are much shorter. CO-29 means the payer received the claim after that limit.',
+      'CO-29 is one of the most expensive denials because it is usually final. Unlike most denials, there is nothing to correct on the claim itself: the only way to get paid is to prove the claim was submitted on time, or that a recognised exception applies.',
+    ],
+    causes: [
+      { title: 'Claim never left the system', text: 'Charges held for missing information, a coding question or a provider signature and forgotten.' },
+      { title: 'Rejections not worked', text: 'Clearinghouse or payer rejections were never corrected, so the claim was never accepted.' },
+      { title: 'Wrong payer first', text: 'Time spent billing the wrong plan (see CO-22 and CO-109) used up the filing window at the right one.' },
+      { title: 'Secondary claims late', text: 'Secondary claims not sent promptly after the primary payer paid.' },
+      { title: 'Short commercial limits', text: 'A commercial contract with a much shorter limit than the team assumed.' },
+      { title: 'Corrections sent too late', text: 'A corrected claim that arrived after the filing or correction window.' },
+    ],
+    fix: [
+      { title: 'Check the dates', text: 'Confirm the date of service, the payer\'s filing limit and the dates the claim was first sent and accepted.' },
+      { title: 'Find proof of timely filing', text: 'Pull the clearinghouse acceptance report (999/277CA) or payer acknowledgment showing the claim was received within the limit.' },
+      { title: 'Check for exceptions', text: 'For Medicare, exceptions include an administrative error by Medicare or its contractor and retroactive Medicare or Medicaid entitlement. Commercial contracts may have their own.' },
+      { title: 'Appeal or request reconsideration', text: 'Send the proof with a short letter that cites the original submission date and the payer\'s limit.' },
+      { title: 'Write off if there is no proof', text: 'Without proof or an exception, post the balance as a timely-filing write-off. It cannot be billed to the patient.' },
+    ],
+    appeal: [
+      'Appeal only with documentary proof: a clearinghouse acceptance report, payer acknowledgment or portal confirmation dated inside the filing limit.',
+      'A screenshot of the claim in your own system is not usually accepted as proof that the payer received it.',
+      'If the delay came from the payer (for example a retroactive eligibility change), include that evidence.',
+    ],
+    prevent: [
+      'Keep a table of filing limits by payer and contract, and flag claims approaching them.',
+      'Work clearinghouse rejections every day so claims are accepted, not just sent.',
+      'Bill secondary claims as soon as the primary remittance posts.',
+      'Store acceptance reports so proof is available if a payer later says the claim was late.',
+    ],
+    faqs: [
+      { question: 'What does denial code CO-29 mean?', answer: 'CO-29 means the time limit for filing has expired: the payer received the claim after its timely-filing deadline.' },
+      { question: 'What is the Medicare timely filing limit?', answer: 'Medicare claims must generally be filed within 12 months (one calendar year) after the date of service. Limited exceptions apply, such as administrative error or retroactive entitlement.' },
+      { question: 'Can a CO-29 denial be appealed?', answer: 'Yes, but only with proof the claim was filed within the limit (for example a clearinghouse acceptance report) or evidence that an exception applies.' },
+      { question: 'Can I bill the patient for a timely filing denial?', answer: 'No. CO-29 uses the Contractual Obligation group code, so the provider absorbs the amount.' },
+    ],
+    relatedCodes: ['co-22', 'co-109', 'co-16'],
+  },
+
+  // ------------------------------------------------------------------ CO-50
+  {
+    slug: 'co-50',
+    code: 'CO-50',
+    carc: '50',
+    group: 'CO',
+    name: 'Not deemed a medical necessity by the payer',
+    official: 'These are non-covered services because this is not deemed a \'medical necessity\' by the payer.',
+    definition:
+      'Denial code CO-50 means the payer decided the service was not medically necessary for the diagnosis and documentation it received; it is resolved by correcting the diagnosis if it was coded wrongly, or by appealing with clinical records that meet the payer\'s coverage policy.',
+    seoTitle: 'CO-50 Denial Code: Medical Necessity Denial (How to Appeal)',
+    seoDescription:
+      'CO-50 means the service was not deemed medically necessary. Learn how LCDs, NCDs and payer policies apply, when an ABN shifts liability (PR-50), and how to appeal.',
+    glance: [
+      { label: 'Group code', value: 'CO (PR when a valid ABN was signed)' },
+      { label: 'Bill the patient?', value: 'Only with a valid ABN or waiver' },
+      { label: 'Usual fix', value: 'Appeal with clinical documentation' },
+      { label: 'Appeal needed?', value: 'Often' },
+    ],
+    intro: [
+      'CO-50 is a medical-necessity denial. The payer is saying the documentation and diagnosis on the claim do not show that the service was reasonable and necessary under its coverage rules. For Medicare, those rules are mostly in National Coverage Determinations (NCDs) and the local coverage determinations (LCDs) published by each Medicare Administrative Contractor. Commercial payers publish their own medical policies.',
+      'Some CO-50 denials are coding problems: the right diagnosis was documented but not coded, or a less specific code was used. Others are documentation problems, where the note does not show the criteria in the policy. The fix depends on which one you have.',
+    ],
+    causes: [
+      { title: 'Diagnosis not on the covered list', text: 'The ICD-10-CM code billed is not one the LCD, NCD or payer policy accepts for the service.' },
+      { title: 'Criteria not documented', text: 'The policy requires specific findings, prior treatments or test results that the note does not show.' },
+      { title: 'Frequency limits', text: 'The service was repeated sooner than the policy allows.' },
+      { title: 'Screening billed as diagnostic', text: 'A screening service without symptoms billed under a diagnostic code, or the reverse.' },
+      { title: 'Experimental or investigational', text: 'The payer considers the service not proven for the condition.' },
+    ],
+    remarks: [
+      { code: 'N115', meaning: 'This decision was based on a Local Coverage Determination (LCD).' },
+      { code: 'N386', meaning: 'This decision was based on a National Coverage Determination (NCD).' },
+    ],
+    fix: [
+      { title: 'Find the policy', text: 'Identify the LCD, NCD or payer medical policy for the service, using the remark code where available.' },
+      { title: 'Compare the record', text: 'Check whether the documentation shows the criteria the policy requires.' },
+      { title: 'Correct coding errors', text: 'If a supported, more specific or covered diagnosis was documented but not coded, send a corrected claim.' },
+      { title: 'Appeal with records', text: 'If the service met the policy, appeal with the clinical notes, test results and a letter that maps them to the policy criteria.' },
+      { title: 'Check liability', text: 'For Medicare, if the patient signed a valid ABN before the service (modifier GA), the amount may be billed to the patient.' },
+    ],
+    appeal: [
+      'Write the appeal around the policy: quote the coverage criteria and point to the page in the record that meets each one.',
+      'A letter of medical necessity from the treating provider strengthens the appeal.',
+      'For Medicare Part B, the first level is a redetermination by the MAC, generally requested within 120 days of the initial determination.',
+    ],
+    prevent: [
+      'Check LCD/NCD and payer policy criteria before scheduling services that are often denied.',
+      'Use an Advance Beneficiary Notice (ABN) for Medicare patients when you expect a service may not be covered, and append the right modifier (GA, GZ, GX).',
+      'Give providers documentation templates that capture policy criteria.',
+    ],
+    faqs: [
+      { question: 'What does denial code CO-50 mean?', answer: 'CO-50 means the service is non-covered because the payer does not consider it medically necessary based on the diagnosis and documentation submitted.' },
+      { question: 'How do I appeal a CO-50 denial?', answer: 'Find the coverage policy (LCD, NCD or payer policy), confirm the record meets its criteria, and appeal with the clinical notes and a letter that maps the documentation to each criterion.' },
+      { question: 'What is the difference between CO-50 and PR-50?', answer: 'With CO-50 the provider is liable. PR-50 appears when the patient is liable, for example when a Medicare patient signed a valid Advance Beneficiary Notice before the service.' },
+      { question: 'Can I bill the patient for CO-50?', answer: 'Not for a CO-50 denial. You can bill the patient only when liability has shifted to them, such as with a valid ABN for Medicare (reported as PR-50).' },
+    ],
+    relatedCodes: ['co-11', 'co-197', 'co-16'],
+  },
+
+  // ------------------------------------------------------------------ CO-109
+  {
+    slug: 'co-109',
+    code: 'CO-109',
+    carc: '109',
+    group: 'CO',
+    name: 'Claim not covered by this payer or contractor',
+    official: 'Claim/service not covered by this payer/contractor. You must send the claim/service to the correct payer/contractor.',
+    definition:
+      'Denial code CO-109 means the claim was sent to the wrong payer or the wrong Medicare contractor; there is nothing to appeal, so the fix is to identify the correct payer or jurisdiction and submit the claim there before its filing limit runs out.',
+    seoTitle: 'CO-109 Denial Code: Claim Sent to the Wrong Payer (How to Fix)',
+    seoDescription:
+      'CO-109 means the claim is not covered by this payer or contractor and must go to the correct one. Common causes: Medicare Advantage, DME MAC, Medicaid managed care.',
+    glance: [
+      { label: 'Group code', value: 'CO (Contractual Obligation)' },
+      { label: 'Bill the patient?', value: 'No' },
+      { label: 'Usual fix', value: 'Rebill the correct payer or contractor' },
+      { label: 'Appeal needed?', value: 'No' },
+    ],
+    intro: [
+      'CO-109 is a routing denial. The payer that received the claim is telling you it is not responsible for this patient or this type of service, and that the claim belongs with another payer or contractor.',
+      'It often happens when a patient\'s coverage has changed, for example from Original Medicare to a Medicare Advantage plan, or from Medicaid fee-for-service to a Medicaid managed care plan. It also happens within Medicare when a claim goes to the wrong contractor, such as DME billed to the Part B MAC instead of the DME MAC.',
+    ],
+    causes: [
+      { title: 'Medicare Advantage enrollment', text: 'The patient is enrolled in a Medicare Advantage plan, so Original Medicare does not pay; the plan does.' },
+      { title: 'Medicaid managed care', text: 'The patient moved to a Medicaid managed care plan and the claim went to state fee-for-service Medicaid.' },
+      { title: 'Wrong Medicare contractor', text: 'DMEPOS items billed to the Part B MAC instead of the DME MAC, or a claim sent to the wrong jurisdiction.' },
+      { title: 'Carved-out benefits', text: 'Behavioral health, vision, lab or pharmacy benefits managed by a separate vendor.' },
+      { title: 'Outdated registration', text: 'The insurance on file was not updated when the patient changed plans.' },
+    ],
+    remarks: [
+      { code: 'N418', meaning: 'Misrouted claim. See the payer\'s claim submission instructions.' },
+    ],
+    fix: [
+      { title: 'Verify current coverage', text: 'Run an eligibility check for the date of service to see which plan is responsible.' },
+      { title: 'Check carve-outs', text: 'Look at the member card and plan details for separate behavioral health, lab or DME vendors.' },
+      { title: 'Update registration', text: 'Correct the payer on file so future claims route correctly.' },
+      { title: 'Submit to the right payer', text: 'Send a new claim to the correct payer or contractor, watching its timely-filing limit.' },
+      { title: 'Close the original', text: 'Adjust the CO-109 balance off the wrong payer once the new claim is accepted.' },
+    ],
+    appeal: [
+      'An appeal rarely helps: CO-109 means the payer is not responsible. Only dispute it if eligibility for that payer on the date of service is confirmed in writing.',
+    ],
+    prevent: [
+      'Verify eligibility before every visit; Medicare Advantage and Medicaid plan changes are common.',
+      'Ask patients at check-in whether their insurance has changed, including Medicare Advantage enrollment.',
+      'Set payer routing rules for DME, lab and behavioral health carve-outs.',
+    ],
+    faqs: [
+      { question: 'What does denial code CO-109 mean?', answer: 'CO-109 means the claim or service is not covered by this payer or contractor, and the claim must be sent to the correct payer or contractor.' },
+      { question: 'How do I fix a CO-109 denial?', answer: 'Verify the patient\'s coverage for the date of service, update the payer in your system, and submit a new claim to the correct payer or Medicare contractor within its filing limit.' },
+      { question: 'Why would Medicare deny a claim with CO-109?', answer: 'Common reasons are that the patient is enrolled in a Medicare Advantage plan, or the claim went to the wrong Medicare contractor, such as DME billed to the Part B MAC instead of the DME MAC.' },
+      { question: 'Can I bill the patient for CO-109?', answer: 'No. The claim needs to go to the correct payer; CO-109 is not patient responsibility.' },
+    ],
+    relatedCodes: ['co-22', 'co-29', 'co-16'],
+  },
+
+  // ------------------------------------------------------------------ CO-197
+  {
+    slug: 'co-197',
+    code: 'CO-197',
+    carc: '197',
+    group: 'CO',
+    name: 'Precertification or authorization absent',
+    official: 'Precertification/authorization/notification/pre-treatment absent.',
+    definition:
+      'Denial code CO-197 means the service needed prior authorization (or notification) that was not obtained or not shown on the claim; if an authorization exists, resubmit with its number, otherwise ask the payer about retro-authorization or appeal, because the amount cannot be billed to the patient.',
+    seoTitle: 'CO-197 Denial Code: Prior Authorization Absent (How to Fix It)',
+    seoDescription:
+      'CO-197 means precertification or authorization was absent. How to fix it when an authorization existed, when retro-authorization is possible, and how to prevent it.',
+    glance: [
+      { label: 'Group code', value: 'CO (Contractual Obligation)' },
+      { label: 'Bill the patient?', value: 'No' },
+      { label: 'Usual fix', value: 'Add the auth number, or request retro-auth' },
+      { label: 'Appeal needed?', value: 'When the service was urgent or auth was obtained' },
+    ],
+    intro: [
+      'Many payers require prior authorization before advanced imaging, surgery, specialty drugs, therapy and other services. CO-197 means the payer has no authorization on record for the service billed, or the claim did not reference it.',
+      'Some CO-197 denials are easy: the authorization was obtained but the number was left off the claim. Others are true process gaps, where nobody requested the authorization before the visit. Those are harder to recover and are best prevented at scheduling.',
+    ],
+    causes: [
+      { title: 'Authorization number missing', text: 'An authorization existed but was not entered on the claim (for example, item 23 of the CMS-1500 or the 837P REF segment).' },
+      { title: 'Authorization never requested', text: 'The service was scheduled without checking whether the payer requires authorization.' },
+      { title: 'Code or date mismatch', text: 'The service performed differs from the code that was authorized, or falls outside the authorized dates.' },
+      { title: 'Wrong provider or location', text: 'The authorization was issued for a different rendering provider or facility.' },
+      { title: 'Coverage changed', text: 'The patient changed plans and the new payer has its own authorization rules.' },
+    ],
+    remarks: [
+      { code: 'N54', meaning: 'Claim information is inconsistent with pre-certified/authorized services.' },
+      { code: 'M62', meaning: 'Missing/incomplete/invalid treatment authorization code.' },
+    ],
+    fix: [
+      { title: 'Search for an authorization', text: 'Check the payer portal and your records for an approval covering the patient, code, provider and date.' },
+      { title: 'If it exists', text: 'Send a corrected claim with the authorization number in the right field.' },
+      { title: 'If the code changed', text: 'Ask the payer to update the authorization to the code performed, then resubmit.' },
+      { title: 'If none exists', text: 'Ask whether the payer allows retro-authorization and request it with clinical notes.' },
+      { title: 'Appeal when justified', text: 'Appeal urgent or emergency services, or cases where the payer gave wrong information, with documentation.' },
+    ],
+    appeal: [
+      'Appeal when the service was emergent, when the payer\'s own representative said no authorization was needed (note the call reference), or when an approval exists but was not linked to the claim.',
+      'Include the clinical notes and any call reference numbers or portal screenshots.',
+      'Note that CO-198 is different: it means the authorization was exceeded (for example more visits or units than approved).',
+    ],
+    prevent: [
+      'Check authorization requirements by payer and CPT code at scheduling, not at check-in.',
+      'Track authorization numbers, approved codes, units and dates, and link them to the visit in your system.',
+      'Re-check authorization when the planned procedure changes.',
+      'Read our guide to authorization in medical billing for payer timelines and rules.',
+    ],
+    faqs: [
+      { question: 'What does denial code CO-197 mean?', answer: 'CO-197 means precertification, authorization, notification or pre-treatment was absent: the payer has no required authorization on record for the service billed.' },
+      { question: 'How do I fix a CO-197 denial?', answer: 'If an authorization was obtained, send a corrected claim with the authorization number. If not, ask the payer about retro-authorization, and appeal urgent services with clinical documentation.' },
+      { question: 'What is the difference between CO-197 and CO-198?', answer: 'CO-197 means the authorization is absent. CO-198 means an authorization exists but the service exceeded it, such as more units or visits than were approved.' },
+      { question: 'Can I bill the patient for a missing authorization?', answer: 'No. CO-197 uses the Contractual Obligation group code, so the provider cannot transfer the amount to the patient.' },
+    ],
+    relatedCodes: ['co-50', 'co-16', 'co-109'],
+  },
 ]
 
 /** Codes summarised on the hub that do not have their own page yet. */
 export const otherCodes: { code: string; meaning: string }[] = [
   { code: 'CO-27', meaning: 'Expenses incurred after coverage terminated.' },
-  { code: 'CO-29', meaning: 'Time limit for filing has expired.' },
-  { code: 'CO-50', meaning: 'Non-covered: not deemed a medical necessity by the payer.' },
-  { code: 'CO-109', meaning: 'Claim or service not covered by this payer or contractor.' },
-  { code: 'CO-197', meaning: 'Precertification/authorization/notification absent.' },
+  { code: 'CO-198', meaning: 'Precertification/notification/authorization/pre-treatment exceeded.' },
   { code: 'CO-216', meaning: 'Based on the findings of a review organization.' },
   { code: 'CO-253', meaning: 'Sequestration: reduction in federal payment.' },
   { code: 'PR-2 / PR-3', meaning: 'Coinsurance amount / copayment amount (patient responsibility).' },

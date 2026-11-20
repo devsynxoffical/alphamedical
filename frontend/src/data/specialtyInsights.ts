@@ -173,7 +173,7 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Fluoroscopic or CT guidance is included in many spinal injection codes and cannot be billed separately for them.',
       'Commercial payers often require prior authorization for radiofrequency ablation and spinal cord stimulator trials.',
     ],
-    denialCodes: ['co-97', 'co-11', 'co-16', 'co-18'],
+    denialCodes: ['co-50', 'co-197', 'co-97', 'co-11'],
     faqs: [
       { question: 'Why are facet joint and RFA procedures denied so often?', answer: 'Coverage policies for facet interventions require specific steps, typically documented diagnostic medial branch blocks with a significant percentage of pain relief before ablation, plus limits on how often procedures can be repeated. Missing pain-relief documentation is the most common cause of denial.' },
       { question: 'Is fluoroscopic guidance billed separately for epidural injections?', answer: 'For most current epidural and facet injection codes, imaging guidance is included in the procedure code and is not billed separately.' },
@@ -399,7 +399,7 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Medicare applies a multiple procedure payment reduction to certain advanced imaging services performed for the same patient in the same session.',
       'Diagnostic studies need a signed order from the treating practitioner and a diagnosis that supports medical necessity.',
     ],
-    denialCodes: ['co-16', 'co-11', 'co-97', 'co-4'],
+    denialCodes: ['co-197', 'co-16', 'co-11', 'co-50'],
     faqs: [
       { question: 'What do modifiers 26 and TC mean in radiology billing?', answer: 'Modifier 26 bills only the professional component (the radiologist\'s interpretation). Modifier TC bills only the technical component (equipment and staff). When one entity performs both, the study is billed globally without either modifier.' },
       { question: 'Why are MRI and CT claims denied even with an authorization?', answer: 'Frequently because the study performed differs from the one authorized, for example with and without contrast instead of without. The authorization must be updated to match the exact code billed.' },
