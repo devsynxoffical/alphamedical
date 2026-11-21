@@ -236,3 +236,42 @@ Search Console data through 2026-11-19. GA4 not set up, so there is still no lea
 
 **Change (data-justified)**
 1. The indexed denial-codes blog post is gaining code queries, but the 12 dedicated code pages are still unknown to Google. Added links from that post to the CO-50, CO-197, CO-29 and CO-4 guides and the hub (the post already linked to CO-16 and CO-97), so Google can discover them from an indexed page.
+
+## 2026-11-21 12:41 UTC: 12-hour monitor run #7
+**Data status:** deploy #42 succeeded with all live checks green (404 for missing pages, `/about` 301, H1, canonical, verification tag, form healthcheck `ok:true`). The only citation errors are 403 bot blocks. Search Console data through 2026-11-21 (partial). GA4 not set up.
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-19 | 60 | 0 | 64.6 |
+| 2026-11-20 | **88** (best day since recovery; was 48 at last check) | 1 | 49.1 |
+| 2026-11-21 | 2 (partial) | 0 | 14 |
+
+**Restored articles are ranking (Nov 1–21, from 0):**
+
+| Article | Impr | Pos |
+|---|---|---|
+| ICD-10 code for ADHD | 9 | 21.1 |
+| Void claim | 4 | 1.8 |
+| ICD-10 code for anxiety | 3 | 42.3 |
+| Reversal vs recoupment | 1 | 4 |
+| Rendering vs referring provider | 1 | 1 |
+
+**Pages, Nov 1–21:** radiology 103 / 40.8 · pain management 51 / 76.2 · denial-codes blog 25 / 63.9 · contact 16 · home 15 impr, 4 clicks / 13.1 · dermatology 15 · rheumatology 14 · anesthesiology 11 / 65.2.
+
+**Tracked keywords (Nov 20–21)**
+
+| Query | Pos | Previous |
+|---|---|---|
+| radiology billing services | 21 | 24.5 ↑ |
+| radiology billing company | 16 | 29.3 ↑ |
+| radiology billing companies | 19 | 41 ↑ |
+| radiology claims processing company | 7 | new |
+| anesthesia billing services | **11** | new (keyword-map P1 target; retargeted 20 Nov) |
+| anesthesiology billing | 25 | new |
+| icd code for adhd | 16 | new |
+| history of adhd icd 10 | 10.3 (3 impr) | new |
+| pain management billing company | 76.6 | 78.5 → |
+
+**Changes (data-justified)**
+1. ADHD article ranks for "history of adhd icd 10" (pos 10.3) and "icd 9 attention deficit disorder" (pos 25.5) but did not answer either. Added FAQs: history of ADHD (Z86.59 when documented as resolved; otherwise F90.x) and the ICD-9 codes (314.00 and 314.01; ICD-10-CM required since 1 Oct 2015).
+2. Anxiety article shows for "f41.2 diagnosis code". Added an FAQ explaining that F41.2 is WHO ICD-10, not U.S. ICD-10-CM, and that mixed anxiety and depressive disorder is indexed to F41.8.

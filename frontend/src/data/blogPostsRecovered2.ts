@@ -116,6 +116,8 @@ export const recoveredPosts2: BlogPost[] = [
       },
     ],
     faqs: [
+      { question: 'What is the ICD-10 code for a history of ADHD?', answer: 'There is no separate code for a history of ADHD. If the provider documents ADHD as a current condition being monitored or treated, code it with the appropriate F90 code. If the provider documents ADHD as a past condition that has resolved, Z86.59 (personal history of other mental and behavioral disorders) can be used.' },
+      { question: 'What was the ICD-9 code for ADHD?', answer: 'In ICD-9-CM, attention deficit disorder was coded 314.00 (without mention of hyperactivity) and 314.01 (with hyperactivity). ICD-9-CM was replaced by ICD-10-CM for U.S. claims on October 1, 2015, so current claims must use the F90 codes.' },
       { question: 'What is the ICD-10 code for ADHD?', answer: 'ADHD is coded in category F90: F90.0 (predominantly inattentive type), F90.1 (predominantly hyperactive type), F90.2 (combined type), F90.8 (other type) and F90.9 (unspecified type). F90 alone is a category heading and is not billable.' },
       { question: 'What is the ICD-10 code for adult ADHD?', answer: 'Adults use the same F90 codes as children. The F90-F98 block notes that its codes may be used regardless of age, so an adult with combined presentation is coded F90.2.' },
       { question: 'What is F90.9?', answer: 'F90.9 is attention-deficit hyperactivity disorder, unspecified type. Use it when ADHD is diagnosed but the documentation does not specify the presentation. Once the presentation is documented, switch to F90.0, F90.1, F90.2 or F90.8.' },
@@ -244,6 +246,7 @@ export const recoveredPosts2: BlogPost[] = [
       },
     ],
     faqs: [
+      { question: 'Is F41.2 a valid ICD-10-CM code?', answer: 'No. F41.2 (mixed anxiety and depressive disorder) exists in the World Health Organization ICD-10, but it is not part of the U.S. ICD-10-CM code set. In ICD-10-CM, mixed anxiety and depressive disorder is indexed to F41.8 (other specified anxiety disorders), so a claim with F41.2 will be rejected.' },
       { question: 'What is the ICD-10 code for anxiety?', answer: 'Unspecified anxiety (anxiety NOS) is F41.9. Specific anxiety disorders have their own codes: F41.1 generalized anxiety disorder, F41.0 panic disorder, F41.8 other specified anxiety disorders, and F40.- codes for phobic anxiety disorders such as social anxiety disorder (F40.10).' },
       { question: 'What is the difference between F41.1 and F41.9?', answer: 'F41.1 is generalized anxiety disorder, a specific diagnosis. F41.9 is anxiety disorder, unspecified, used when the documentation does not identify a specific anxiety disorder.' },
       { question: 'What is the ICD-10 code for anxiety and depression?', answer: 'Mixed anxiety and depressive disorder, where neither condition meets full criteria, indexes to F41.8. If both a full anxiety disorder and a depressive disorder are diagnosed, code each one separately.' },
