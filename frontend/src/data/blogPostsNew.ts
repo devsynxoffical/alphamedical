@@ -376,7 +376,11 @@ export const newPosts: BlogPost[] = [
     related: [
       { label: 'CO-16 denial code: full guide', path: '/denial-codes/co-16' },
       { label: 'CO-97 denial code: full guide', path: '/denial-codes/co-97' },
-      { label: 'CO-45 and PR-1 explained', path: '/denial-codes' },
+      { label: 'CO-50 denial code: medical necessity', path: '/denial-codes/co-50' },
+      { label: 'CO-197 denial code: authorization absent', path: '/denial-codes/co-197' },
+      { label: 'CO-29 denial code: timely filing', path: '/denial-codes/co-29' },
+      { label: 'CO-4 and CO-11: modifier and diagnosis denials', path: '/denial-codes/co-4' },
+      { label: 'All denial codes: CO-45, PR-1, CO-18, CO-22 and more', path: '/denial-codes' },
       { label: 'Denial management services', path: '/denial-management-services' },
       { label: 'Revenue cycle management services', path: '/revenue-cycle-management-services' },
       { label: 'Top 10 reasons for claim denials', path: '/blog/top-10-reasons-for-medical-claim-denials-and-how-to-fix-them' },

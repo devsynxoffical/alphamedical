@@ -201,3 +201,38 @@ Search Console data through 2026-11-19. GA4 not set up, so there is still no lea
 
 **Change (data-justified)**
 1. /specialties/anesthesiology: title, description and H1 retargeted to the observed query wording ("anesthesia billing company", "best anesthesia billing company", "anesthesia coding services", "anesthesiology billing companies"). This is the same change that moved radiology from about pos 70 to about 30. Before: "Anesthesiology Medical Billing Services". After: "Anesthesia Billing Company & Coding Services". Validate: position for those queries over the next week.
+
+## 2026-11-21 00:41 UTC: 12-hour monitor run #6
+**Data status:** deploy #41 succeeded. All live checks pass: missing page 404, `/about` 301, www→bare 301, H1, canonical and verification tag present, and form healthcheck `ok:true`. The only citation-link errors are 403 bot blocks (cdc.gov ×2, hhs.gov, palmettogba.com, softwareadvice.com). Search Console data through 2026-11-20. GA4 not set up.
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-16 | 60 | 2 | 64.4 |
+| 2026-11-17 | 40 | 1 | 49.1 |
+| 2026-11-18 | 39 | 0 | 49.7 |
+| 2026-11-19 | 60 | 0 | 64.6 |
+| 2026-11-20 | 48 | **1** | 59.4 |
+
+- **Pages, Nov 1–21:**
+  - radiology 94 impr / pos 42.0 · pain management 48 / 76.1 · **denial-codes blog 23 / 61.9 (was 12 / 70.1)** · dermatology 15 / 76.2 · rheumatology 14 / 68.0
+  - home 13 impr, **4 clicks** / pos 14.7 · contact 13 / 90.6 · billing cost blog 8 / 68.8 · anesthesiology 8 / 74.8
+  - **/blog/what-is-void-claim-in-medical-billing: first impressions, 2 at pos 2.5** (restored article, indexed 20 Nov)
+- **New query types (Nov 19–21):** the denial-codes blog now shows for "co 97 denial code", "co-50 denial code description", "co 197 denial code descriptions", "co16" and "co 253" (×4 variants), at pos 75–88.
+- **Index:**
+  - /denial-codes and /denial-codes/co-16: "unknown to Google".
+  - /denial-management-services: "Discovered, not indexed".
+
+**Tracked keywords (Nov 19–21)**
+
+| Query | Pos | Run #5 |
+|---|---|---|
+| radiology billing services | 24.5 | 27 ↑ |
+| radiology billing company | 29.3 | 33.7 ↑ |
+| radiology medical billing | 8 | 8 → |
+| radiology payment solution | 14 | new |
+| pain management billing company | 78.5 | 80.8 → |
+| anesthesia coding services | 77 | 77 → (retarget 20 Nov, not yet re-crawled) |
+| co 216 denial code | 75 | 75 → |
+
+**Change (data-justified)**
+1. The indexed denial-codes blog post is gaining code queries, but the 12 dedicated code pages are still unknown to Google. Added links from that post to the CO-50, CO-197, CO-29 and CO-4 guides and the hub (the post already linked to CO-16 and CO-97), so Google can discover them from an indexed page.
