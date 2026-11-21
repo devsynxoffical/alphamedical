@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { ArrowRight, BookOpen, CheckCircle, ChevronDown, ExternalLink, FileWarning, Lightbulb, ShieldCheck, Phone } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
 import LeadSection from '../components/LeadSection'
+import PreferredSourceButton from '../components/PreferredSourceButton'
 import NotFound from './NotFound'
 import { denialCodes, denialCodeSources, DENIAL_HUB_PATH } from '../data/denialCodes'
 import { BRAND } from '../seo/site'
@@ -199,6 +200,8 @@ const DenialCodePage: React.FC = () => {
                 </p>
               </div>
             </aside>
+
+            <PreferredSourceButton variant="article" />
           </article>
 
           <aside className="bp-sidebar" aria-label="Guide tools">

@@ -7,6 +7,7 @@ import { slugify, readingMinutes, formatDate } from '../utils/blog'
 import { BRAND } from '../seo/site'
 import NotFound from './NotFound'
 import LeadSection from '../components/LeadSection'
+import PreferredSourceButton from '../components/PreferredSourceButton'
 import '../styles/landing.css'
 import '../styles/blog.css'
 
@@ -140,6 +141,8 @@ const BlogPostDetail: React.FC = () => {
                 </p>
               </div>
             </aside>
+
+            <PreferredSourceButton variant="article" />
 
             <section className="bp-section">
               <h2>Related services</h2>

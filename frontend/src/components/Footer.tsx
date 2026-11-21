@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react'
 import logo from '../Images/ALPHA-MEDI-ASSIST-LOGO-PNG.png'
+import PreferredSourceButton from './PreferredSourceButton'
 import hipaaIcon from '../Images/HIPAA-1-768x296 - Edited.png'
 import accreditedIcon from '../Images/Accredited.png'
 
@@ -110,6 +111,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="footer-bottom">
+          <PreferredSourceButton />
           <div className="footer-badges">
             <img loading="lazy" decoding="async"
               src={hipaaIcon}
