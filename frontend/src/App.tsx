@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
@@ -40,10 +40,17 @@ import Urology from './pages/Urology'
 import NursePractitioner from './pages/NursePractitioner'
 import './App.css'
 import ChatWidgetEmbed from './components/ChatWidgetEmbed'
+import StickyCta from './components/StickyCta'
+import DenialCodesHub from './pages/DenialCodesHub'
+import DenialCodePage from './pages/DenialCodePage'
+import NotFound from './pages/NotFound'
+import LandingPage from './pages/LandingPage'
+import { landingPages } from './data/landingPages'
+import { redirects } from './seo/routes'
 
 function App() {
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <ChatWidgetEmbed siteId="alpha-medi-assist" />
       <div className="App">
@@ -53,6 +60,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<About />} />
             <Route path="/services" element={<Services />} />
+            {landingPages.map((page) => (
+              <Route key={page.path} path={page.path} element={<LandingPage page={page} />} />
+            ))}
             <Route path="/medical-coding-services" element={<ServiceDetail serviceId="medical-coding" />} />
             <Route path="/virtual-medical-assistant-services" element={<ServiceDetail serviceId="virtual-assistant" />} />
             <Route path="/medical-payment-posting-services" element={<ServiceDetail serviceId="payment-posting" />} />
@@ -85,18 +95,24 @@ function App() {
             <Route path="/specialties/nurse-practitioner" element={<NursePractitioner />} />
             <Route path="/specialties/:specialtyId" element={<SpecialtyDetail />} />
             <Route path="/book-appointment" element={<BookAppointment />} />
-            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPostDetail />} />
+            <Route path="/denial-codes" element={<DenialCodesHub />} />
+            <Route path="/denial-codes/:code" element={<DenialCodePage />} />
             <Route path="/free-consultation" element={<FreeConsultation />} />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            {Object.entries(redirects).map(([from, to]) => (
+              <Route key={from} path={from} element={<Navigate to={to} replace />} />
+            ))}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
+        <StickyCta />
       </div>
-    </Router>
+    </>
   )
 }
 

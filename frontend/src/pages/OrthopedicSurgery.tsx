@@ -2,6 +2,10 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import LeadSection from '../components/LeadSection'
+import SpecialtyInsights from '../components/SpecialtyInsights'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drLissa from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -21,8 +25,8 @@ const OrthopedicSurgery: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Orthopedic Surgery Billing Services | AlphaMedi Assist"
-                description="Streamline orthopedic surgery medical billing services with AlphaMedi Assist. Efficient coding, claims, and revenue cycle management for orthopedic practices."
+                title="Orthopedic Surgery Billing & Coding | Alpha Medi Assist"
+                description="Orthopedic surgery billing: joint replacement, arthroscopy and spine coding, global periods, surgical modifiers and prior authorization handled end to end."
             />
 
             <div className="specialty-detail-page internal-medicine-page">
@@ -30,21 +34,21 @@ const OrthopedicSurgery: React.FC = () => {
                 <section className="specialty-hero-enhanced">
                     <div className="container">
                         <div className="specialty-hero-content">
-                            <Link to="/specialties" className="back-link-enhanced">
+                            <Link to="/medical-billing-specialities" className="back-link-enhanced">
                                 <ArrowLeft size={16} />
                                 Back to Specialties
                             </Link>
 
                             <div className="specialty-hero-main">
                                 <div className="specialty-hero-text">
-                                    <h1 className="specialty-title">Orthopedic Surgery Medical Billing Services</h1>
+                                    <h1 className="specialty-title">Orthopedic Surgery Billing &amp; Coding Services</h1>
                                     <p className="specialty-description">
                                         Efficient billing is essential for orthopedic surgery practices to maintain smooth operations, maximize revenue, and provide exceptional patient care. At Alpha Medi Assist, we specialize in orthopedic surgery medical billing services to streamline claims, coding, and revenue cycle management (RCM). Our expert solutions reduce administrative burdens, improve reimbursements, and ensure HIPAA-compliant workflows, allowing your team to focus entirely on surgical care and patient outcomes.
                                     </p>
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drLissa} alt="Dr. Lissa Jenn" />
+                                            <img loading="lazy" decoding="async" src={drLissa} alt="Dr. Lissa Jenn" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -72,7 +76,7 @@ const OrthopedicSurgery: React.FC = () => {
                                     AlphaMedi Assist is a trusted provider of orthopedic billing services across the United States. Our team of specialists delivers end-to-end orthopedic medical billing services designed specifically for orthopedic surgery practices, including outpatient surgical centers, hospital-affiliated clinics, and private orthopedic offices.
                                 </p>
                                 <div className="about-cta-wrapper">
-                                    <Link to="/about" className="btn btn-primary">Learn more</Link>
+                                    <Link to="/about-us" className="btn btn-primary">Learn more</Link>
                                 </div>
                             </div>
 
@@ -412,6 +416,8 @@ const OrthopedicSurgery: React.FC = () => {
                                 <div key={index} className="faq-item" style={{ marginBottom: '1rem', border: '1px solid #e0e0e0', borderRadius: '8px', overflow: 'hidden', background: 'white' }}>
                                     <button
                                         onClick={() => toggleFaq(index)}
+                                        aria-expanded={openFaq === index}
+                                        data-faq-q
                                         style={{
                                             width: '100%',
                                             display: 'flex',
@@ -430,8 +436,8 @@ const OrthopedicSurgery: React.FC = () => {
                                         {item.q}
                                         {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                     </button>
-                                    {openFaq === index && (
-                                        <div style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
+                                    {(
+                                        <div data-faq-a hidden={openFaq !== index} style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
                                             {item.a}
                                         </div>
                                     )}
@@ -440,6 +446,12 @@ const OrthopedicSurgery: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <SpecialtyInsights id="orthopedic-surgery" name="Orthopedic surgery" />
+
+                <LeadSection title="Get a free Orthopedic Surgery billing assessment" />
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

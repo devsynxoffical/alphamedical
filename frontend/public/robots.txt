@@ -1,15 +1,42 @@
-# robots.txt for Alpha Medi Assist
-
+# robots.txt for https://alphamediassist.com
 User-agent: *
 Allow: /
+Disallow: /api/
 
-# Disallow admin or private areas (if any)
-# Disallow: /admin/
-# Disallow: /private/
+# AI search & answer engines: explicitly welcome (GEO).
+# Being crawlable by these bots is what makes Alpha Medi Assist citable in
+# ChatGPT, Claude, Perplexity, Gemini / AI Overviews and Copilot answers.
+User-agent: OAI-SearchBot
+Allow: /
 
-# Sitemap location (update with your actual domain)
-Sitemap: https://www.alphamediassist.com/sitemap.xml
+User-agent: ChatGPT-User
+Allow: /
 
-# Crawl-delay (optional, adjust as needed)
-# Crawl-delay: 1
+User-agent: GPTBot
+Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://alphamediassist.com/sitemap.xml

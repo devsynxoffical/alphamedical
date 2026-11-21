@@ -1,0 +1,42 @@
+# SEO Plan (20 Nov 2026): implementation status
+
+Source: "Alpha Medi Assist SEO Plan", prepared by DEVSYNX on 20 Nov 2026. Keyword map: `keyword-map-2026-11-20.csv` (Semrush US volumes and KD as supplied in the plan).
+Rule kept from the recovery plan: nothing is published that needs facts we do not have (no invented case studies, credentials, client names or partnerships).
+
+## Done (20 Nov 2026)
+
+| Plan item | What was done | URLs | How to validate |
+|---|---|---|---|
+| www fix (wk 1-2) | Already live since Nov: www → bare domain 301 and matching canonical. Checked in every deploy | all | Deploy log "www → bare domain redirect: 301" |
+| Denial code pages (wk 3-4, first 4) | New hub plus 4 code pages. Each has a one-sentence definition first (AEO), an at-a-glance box, the official CARC wording, causes, remark codes, fix steps, appeal and prevention guidance, FAQ (FAQPage schema), sources and a lead form | /denial-codes, /denial-codes/co-16, /co-97, /co-45, /pr-1 | GSC impressions for "co 16 denial code" (1,600/mo), "co 97 denial code" (1,600), "co 45 denial code" (1,000), "pr 1 denial code" (320) |
+| Internal links to the new pages | Footer "Denial Codes Guide", specialty related links, the denial management page and the old denial-codes blog post all point to the new pages | site-wide | Prerender output |
+| Rebuild /medical-billing-services (wk 3-4, partial) | Added: pricing models table, what affects price, monthly metrics with definitions, signs it is time to outsource, first-90-days timeline, 3 new FAQs. Main content is now about 1,700 words | /medical-billing-services | Position for "medical billing services" (4,400/mo, KD 10) and "outsourced medical billing" |
+| FAQ schema on specialty pages | Already on 15 specialty pages via the specialty billing guides | /specialties/* | Rich results test |
+| Specialty page upgrades (wk 5-8, 6 pages) | Dermatology, orthopedics, pain management, internal medicine, urology and radiology each gained a "Payer and coverage rules" card (Medicare global periods, LCDs, prior authorization, frequency rules, 26/TC ownership) and links to the 4 denial-code guides most relevant to that specialty. Orthopedics title and H1 retargeted to "Orthopedic Billing Services" (480/mo). These pages already had codes, modifiers, denial drivers, documentation and FAQ schema. Mini case studies are still blocked (need real client data) | /specialties/dermatology, /orthopedics, /pain-management, /internal-medicine, /urology, /radiology | Positions for each page's keyword-map target over 4–8 weeks |
+| Denial code pages (wk 5-8, 4 more) | CO-4 (modifier), CO-11 (diagnosis vs procedure), CO-18/OA-18 (duplicate), CO-22 (coordination of benefits). Same template as the first 4; the hub now lists 8 guides | /denial-codes/co-4, /co-11, /co-18, /co-22 | GSC impressions per code page |
+| Denial code pages (wk 9-12, 4 more) | CO-29 (timely filing), CO-50 (medical necessity, incl. ABN / PR-50), CO-109 (wrong payer or contractor), CO-197 (authorization absent, vs CO-198). The hub now lists 12 guides. Radiology links to CO-197, pain management to CO-50 and CO-197 | /denial-codes/co-29, /co-50, /co-109, /co-197 | GSC impressions per code page |
+| Blogs (wk 9-12) | New: "In-house vs. outsourced medical billing" and "Annual CPT, ICD-10 & HCPCS updates". Two topics overlapped existing ranking posts, so those posts were expanded instead of creating competing URLs: the billing cost guide gained a "cost by specialty" section, and the credentialing guide gained a "timelines by payer type" section | /blog/in-house-vs-outsourced-medical-billing, /blog/annual-cpt-code-updates-how-practices-should-prepare, /blog/how-much-does-medical-billing-cost, /blog/how-long-does-medical-credentialing-take | GSC impressions; queries per post |
+
+## Blocked: needs facts or decisions from the owner
+
+| Plan item | What is needed |
+|---|---|
+| Case study on /medical-billing-services and specialty pages | Real before/after numbers from a client, ideally with written permission to name them (or an anonymised version they approve) |
+| Proof for "98% net collection rate" and "90+ specialties" | The source for these figures. If they cannot be shown, we should soften the wording |
+| EHR/software section (Kareo/Tebra, AdvancedMD, eClinicalWorks, athenahealth) | Confirmation of which systems the team actually works in today |
+| Author and reviewer box with credentials (CPC, CPB) | Real names and credentials of the people who write or review the guides |
+| Certifications and trust page (AAPC, HFMA, HIPAA) | Which certifications and memberships the company and staff actually hold; HIPAA policies, such as training and risk assessment, that can be described |
+| Separate phone number and address | A dedicated number for this brand. Confirm whether the Spotsylvania, VA office is a real staffed office (needed before a Google Business Profile) |
+| Disavow file | A backlink export from Semrush (Backlinks → Referring domains). Upload the resulting `disavow.txt` in Search Console's Disavow tool; I can prepare the file from the export |
+| Stop paid link packages | Owner action |
+| Behavioral health, physical therapy and chiropractic pages | Confirm these are services you sell. Behavioral health must be scoped against the existing psychiatry and mental-health pages to avoid cannibalization |
+| Dental billing page | Only if dental billing is offered |
+
+## Next (per plan timeline)
+- Weeks 5-8 remaining: 3 new specialty pages (waiting for owner confirmation); 6 clean links (need owner accounts and outreach).
+- Weeks 9-12: done (see above); review rankings against the targets at day 30.
+- Clean links: healthcare directories, EHR marketplaces, guest posts. These need owner accounts and outreach.
+
+## Targets (from the plan) vs. measurement
+Day 30 / 60 / 90: ranking keywords 60 / 150 / 300; top-20 keywords 3 / 15 / 40; organic visits 50 / 300 / 900; leads 1 / 4 / 10.
+Leads cannot be measured until GA4 (`VITE_GA_MEASUREMENT_ID`) is set; form emails are the fallback count.

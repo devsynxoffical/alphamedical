@@ -65,8 +65,8 @@ const Contact: React.FC = () => {
   return (
     <>
       <PageTitle
-        title="Contact Us - Alpha Medi Assist | Get in Touch"
-        description="Get in touch with Alpha Medi Assist for expert medical billing services, coding solutions, and practice management inquiries."
+        title="Contact Alpha Medi Assist | Medical Billing Company"
+        description="Contact Alpha Medi Assist: call +1 424-542-7170 or email info@alphamediassist.com. Offices in Spotsylvania, VA and St. Petersburg, FL."
       />
       <div className="contact-page">
         {/* Split Hero Section (inspired design) */}
@@ -74,17 +74,17 @@ const Contact: React.FC = () => {
           <div className="contact-hero-inner">
             <div className="contact-hero-left">
               <div className="split-badge">We’re here to help</div>
-              <h1>Contact Us</h1>
+              <h1>Contact Alpha Medi Assist</h1>
               <p>
                 Whether you have a question about our services, need assistance with medical billing,
                 or want to discuss how Alpha Medi Assist can support your practice, we’re ready to connect.
               </p>
-              <Link to="/about" className="btn btn-primary split-btn">
+              <Link to="/about-us" className="btn btn-primary split-btn">
                 Learn More <ArrowRight size={18} />
               </Link>
             </div>
             <div className="contact-hero-right">
-              <img
+              <img loading="lazy" decoding="async"
                 src={contactHeroImg}
                 alt="Team discussing strategy"
                 className="contact-hero-image"

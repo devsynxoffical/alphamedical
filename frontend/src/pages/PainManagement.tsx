@@ -2,6 +2,10 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import LeadSection from '../components/LeadSection'
+import SpecialtyInsights from '../components/SpecialtyInsights'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drLissa from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -21,8 +25,8 @@ const PainManagement: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Pain Management Medical Billing Services | Alpha Medi Assist"
-                description="Streamline pain management medical billing services with Alpha Medi Assist. Accurate coding, faster claims, and optimized RCM for pain practices."
+                title="Pain Management Billing Company & Services | Alpha Medi Assist"
+                description="Pain management billing company for interventional practices: epidural, facet and RFA coding, LCD documentation, prior authorization and denial follow-up."
             />
 
             <div className="specialty-detail-page internal-medicine-page">
@@ -30,21 +34,21 @@ const PainManagement: React.FC = () => {
                 <section className="specialty-hero-enhanced">
                     <div className="container">
                         <div className="specialty-hero-content">
-                            <Link to="/specialties" className="back-link-enhanced">
+                            <Link to="/medical-billing-specialities" className="back-link-enhanced">
                                 <ArrowLeft size={16} />
                                 Back to Specialties
                             </Link>
 
                             <div className="specialty-hero-main">
                                 <div className="specialty-hero-text">
-                                    <h1 className="specialty-title">Pain Management Medical Billing Services</h1>
+                                    <h1 className="specialty-title">Pain Management Billing Company &amp; Services</h1>
                                     <p className="specialty-description">
                                         Efficient billing is essential for pain management practices to maintain smooth operations and consistent cash flow. At Alpha Medi Assist, we specialize in pain management medical billing services that streamline claims, coding, and revenue cycle management. Our solutions reduce administrative burdens, improve reimbursement accuracy, and ensure HIPAA-compliant patient care.
                                     </p>
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drLissa} alt="Dr. Lissa" />
+                                            <img loading="lazy" decoding="async" src={drLissa} alt="Dr. Lissa" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -75,7 +79,7 @@ const PainManagement: React.FC = () => {
                                     Our team understands the complexity of pain management documentation, modifiers, and payer requirements.
                                 </p>
                                 <div className="about-cta-wrapper">
-                                    <Link to="/about" className="btn btn-primary">Learn more</Link>
+                                    <Link to="/about-us" className="btn btn-primary">Learn more</Link>
                                 </div>
                             </div>
 
@@ -387,33 +391,35 @@ const PainManagement: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are pain management medical billing services?",
+                                    q: "What are pain management medical billing services?",
                                     a: "These services manage coding, claims submission, insurance verification, patient billing, and revenue cycle management for pain management practices."
                                 },
                                 {
-                                    q: "2. Do you support interventional pain procedures?",
+                                    q: "Do you support interventional pain procedures?",
                                     a: "Yes, we handle billing for injections, nerve blocks, and advanced interventional pain treatments."
                                 },
                                 {
-                                    q: "3. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Absolutely. All workflows comply with strict HIPAA privacy and security standards."
                                 },
                                 {
-                                    q: "4. Can you support multi-provider pain clinics?",
+                                    q: "Can you support multi-provider pain clinics?",
                                     a: "Yes, our solutions scale to support both small practices and large pain management centers."
                                 },
                                 {
-                                    q: "5. How quickly can services begin?",
+                                    q: "How quickly can services begin?",
                                     a: "Most practices can start within a few days after assessment and system integration."
                                 },
                                 {
-                                    q: "6. Do you provide reporting and analytics?",
+                                    q: "Do you provide reporting and analytics?",
                                     a: "Yes, we deliver detailed financial and operational reports to support informed decision-making."
                                 }
                             ].map((item, index) => (
                                 <div key={index} className="faq-item" style={{ marginBottom: '1rem', border: '1px solid #e0e0e0', borderRadius: '8px', overflow: 'hidden', background: 'white' }}>
                                     <button
                                         onClick={() => toggleFaq(index)}
+                                        aria-expanded={openFaq === index}
+                                        data-faq-q
                                         style={{
                                             width: '100%',
                                             display: 'flex',
@@ -432,8 +438,8 @@ const PainManagement: React.FC = () => {
                                         {item.q}
                                         {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                     </button>
-                                    {openFaq === index && (
-                                        <div style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
+                                    {(
+                                        <div data-faq-a hidden={openFaq !== index} style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
                                             {item.a}
                                         </div>
                                     )}
@@ -442,6 +448,12 @@ const PainManagement: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <SpecialtyInsights id="pain-management" name="Pain management" />
+
+                <LeadSection title="Get a free Pain Management billing assessment" />
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

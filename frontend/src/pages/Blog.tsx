@@ -1,8 +1,14 @@
 import React, { useState } from 'react'
-import { CheckCircle } from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import PageTitle from '../components/PageTitle'
-import { blogPosts, type BlogPost } from '../data/blogPosts.ts'
+import { blogPosts } from '../data/blogPosts.ts'
+import { readingMinutes, formatDate } from '../utils/blog'
+import '../styles/landing.css'
+import '../styles/blog.css'
+
+// Newest first; the pricing guide is featured because it answers the most commercial question.
+const FEATURED = 'how-much-does-medical-billing-cost'
 
 const Blog: React.FC = () => {
   const [email, setEmail] = useState('')
@@ -17,35 +23,55 @@ const Blog: React.FC = () => {
     }
   }
 
+  const featured = blogPosts.find((p) => p.slug === FEATURED)
+  const rest = [...blogPosts].reverse().filter((p) => p.slug !== FEATURED)
+
   return (
     <>
       <PageTitle
-        title="Healthcare Insights & Updates - Blog | Alpha Medi Assist"
-        description="Stay informed with the latest healthcare billing insights, industry trends, and best practices from the Alpha Medi Assist blog."
+        title="Medical Billing & RCM Blog | Alpha Medi Assist"
+        description="Practical guides on medical billing costs, claim denial codes, credentialing timelines, coding and revenue cycle management for U.S. practices."
       />
-      <div className="blog-page">
-        {/* Hero Section */}
-        <section className="page-hero">
+      <div className="blog-page bp">
+        <section className="bi-hero">
           <div className="container">
-            <div className="hero-content">
-              <h1>Healthcare Insights & Updates</h1>
-              <p>Stay informed with the latest trends, tips, and best practices in healthcare revenue management</p>
+            <p className="lp-eyebrow">Alpha Medi Assist blog</p>
+            <h1>Medical Billing &amp; RCM Insights</h1>
+            <p>Practical, source-backed guides on billing costs, claim denials, coding and credentialing, written by our billing team for U.S. practice owners and managers.</p>
+            <div className="bi-topics" aria-label="Topics">
+              {[...new Set(blogPosts.map((p) => p.category).filter(Boolean))].map((c) => <span key={c}>{c}</span>)}
             </div>
           </div>
         </section>
 
-        {/* Blog Posts Section */}
-        <section className="blog-section section">
+        <section className="bi-list">
           <div className="container">
-            <div className="blog-grid">
-              {blogPosts.map((post: BlogPost) => (
-                <article key={post.slug} className="card blog-card">
-                  <h2 className="blog-title">{post.title}</h2>
-                  <p className="blog-excerpt">{post.excerpt}</p>
-                  <Link to={`/blog/${post.slug}`} className="blog-link">
-                    Read Full Article
-                  </Link>
-                </article>
+            {featured && (
+              <Link to={`/blog/${featured.slug}`} className="bi-featured">
+                <div>
+                  <span className="bp-card-cat">Featured guide{featured.category ? ` · ${featured.category}` : ''}</span>
+                  <span className="bi-featured-title">{featured.title}</span>
+                  <span className="bi-featured-excerpt">{featured.excerpt}</span>
+                  <span className="bp-card-meta" style={{ marginTop: '1rem', display: 'inline-flex' }}>
+                    Read the guide · {readingMinutes(featured)} min <ArrowRight size={14} aria-hidden="true" />
+                  </span>
+                </div>
+                <div className="bi-featured-side">
+                  <strong>Short answer:</strong> {featured.intro[0].replace(/^Short answer:\s*/i, '')}
+                </div>
+              </Link>
+            )}
+            <div className="bp-cards">
+              {rest.map((post) => (
+                <Link key={post.slug} to={`/blog/${post.slug}`} className="bp-card">
+                  {post.category && <span className="bp-card-cat">{post.category}</span>}
+                  <span className="bp-card-title">{post.title}</span>
+                  <span className="bp-card-excerpt">{post.excerpt}</span>
+                  <span className="bp-card-meta bi-card-meta">
+                    <time dateTime={post.dateModified ?? post.datePublished}>{formatDate(post.dateModified ?? post.datePublished)}</time>
+                    <span>{readingMinutes(post)} min read <ArrowRight size={14} aria-hidden="true" /></span>
+                  </span>
+                </Link>
               ))}
             </div>
           </div>

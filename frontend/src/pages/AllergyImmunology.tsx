@@ -2,6 +2,9 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import LeadSection from '../components/LeadSection'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drWilliam from '../Images/young-handsome-physician-medical-robe-with-stethoscope.jpg' // Using valid image from directory
 import '../App.css'
 
@@ -22,7 +25,7 @@ const AllergyImmunology: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Allergy & Immunology Medical Billing Services | AlphaMedi Assist"
+                title="Allergy & Immunology Billing Services | Alpha Medi Assist"
                 description="Streamline allergy & immunology medical billing services with AlphaMedi Assist. Efficient claims, coding, and RCM for your practice."
             />
 
@@ -31,7 +34,7 @@ const AllergyImmunology: React.FC = () => {
                 <section className="specialty-hero-enhanced">
                     <div className="container">
                         <div className="specialty-hero-content">
-                            <Link to="/specialties" className="back-link-enhanced">
+                            <Link to="/medical-billing-specialities" className="back-link-enhanced">
                                 <ArrowLeft size={16} />
                                 Back to Specialties
                             </Link>
@@ -47,7 +50,7 @@ const AllergyImmunology: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drWilliam} alt="Dr. William" />
+                                            <img loading="lazy" decoding="async" src={drWilliam} alt="Dr. William" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -75,7 +78,7 @@ const AllergyImmunology: React.FC = () => {
                                     Alpha Medi Assist is a trusted provider of medical billing allergy immunology solutions across the United States. Our team of experts offers end-to-end billing, coding, and revenue cycle management services specifically designed for allergy and immunology practices.
                                 </p>
                                 <div className="about-cta-wrapper">
-                                    <Link to="/about" className="btn btn-primary">Learn more</Link>
+                                    <Link to="/about-us" className="btn btn-primary">Learn more</Link>
                                 </div>
                             </div>
 
@@ -356,29 +359,31 @@ const AllergyImmunology: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are allergy & immunology medical billing services?",
+                                    q: "What are allergy & immunology medical billing services?",
                                     a: "Services that manage claims, coding, patient billing, and revenue cycle management for allergy and immunology practices."
                                 },
                                 {
-                                    q: "2. Can you manage multi-provider clinics?",
+                                    q: "Can you manage multi-provider clinics?",
                                     a: "Yes, our services scale to practices of any size."
                                 },
                                 {
-                                    q: "3. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Absolutely. All processes follow strict HIPAA guidelines."
                                 },
                                 {
-                                    q: "4. How fast can we get started?",
+                                    q: "How fast can we get started?",
                                     a: "Services typically begin within a few days after assessment and system integration."
                                 },
                                 {
-                                    q: "5. Do you provide reporting?",
+                                    q: "Do you provide reporting?",
                                     a: "Yes, detailed reports give insights into claims, reimbursements, and outstanding balances."
                                 }
                             ].map((item, index) => (
                                 <div key={index} className="faq-item" style={{ marginBottom: '1rem', border: '1px solid #e0e0e0', borderRadius: '8px', overflow: 'hidden', background: 'white' }}>
                                     <button
                                         onClick={() => toggleFaq(index)}
+                                        aria-expanded={openFaq === index}
+                                        data-faq-q
                                         style={{
                                             width: '100%',
                                             display: 'flex',
@@ -397,8 +402,8 @@ const AllergyImmunology: React.FC = () => {
                                         {item.q}
                                         {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                     </button>
-                                    {openFaq === index && (
-                                        <div style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
+                                    {(
+                                        <div data-faq-a hidden={openFaq !== index} style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
                                             {item.a}
                                         </div>
                                     )}
@@ -407,6 +412,10 @@ const AllergyImmunology: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <LeadSection title="Get a free Allergy & Immunology billing assessment" />
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

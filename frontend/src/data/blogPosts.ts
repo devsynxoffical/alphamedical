@@ -3,12 +3,24 @@ export type BlogPost = {
   title: string
   seoTitle: string
   seoDescription: string
+  /** ISO date (YYYY-MM-DD). Update dateModified whenever the article is revised. */
+  datePublished: string
+  dateModified?: string
+  /** Named, credentialed author improves E-E-A-T. Falls back to the organization. */
+  author?: string
   excerpt: string
   intro: string[]
   sections: Array<{
     heading: string
-    paragraphs: string[]
+    paragraphs?: string[]
+    bullets?: string[]
   }>
+  /** Internal links shown at the end of the article (service / specialty pages). */
+  related?: Array<{ label: string; path: string }>
+  /** Topic label shown on cards and in the article header. */
+  category?: string
+  /** Authoritative sources the article relies on (shown as "Sources", added to schema as citation). */
+  references?: Array<{ label: string; url: string }>
   faqs: Array<{
     question: string
     answer: string
@@ -16,13 +28,25 @@ export type BlogPost = {
   closing: string[]
 }
 
+import { newPosts } from './blogPostsNew'
+import { recoveredPosts } from './blogPostsRecovered'
+import { recoveredPosts2 } from './blogPostsRecovered2'
+import { planPosts } from './blogPostsPlan'
+
 export const blogPosts: BlogPost[] = [
   {
     slug: 'top-10-reasons-for-medical-claim-denials-and-how-to-fix-them',
+    category: 'Denial management',
+    references: [
+      { label: 'X12: Claim Adjustment Reason Codes (CARC)', url: 'https://x12.org/codes/claim-adjustment-reason-codes' },
+      { label: 'CMS: Medicare Claims Processing Manual (Pub. 100-04)', url: 'https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912' },
+      { label: 'CMS: National Correct Coding Initiative (NCCI) edits', url: 'https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits' },
+    ],
     title: 'Top 10 Reasons for Medical Claim Denials and How to Fix Them',
+    datePublished: '2026-11-17',
     seoTitle: 'Top 10 Reasons for Medical Claim Denials & How to Fix Them',
     seoDescription:
-      "Discover the top 10 reasons for medical claim denials and learn proven fixes to protect your practice's revenue. Expert billing insights for Florida healthcare providers.",
+      "The top 10 reasons medical claims are denied and the proven fix for each, from eligibility errors to missing prior authorization and coding mistakes.",
     excerpt:
       'Learn the top denial triggers, practical fixes for each, and how to improve clean-claim performance across your revenue cycle.',
     intro: [
@@ -166,7 +190,14 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'how-to-reduce-medical-claim-denials-complete-guide',
+    category: 'Denial management',
+    references: [
+      { label: 'CMS: National Correct Coding Initiative (NCCI) edits', url: 'https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits' },
+      { label: 'CMS: Medicare Claims Processing Manual (Pub. 100-04)', url: 'https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912' },
+      { label: 'X12: Remittance Advice Remark Codes (RARC)', url: 'https://x12.org/codes/remittance-advice-remark-codes' },
+    ],
     title: 'How to Reduce Medical Claim Denials: A Complete Guide for Practices',
+    datePublished: '2026-11-17',
     seoTitle: 'How to Reduce Medical Claim Denials | Complete Guide',
     seoDescription:
       "Struggling with denied claims? Learn proven strategies to reduce medical claim denials, boost reimbursements, and streamline your practice's revenue cycle.",
@@ -261,4 +292,8 @@ export const blogPosts: BlogPost[] = [
       'Alpha Medi Assist helps practices implement full-cycle billing, credentialing, denial management, and revenue optimization workflows.',
     ],
   },
+  ...newPosts,
+  ...recoveredPosts,
+  ...recoveredPosts2,
+  ...planPosts,
 ]

@@ -42,10 +42,10 @@ const SpecialtyCard = memo(({ specialty, getSpecialtyIcon, getSpecialtyImage, pr
     <div className="specialty-image">
       <img
         src={getSpecialtyImage(specialty.id)}
-        alt={specialty.name}
+        alt={`${specialty.name} medical billing`}
         loading={priority ? "eager" : "lazy"}
         decoding="async"
-        {...(priority ? { fetchpriority: "high" } : {})}
+        {...(priority ? { fetchPriority: "high" as const } : {})}
       />
       <div className="specialty-overlay">
         <div className="specialty-icon">
@@ -143,14 +143,17 @@ const Specialties: React.FC = () => {
 
   return (
     <>
-      <PageTitle title="Medical Specialties - Billing & RCM Services | Alpha Medi Assist" />
+      <PageTitle
+        title="Medical Billing by Specialty (90+) | Alpha Medi Assist"
+        description="Specialty-specific medical billing and coding for cardiology, urology, pain management, psychiatry, OB/GYN, radiology and 90+ other specialties. HIPAA-compliant RCM."
+      />
       <div className="specialties-page">
         {/* Page Header */}
         <section className="specialties-header section">
           <div className="container">
             <div className="specialties-header-content">
-              <h1 className="specialties-title">MEDICAL SPECIALTIES</h1>
-              <p className="specialties-subtitle">Specialized billing and coding support</p>
+              <h1 className="specialties-title">Specialty Medical Billing for 90+ Specialties</h1>
+              <p className="specialties-subtitle">Specialty-specific billing, coding and RCM support for 90+ specialties</p>
             </div>
           </div>
         </section>

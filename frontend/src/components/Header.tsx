@@ -38,6 +38,9 @@ const Header: React.FC = () => {
   }, [])
 
   const services = [
+    { id: 'medical-billing', name: 'Medical Billing Services', path: '/medical-billing-services' },
+    { id: 'rcm', name: 'Revenue Cycle Management', path: '/revenue-cycle-management-services' },
+    { id: 'denials', name: 'Denial Management', path: '/denial-management-services' },
     { id: 'medical-billing-specialties', name: 'Medical Billing Specialties', path: '/medical-billing-specialities' },
     { id: 'virtual-assistant', name: 'Virtual Medical Assistant', path: '/virtual-medical-assistant-services' },
     { id: 'medical-coding', name: 'Medical Coding Services', path: '/medical-coding-services' },

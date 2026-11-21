@@ -2,6 +2,10 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import LeadSection from '../components/LeadSection'
+import SpecialtyInsights from '../components/SpecialtyInsights'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drJenn from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -21,8 +25,8 @@ const Orthopedics: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Orthopedic Medical Billing Services | Alpha Medi Assist"
-                description="Streamline orthopedic medical billing services with Alpha Medi Assist. Efficient claims, coding, and RCM for orthopedic practices."
+                title="Orthopedic Billing Services for Practices | Alpha Medi Assist"
+                description="Billing for orthopedic clinics: E/M visits, joint injections, X-rays, casting, DME and laterality modifiers coded and paid correctly. HIPAA-compliant RCM."
             />
 
             <div className="specialty-detail-page internal-medicine-page">
@@ -30,21 +34,21 @@ const Orthopedics: React.FC = () => {
                 <section className="specialty-hero-enhanced">
                     <div className="container">
                         <div className="specialty-hero-content">
-                            <Link to="/specialties" className="back-link-enhanced">
+                            <Link to="/medical-billing-specialities" className="back-link-enhanced">
                                 <ArrowLeft size={16} />
                                 Back to Specialties
                             </Link>
 
                             <div className="specialty-hero-main">
                                 <div className="specialty-hero-text">
-                                    <h1 className="specialty-title">Orthopedic Medical Billing Services</h1>
+                                    <h1 className="specialty-title">Orthopedic Billing Services</h1>
                                     <p className="specialty-description">
                                         Efficient billing is essential for orthopedic practices to maintain smooth operations and maximize revenue. At Alpha Medi Assist, we specialize in orthopedic medical billing services to streamline claims, coding, and revenue cycle management (RCM). Our solutions reduce administrative burdens, improve reimbursements, and ensure HIPAA-compliant patient care.
                                     </p>
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drJenn} alt="Dr. Jenn" />
+                                            <img loading="lazy" decoding="async" src={drJenn} alt="Dr. Jenn" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -75,7 +79,7 @@ const Orthopedics: React.FC = () => {
                                     Our orthopedic medical billing services are fully HIPAA-compliant, scalable, and tailored to the unique needs of orthopedic practices.
                                 </p>
                                 <div className="about-cta-wrapper">
-                                    <Link to="/about" className="btn btn-primary">Learn More</Link>
+                                    <Link to="/about-us" className="btn btn-primary">Learn More</Link>
                                 </div>
                             </div>
 
@@ -378,33 +382,35 @@ const Orthopedics: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are orthopedic medical billing services?",
+                                    q: "What are orthopedic medical billing services?",
                                     a: "Services that handle coding, claims submission, insurance verification, patient billing, and revenue cycle management for orthopedic practices."
                                 },
                                 {
-                                    q: "2. Can you manage multi-provider orthopedic clinics?",
+                                    q: "Can you manage multi-provider orthopedic clinics?",
                                     a: "Yes, our services scale for practices of all sizes."
                                 },
                                 {
-                                    q: "3. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Absolutely. All processes adhere to strict HIPAA guidelines to protect patient data."
                                 },
                                 {
-                                    q: "4. How quickly can services be implemented?",
+                                    q: "How quickly can services be implemented?",
                                     a: "Services typically start within a few days after assessment and system integration."
                                 },
                                 {
-                                    q: "5. Do you provide detailed reporting?",
+                                    q: "Do you provide detailed reporting?",
                                     a: "Yes, detailed reports provide insights into claims, reimbursements, and outstanding balances."
                                 },
                                 {
-                                    q: "6. Can you handle orthopedic surgery billing services?",
+                                    q: "Can you handle orthopedic surgery billing services?",
                                     a: "Yes, we specialize in both routine procedures and complex orthopedic surgery billing."
                                 }
                             ].map((item, index) => (
                                 <div key={index} className="faq-item" style={{ marginBottom: '1rem', border: '1px solid #e0e0e0', borderRadius: '8px', overflow: 'hidden', background: 'white' }}>
                                     <button
                                         onClick={() => toggleFaq(index)}
+                                        aria-expanded={openFaq === index}
+                                        data-faq-q
                                         style={{
                                             width: '100%',
                                             display: 'flex',
@@ -423,8 +429,8 @@ const Orthopedics: React.FC = () => {
                                         {item.q}
                                         {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                     </button>
-                                    {openFaq === index && (
-                                        <div style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
+                                    {(
+                                        <div data-faq-a hidden={openFaq !== index} style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
                                             {item.a}
                                         </div>
                                     )}
@@ -433,6 +439,12 @@ const Orthopedics: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <SpecialtyInsights id="orthopedics" name="Orthopedic" />
+
+                <LeadSection title="Get a free Orthopedic Practice billing assessment" />
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">
