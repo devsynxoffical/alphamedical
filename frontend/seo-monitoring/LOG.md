@@ -296,3 +296,35 @@ Search Console data through 2026-11-19. GA4 not set up, so there is still no lea
 
 **Change (data-justified)**
 1. Anxiety article ranks for "ocd f code" (#8) and "icd-10 code for stress unspecified" (2 impressions, #47.5) but did not answer them. Added FAQs: OCD codes in category F42 (F42.2, F42.3, F42.4, F42.8, F42.9) and stress (F43.9 vs Z73.3).
+
+## 2026-11-22 12:41 UTC: 12-hour monitor run #9
+**Data status:** deploy #45 succeeded with all live checks green. Search Console data through 2026-11-22 (partial). GA4 not set up.
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-20 | 90 | 1 | 49.1 |
+| 2026-11-21 | **148** (record; was 63 at last check) | 0 | **40.3** |
+| 2026-11-22 | 7 (partial) | 0 | 36.7 |
+
+**Pages, Nov 1–22 (restored articles in bold)**
+
+| Page | Impr | Pos |
+|---|---|---|
+| radiology | 108 | 40.6 |
+| **ICD-10 ADHD** | **69** | **31.5** (was 10 / 22.9) |
+| pain management | 53 | 76.2 |
+| denial-codes blog | 33 | 66.8 |
+| **ICD-10 anxiety** | **27** | 51.4 |
+| **rendering vs referring** | **19** | **22.1** |
+| contact | 19 | 77.3 |
+| **reversal vs recoupment** | **13** | 29 |
+| **void claim** | **9** | **3.6** |
+| **paid-claim reversal** | **4** | 20.3 |
+| **authorization** | **6** | 89 |
+
+All 8 restored articles now have impressions. Clicks are unchanged (4, all to the home page).
+
+**Pain management queries (Nov 15–22):** "pain management billing company" 32 impressions at pos 78.9, plus 6 variants at 68–80. No movement since the 19 Nov retarget.
+
+**Change (data-justified)**
+1. Pain management (2nd-most impressions, stuck at about 79) and radiology (top page, about 40) had almost no contextual internal links; they were reached only through the menu and the hub. Added "Radiology billing services" and "Pain management billing services" to the related-link blocks on all specialty and service pages, so each now has descriptive links from about 47 pages. RelatedLinks now hides a page's link to itself.

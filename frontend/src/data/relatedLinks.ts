@@ -5,6 +5,8 @@ export interface RelatedLink {
 }
 
 export const specialtyRelatedLinks: RelatedLink[] = [
+  { label: 'Radiology billing services', path: '/specialties/radiology' },
+  { label: 'Pain management billing services', path: '/specialties/pain-management' },
   { label: 'Outsourced medical billing services', path: '/medical-billing-services' },
   { label: 'Revenue cycle management services', path: '/revenue-cycle-management-services' },
   { label: 'Denial management services', path: '/denial-management-services' },
@@ -17,6 +19,8 @@ export const specialtyRelatedLinks: RelatedLink[] = [
 ]
 
 export const serviceRelatedLinks: RelatedLink[] = [
+  { label: 'Radiology billing services', path: '/specialties/radiology' },
+  { label: 'Pain management billing services', path: '/specialties/pain-management' },
   { label: 'Outsourced medical billing services', path: '/medical-billing-services' },
   { label: 'Revenue cycle management services', path: '/revenue-cycle-management-services' },
   { label: 'Denial management services', path: '/denial-management-services' },
