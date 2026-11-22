@@ -275,3 +275,24 @@ Search Console data through 2026-11-19. GA4 not set up, so there is still no lea
 **Changes (data-justified)**
 1. ADHD article ranks for "history of adhd icd 10" (pos 10.3) and "icd 9 attention deficit disorder" (pos 25.5) but did not answer either. Added FAQs: history of ADHD (Z86.59 when documented as resolved; otherwise F90.x) and the ICD-9 codes (314.00 and 314.01; ICD-10-CM required since 1 Oct 2015).
 2. Anxiety article shows for "f41.2 diagnosis code". Added an FAQ explaining that F41.2 is WHO ICD-10, not U.S. ICD-10-CM, and that mixed anxiety and depressive disorder is indexed to F41.8.
+
+## 2026-11-22 00:40 UTC: 12-hour monitor run #8
+**Data status:** deploy #44 succeeded with all live checks green (404, `/about` 301, H1, canonical, verification tag, form healthcheck `ok:true`). The only citation errors are 403 bot blocks. Search Console data through 2026-11-21. GA4 not set up.
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-19 | 60 | 0 | 64.6 |
+| 2026-11-20 | 90 | 1 | 49.1 |
+| 2026-11-21 | **63** (was 7 partial) | 0 | **43.1** (best daily avg so far) |
+
+- **Restored articles are broadening fast:** Nov 20–22 query+page rows went from 45 to 80.
+  - ADHD article: about 25 distinct queries ("icd 10 code adhd inattentive type" #15, "icd code for adhd" #16, "history of adhd icd 10" #10.3).
+  - Anxiety article: "ocd f code" #8.
+  - Paid-claim reversal article: "insurance payment reversal" #13.
+  - Authorization article: first impressions ("prior authorization in medical billing", 4 impressions, pos 94).
+- **Radiology** steady: "radiology billing services" #21, "radiology billing company" #16, "radiology claims processing company" #7.
+- **Anesthesia:** "anesthesia billing services" #11.
+- **Pain management** flat at about 77.
+
+**Change (data-justified)**
+1. Anxiety article ranks for "ocd f code" (#8) and "icd-10 code for stress unspecified" (2 impressions, #47.5) but did not answer them. Added FAQs: OCD codes in category F42 (F42.2, F42.3, F42.4, F42.8, F42.9) and stress (F43.9 vs Z73.3).
