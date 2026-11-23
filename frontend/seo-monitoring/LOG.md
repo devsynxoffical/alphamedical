@@ -328,3 +328,36 @@ All 8 restored articles now have impressions. Clicks are unchanged (4, all to th
 
 **Change (data-justified)**
 1. Pain management (2nd-most impressions, stuck at about 79) and radiology (top page, about 40) had almost no contextual internal links; they were reached only through the menu and the hub. Added "Radiology billing services" and "Pain management billing services" to the related-link blocks on all specialty and service pages, so each now has descriptive links from about 47 pages. RelatedLinks now hides a page's link to itself.
+
+## 2026-11-23 00:40 UTC: 12-hour monitor run #10
+**Data status:** deploy #46 succeeded; live checks green (404 test, form healthcheck `ok:true`). Search Console data through 2026-11-22. GA4 not set up.
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-20 | 90 | 1 | 49.1 |
+| 2026-11-21 | 150 | 0 | 39.8 |
+| 2026-11-22 | **169** (new record) | 0 | **38.4** |
+
+**Pages, Nov 1–23 (restored articles in bold)**
+
+| Page | Impr | Pos |
+|---|---|---|
+| **ICD-10 ADHD** | **134** | 30.3 (now the top page) |
+| radiology | 109 | 40.8 |
+| **ICD-10 anxiety** | **67** | 49.3 |
+| pain management | 53 | 76.2 |
+| denial-codes blog | 38 | 68.5 |
+| **rendering vs referring** | **35** | 28.6 |
+| **reversal vs recoupment** | **30** | 33.9 |
+| **void claim** | **15** | **5.4** |
+| orthopedics | 5 | 26.4 (new) |
+
+Total clicks this month: 4 (all to the home page).
+
+**ADHD article queries (Nov 15–23):** about 50 queries, mostly by presentation:
+- "adhd combined type icd 10" #20, "adhd inattentive type icd 10" #22.7, "adhd predominantly inattentive type icd 10" #15
+- "f90 0 diagnosis code" 5 impressions #28, "diagnosis code f90 0" #12
+- "adhd nos icd 10" #35, "adhd icd 10 code" #18
+
+**Change (data-justified)**
+1. ADHD article: the title and description listed bare codes, but searchers use presentation names. New title: "ADHD ICD-10 Codes: F90.0 Inattentive, F90.2 Combined, F90.9 NOS". The description now maps each code to its presentation, including "ADHD NOS". Added an FAQ for ADHD NOS (F90.9). dateModified set to 2026-11-23.

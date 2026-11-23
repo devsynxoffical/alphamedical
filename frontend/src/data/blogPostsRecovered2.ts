@@ -24,9 +24,10 @@ export const recoveredPosts2: BlogPost[] = [
     datePublished: '2026-11-19',
     category: 'Coding',
     title: 'What Is the ICD-10 Code for ADHD? F90.0 to F90.9 Explained',
-    seoTitle: 'ICD-10 Code for ADHD: F90.0, F90.1, F90.2, F90.8, F90.9',
+    dateModified: '2026-11-23',
+    seoTitle: 'ADHD ICD-10 Codes: F90.0 Inattentive, F90.2 Combined, F90.9 NOS',
     seoDescription:
-      'ADHD is coded in ICD-10-CM category F90. Which code to use for inattentive, hyperactive, combined, other and unspecified ADHD, adult ADHD, comorbidities and denials.',
+      'ADHD ICD-10-CM codes: F90.0 predominantly inattentive, F90.1 hyperactive-impulsive, F90.2 combined presentation, F90.8 other, F90.9 unspecified (ADHD NOS). Plus adult ADHD and denials.',
     excerpt:
       'The ADHD codes in ICD-10-CM category F90, how they map to DSM-5-TR presentations, and the documentation and claim errors that cause denials.',
     intro: [
@@ -116,6 +117,7 @@ export const recoveredPosts2: BlogPost[] = [
       },
     ],
     faqs: [
+      { question: 'What is the ICD-10 code for ADHD NOS?', answer: 'ADHD not otherwise specified, where the clinician does not document a presentation, is coded F90.9 (attention-deficit hyperactivity disorder, unspecified type). When the presentation is documented, use the specific code instead: F90.0 inattentive, F90.1 hyperactive-impulsive or F90.2 combined.' },
       { question: 'What is the ICD-10 code for a history of ADHD?', answer: 'There is no separate code for a history of ADHD. If the provider documents ADHD as a current condition being monitored or treated, code it with the appropriate F90 code. If the provider documents ADHD as a past condition that has resolved, Z86.59 (personal history of other mental and behavioral disorders) can be used.' },
       { question: 'What was the ICD-9 code for ADHD?', answer: 'In ICD-9-CM, attention deficit disorder was coded 314.00 (without mention of hyperactivity) and 314.01 (with hyperactivity). ICD-9-CM was replaced by ICD-10-CM for U.S. claims on October 1, 2015, so current claims must use the F90 codes.' },
       { question: 'What is the ICD-10 code for ADHD?', answer: 'ADHD is coded in category F90: F90.0 (predominantly inattentive type), F90.1 (predominantly hyperactive type), F90.2 (combined type), F90.8 (other type) and F90.9 (unspecified type). F90 alone is a category heading and is not billable.' },
