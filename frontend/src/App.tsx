@@ -28,7 +28,6 @@ import Dermatology from './pages/Dermatology'
 import EmergencyMedicine from './pages/EmergencyMedicine'
 import OBGYN from './pages/OBGYN'
 import HematologyOncology from './pages/HematologyOncology'
-import OrthopedicSurgery from './pages/OrthopedicSurgery'
 import Pediatrics from './pages/Pediatrics'
 import PlasticSurgery from './pages/PlasticSurgery'
 import Psychiatry from './pages/Psychiatry'
@@ -83,7 +82,6 @@ function App() {
             <Route path="/specialties/emergency-medicine" element={<EmergencyMedicine />} />
             <Route path="/specialties/gynecology-obstetrics" element={<OBGYN />} />
             <Route path="/specialties/hematology-oncology" element={<HematologyOncology />} />
-            <Route path="/specialties/orthopedic-surgery" element={<OrthopedicSurgery />} />
             <Route path="/specialties/pediatrics" element={<Pediatrics />} />
             <Route path="/specialties/plastic-surgery" element={<PlasticSurgery />} />
             <Route path="/specialties/psychiatry" element={<Psychiatry />} />

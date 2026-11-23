@@ -56,7 +56,7 @@ export const landingPages: LandingPageData[] = [
     serviceType: 'Medical billing',
     metaTitle: 'Outsourced Medical Billing Services | Alpha Medi Assist',
     metaDescription:
-      'Outsourced medical billing for U.S. practices: eligibility, coding, claims, denial management, A/R follow-up and patient billing. HIPAA-compliant. Free assessment.',
+      'Outsourced medical billing services for US practices: claims, payment posting, denials and A/R follow-up. HIPAA-compliant team. Free billing assessment.',
     eyebrow: 'Medical billing company',
     h1: 'Outsourced Medical Billing Services for Healthcare Practices',
     answer:
@@ -191,6 +191,9 @@ export const landingPages: LandingPageData[] = [
       { question: 'What is the difference between medical billing and medical coding?', answer: 'Medical coding turns the clinical documentation into ICD-10-CM, CPT and HCPCS codes. Medical billing uses those codes to create and submit claims, post payments, work denials and follow up on unpaid balances. Alpha Medi Assist provides both.' },
       { question: 'Can you take over billing from another company or clean up old A/R?', answer: 'Yes. We start with an audit of open claims, denials and aging A/R, then work the balances that are still within payer filing and appeal limits, highest value first, while new claims move to a clean daily cycle.' },
       { question: 'What reports will I receive?', answer: 'A monthly report on collections, net collection rate, first-pass acceptance rate, denial rate by reason code and payer, days in A/R and A/R over 90 days, plus a review call.' },
+      { question: 'Is outsourcing medical billing worth it for a small practice?', answer: 'Often, yes. A small practice usually relies on one or two people for billing, so vacations, turnover and busy clinic days delay claims and denial follow-up. Outsourcing replaces that fixed payroll with a fee tied to collections and gives you a full team. Compare your current cost to collect with a quote before you decide.' },
+      { question: 'How long does it take to switch medical billing companies?', answer: 'Most of the work is setup: signing a Business Associate Agreement, getting access to your EHR, practice-management system and clearinghouse, and mapping your payers. Most practices are onboarded within a few days after the assessment. Plan the cutover date so every claim has a clear owner.' },
+      { question: 'Who owns the A/R during the transition?', answer: 'Your practice always owns its accounts receivable. During a switch, agree in writing who works the claims submitted before the cutover date (often the previous company finishes them during a run-out period) and who handles everything after it, so no claim misses a filing or appeal deadline.' },
       { question: 'Is outsourced medical billing HIPAA-compliant?', answer: 'Yes. We sign a HIPAA Business Associate Agreement and follow role-based access and secure data-handling procedures for all protected health information.' },
     ],
     related: [
@@ -509,7 +512,7 @@ export const landingPages: LandingPageData[] = [
     kind: 'service',
     label: 'Denial Management Services',
     serviceType: 'Medical claim denial management',
-    metaTitle: 'Denial Management Services for Medical Practices | Alpha Medi Assist',
+    metaTitle: 'Denial Management Services | Alpha Medi Assist',
     metaDescription:
       'Outsourced denial management: root-cause analysis by CARC/RARC code, corrected claims, appeals and prevention. Stop writing off denied claims. Free denial assessment.',
     eyebrow: 'Denial management company',

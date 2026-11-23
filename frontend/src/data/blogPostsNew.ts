@@ -208,7 +208,7 @@ export const newPosts: BlogPost[] = [
     ],
     datePublished: '2026-11-17',
     title: 'Medical Billing vs. Medical Coding: What Is the Difference?',
-    seoTitle: 'Medical Billing vs. Medical Coding: Key Differences Explained',
+    seoTitle: 'Medical Billing vs. Medical Coding: Key Differences',
     seoDescription:
       'Medical coding turns clinical documentation into ICD-10, CPT and HCPCS codes; medical billing turns those codes into paid claims. How they differ and work together.',
     excerpt:

@@ -109,6 +109,8 @@ export const redirects: Record<string, string> = {
   '/book-a-meeting': '/book-appointment',
   '/healthcare-seo': '/healthcare-seo-services',
   '/allergy-immunology': '/specialties/allergy-immunology',
+  // Plan 23 Nov 2026: two near-identical orthopedic pages competed; merged into one.
+  '/specialties/orthopedic-surgery': '/specialties/orthopedics',
   '/faq': '/services',
   '/faqs': '/services',
   '/customer-stories': '/about-us',

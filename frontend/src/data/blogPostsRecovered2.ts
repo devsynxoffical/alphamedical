@@ -25,7 +25,7 @@ export const recoveredPosts2: BlogPost[] = [
     category: 'Coding',
     title: 'What Is the ICD-10 Code for ADHD? F90.0 to F90.9 Explained',
     dateModified: '2026-11-23',
-    seoTitle: 'ADHD ICD-10 Codes: F90.0 Inattentive, F90.2 Combined, F90.9 NOS',
+    seoTitle: 'ADHD ICD-10 Codes: F90.0 Inattentive, F90.2 Combined, NOS',
     seoDescription:
       'ADHD ICD-10-CM codes: F90.0 predominantly inattentive, F90.1 hyperactive-impulsive, F90.2 combined presentation, F90.8 other, F90.9 unspecified (ADHD NOS). Plus adult ADHD and denials.',
     excerpt:
@@ -285,7 +285,7 @@ export const recoveredPosts2: BlogPost[] = [
     datePublished: '2026-11-19',
     category: 'Revenue cycle',
     title: 'What Is Authorization in Medical Billing? Prior Auth Explained',
-    seoTitle: 'What Is Prior Authorization in Medical Billing? Process & Rules',
+    seoTitle: 'Prior Authorization in Medical Billing: Process & Rules',
     seoDescription:
       'Prior authorization is a payer\'s approval before a service. How it differs from referrals, the step-by-step process, CMS 2026 decision timeframes, and auth denials.',
     excerpt:

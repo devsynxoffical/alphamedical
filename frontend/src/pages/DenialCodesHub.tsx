@@ -25,7 +25,7 @@ const FAQS = [
 const DenialCodesHub: React.FC = () => (
   <>
     <PageTitle
-      title="Denial Codes in Medical Billing: CO-16, CO-97, CO-45, PR-1 & More"
+      title="Denial Codes in Medical Billing: CO-16, CO-97, CO-45, PR-1"
       description="Plain-English guide to claim denial codes (CARC): what CO-16, CO-97, CO-45, PR-1 and other common codes mean, who pays, and how to fix each one."
     />
     <div className="bp dc">

@@ -12,7 +12,7 @@ const InternalMedicine: React.FC = () => {
     return (
         <>
             <PageTitle
-                title="Internal Medicine Medical Billing Services | Alpha Medi Assist"
+                title="Internal Medicine Billing Services | Alpha Medi Assist"
                 description="Streamline Internal Medicine Medical Billing Services with Alpha Medi Assist. Expert coding, claims, and RCM solutions for your practice."
             />
 

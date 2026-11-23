@@ -25,7 +25,7 @@ const Gastroenterology: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Gastroenterology Medical Billing Services | Alpha Medi Assist"
+                title="Gastroenterology Billing Services | Alpha Medi Assist"
                 description="Streamline gastroenterology medical billing services with AlphaMedi Assist. Accurate coding, faster claims, and optimized RCM for GI practices."
             />
 

@@ -193,7 +193,7 @@ export const denialCodes: DenialCode[] = [
     official: 'Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement. Use this code with Group Codes PR or CO depending upon liability.',
     definition:
       'Code CO-45 means the payer reduced your billed charge to the allowed amount in its fee schedule or your contract; it is a contractual adjustment that is written off, not billed to the patient, and only disputed if the payer paid less than the contracted rate.',
-    seoTitle: 'CO-45 Denial Code: Meaning, Write-Off Rules & When to Dispute',
+    seoTitle: 'CO-45 Denial Code: Meaning, Write-Offs & Disputes',
     seoDescription:
       'CO-45 means the charge exceeds the fee schedule or contracted amount. Learn how to post it, when PR-45 applies instead, and how to spot underpayments worth disputing.',
     glance: [
@@ -250,7 +250,7 @@ export const denialCodes: DenialCode[] = [
     official: 'Deductible Amount.',
     definition:
       'Code PR-1 means the payer applied the allowed amount to the patient\'s deductible, so the patient owes that amount; it is not a denial, and the practice should bill the patient rather than appeal.',
-    seoTitle: 'PR-1 Denial Code: Deductible Amount Explained (and How to Collect)',
+    seoTitle: 'PR-1 Denial Code: Deductible Amount Explained',
     seoDescription:
       'PR-1 means the amount was applied to the patient\'s deductible. Learn what it means, how to post it, how to bill the patient and how to collect deductibles up front.',
     glance: [
@@ -303,7 +303,7 @@ export const denialCodes: DenialCode[] = [
     official: 'The procedure code is inconsistent with the modifier used, or a required modifier is missing.',
     definition:
       'Denial code CO-4 means the payer rejected the service line because a modifier does not fit the procedure code, or a modifier the payer requires is missing; it is fixed by correcting the modifier and sending a corrected claim.',
-    seoTitle: 'CO-4 Denial Code: Modifier Missing or Invalid (and How to Fix It)',
+    seoTitle: 'CO-4 Denial Code: Modifier Missing or Invalid',
     seoDescription:
       'CO-4 means the procedure code is inconsistent with the modifier, or a required modifier is missing. Common causes (26/TC, laterality, 25, 59/X) and how to fix them.',
     glance: [
@@ -364,7 +364,7 @@ export const denialCodes: DenialCode[] = [
     official: 'The diagnosis is inconsistent with the procedure.',
     definition:
       'Denial code CO-11 means the payer decided the diagnosis code on the claim does not support the procedure billed; it is fixed by linking or coding the diagnosis the documentation supports, or appealing with records when the original coding was correct.',
-    seoTitle: 'CO-11 Denial Code: Diagnosis Inconsistent with Procedure (Fixes)',
+    seoTitle: 'CO-11 Denial Code: Diagnosis Inconsistent with Procedure',
     seoDescription:
       'CO-11 means the diagnosis does not match the procedure billed. Learn the common causes (pointers, specificity, coverage policies) and how to correct or appeal it.',
     glance: [
@@ -481,7 +481,7 @@ export const denialCodes: DenialCode[] = [
     official: 'This care may be covered by another payer per coordination of benefits.',
     definition:
       'Denial code CO-22 means the payer believes another insurance plan is primary for this patient, so it will not pay until the primary payer has processed the claim; it is fixed by confirming coverage order and billing the correct primary payer first.',
-    seoTitle: 'CO-22 Denial Code: Coordination of Benefits Explained (and Fixed)',
+    seoTitle: 'CO-22 Denial Code: Coordination of Benefits Explained',
     seoDescription:
       'CO-22 means care may be covered by another payer (coordination of benefits). How to confirm which plan is primary, update COB, and rebill primary then secondary.',
     glance: [
@@ -539,7 +539,7 @@ export const denialCodes: DenialCode[] = [
     official: 'The time limit for filing has expired.',
     definition:
       'Denial code CO-29 means the claim reached the payer after its timely-filing deadline; it can only be overturned with proof that the claim was filed on time or that an exception applies, otherwise the amount is written off and cannot be billed to the patient.',
-    seoTitle: 'CO-29 Denial Code: Timely Filing Limit Expired (What You Can Do)',
+    seoTitle: 'CO-29 Denial Code: Timely Filing Limit Expired',
     seoDescription:
       'CO-29 means the timely filing limit has expired. Learn Medicare and commercial filing limits, what counts as proof of timely filing, exceptions, and how to stop it happening.',
     glance: [
@@ -657,7 +657,7 @@ export const denialCodes: DenialCode[] = [
     official: 'Claim/service not covered by this payer/contractor. You must send the claim/service to the correct payer/contractor.',
     definition:
       'Denial code CO-109 means the claim was sent to the wrong payer or the wrong Medicare contractor; there is nothing to appeal, so the fix is to identify the correct payer or jurisdiction and submit the claim there before its filing limit runs out.',
-    seoTitle: 'CO-109 Denial Code: Claim Sent to the Wrong Payer (How to Fix)',
+    seoTitle: 'CO-109 Denial Code: Claim Sent to the Wrong Payer',
     seoDescription:
       'CO-109 means the claim is not covered by this payer or contractor and must go to the correct one. Common causes: Medicare Advantage, DME MAC, Medicaid managed care.',
     glance: [
@@ -714,7 +714,7 @@ export const denialCodes: DenialCode[] = [
     official: 'Precertification/authorization/notification/pre-treatment absent.',
     definition:
       'Denial code CO-197 means the service needed prior authorization (or notification) that was not obtained or not shown on the claim; if an authorization exists, resubmit with its number, otherwise ask the payer about retro-authorization or appeal, because the amount cannot be billed to the patient.',
-    seoTitle: 'CO-197 Denial Code: Prior Authorization Absent (How to Fix It)',
+    seoTitle: 'CO-197 Denial Code: Prior Authorization Absent',
     seoDescription:
       'CO-197 means precertification or authorization was absent. How to fix it when an authorization existed, when retro-authorization is possible, and how to prevent it.',
     glance: [

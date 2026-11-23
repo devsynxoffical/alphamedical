@@ -25,7 +25,7 @@ const PainManagement: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Pain Management Billing Company & Services | Alpha Medi Assist"
+                title="Pain Management Billing Company | Alpha Medi Assist"
                 description="Pain management billing company for interventional practices: epidural, facet and RFA coding, LCD documentation, prior authorization and denial follow-up."
             />
 

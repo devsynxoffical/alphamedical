@@ -73,7 +73,7 @@ const Home: React.FC = () => {
   return (
     <>
       <PageTitle
-        title="Medical Billing Company for U.S. Practices | Alpha Medi Assist"
+        title="Medical Billing Company for US Practices | Alpha Medi Assist"
         description="Outsourced medical billing, coding, credentialing and RCM for U.S. practices in 90+ specialties. HIPAA-compliant, 98% net collection rate. Free consultation."
       />
       <div className="home">

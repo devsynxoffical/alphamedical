@@ -96,11 +96,12 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
     ],
     denialCodes: ['co-97', 'co-4', 'co-22', 'co-16'],
     faqs: [
+      { question: "What do modifiers 57, 58, 78 and 79 mean?", answer: "57 marks the visit where the decision for major surgery was made. 58 is a staged or related procedure by the same physician during the postoperative period. 78 is an unplanned return to the operating room for a related problem. 79 is an unrelated procedure during the postoperative period." },
+      { question: "How are workers' compensation and auto injury claims billed?", answer: "They go to the employer's workers' compensation carrier or the auto insurer, not the patient's health plan. They need the claim number and injury details, follow state fee schedules and have their own filing rules and deadlines." },
       { question: 'Can I bill an office visit and a joint injection on the same day?', answer: 'Yes, but only if the visit addressed something significant and separately identifiable beyond the routine assessment before the injection, documented in the note and billed with modifier 25. An injection-only visit is billed with the procedure code alone.' },
       { question: 'How do I bill bilateral knee injections?', answer: 'Most payers want 20610 with modifier 50 on one line, while some require separate RT and LT lines. Follow each payer\'s bilateral billing policy and bill drug units for the total dose given.' },
       { question: 'What is the difference between orthopedic practice billing and orthopedic surgery billing?', answer: 'Practice billing covers office visits, injections, imaging, splints and DME. Surgical billing deals with operative codes, global periods, assistant surgeons and surgical modifiers. Most orthopedic groups need both handled consistently.' },
     ],
-    seeAlso: { label: 'Orthopedic surgery billing & coding', path: '/specialties/orthopedic-surgery', note: 'Operative billing (joint replacement, arthroscopy, spine), global periods and surgical modifiers are covered on our orthopedic surgery page.' },
   },
 
   'orthopedic-surgery': {
@@ -175,6 +176,8 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
     ],
     denialCodes: ['co-50', 'co-197', 'co-97', 'co-11'],
     faqs: [
+      { question: "How is urine drug testing billed in pain management?", answer: "Presumptive (screening) drug tests use CPT 80305 to 80307 depending on the method. Definitive tests for Medicare use HCPCS G0480 to G0483, chosen by the number of drug classes tested. Payers limit frequency, so document why each test was ordered." },
+      { question: "What documentation do payers expect for opioid therapy visits?", answer: "Payers and state rules commonly expect a treatment agreement, a prescription drug monitoring program check, risk assessment, functional goals and the results of any drug testing in the record. Requirements vary by state and payer, so keep the practice policy current." },
       { question: 'Why are facet joint and RFA procedures denied so often?', answer: 'Coverage policies for facet interventions require specific steps, typically documented diagnostic medial branch blocks with a significant percentage of pain relief before ablation, plus limits on how often procedures can be repeated. Missing pain-relief documentation is the most common cause of denial.' },
       { question: 'Is fluoroscopic guidance billed separately for epidural injections?', answer: 'For most current epidural and facet injection codes, imaging guidance is included in the procedure code and is not billed separately.' },
       { question: 'Do pain management procedures need prior authorization?', answer: 'Commercial and Medicare Advantage plans frequently require authorization for epidurals, facet procedures, RFA and spinal cord stimulator trials and implants. We verify requirements at scheduling for every payer.' },
@@ -401,6 +404,8 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
     ],
     denialCodes: ['co-197', 'co-16', 'co-11', 'co-50'],
     faqs: [
+      { question: "How is teleradiology billed?", answer: "The remote radiologist bills only the professional component (modifier 26) under their own NPI, while the facility that performed the scan bills the technical component. The radiologist must be credentialed with the patient's payers and licensed where the payer and state require it." },
+      { question: "Who bills the technical component when a radiologist reads at a hospital?", answer: "The hospital or imaging facility that owns the equipment bills the technical component (TC). The reading radiologist bills the professional component with modifier 26. Global billing is only used when the same entity owns the equipment and provides the read." },
       { question: 'What do modifiers 26 and TC mean in radiology billing?', answer: 'Modifier 26 bills only the professional component (the radiologist\'s interpretation). Modifier TC bills only the technical component (equipment and staff). When one entity performs both, the study is billed globally without either modifier.' },
       { question: 'Why are MRI and CT claims denied even with an authorization?', answer: 'Frequently because the study performed differs from the one authorized, for example with and without contrast instead of without. The authorization must be updated to match the exact code billed.' },
       { question: 'How are screening and diagnostic mammograms billed differently?', answer: 'Screening mammography (77067) is for patients without symptoms. Diagnostic codes are used when there are symptoms, findings or a call-back from screening, and patient cost-sharing differs.' },
@@ -504,6 +509,8 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Diagnosis, disease activity and prior therapies supporting the biologic and authorization',
     ],
     faqs: [
+      { question: "Can I bill an E/M visit on an infusion day?", answer: "Only when the provider performs a significant, separately identifiable evaluation beyond the routine pre-infusion assessment. Then bill the E/M with modifier 25 and document the separate decision-making. Otherwise the assessment is part of the infusion service." },
+      { question: "What do modifiers JW and JZ mean?", answer: "On Medicare Part B claims for drugs from single-dose containers, JW reports the amount of drug discarded and not given, and JZ states that no drug was discarded. One of them is required on these drug lines." },
       { question: 'Which administration code is used for biologic infusions like infliximab?', answer: 'Complex biologic infusions such as infliximab are commonly reported with the chemotherapy administration code 96413 (first hour) plus 96415 for each additional hour, rather than 96365, when the drug requires that level of monitoring under payer policy. Check each payer\'s policy for the specific drug.' },
       { question: 'What are the JW and JZ modifiers?', answer: 'For Medicare, drugs from single-dose containers must report wastage: JW on a separate line for the amount discarded, or JZ when no drug was discarded. Missing these modifiers can lead to claim rejections.' },
       { question: 'Why are biologic claims denied even when the infusion was given?', answer: 'The most common reasons are missing or expired prior authorization, step-therapy requirements not documented, and drug units that do not match the HCPCS dosage descriptor. Verifying authorization before each infusion prevents most of these denials.' },

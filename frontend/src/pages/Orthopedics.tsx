@@ -25,7 +25,7 @@ const Orthopedics: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Orthopedic Billing Services for Practices | Alpha Medi Assist"
+                title="Orthopedic Billing Services | Alpha Medi Assist"
                 description="Billing for orthopedic clinics: E/M visits, joint injections, X-rays, casting, DME and laterality modifiers coded and paid correctly. HIPAA-compliant RCM."
             />
 
@@ -441,6 +441,7 @@ const Orthopedics: React.FC = () => {
                 </section>
 
                 <SpecialtyInsights id="orthopedics" name="Orthopedic" />
+                <SpecialtyInsights id="orthopedic-surgery" name="Orthopedic surgery" />
 
                 <LeadSection title="Get a free Orthopedic Practice billing assessment" />
 

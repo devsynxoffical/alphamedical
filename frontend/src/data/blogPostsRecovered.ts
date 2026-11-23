@@ -94,7 +94,7 @@ export const recoveredPosts: BlogPost[] = [
     datePublished: '2026-11-19',
     category: 'Claims',
     title: 'What Is a Void Claim in Medical Billing? (And When to Use One)',
-    seoTitle: 'What Is a Void Claim in Medical Billing? Meaning & How to Void',
+    seoTitle: 'Void Claim in Medical Billing: Meaning & How to Void',
     seoDescription:
       'A void claim cancels a claim already sent to the payer. What voided means, void vs. corrected claims, frequency code 8, the ICN/DCN you need, and common reasons.',
     excerpt:
@@ -235,7 +235,7 @@ export const recoveredPosts: BlogPost[] = [
     datePublished: '2026-11-19',
     category: 'Claims',
     title: 'Rendering vs. Referring Provider: What\'s the Difference in Billing?',
-    seoTitle: 'Rendering vs. Referring Provider in Medical Billing (CMS-1500)',
+    seoTitle: 'Rendering vs. Referring Provider in Medical Billing',
     seoDescription:
       'The rendering provider performed the service; the referring provider sent the patient. Where each goes on the CMS-1500 and 837P, and the errors that cause denials.',
     excerpt:

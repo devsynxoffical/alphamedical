@@ -40,3 +40,40 @@ Rule kept from the recovery plan: nothing is published that needs facts we do no
 ## Targets (from the plan) vs. measurement
 Day 30 / 60 / 90: ranking keywords 60 / 150 / 300; top-20 keywords 3 / 15 / 40; organic visits 50 / 300 / 900; leads 1 / 4 / 10.
 Leads cannot be measured until GA4 (`VITE_GA_MEASUREMENT_ID`) is set; form emails are the fallback count.
+
+---
+
+# Detailed SEO Plan (23 Nov 2026): implementation status
+
+Source: `CLAUDE_CODE_PLAN_alphamediassist_com.md` by DEVSYNX. Rules applied: no em dashes; titles of 60 characters or fewer; descriptions of 155 or fewer; one H1; 7-day rule (pages edited in the last 7 days get only title, meta and FAQ changes now); IndexNow/Bing only.
+
+## Done on 23 Nov 2026
+
+| Plan item | Before | After | Validation |
+|---|---|---|---|
+| Titles of 60 characters or fewer (sitewide) | 21 titles over 60 (up to 68) | 0 over 60 | Build audit script over dist/*.html |
+| No em dashes | 25 in specialty data (repeated testimonial quote, general surgery intro) | 0 in src | grep |
+| Week 1: orthopedic merge | /specialties/orthopedic-surgery and /specialties/orthopedics competed | 301 from orthopedic-surgery to orthopedics; the surgery billing guide is shown on orthopedics; removed from sitemap, hub and menu | .htaccess rule; deploy check follows redirect to 200 |
+| Week 1: prerender check | already prerendered | unchanged: 73 pages, each with its own title, meta, canonical, one H1 and text | Build output; GSC URL Inspection |
+| Week 1: bot-check check | not monitored | Deploy now requests 3 pages as Googlebot and Bingbot and warns if "One moment, please" is served (warning only, because runner IPs are not real crawler IPs) | Deploy log; confirm with Search Console URL Inspection, Live test |
+| Week 2: /medical-billing-services (7-day rule: meta and FAQs only) | meta from 19 Nov | Plan meta; 3 new FAQs (small-practice ROI, switching time, who owns the A/R) | FAQ schema rebuilt from visible text |
+| Specialty FAQs to 5 (7-day rule) | 3 specialty-specific FAQs each | 5 for radiology (teleradiology, TC vs 26), pain management (UDT 80305-80307 / G0480-G0483, opioid documentation), rheumatology (E/M on infusion day, JW/JZ), orthopedics (57/58/78/79, workers' comp and auto) | FAQ schema 397 to 402 Q&As |
+| Titles matching the keyword map | e.g. "Anesthesia Billing Company & Coding Services" | "Anesthesia Billing Services & Coding" (keyword-map target, pos 11); pain management keeps "Pain Management Billing Company" (top query) | GSC positions |
+| Already done before this plan | | Denial hub and 12 guides, /denial-management-services, cost guide (/blog/how-much-does-medical-billing-cost, kept at its URL instead of a new /medical-billing-cost to avoid two pages competing), reversal/recoupment and prior-auth posts, ProfessionalService + Service + BreadcrumbList + FAQPage schema, IndexNow | |
+
+## Scheduled by the 7-day rule
+
+| From | Page | Work |
+|---|---|---|
+| 25 Nov | Homepage | Add links to /medical-billing-services, the top 8 specialty pages and /denial-codes; proof notes next to each percentage (needs owner sources) |
+| 27 Nov | 12 denial-code guides | Add an example scenario and links to 2 specialty pages to each guide |
+| 27 Nov | Radiology, pain management, rheumatology, orthopedics | Turn the "denial codes ... see most often" box into a "Common denials in [specialty]" table; new body sections (teleradiology, drug testing, infusion E/M, global surgery and DME) |
+| 27 Nov | /medical-billing-services | H1 "Medical Billing Services for Independent Practices and Groups"; "Onboarding in 30 days" section; software and results sections once the owner confirms |
+
+## Owner decisions and TODOs (nothing invented in the meantime)
+- **Homepage figures:** sources for 98%, 92%, 99%, "up to 10%" and "12% within six months". Without a source, the plan says to remove the figure.
+- **Testimonials:** the same three testimonials ("Dr. Theo James", "Emilia Munro", "Dr. Branden Griffiths") appear on about 23 specialty pages. If they are not real, attributable clients, they should be replaced with real reviews or removed. This is a trust and FTC risk on a health/money site.
+- **Pricing:** the real pricing model. **Software:** which EHR/PM systems the team uses. **Reviewer:** a coder or billing manager with CPC/CCS credentials.
+- **Services offered:** chiropractic and dental billing (yes/no). Confirm behavioral health and physical therapy before those pages are built (weeks 7 to 8).
+- **Disavow (week 1):** a Semrush or Search Console backlinks export so the disavow file can be built.
+- **Directories and reviews:** Clutch, GoodFirms, Crunchbase, MGMA, HFMA, and Google reviews from current practices.
