@@ -361,3 +361,33 @@ Total clicks this month: 4 (all to the home page).
 
 **Change (data-justified)**
 1. ADHD article: the title and description listed bare codes, but searchers use presentation names. New title: "ADHD ICD-10 Codes: F90.0 Inattentive, F90.2 Combined, F90.9 NOS". The description now maps each code to its presentation, including "ADHD NOS". Added an FAQ for ADHD NOS (F90.9). dateModified set to 2026-11-23.
+
+## 2026-11-23 12:41 UTC: 12-hour monitor run #11
+**Data status:** deploy #47 succeeded; live checks green. Search Console data through 2026-11-22. GA4 not set up.
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-20 | 90 | 1 | 49.1 |
+| 2026-11-21 | 201 (was 150) | 0 | 39.4 |
+| 2026-11-22 | **359** (record; about 6x the 60 on 16 Nov) | **1** | **36.4** |
+
+**Pages, Nov 1–23**
+
+| Page | Impr | Clicks | Pos |
+|---|---|---|---|
+| **ICD-10 ADHD** | **248** | 0 | 29.0 |
+| radiology | 115 | 0 | 41.2 |
+| **ICD-10 anxiety** | **99** | 0 | 48.3 |
+| pain management | 53 | 0 | 76.2 |
+| denial-codes blog | 49 | 0 | 70.9 |
+| **reversal vs recoupment** | **46** | **1 (first article click)** | 35.8 |
+| **rendering vs referring** | **42** | 0 | 26.1 |
+| **void claim** | **26** | 0 | 7.8 |
+| virtual medical receptionist | 16 | 0 | 21.1 (new) |
+| authorization | 16 | 0 | 81 |
+| **/denial-codes/co-16** | **1** | 0 | **24 (first sign of indexing for the new code pages)** |
+
+Total clicks this month: 5.
+
+**Change (data-justified)**
+1. Anxiety article shows for "dsm 5 code generalized anxiety disorder" (3 impressions, #26) and "cpt code for anxiety" / "cpt code anxiety disorder". Added FAQs: the DSM-5-TR code for GAD (F41.1, shared with ICD-10-CM), and that anxiety has no CPT code (90791, 90832/90834/90837 or E/M linked to the F41 diagnosis).
