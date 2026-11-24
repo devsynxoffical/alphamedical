@@ -391,3 +391,42 @@ Total clicks this month: 5.
 
 **Change (data-justified)**
 1. Anxiety article shows for "dsm 5 code generalized anxiety disorder" (3 impressions, #26) and "cpt code for anxiety" / "cpt code anxiety disorder". Added FAQs: the DSM-5-TR code for GAD (F41.1, shared with ICD-10-CM), and that anxiety has no CPT code (90791, 90832/90834/90837 or E/M linked to the F41 diagnosis).
+
+## 2026-11-24 00:40 UTC: 12-hour monitor run #12
+**Data status:** deploy #49 succeeded. Live checks green: 404 test, form healthcheck `ok:true`, `/specialties/orthopedic-surgery` 301 to orthopedics, and Googlebot/Bingbot get the real pages with an H1 (no interstitial). Search Console data through 2026-11-23. GA4 not set up.
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-21 | 201 | 0 | 39.4 |
+| 2026-11-22 | **375** (record) | 1 | 36.4 |
+| 2026-11-23 | 108 (partial) | 0 | **29.3** (best average so far) |
+
+**Pages, Nov 1–24**
+
+| Page | Impr | Pos | Change |
+|---|---|---|---|
+| ADHD | 281 | 28.2 | |
+| radiology | 121 | 41.3 | |
+| anxiety | 109 | 46.8 | |
+| reversal vs recoupment | 56 | 35.3 | 1 click |
+| rendering vs referring | 54 | 22.2 | |
+| denial-codes blog | 54 | | |
+| pain management | 53 | 76.2 | |
+| void claim | 45 | 11.1 | |
+| paid-claim reversal | 19 | 21.4 | |
+| virtual medical receptionist | 17 | 21.5 | |
+| /denial-codes/co-16 | 5 | 47.8 | |
+| /denial-codes/co-197 | 1 | 80 | first impression |
+| /medical-billing-services | 1 | 3 | first impression |
+
+**Queries with 5+ impressions (Nov 17–24):**
+- "history of adhd icd 10" #14.3, "icd code for adhd" #16.2, "adhd icd 10" #23
+- "best virtual medical receptionist in florida" #13.7 (6 impr)
+- "difference between reversal and recoupment in medical billing" #33.3 (16)
+- "recoupment meaning in medical billing" #55.1 (16)
+- "radiology billing services" #39.1 (23)
+- "pain management billing company" #78.3 (24)
+
+**Changes (data-justified; title and meta only)**
+1. Reversal vs recoupment: title "Reversal vs. Recoupment in Medical Billing (and Offsets)" became "...: Meaning" to match "recoupment meaning in medical billing" (16 impressions, #55).
+2. Virtual medical receptionist: replaced the generic, ungrammatical description with one naming the services listed on the page (call answering, scheduling, intake, insurance inquiries). The page ranks #13.7 for "best virtual medical receptionist in florida" with 0 clicks.

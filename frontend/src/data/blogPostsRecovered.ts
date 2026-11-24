@@ -166,7 +166,7 @@ export const recoveredPosts: BlogPost[] = [
     datePublished: '2026-11-19',
     category: 'Payment posting',
     title: 'Reversal vs. Recoupment in Medical Billing: What\'s the Difference?',
-    seoTitle: 'Reversal vs. Recoupment in Medical Billing (and Offsets)',
+    seoTitle: 'Reversal vs. Recoupment in Medical Billing: Meaning',
     seoDescription:
       'A reversal cancels a prior claim payment; a recoupment is how the payer recovers the money, often by offsetting future payments. How to spot and post each.',
     excerpt:
