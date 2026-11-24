@@ -58,7 +58,7 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       'Outsourced medical billing services for US practices: claims, payment posting, denials and A/R follow-up. HIPAA-compliant team. Free billing assessment.',
     eyebrow: 'Medical billing company',
-    h1: 'Outsourced Medical Billing Services for Healthcare Practices',
+    h1: 'Medical Billing Services for Independent Practices and Groups',
     answer:
       'Alpha Medi Assist is a U.S. medical billing company that manages your full claim cycle: insurance verification, coding review, claim submission, payment posting, denial management and A/R follow-up. Practices in 90+ specialties use us to get paid faster, reduce denials and remove billing work from their front office.',
     heroBullets: [
@@ -305,7 +305,7 @@ export const landingPages: LandingPageData[] = [
     serviceType: 'Medical billing for small practices',
     metaTitle: 'Medical Billing for Small Practices | Alpha Medi Assist',
     metaDescription:
-      'Affordable outsourced medical billing for solo physicians and small group practices. No billing staff to hire, faster payments, fewer denials. Free assessment.',
+      'Outsourced medical billing for solo physicians and small group practices. No billing staff to hire, faster payments, fewer denials. Free assessment.',
     eyebrow: 'Solo & small group practices',
     h1: 'Medical Billing Services for Small and Solo Practices',
     answer:
@@ -372,7 +372,7 @@ export const landingPages: LandingPageData[] = [
     areaServed: 'Florida',
     metaTitle: 'Florida Medical Billing Company | St. Petersburg & Tampa',
     metaDescription:
-      'Florida medical billing company with an office in St. Petersburg. Billing, coding, credentialing and RCM for practices in Tampa Bay, Orlando, Miami and statewide.',
+      'Florida medical billing company with an office in St. Petersburg. Billing, coding, credentialing and RCM for practices in Tampa Bay, Orlando and Miami.',
     eyebrow: 'Florida medical billing',
     h1: 'Medical Billing Services in Florida',
     answer:
@@ -514,7 +514,7 @@ export const landingPages: LandingPageData[] = [
     serviceType: 'Medical claim denial management',
     metaTitle: 'Denial Management Services | Alpha Medi Assist',
     metaDescription:
-      'Outsourced denial management: root-cause analysis by CARC/RARC code, corrected claims, appeals and prevention. Stop writing off denied claims. Free denial assessment.',
+      'Outsourced denial management: root-cause analysis by CARC/RARC code, corrected claims, appeals and prevention. Free denial assessment.',
     eyebrow: 'Denial management company',
     h1: 'Denial Management Services That Recover Denied Claims and Prevent the Next Ones',
     answer:

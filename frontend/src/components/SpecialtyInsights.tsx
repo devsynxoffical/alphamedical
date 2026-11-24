@@ -74,16 +74,28 @@ const SpecialtyInsights: React.FC<{ id: string; name: string }> = ({ id, name })
         )}
 
         {data.denialCodes && (
-          <div className="si-denials">
-            <p><FileWarning size={18} aria-hidden="true" /> Denial codes {name.toLowerCase()} practices see most often:</p>
-            <ul>
-              {data.denialCodes.map((slug) => {
-                const d = denialCodes.find((c) => c.slug === slug)
-                return d ? (
-                  <li key={slug}><Link to={`${DENIAL_HUB_PATH}/${slug}`}><strong>{d.code}</strong> {d.name}</Link></li>
-                ) : null
-              })}
-            </ul>
+          <div className="si-card si-card-wide si-denials-table">
+            <h3><FileWarning size={18} aria-hidden="true" /> Common denials in {name.toLowerCase()} billing</h3>
+            <div className="lp-table-wrap">
+              <table className="lp-table">
+                <thead>
+                  <tr><th scope="col">Code</th><th scope="col">Why it happens in {name.toLowerCase()}</th><th scope="col">Guide</th></tr>
+                </thead>
+                <tbody>
+                  {data.denialCodes.map((slug) => {
+                    const d = denialCodes.find((c) => c.slug === slug)
+                    if (!d) return null
+                    return (
+                      <tr key={slug}>
+                        <th scope="row">{d.code}</th>
+                        <td>{data.denialWhy?.[slug] ?? d.name}</td>
+                        <td><Link to={`${DENIAL_HUB_PATH}/${slug}`}>How to fix {d.code}</Link></td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+            </div>
           </div>
         )}
 

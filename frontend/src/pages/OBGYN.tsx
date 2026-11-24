@@ -26,7 +26,7 @@ const OBGYN: React.FC = () => {
         <div className="internal-medicine-page">
             <PageTitle
                 title="OB-GYN Medical Billing Services | Alpha Medi Assist"
-                description="Streamline OB-GYN medical billing services with AlphaMedi Assist. Expert coding, claims, and revenue cycle management for obstetrics and gynecology practices."
+                description="OB-GYN medical billing services from Alpha Medi Assist: coding, claims and revenue cycle management for obstetrics and gynecology practices."
             />
 
             <div className="specialty-detail-page internal-medicine-page">

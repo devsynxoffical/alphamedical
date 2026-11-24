@@ -5,7 +5,7 @@ import PageTitle from '../components/PageTitle'
 import LeadSection from '../components/LeadSection'
 import PreferredSourceButton from '../components/PreferredSourceButton'
 import NotFound from './NotFound'
-import { denialCodes, denialCodeSources, DENIAL_HUB_PATH } from '../data/denialCodes'
+import { denialCodes, denialCodeSources, denialCodeExtras, DENIAL_HUB_PATH } from '../data/denialCodes'
 import { BRAND } from '../seo/site'
 import '../styles/landing.css'
 import '../styles/blog.css'
@@ -19,12 +19,14 @@ const DenialCodePage: React.FC = () => {
   if (!d) return <NotFound />
 
   const sources = denialCodeSources[d.slug] ?? []
+  const extra = denialCodeExtras[d.slug]
   const related = d.relatedCodes.map((s) => denialCodes.find((c) => c.slug === s)).filter(Boolean) as typeof denialCodes
   const toc = [
     { id: 'meaning', label: `What ${d.code} means` },
     { id: 'causes', label: 'Common causes' },
     ...(d.remarks ? [{ id: 'remarks', label: 'Remark codes you may see' }] : []),
     { id: 'fix', label: `How to fix ${d.code}` },
+    ...(extra ? [{ id: 'example', label: 'Example' }] : []),
     { id: 'appeal', label: 'When to appeal' },
     { id: 'prevent', label: 'How to prevent it' },
     { id: 'faq', label: 'FAQ' },
@@ -118,6 +120,26 @@ const DenialCodePage: React.FC = () => {
                 ))}
               </ol>
             </section>
+
+            {extra && (
+              <section className="bp-section" id="example">
+                <h2>Example: a {d.code} denial and how it was fixed</h2>
+                <blockquote className="dc-example">
+                  <p>{extra.example}</p>
+                  <p className="dc-example-note">Illustrative example, not a specific client case.</p>
+                </blockquote>
+                <p>
+                  {d.code} is common in{' '}
+                  {extra.specialties.map((sp, i) => (
+                    <React.Fragment key={sp.path}>
+                      {i > 0 && ' and '}
+                      <Link to={sp.path}>{sp.label.toLowerCase()}</Link>
+                    </React.Fragment>
+                  ))}
+                  . See how our <Link to="/denial-management-services">denial management service</Link> works these denials end to end.
+                </p>
+              </section>
+            )}
 
             <section className="bp-section" id="appeal">
               <h2>When to appeal {d.code}</h2>

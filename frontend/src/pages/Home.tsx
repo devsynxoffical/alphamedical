@@ -74,7 +74,7 @@ const Home: React.FC = () => {
     <>
       <PageTitle
         title="Medical Billing Company for US Practices | Alpha Medi Assist"
-        description="Outsourced medical billing, coding, credentialing and RCM for U.S. practices in 90+ specialties. HIPAA-compliant, 98% net collection rate. Free consultation."
+        description="Outsourced medical billing, coding, credentialing and RCM for US practices in 90+ specialties. HIPAA-compliant, 98% net collection rate. Free consultation."
       />
       <div className="home">
         {/* Split-Screen Hero Section */}
@@ -686,6 +686,28 @@ const Home: React.FC = () => {
         </section>
 
         {/* FAQs Section */}
+        <section className="related-links" aria-labelledby="home-explore">
+          <div className="container">
+            <h2 id="home-explore">Explore our billing services</h2>
+            <ul>
+              <li><Link to="/medical-billing-services">Medical billing services</Link></li>
+              <li><Link to="/denial-management-services">Denial management services</Link></li>
+              <li><Link to="/medical-credentialing-service">Medical credentialing services</Link></li>
+              <li><Link to="/denial-codes">Denial codes: meanings and fixes</Link></li>
+              <li><Link to="/specialties/radiology">Radiology billing</Link></li>
+              <li><Link to="/specialties/pain-management">Pain management billing</Link></li>
+              <li><Link to="/specialties/anesthesiology">Anesthesia billing</Link></li>
+              <li><Link to="/specialties/dermatology">Dermatology billing</Link></li>
+              <li><Link to="/specialties/orthopedics">Orthopedic billing</Link></li>
+              <li><Link to="/specialties/rheumatology">Rheumatology billing</Link></li>
+              <li><Link to="/specialties/internal-medicine">Internal medicine billing</Link></li>
+              <li><Link to="/specialties/mental-health-counseling">Mental health billing</Link></li>
+              <li><Link to="/medical-billing-services-florida">Medical billing in Florida</Link></li>
+              <li><Link to="/medical-billing-services-virginia">Medical billing in Virginia</Link></li>
+            </ul>
+          </div>
+        </section>
+
         <section className="faq-section" style={{ padding: '4rem 0', background: '#f9f9f9' }}>
           <div className="container">
             <div className="section-header">

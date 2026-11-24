@@ -111,3 +111,17 @@ Source: `CLAUDE_CODE_STRUCTURE_medi.md` + `Alpha_Medi_Assist_Page_Map_24-Nov-202
 - Denial-code pages link to /denial-management-services and the hub. Links to 2 specialty pages are scheduled for 27 Nov (7-day rule).
 - Blog: the ADHD post should link to the psychiatry and mental-health pages (behavioral health once it exists). Scheduled for 30 Nov (ADHD post edited 23 Nov).
 - Footer: both offices, the FL/VA pages and the HTML sitemap are linked. Homepage links scheduled for 25 Nov.
+
+## 24 Nov 2026 (owner instruction: do the scheduled items now; the 7-day rule was waived)
+
+| Item | Before | After |
+|---|---|---|
+| Denial-code guides (12) | no example; linked only to the hub and the service page | "Example" section on each (labelled illustrative, not a client case) plus links to 2 relevant specialty pages and the denial management service |
+| Specialty pages: common denials | link box | "Common denials in [specialty] billing" table on the 6 upgraded pages, with the specialty reason for each code and a link to the guide |
+| Specialty pages: 2 denial guides each | 6 pages | All specialty pages: related links now include CO-16 and CO-97 |
+| Homepage links | /medical-billing-services only (hero) | "Explore our billing services" block: billing, denial management, credentialing, denial codes, 8 specialties, FL and VA |
+| /medical-billing-services H1 | "Outsourced Medical Billing Services for Healthcare Practices" | "Medical Billing Services for Independent Practices and Groups" (plan) |
+| ADHD and anxiety posts | linked only to services | Also link to psychiatry billing, mental health billing and medical coding |
+| Descriptions of 155 characters or fewer | 33 over 155 (the earlier audit missed them because of the meta tag attribute order) | 0 over 155; all titles 60 or fewer; one H1 per page |
+
+Still with the owner: the "onboarding in 30 days" section (the site currently says "within a few days"; needs the owner's real process), software/results sections, all state and city pages, the /locations hub, phone number, testimonials and homepage figures.

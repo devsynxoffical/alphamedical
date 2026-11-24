@@ -27,7 +27,7 @@ export const recoveredPosts2: BlogPost[] = [
     dateModified: '2026-11-23',
     seoTitle: 'ADHD ICD-10 Codes: F90.0 Inattentive, F90.2 Combined, NOS',
     seoDescription:
-      'ADHD ICD-10-CM codes: F90.0 predominantly inattentive, F90.1 hyperactive-impulsive, F90.2 combined presentation, F90.8 other, F90.9 unspecified (ADHD NOS). Plus adult ADHD and denials.',
+      'ADHD ICD-10-CM codes: F90.0 inattentive, F90.1 hyperactive-impulsive, F90.2 combined, F90.8 other, F90.9 unspecified (ADHD NOS). Adult ADHD and denials.',
     excerpt:
       'The ADHD codes in ICD-10-CM category F90, how they map to DSM-5-TR presentations, and the documentation and claim errors that cause denials.',
     intro: [
@@ -154,7 +154,7 @@ export const recoveredPosts2: BlogPost[] = [
     title: 'What Is the ICD-10 Code for Anxiety? F41.9, F41.1 and Related Codes',
     seoTitle: 'ICD-10 Code for Anxiety: F41.9, F41.1 (GAD), F41.0 & F40.x',
     seoDescription:
-      'Unspecified anxiety is F41.9 and generalized anxiety disorder is F41.1. Panic, social anxiety, phobias, mixed anxiety and depression, adjustment disorder and PTSD codes.',
+      'Unspecified anxiety is F41.9 and generalized anxiety disorder is F41.1. Codes for panic, social anxiety, phobias, mixed anxiety, adjustment and PTSD.',
     excerpt:
       'Anxiety has several ICD-10-CM codes, not one. Which code fits which diagnosis, how to tell anxiety from adjustment disorder and PTSD, and how to avoid denials.',
     intro: [
@@ -287,7 +287,7 @@ export const recoveredPosts2: BlogPost[] = [
     title: 'What Is Authorization in Medical Billing? Prior Auth Explained',
     seoTitle: 'Prior Authorization in Medical Billing: Process & Rules',
     seoDescription:
-      'Prior authorization is a payer\'s approval before a service. How it differs from referrals, the step-by-step process, CMS 2026 decision timeframes, and auth denials.',
+      'Prior authorization is a payer\u2019s approval before a service. How it differs from referrals, the step-by-step process, CMS 2026 timeframes and denials.',
     excerpt:
       'What authorization means in medical billing, how the prior auth process works, what changed under the CMS 2026 rule, and how to prevent authorization denials.',
     intro: [
@@ -410,7 +410,7 @@ export const recoveredPosts2: BlogPost[] = [
     title: 'Steps Involved in the Medical Billing Cycle (12-Step Guide)',
     seoTitle: 'Medical Billing Cycle Steps: From Registration to Payment',
     seoDescription:
-      'The 12 steps of the medical billing cycle: registration, eligibility, authorization, coding, claim submission, adjudication, payment posting, denials, patient billing and A/R.',
+      'The 12 steps of the medical billing cycle: registration, eligibility, authorization, coding, claims, adjudication, posting, denials, patient billing, A/R.',
     excerpt:
       'Every step of the medical billing cycle, what happens at each one, the electronic transactions involved, and where revenue is most often lost.',
     intro: [

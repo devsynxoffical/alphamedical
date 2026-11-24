@@ -145,7 +145,7 @@ const Specialties: React.FC = () => {
     <>
       <PageTitle
         title="Medical Billing by Specialty (90+) | Alpha Medi Assist"
-        description="Specialty-specific medical billing and coding for cardiology, urology, pain management, psychiatry, OB/GYN, radiology and 90+ other specialties. HIPAA-compliant RCM."
+        description="Specialty medical billing and coding for cardiology, urology, pain management, psychiatry, OB/GYN, radiology and 90+ other specialties. HIPAA-compliant."
       />
       <div className="specialties-page">
         {/* Page Header */}

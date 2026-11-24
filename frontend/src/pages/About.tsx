@@ -26,7 +26,7 @@ const About: React.FC = () => {
     <>
       <PageTitle
         title="About Alpha Medi Assist | Medical Billing & RCM Company"
-        description="Alpha Medi Assist is a U.S. medical billing and revenue cycle management company with offices in Virginia and Florida, serving practices in 90+ specialties."
+        description="Alpha Medi Assist is a US medical billing and revenue cycle management company with offices in Virginia and Florida, serving practices in 90+ specialties."
       />
 
       <div className="about-sleek-container">

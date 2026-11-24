@@ -26,7 +26,7 @@ const Anesthesiology: React.FC = () => {
         <div className="internal-medicine-page">
             <PageTitle
                 title="Anesthesia Billing Services & Coding | Alpha Medi Assist"
-                description="Outsourced anesthesia billing and coding for anesthesiologists and CRNA groups: time-unit and base-unit billing, modifiers, denial management and A/R follow-up."
+                description="Outsourced anesthesia billing and coding for anesthesiologists and CRNA groups: time and base units, modifiers, denial management and A/R follow-up."
             />
 
             <div className="specialty-detail-page internal-medicine-page">

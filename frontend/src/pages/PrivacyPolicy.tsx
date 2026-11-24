@@ -36,7 +36,7 @@ const PrivacyPolicy: React.FC = () => {
         <>
             <PageTitle
                 title="Privacy Policy | Alpha Medi Assist"
-                description="Protecting your personal and health data is our priority. Learn how Alpha Medi Assist handles medical billing information, HIPAA compliance, and website data."
+                description="How Alpha Medi Assist protects your personal and health data: how we handle medical billing information, HIPAA compliance and website data."
             />
 
             <div className="about-sleek-container" style={{ background: '#fcfcfd' }}>

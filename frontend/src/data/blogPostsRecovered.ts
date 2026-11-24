@@ -18,7 +18,7 @@ export const recoveredPosts: BlogPost[] = [
     title: 'Can a Health Insurance Company Reverse a Paid Claim?',
     seoTitle: 'Can an Insurance Company Reverse a Paid Claim? (Yes)',
     seoDescription:
-      'Yes, insurers can reverse a paid claim and take the money back. Common reasons, how reversals appear on the ERA, time limits, and how practices should respond.',
+      'Yes, insurers can reverse a paid claim and take the money back. Common reasons, how reversals show on the ERA, time limits and how to respond.',
     excerpt:
       'Insurers can and do take back payments after a claim is paid. Why it happens, how to spot it on the remittance, and what to do next.',
     intro: [
@@ -96,7 +96,7 @@ export const recoveredPosts: BlogPost[] = [
     title: 'What Is a Void Claim in Medical Billing? (And When to Use One)',
     seoTitle: 'Void Claim in Medical Billing: Meaning & How to Void',
     seoDescription:
-      'A void claim cancels a claim already sent to the payer. What voided means, void vs. corrected claims, frequency code 8, the ICN/DCN you need, and common reasons.',
+      'A void claim cancels a claim already sent to the payer. What voided means, void vs. corrected claims, frequency code 8, the ICN you need, and reasons.',
     excerpt:
       'Void claims cancel a previously submitted claim entirely. How they differ from corrected claims, and how to submit one correctly.',
     intro: [
@@ -237,7 +237,7 @@ export const recoveredPosts: BlogPost[] = [
     title: 'Rendering vs. Referring Provider: What\'s the Difference in Billing?',
     seoTitle: 'Rendering vs. Referring Provider in Medical Billing',
     seoDescription:
-      'The rendering provider performed the service; the referring provider sent the patient. Where each goes on the CMS-1500 and 837P, and the errors that cause denials.',
+      'The rendering provider performed the service; the referring provider sent the patient. Where each goes on the CMS-1500 and 837P, and common errors.',
     excerpt:
       'Who is the rendering, referring, ordering and billing provider on a claim, and where each NPI goes.',
     intro: [

@@ -25,7 +25,7 @@ const Pediatrics: React.FC = () => {
         <div className="internal-medicine-page">
             <PageTitle
                 title="Pediatrics Medical Billing Services | Alpha Medi Assist"
-                description="Streamline pediatrics medical billing services with AlphaMedi Assist. Expert pediatric coding, claims, and revenue cycle management for pediatric practices."
+                description="Pediatric medical billing services from Alpha Medi Assist: pediatric coding, claims and revenue cycle management for pediatric practices."
             />
 
             <div className="specialty-detail-page internal-medicine-page">

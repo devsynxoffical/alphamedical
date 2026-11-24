@@ -17,7 +17,7 @@ export const planPosts: BlogPost[] = [
     title: 'In-House vs. Outsourced Medical Billing: Costs, Risks and How to Decide',
     seoTitle: 'In-House vs. Outsourced Medical Billing: How to Decide',
     seoDescription:
-      'Compare in-house and outsourced medical billing: the full cost of an in-house team, outsourced pricing models, risks, a hybrid option and a formula to calculate your own cost.',
+      'In-house vs. outsourced medical billing: the full cost of an in-house team, outsourced pricing models, risks, a hybrid option and a cost formula.',
     excerpt:
       'What in-house billing really costs, how outsourced pricing works, a side-by-side comparison and a simple formula to calculate your own cost to collect.',
     intro: [
@@ -151,7 +151,7 @@ export const planPosts: BlogPost[] = [
     title: 'Annual Medical Code Updates: How Practices Should Prepare for CPT, ICD-10 and HCPCS Changes',
     seoTitle: 'Annual CPT, ICD-10 & HCPCS Updates: How to Prepare',
     seoDescription:
-      'When CPT, ICD-10 and HCPCS codes change each year, how to update your charge master, EHR and scrubber, and how to avoid denials for deleted or invalid codes.',
+      'When CPT, ICD-10 and HCPCS codes change each year: how to update your charge master, EHR and scrubber, and avoid denials for deleted codes.',
     excerpt:
       'CPT changes January 1, ICD-10 on October 1, HCPCS every quarter. A calendar of code-set updates and a checklist to avoid denials after each one.',
     intro: [

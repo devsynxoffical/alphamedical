@@ -31,3 +31,7 @@
 .dc-more a { color: #1d4ed8; font-weight: 600; }
 
 @media (max-width: 900px) { .dc-glance { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.dc-example { margin: 0 0 1rem; padding: 1.1rem 1.25rem; background: #f0f9ff; border-left: 4px solid #0284c7; border-radius: 0 12px 12px 0; }
+.dc-example p { margin: 0; color: #0c4a6e; line-height: 1.7; }
+.dc-example .dc-example-note { margin-top: 0.5rem; font-size: 0.8rem; color: #64748b; }
+.bp-section a { color: #1d4ed8; font-weight: 600; }

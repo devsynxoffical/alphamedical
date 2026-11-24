@@ -15,6 +15,8 @@ export const specialtyRelatedLinks: RelatedLink[] = [
   { label: 'Medical billing in Florida', path: '/medical-billing-services-florida' },
   { label: 'Medical billing in Virginia', path: '/medical-billing-services-virginia' },
   { label: 'Denial codes: meanings and fixes', path: '/denial-codes' },
+  { label: 'CO-16 denial code: missing information', path: '/denial-codes/co-16' },
+  { label: 'CO-97 denial code: bundled services', path: '/denial-codes/co-97' },
   { label: 'How much does medical billing cost?', path: '/blog/how-much-does-medical-billing-cost' },
 ]
 

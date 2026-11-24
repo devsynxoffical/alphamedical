@@ -16,7 +16,7 @@ export const newPosts: BlogPost[] = [
     title: 'How Much Does Medical Billing Cost? Outsourced Pricing Explained',
     seoTitle: 'How Much Does Medical Billing Cost? (2026 Pricing Guide)',
     seoDescription:
-      'Outsourced medical billing typically costs 4% to 10% of collections. Compare percentage, per-claim and flat-fee pricing, what is included, and in-house costs.',
+      'Outsourced medical billing typically costs 4% to 10% of collections. Compare percentage, per-claim and flat-fee pricing, inclusions and in-house cost.',
     excerpt:
       'Percentage of collections, per-claim or flat fee? What outsourced medical billing really costs, what should be included, and how to compare quotes.',
     intro: [
@@ -120,7 +120,7 @@ export const newPosts: BlogPost[] = [
     title: 'How Long Does Medical Credentialing Take? Timeline by Payer',
     seoTitle: 'How Long Does Medical Credentialing Take? Payer Timelines',
     seoDescription:
-      'Provider credentialing usually takes 60 to 180 days. See typical Medicare, Medicaid and commercial payer timelines, the steps involved and how to avoid delays.',
+      'Provider credentialing usually takes 60 to 180 days. Typical Medicare, Medicaid and commercial payer timelines, the steps and how to avoid delays.',
     excerpt:
       'Credentialing with insurance companies typically takes 60 to 180 days. Here is what drives the timeline and how to start billing sooner.',
     intro: [
@@ -210,7 +210,7 @@ export const newPosts: BlogPost[] = [
     title: 'Medical Billing vs. Medical Coding: What Is the Difference?',
     seoTitle: 'Medical Billing vs. Medical Coding: Key Differences',
     seoDescription:
-      'Medical coding turns clinical documentation into ICD-10, CPT and HCPCS codes; medical billing turns those codes into paid claims. How they differ and work together.',
+      'Coding turns clinical documentation into ICD-10, CPT and HCPCS codes; billing turns those codes into paid claims. How they differ and work together.',
     excerpt:
       'Coding translates care into codes; billing turns those codes into payment. A plain-English comparison for practice owners.',
     intro: [

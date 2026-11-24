@@ -132,7 +132,7 @@ export const denialCodes: DenialCode[] = [
       'Denial code CO-97 means the payer bundled the service into another procedure it already paid, usually because of an NCCI or payer bundling edit; it is fixed with a supported modifier only when the services were truly separate, otherwise the adjustment stands.',
     seoTitle: 'CO-97 Denial Code: Meaning, Bundling Rules & How to Fix It',
     seoDescription:
-      'CO-97 means the service was bundled into another paid procedure. Learn why it happens (NCCI edits, global periods, E/M on procedure days) and when modifiers 25 or 59/X apply.',
+      'CO-97 means the service was bundled into another paid procedure. Why it happens (NCCI, global periods, E/M on procedure days) and when 25 or 59/X apply.',
     glance: [
       { label: 'Group code', value: 'CO (Contractual Obligation)' },
       { label: 'Bill the patient?', value: 'No' },
@@ -195,7 +195,7 @@ export const denialCodes: DenialCode[] = [
       'Code CO-45 means the payer reduced your billed charge to the allowed amount in its fee schedule or your contract; it is a contractual adjustment that is written off, not billed to the patient, and only disputed if the payer paid less than the contracted rate.',
     seoTitle: 'CO-45 Denial Code: Meaning, Write-Offs & Disputes',
     seoDescription:
-      'CO-45 means the charge exceeds the fee schedule or contracted amount. Learn how to post it, when PR-45 applies instead, and how to spot underpayments worth disputing.',
+      'CO-45 means the charge exceeds the fee schedule or contracted amount. How to post it, when PR-45 applies, and how to spot underpayments to dispute.',
     glance: [
       { label: 'Group code', value: 'CO (or PR when the patient is liable)' },
       { label: 'Bill the patient?', value: 'Not when CO; possibly when PR' },
@@ -252,7 +252,7 @@ export const denialCodes: DenialCode[] = [
       'Code PR-1 means the payer applied the allowed amount to the patient\'s deductible, so the patient owes that amount; it is not a denial, and the practice should bill the patient rather than appeal.',
     seoTitle: 'PR-1 Denial Code: Deductible Amount Explained',
     seoDescription:
-      'PR-1 means the amount was applied to the patient\'s deductible. Learn what it means, how to post it, how to bill the patient and how to collect deductibles up front.',
+      'PR-1 means the amount was applied to the patient\u2019s deductible. What it means, how to post it, how to bill the patient and how to collect up front.',
     glance: [
       { label: 'Group code', value: 'PR (Patient Responsibility)' },
       { label: 'Bill the patient?', value: 'Yes' },
@@ -305,7 +305,7 @@ export const denialCodes: DenialCode[] = [
       'Denial code CO-4 means the payer rejected the service line because a modifier does not fit the procedure code, or a modifier the payer requires is missing; it is fixed by correcting the modifier and sending a corrected claim.',
     seoTitle: 'CO-4 Denial Code: Modifier Missing or Invalid',
     seoDescription:
-      'CO-4 means the procedure code is inconsistent with the modifier, or a required modifier is missing. Common causes (26/TC, laterality, 25, 59/X) and how to fix them.',
+      'CO-4 means the modifier does not fit the procedure code, or a required modifier is missing. Common causes (26/TC, laterality, 25, 59/X) and fixes.',
     glance: [
       { label: 'Group code', value: 'CO (Contractual Obligation)' },
       { label: 'Bill the patient?', value: 'No' },
@@ -366,7 +366,7 @@ export const denialCodes: DenialCode[] = [
       'Denial code CO-11 means the payer decided the diagnosis code on the claim does not support the procedure billed; it is fixed by linking or coding the diagnosis the documentation supports, or appealing with records when the original coding was correct.',
     seoTitle: 'CO-11 Denial Code: Diagnosis Inconsistent with Procedure',
     seoDescription:
-      'CO-11 means the diagnosis does not match the procedure billed. Learn the common causes (pointers, specificity, coverage policies) and how to correct or appeal it.',
+      'CO-11 means the diagnosis does not match the procedure billed. Common causes (pointers, specificity, coverage policies) and how to correct or appeal.',
     glance: [
       { label: 'Group code', value: 'CO (Contractual Obligation)' },
       { label: 'Bill the patient?', value: 'No' },
@@ -426,7 +426,7 @@ export const denialCodes: DenialCode[] = [
       'Denial code 18 (usually shown as OA-18, sometimes CO-18) means the payer already received a claim for the same patient, provider, date and service, so it denied the copy; check whether the first claim was paid before doing anything else.',
     seoTitle: 'CO-18 / OA-18 Denial Code: Duplicate Claim (Meaning and Fix)',
     seoDescription:
-      'CO-18 or OA-18 means exact duplicate claim or service. Learn why duplicates happen, how to check the original claim, and when to send a corrected claim instead.',
+      'CO-18 or OA-18 means exact duplicate claim or service. Why duplicates happen, how to check the original claim, and when to send a corrected claim.',
     glance: [
       { label: 'Group code', value: 'OA (CO for some workers\' comp)' },
       { label: 'Bill the patient?', value: 'No' },
@@ -483,7 +483,7 @@ export const denialCodes: DenialCode[] = [
       'Denial code CO-22 means the payer believes another insurance plan is primary for this patient, so it will not pay until the primary payer has processed the claim; it is fixed by confirming coverage order and billing the correct primary payer first.',
     seoTitle: 'CO-22 Denial Code: Coordination of Benefits Explained',
     seoDescription:
-      'CO-22 means care may be covered by another payer (coordination of benefits). How to confirm which plan is primary, update COB, and rebill primary then secondary.',
+      'CO-22 means another payer may be primary (coordination of benefits). How to confirm the primary plan, update COB, and rebill primary then secondary.',
     glance: [
       { label: 'Group code', value: 'CO (Contractual Obligation)' },
       { label: 'Bill the patient?', value: 'No (ask the patient to update COB)' },
@@ -541,7 +541,7 @@ export const denialCodes: DenialCode[] = [
       'Denial code CO-29 means the claim reached the payer after its timely-filing deadline; it can only be overturned with proof that the claim was filed on time or that an exception applies, otherwise the amount is written off and cannot be billed to the patient.',
     seoTitle: 'CO-29 Denial Code: Timely Filing Limit Expired',
     seoDescription:
-      'CO-29 means the timely filing limit has expired. Learn Medicare and commercial filing limits, what counts as proof of timely filing, exceptions, and how to stop it happening.',
+      'CO-29 means the timely filing limit has expired. Medicare and commercial limits, what counts as proof of timely filing, exceptions and prevention.',
     glance: [
       { label: 'Group code', value: 'CO (Contractual Obligation)' },
       { label: 'Bill the patient?', value: 'No' },
@@ -599,7 +599,7 @@ export const denialCodes: DenialCode[] = [
       'Denial code CO-50 means the payer decided the service was not medically necessary for the diagnosis and documentation it received; it is resolved by correcting the diagnosis if it was coded wrongly, or by appealing with clinical records that meet the payer\'s coverage policy.',
     seoTitle: 'CO-50 Denial Code: Medical Necessity Denial (How to Appeal)',
     seoDescription:
-      'CO-50 means the service was not deemed medically necessary. Learn how LCDs, NCDs and payer policies apply, when an ABN shifts liability (PR-50), and how to appeal.',
+      'CO-50 means the service was not deemed medically necessary. How LCDs, NCDs and payer policies apply, when an ABN shifts liability, and how to appeal.',
     glance: [
       { label: 'Group code', value: 'CO (PR when a valid ABN was signed)' },
       { label: 'Bill the patient?', value: 'Only with a valid ABN or waiver' },
@@ -659,7 +659,7 @@ export const denialCodes: DenialCode[] = [
       'Denial code CO-109 means the claim was sent to the wrong payer or the wrong Medicare contractor; there is nothing to appeal, so the fix is to identify the correct payer or jurisdiction and submit the claim there before its filing limit runs out.',
     seoTitle: 'CO-109 Denial Code: Claim Sent to the Wrong Payer',
     seoDescription:
-      'CO-109 means the claim is not covered by this payer or contractor and must go to the correct one. Common causes: Medicare Advantage, DME MAC, Medicaid managed care.',
+      'CO-109 means the claim must go to a different payer or contractor. Common causes: Medicare Advantage, DME MAC, Medicaid managed care. How to fix it.',
     glance: [
       { label: 'Group code', value: 'CO (Contractual Obligation)' },
       { label: 'Bill the patient?', value: 'No' },
@@ -716,7 +716,7 @@ export const denialCodes: DenialCode[] = [
       'Denial code CO-197 means the service needed prior authorization (or notification) that was not obtained or not shown on the claim; if an authorization exists, resubmit with its number, otherwise ask the payer about retro-authorization or appeal, because the amount cannot be billed to the patient.',
     seoTitle: 'CO-197 Denial Code: Prior Authorization Absent',
     seoDescription:
-      'CO-197 means precertification or authorization was absent. How to fix it when an authorization existed, when retro-authorization is possible, and how to prevent it.',
+      'CO-197 means prior authorization was absent. How to fix it when an authorization existed, when retro-authorization is possible, and how to prevent it.',
     glance: [
       { label: 'Group code', value: 'CO (Contractual Obligation)' },
       { label: 'Bill the patient?', value: 'No' },
@@ -776,3 +776,58 @@ export const otherCodes: { code: string; meaning: string }[] = [
 ]
 
 export const DENIAL_HUB_PATH = '/denial-codes'
+
+/**
+ * Per-code example scenario (illustrative, not a client case) and the
+ * specialty pages where the code is common (internal-link map, plan 24 Nov).
+ */
+export const denialCodeExtras: Record<string, { example: string; specialties: { label: string; path: string }[] }> = {
+  'co-16': {
+    example: 'A secondary claim is sent to the second insurer without the primary payer\'s payment information. The remittance shows CO-16 with remark MA04. The biller adds the primary remittance data to the claim and resubmits, and the secondary pays.',
+    specialties: [{ label: 'Internal medicine billing', path: '/specialties/internal-medicine' }, { label: 'Radiology billing', path: '/specialties/radiology' }],
+  },
+  'co-97': {
+    example: 'A patient gets a knee injection and an office visit on the same day, and the visit line is denied CO-97. The note documents a separate problem that was evaluated and managed. The biller adds modifier 25 to the visit and sends a corrected claim.',
+    specialties: [{ label: 'Orthopedic billing', path: '/specialties/orthopedics' }, { label: 'Pain management billing', path: '/specialties/pain-management' }],
+  },
+  'co-45': {
+    example: 'A practice bills $250 for an office visit and the payer allows $142, adjusting $108 with CO-45. The biller posts $108 as a contractual write-off and checks that $142 matches the contracted rate for that code.',
+    specialties: [{ label: 'Dermatology billing', path: '/specialties/dermatology' }, { label: 'Internal medicine billing', path: '/specialties/internal-medicine' }],
+  },
+  'pr-1': {
+    example: 'In January, a patient with a high-deductible plan has an MRI read. The payer allows the professional fee and applies all of it to the deductible as PR-1. The practice bills the patient, after confirming there is no secondary coverage.',
+    specialties: [{ label: 'Radiology billing', path: '/specialties/radiology' }, { label: 'Dermatology billing', path: '/specialties/dermatology' }],
+  },
+  'co-4': {
+    example: 'A radiologist reads a CT scan performed on hospital equipment, but the claim goes out without modifier 26. The line is denied CO-4. The biller adds modifier 26 and sends a corrected claim for the professional component only.',
+    specialties: [{ label: 'Radiology billing', path: '/specialties/radiology' }, { label: 'Orthopedic billing', path: '/specialties/orthopedics' }],
+  },
+  'co-11': {
+    example: 'A urine drug screen is billed with a diagnosis for low back pain only, and the payer denies it CO-11 because its policy requires a monitoring diagnosis. The record documents long-term opioid therapy, so the biller adds the supported diagnosis and resubmits.',
+    specialties: [{ label: 'Pain management billing', path: '/specialties/pain-management' }, { label: 'Psychiatry billing', path: '/specialties/psychiatry' }],
+  },
+  'co-18': {
+    example: 'A claim shows "pending" in the portal, so a staff member sends it again. The second claim comes back OA-18. The biller confirms the first claim is processing, closes the duplicate and adds a rule to check status before resubmitting.',
+    specialties: [{ label: 'Internal medicine billing', path: '/specialties/internal-medicine' }, { label: 'Mental health billing', path: '/specialties/mental-health-counseling' }],
+  },
+  'co-22': {
+    example: 'A 67-year-old patient who still works is billed to Medicare first, and Medicare denies with CO-22 because the employer plan is primary. The front desk completes the Medicare Secondary Payer questionnaire, the claim goes to the employer plan, and Medicare is billed second.',
+    specialties: [{ label: 'Orthopedic billing', path: '/specialties/orthopedics' }, { label: 'Cardiology billing', path: '/specialties/cardiology' }],
+  },
+  'co-29': {
+    example: 'A batch of claims was rejected at the clearinghouse and never corrected, and months later the payer denies them CO-29. There is no acceptance report inside the filing limit, so the claims are written off and rejections are now worked every day.',
+    specialties: [{ label: 'Mental health billing', path: '/specialties/mental-health-counseling' }, { label: 'Gastroenterology billing', path: '/specialties/gastroenterology' }],
+  },
+  'co-50': {
+    example: 'A repeat epidural steroid injection is denied CO-50 because the coverage policy requires documented relief from the earlier injection. The note does document the relief and the functional improvement, so the practice appeals with that record and the policy criteria.',
+    specialties: [{ label: 'Pain management billing', path: '/specialties/pain-management' }, { label: 'Dermatology billing', path: '/specialties/dermatology' }],
+  },
+  'co-109': {
+    example: 'A patient switched from Original Medicare to a Medicare Advantage plan in January, but the visit is billed to Medicare and denied CO-109. An eligibility check shows the new plan, so the claim is sent to the Medicare Advantage plan within its filing limit.',
+    specialties: [{ label: 'Internal medicine billing', path: '/specialties/internal-medicine' }, { label: 'Orthopedic billing', path: '/specialties/orthopedics' }],
+  },
+  'co-197': {
+    example: 'An MRI is scheduled without checking the payer\'s authorization list, and the claim is denied CO-197. The payer does not allow retro-authorization for this service, so the practice adds an authorization check at scheduling for all advanced imaging.',
+    specialties: [{ label: 'Radiology billing', path: '/specialties/radiology' }, { label: 'Rheumatology billing', path: '/specialties/rheumatology' }],
+  },
+}

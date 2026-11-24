@@ -20,6 +20,8 @@ export interface SpecialtyInsight {
   payerRules?: string[]
   /** Denial code guides most relevant to this specialty (slugs under /denial-codes) */
   denialCodes?: string[]
+  /** Why each of those codes shows up in this specialty (keyed by slug) */
+  denialWhy?: Record<string, string>
   /** Optional cross-link to a closely related specialty page (avoids cannibalization) */
   seeAlso?: { label: string; path: string; note: string }
 }
@@ -95,6 +97,12 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       "Workers' compensation and auto-injury claims follow state fee schedules and their own claim forms and deadlines, separate from health insurance.",
     ],
     denialCodes: ['co-97', 'co-4', 'co-22', 'co-16'],
+    denialWhy: {
+      'co-97': 'Visits inside a 90-day global period, or injection and E/M lines bundled',
+      'co-4': 'Laterality (RT, LT, 50) or global-period modifiers (24, 57, 58, 78, 79) missing or wrong',
+      'co-22': 'Workers\u2019 comp or auto injury that should be billed before health insurance',
+      'co-16': 'DME orders, HCPCS details or referring provider information missing',
+    },
     faqs: [
       { question: "What do modifiers 57, 58, 78 and 79 mean?", answer: "57 marks the visit where the decision for major surgery was made. 58 is a staged or related procedure by the same physician during the postoperative period. 78 is an unplanned return to the operating room for a related problem. 79 is an unrelated procedure during the postoperative period." },
       { question: "How are workers' compensation and auto injury claims billed?", answer: "They go to the employer's workers' compensation carrier or the auto insurer, not the patient's health plan. They need the claim number and injury details, follow state fee schedules and have their own filing rules and deadlines." },
@@ -175,6 +183,12 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Commercial payers often require prior authorization for radiofrequency ablation and spinal cord stimulator trials.',
     ],
     denialCodes: ['co-50', 'co-197', 'co-97', 'co-11'],
+    denialWhy: {
+      'co-50': 'Repeat injections or RFA without the documented response the coverage policy requires',
+      'co-197': 'Facet, RFA or stimulator procedures done without prior authorization',
+      'co-97': 'Imaging guidance or same-session injections billed separately when bundled',
+      'co-11': 'Drug testing or procedures linked to a diagnosis the policy does not cover',
+    },
     faqs: [
       { question: "How is urine drug testing billed in pain management?", answer: "Presumptive (screening) drug tests use CPT 80305 to 80307 depending on the method. Definitive tests for Medicare use HCPCS G0480 to G0483, chosen by the number of drug classes tested. Payers limit frequency, so document why each test was ordered." },
       { question: "What documentation do payers expect for opioid therapy visits?", answer: "Payers and state rules commonly expect a treatment agreement, a prescription drug monitoring program check, risk assessment, functional goals and the results of any drug testing in the record. Requirements vary by state and payer, so keep the practice policy current." },
@@ -288,6 +302,12 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Many commercial plans require prior authorization for biologics and phototherapy; the approved drug, dose and dates must match the claim.',
     ],
     denialCodes: ['co-97', 'co-11', 'co-4', 'co-16'],
+    denialWhy: {
+      'co-97': 'Biopsy and destruction of the same lesion, or an E/M visit on a procedure day, bundled together',
+      'co-11': 'Benign-lesion removal billed with a diagnosis the policy treats as cosmetic',
+      'co-4': 'Missing or conflicting modifiers on repeat excisions, biopsies or Mohs stages',
+      'co-16': 'Excision size, lesion count or pathology details missing from the claim',
+    },
     faqs: [
       { question: 'Should excisions be coded before or after pathology?', answer: 'Wait for pathology. Benign (11400–11446) and malignant (11600–11646) excision codes differ, and the code also depends on the excised diameter including margins.' },
       { question: 'When is lesion removal considered cosmetic?', answer: 'Removing a benign lesion without symptoms (such as bleeding, itching, inflammation or a suspicious change) is generally considered cosmetic and not covered. Documenting the clinical reason is essential.' },
@@ -329,6 +349,12 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       "Urodynamic studies performed in the office with the practice's equipment are billed globally; when equipment belongs to a facility, only the professional component (modifier 26) is billed.",
     ],
     denialCodes: ['co-97', 'co-4', 'co-16', 'co-11'],
+    denialWhy: {
+      'co-97': 'Cystoscopy bundled with procedures done in the same session',
+      'co-4': 'Professional/technical modifiers missing on urodynamics',
+      'co-16': 'Drug units or NDC missing on injectable drug lines',
+      'co-11': 'PSA tests billed as screening or diagnostic with the wrong diagnosis',
+    },
     faqs: [
       { question: 'How are hormone injections like leuprolide billed in urology?', answer: 'Bill the administration code plus the HCPCS drug code with units that match the dose given (J9217 is per 7.5 mg), and include the NDC when the payer requires it.' },
       { question: 'Can cystoscopy be billed with an office visit?', answer: 'Only when a separately identifiable E/M service is documented and billed with modifier 25. The routine pre-procedure assessment is included in the cystoscopy.' },
@@ -403,6 +429,12 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Diagnostic studies need a signed order from the treating practitioner and a diagnosis that supports medical necessity.',
     ],
     denialCodes: ['co-197', 'co-16', 'co-11', 'co-50'],
+    denialWhy: {
+      'co-197': 'CT, MRI or PET performed without the authorization, or with a different code than approved',
+      'co-16': 'Ordering provider, NPI or other required claim details missing',
+      'co-11': 'Diagnosis on the order does not support medical necessity for the study',
+      'co-50': 'The study does not meet the payer coverage criteria',
+    },
     faqs: [
       { question: "How is teleradiology billed?", answer: "The remote radiologist bills only the professional component (modifier 26) under their own NPI, while the facility that performed the scan bills the technical component. The radiologist must be credentialed with the patient's payers and licensed where the payer and state require it." },
       { question: "Who bills the technical component when a radiologist reads at a hospital?", answer: "The hospital or imaging facility that owns the equipment bills the technical component (TC). The reading radiologist bills the professional component with modifier 26. Global billing is only used when the same entity owns the equipment and provides the read." },
@@ -551,6 +583,12 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Office E/M levels are chosen by medical decision-making or total time on the date of the encounter; the add-on G2211 applies only to longitudinal care relationships.',
     ],
     denialCodes: ['co-16', 'co-11', 'co-18', 'pr-1'],
+    denialWhy: {
+      'co-16': 'Chronic care or transitional care claims missing required elements',
+      'co-11': 'Screening and diagnostic services linked to the wrong diagnosis',
+      'co-18': 'Annual wellness visits or repeat services billed twice or too soon',
+      'pr-1': 'Visits early in the plan year applied to the patient\u2019s deductible',
+    },
     faqs: [
       { question: 'Can an annual wellness visit and a sick visit be billed on the same day?', answer: 'Yes. When a significant problem is addressed during the wellness visit, the problem-oriented E/M can be billed with modifier 25 alongside G0438 or G0439. The patient may owe cost-sharing for the problem-oriented portion.' },
       { question: 'What is required to bill chronic care management?', answer: 'The patient needs two or more chronic conditions expected to last at least 12 months, documented consent, a comprehensive care plan, and at least 20 minutes of clinical staff time in the month for 99490.' },
