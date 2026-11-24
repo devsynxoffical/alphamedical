@@ -129,6 +129,7 @@ const Footer: React.FC = () => {
             <div className="footer-legal-links" style={{ marginTop: '0.5rem', display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
               <Link to="/terms-and-conditions" style={{ color: 'var(--sleek-text-muted)', fontSize: '0.875rem', textDecoration: 'none' }}>Terms and Conditions</Link>
               <Link to="/privacy-policy" style={{ color: 'var(--sleek-text-muted)', fontSize: '0.875rem', textDecoration: 'none' }}>Privacy Policy</Link>
+              <Link to="/sitemap" style={{ color: 'var(--sleek-text-muted)', fontSize: '0.875rem', textDecoration: 'none' }}>Sitemap</Link>
             </div>
           </div>
         </div>

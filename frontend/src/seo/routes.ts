@@ -85,6 +85,7 @@ export const siteRoutes: SiteRoute[] = [
   ...denialCodeRoutes,
   { path: '/free-consultation', kind: 'conversion', label: 'Free Consultation', priority: 0.6, changefreq: 'yearly' },
   { path: '/book-appointment', kind: 'conversion', label: 'Book a Meeting', priority: 0.5, changefreq: 'yearly' },
+  { path: '/sitemap', kind: 'page', label: 'Sitemap', priority: 0.3, changefreq: 'monthly' },
   { path: '/privacy-policy', kind: 'legal', label: 'Privacy Policy', priority: 0.2, changefreq: 'yearly' },
   { path: '/terms-and-conditions', kind: 'legal', label: 'Terms and Conditions', priority: 0.2, changefreq: 'yearly' },
 ]

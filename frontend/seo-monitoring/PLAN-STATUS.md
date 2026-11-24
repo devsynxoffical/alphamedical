@@ -77,3 +77,37 @@ Source: `CLAUDE_CODE_PLAN_alphamediassist_com.md` by DEVSYNX. Rules applied: no 
 - **Services offered:** chiropractic and dental billing (yes/no). Confirm behavioral health and physical therapy before those pages are built (weeks 7 to 8).
 - **Disavow (week 1):** a Semrush or Search Console backlinks export so the disavow file can be built.
 - **Directories and reviews:** Clutch, GoodFirms, Crunchbase, MGMA, HFMA, and Google reviews from current practices.
+
+---
+
+# Site Structure & Location Pages Plan (24 Nov 2026): implementation status
+
+Source: `CLAUDE_CODE_STRUCTURE_medi.md` + `Alpha_Medi_Assist_Page_Map_24-Nov-2026.csv`. Governing rule: **no location page is published until the owner confirms the office, clients in that state, and the state facts are verified from official sources.**
+
+## Done on 24 Nov 2026 (week 1)
+
+| Item | Before | After | Validation |
+|---|---|---|---|
+| 301 /specialties/orthopedic-surgery | two competing pages | 301 to /specialties/orthopedics (done 23 Nov); not in sitemap | Deploy check follows redirect to 200 |
+| 301 /virtual-medical-assistant/ | 301 since 19 Nov | unchanged; not in sitemap. It still shows in GSC from older impressions, which will fade | Deploy check |
+| Sitemap clean-up and lastmod | 58 of 73 URLs got the build date on every deploy | lastmod comes from a per-page content fingerprint (`src/seo/lastmod.json`) and changes only when a page's title, description or main text changes | Two consecutive builds give an identical manifest |
+| HTML sitemap | none | /sitemap lists every indexable page in 6 groups, built from the route registry; linked in the footer | Prerendered, 1 H1, title 27 chars, no mobile overflow |
+
+## Blocked: owner confirmation and official-source verification needed
+
+| Pages (from the page map) | Needs |
+|---|---|
+| /locations hub | Confirmation that the Spotsylvania, VA office is real and staffed (the plan targets "near me", which needs a real office). Decide whether the St. Petersburg "Ste 23684" address is a mailbox |
+| 14 state pages (TX, CA, NY, PA, NJ, GA, NC, MD, OH, MI, IL, AZ, CO) | Which states have current clients. The state facts (Medicaid program, MAC jurisdiction, prompt-pay and surprise-billing rules) must be verified on cms.gov and state sites; cms.gov is not reachable from the build sandbox, so verification needs a reachable environment or a reviewer |
+| 5 city pages (Houston, Dallas, Miami, Los Angeles, Chicago) | Same, plus real local knowledge; the plan forbids name-swap pages |
+| Florida (Miami, Tampa sections) and Virginia upgrades | Owner confirmation; the 7-day rule also applies (FL/VA changed 19 to 22 Nov, so not before 26 to 29 Nov) |
+| Header "Locations" dropdown, homepage links to /locations and top state pages | After the state pages exist |
+| Separate phone number | Owner decision. +1 424-542-7170 is shared with zingoassist.us and alphaaheadllc.com |
+| Behavioral health, physical therapy, chiropractic | Confirm the services are offered |
+| Results per state, pricing model, credentialed reviewer | From the owner |
+
+## Internal-link map (section 6): status
+- Specialty pages link to /medical-billing-services and the denial-code hub (related links). The 6 upgraded specialties link to 4 code guides each.
+- Denial-code pages link to /denial-management-services and the hub. Links to 2 specialty pages are scheduled for 27 Nov (7-day rule).
+- Blog: the ADHD post should link to the psychiatry and mental-health pages (behavioral health once it exists). Scheduled for 30 Nov (ADHD post edited 23 Nov).
+- Footer: both offices, the FL/VA pages and the HTML sitemap are linked. Homepage links scheduled for 25 Nov.

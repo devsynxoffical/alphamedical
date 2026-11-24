@@ -41,6 +41,7 @@ import './App.css'
 import ChatWidgetEmbed from './components/ChatWidgetEmbed'
 import StickyCta from './components/StickyCta'
 import DenialCodesHub from './pages/DenialCodesHub'
+import HtmlSitemap from './pages/HtmlSitemap'
 import DenialCodePage from './pages/DenialCodePage'
 import NotFound from './pages/NotFound'
 import LandingPage from './pages/LandingPage'
@@ -96,6 +97,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPostDetail />} />
+            <Route path="/sitemap" element={<HtmlSitemap />} />
             <Route path="/denial-codes" element={<DenialCodesHub />} />
             <Route path="/denial-codes/:code" element={<DenialCodePage />} />
             <Route path="/free-consultation" element={<FreeConsultation />} />

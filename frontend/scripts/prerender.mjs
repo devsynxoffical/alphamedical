@@ -10,6 +10,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { execSync } from 'node:child_process'
+import { createHash } from 'node:crypto'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
@@ -98,12 +99,37 @@ const gitDate = (() => {
 })() || new Date().toISOString().slice(0, 10)
 
 const postBySlug = Object.fromEntries(blogPosts.map((p) => [`/blog/${p.slug}`, p]))
+
+// lastmod changes only when a page's content changes (title, description or
+// main text). Fingerprints live in src/seo/lastmod.json; a local build updates
+// it and the file is committed, so CI builds keep the same dates.
+const manifestFile = path.join(root, 'src', 'seo', 'lastmod.json')
+const manifest = fs.existsSync(manifestFile) ? JSON.parse(fs.readFileSync(manifestFile, 'utf8')) : {}
+const today = new Date().toISOString().slice(0, 10)
+const lastmodFor = {}
+let manifestChanged = false
+for (const p of pages) {
+  const hash = createHash('sha1').update(`${p.title}\n${p.description}\n${p.text}`).digest('hex').slice(0, 16)
+  const prev = manifest[p.route.path]
+  if (!prev || prev.hash !== hash) {
+    const post = postBySlug[p.route.path]
+    // First time a page is seen, seed with its known date instead of today.
+    const seed = !prev ? (post ? post.dateModified || post.datePublished : gitDate) : today
+    manifest[p.route.path] = { hash, date: seed }
+    manifestChanged = true
+  }
+  lastmodFor[p.route.path] = manifest[p.route.path].date
+}
+for (const k of Object.keys(manifest)) {
+  if (!pages.some((p) => p.route.path === k)) { delete manifest[k]; manifestChanged = true }
+}
+if (manifestChanged) fs.writeFileSync(manifestFile, JSON.stringify(manifest, null, 2) + '\n')
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${siteRoutes
   .map((r) => {
     const post = postBySlug[r.path]
-    const lastmod = post ? post.dateModified || post.datePublished : gitDate
+    const lastmod = lastmodFor[r.path] || (post ? post.dateModified || post.datePublished : gitDate)
     const loc = r.path === '/' ? `${SITE_URL}/` : `${SITE_URL}${r.path}`
     return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${r.changefreq}</changefreq>\n    <priority>${r.priority.toFixed(1)}</priority>\n  </url>`
   })

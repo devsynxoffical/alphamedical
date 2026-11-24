@@ -1,0 +1,298 @@
+{
+  "/": {
+    "hash": "7d74296936ced2fb",
+    "date": "2026-11-23"
+  },
+  "/services": {
+    "hash": "a0f2bf4266151e30",
+    "date": "2026-11-23"
+  },
+  "/medical-billing-services": {
+    "hash": "edaa10b8372363fa",
+    "date": "2026-11-23"
+  },
+  "/revenue-cycle-management-services": {
+    "hash": "7a88df90994bbb67",
+    "date": "2026-11-23"
+  },
+  "/medical-billing-for-small-practices": {
+    "hash": "d01644c8a2780abe",
+    "date": "2026-11-23"
+  },
+  "/medical-billing-services-florida": {
+    "hash": "8eae9c81dcc0587a",
+    "date": "2026-11-23"
+  },
+  "/medical-billing-services-virginia": {
+    "hash": "74b9358d3927f5f9",
+    "date": "2026-11-23"
+  },
+  "/denial-management-services": {
+    "hash": "0a294d1324c1e9fc",
+    "date": "2026-11-23"
+  },
+  "/medical-coding-services": {
+    "hash": "a723442d5a5b0ca2",
+    "date": "2026-11-23"
+  },
+  "/medical-credentialing-service": {
+    "hash": "2d258948e4b1337f",
+    "date": "2026-11-23"
+  },
+  "/medical-payment-posting-services": {
+    "hash": "a70a70ea98876924",
+    "date": "2026-11-23"
+  },
+  "/virtual-medical-assistant-services": {
+    "hash": "bccadb20ca0b43d8",
+    "date": "2026-11-23"
+  },
+  "/virtual-medical-receptionist-services": {
+    "hash": "e7f501646d5c7347",
+    "date": "2026-11-24"
+  },
+  "/healthcare-seo-services": {
+    "hash": "1e574bd9ba87eab8",
+    "date": "2026-11-23"
+  },
+  "/medical-billing-specialities": {
+    "hash": "9f5a240307112b5b",
+    "date": "2026-11-23"
+  },
+  "/specialties/internal-medicine": {
+    "hash": "8b8b94fdbe861dd3",
+    "date": "2026-11-23"
+  },
+  "/specialties/allergy-immunology": {
+    "hash": "d8ccf44b4fcbf0b1",
+    "date": "2026-11-23"
+  },
+  "/specialties/orthopedics": {
+    "hash": "099c26fbac33a846",
+    "date": "2026-11-23"
+  },
+  "/specialties/pain-management": {
+    "hash": "c69120c35eb70ff0",
+    "date": "2026-11-23"
+  },
+  "/specialties/neurology": {
+    "hash": "54f73b24ead0b1c0",
+    "date": "2026-11-23"
+  },
+  "/specialties/gastroenterology": {
+    "hash": "50302348ad711281",
+    "date": "2026-11-23"
+  },
+  "/specialties/general-surgery": {
+    "hash": "f7ab337403f0fc2b",
+    "date": "2026-11-23"
+  },
+  "/specialties/anesthesiology": {
+    "hash": "368f6eea15a03499",
+    "date": "2026-11-23"
+  },
+  "/specialties/cardiology": {
+    "hash": "1345caf591b4db79",
+    "date": "2026-11-23"
+  },
+  "/specialties/dermatology": {
+    "hash": "82ae036f483fa36f",
+    "date": "2026-11-23"
+  },
+  "/specialties/emergency-medicine": {
+    "hash": "259e9467a61e1e3c",
+    "date": "2026-11-23"
+  },
+  "/specialties/gynecology-obstetrics": {
+    "hash": "4acadf0f46479d66",
+    "date": "2026-11-23"
+  },
+  "/specialties/hematology-oncology": {
+    "hash": "96d8bc3d7d01ef16",
+    "date": "2026-11-23"
+  },
+  "/specialties/pediatrics": {
+    "hash": "f373e3c544c63ad0",
+    "date": "2026-11-23"
+  },
+  "/specialties/plastic-surgery": {
+    "hash": "04eb02fcff7ad892",
+    "date": "2026-11-23"
+  },
+  "/specialties/psychiatry": {
+    "hash": "bb02cb02de992d6a",
+    "date": "2026-11-23"
+  },
+  "/specialties/mental-health-counseling": {
+    "hash": "550871c75ece7af7",
+    "date": "2026-11-23"
+  },
+  "/specialties/radiology": {
+    "hash": "c2b134ceac3e181b",
+    "date": "2026-11-23"
+  },
+  "/specialties/reproductive-endocrinology": {
+    "hash": "c3727a62e328e9d7",
+    "date": "2026-11-23"
+  },
+  "/specialties/rheumatology": {
+    "hash": "d6cc0b05ee1a8731",
+    "date": "2026-11-23"
+  },
+  "/specialties/urology": {
+    "hash": "4d4e0a9f93400a22",
+    "date": "2026-11-23"
+  },
+  "/specialties/nurse-practitioner": {
+    "hash": "f54ff3533d335eab",
+    "date": "2026-11-23"
+  },
+  "/about-us": {
+    "hash": "ff7a57c8d3fed5a6",
+    "date": "2026-11-23"
+  },
+  "/contact": {
+    "hash": "0a5c09b43448e785",
+    "date": "2026-11-23"
+  },
+  "/blog": {
+    "hash": "26c43794794a3848",
+    "date": "2026-11-23"
+  },
+  "/blog/top-10-reasons-for-medical-claim-denials-and-how-to-fix-them": {
+    "hash": "ceb157d348636df1",
+    "date": "2026-11-17"
+  },
+  "/blog/how-to-reduce-medical-claim-denials-complete-guide": {
+    "hash": "84412e78c2edf6e6",
+    "date": "2026-11-17"
+  },
+  "/blog/how-much-does-medical-billing-cost": {
+    "hash": "6ef03b7b88055614",
+    "date": "2026-11-20"
+  },
+  "/blog/how-long-does-medical-credentialing-take": {
+    "hash": "82674f7913516dfd",
+    "date": "2026-11-20"
+  },
+  "/blog/medical-billing-vs-medical-coding": {
+    "hash": "f0a6bcfe16e6965c",
+    "date": "2026-11-17"
+  },
+  "/blog/common-claim-denial-codes-and-how-to-fix-them": {
+    "hash": "3391b10e9f325ff6",
+    "date": "2026-11-17"
+  },
+  "/blog/can-an-health-insurance-company-reverse-a-paid-claim": {
+    "hash": "7ab218cd3089013f",
+    "date": "2026-11-19"
+  },
+  "/blog/what-is-void-claim-in-medical-billing": {
+    "hash": "50bcbdf51f3429a0",
+    "date": "2026-11-19"
+  },
+  "/blog/difference-between-reversal-and-recoupment-in-medical-billing": {
+    "hash": "20e14a3d5af77f70",
+    "date": "2026-11-19"
+  },
+  "/blog/rendering-vs-referring-provider": {
+    "hash": "f1a0966572eeccb9",
+    "date": "2026-11-19"
+  },
+  "/blog/what-is-the-icd-10-code-for-adhd": {
+    "hash": "ce091e3a9ed2f9c5",
+    "date": "2026-11-23"
+  },
+  "/blog/what-is-the-icd-10-code-for-anxiety": {
+    "hash": "a4ab8e2a6439f751",
+    "date": "2026-11-19"
+  },
+  "/blog/what-is-authorization-in-medical-billing": {
+    "hash": "7f5d6bad1c02cd58",
+    "date": "2026-11-19"
+  },
+  "/blog/steps-involved-in-the-medical-billing-cycle": {
+    "hash": "1ef4347fd2788c9b",
+    "date": "2026-11-19"
+  },
+  "/blog/in-house-vs-outsourced-medical-billing": {
+    "hash": "9f4f4f0a0e4efec7",
+    "date": "2026-11-20"
+  },
+  "/blog/annual-cpt-code-updates-how-practices-should-prepare": {
+    "hash": "c6f521446d93edc4",
+    "date": "2026-11-20"
+  },
+  "/denial-codes": {
+    "hash": "306965e87980a672",
+    "date": "2026-11-23"
+  },
+  "/denial-codes/co-16": {
+    "hash": "9e4de16cc613766b",
+    "date": "2026-11-23"
+  },
+  "/denial-codes/co-97": {
+    "hash": "5165d4a63aa3cb06",
+    "date": "2026-11-23"
+  },
+  "/denial-codes/co-45": {
+    "hash": "4a9edebc9fb3b7cd",
+    "date": "2026-11-23"
+  },
+  "/denial-codes/pr-1": {
+    "hash": "1fb24fa19d489c67",
+    "date": "2026-11-23"
+  },
+  "/denial-codes/co-4": {
+    "hash": "86ca1e939dba9660",
+    "date": "2026-11-23"
+  },
+  "/denial-codes/co-11": {
+    "hash": "97cbd20f38d81331",
+    "date": "2026-11-23"
+  },
+  "/denial-codes/co-18": {
+    "hash": "338db068bc512c86",
+    "date": "2026-11-23"
+  },
+  "/denial-codes/co-22": {
+    "hash": "de3275af688b9bc6",
+    "date": "2026-11-23"
+  },
+  "/denial-codes/co-29": {
+    "hash": "12551bf8b5a23edb",
+    "date": "2026-11-23"
+  },
+  "/denial-codes/co-50": {
+    "hash": "a1f141dff26c9517",
+    "date": "2026-11-23"
+  },
+  "/denial-codes/co-109": {
+    "hash": "a3ca3ab0034a99c2",
+    "date": "2026-11-23"
+  },
+  "/denial-codes/co-197": {
+    "hash": "ca7f68298aaab674",
+    "date": "2026-11-23"
+  },
+  "/free-consultation": {
+    "hash": "ad2f5ff8a55b39ef",
+    "date": "2026-11-23"
+  },
+  "/book-appointment": {
+    "hash": "6380252e67030e22",
+    "date": "2026-11-23"
+  },
+  "/sitemap": {
+    "hash": "10fbcb56470a229e",
+    "date": "2026-11-24"
+  },
+  "/privacy-policy": {
+    "hash": "e044875c7fe696cc",
+    "date": "2026-11-23"
+  },
+  "/terms-and-conditions": {
+    "hash": "1f444903afb21d31",
+    "date": "2026-11-23"
+  }
+}
