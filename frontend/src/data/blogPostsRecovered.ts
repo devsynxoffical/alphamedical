@@ -235,7 +235,7 @@ export const recoveredPosts: BlogPost[] = [
     datePublished: '2026-11-19',
     category: 'Claims',
     title: 'Rendering vs. Referring Provider: What\'s the Difference in Billing?',
-    seoTitle: 'Rendering vs. Referring Provider in Medical Billing',
+    seoTitle: 'Rendering vs. Referring Provider: Meaning in Billing',
     seoDescription:
       'The rendering provider performed the service; the referring provider sent the patient. Where each goes on the CMS-1500 and 837P, and common errors.',
     excerpt:

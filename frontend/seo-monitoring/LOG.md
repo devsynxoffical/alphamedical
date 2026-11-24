@@ -430,3 +430,41 @@ Total clicks this month: 5.
 **Changes (data-justified; title and meta only)**
 1. Reversal vs recoupment: title "Reversal vs. Recoupment in Medical Billing (and Offsets)" became "...: Meaning" to match "recoupment meaning in medical billing" (16 impressions, #55).
 2. Virtual medical receptionist: replaced the generic, ungrammatical description with one naming the services listed on the page (call answering, scheduling, intake, insurance inquiries). The page ranks #13.7 for "best virtual medical receptionist in florida" with 0 clicks.
+
+## 2026-11-24 12:41 UTC: 12-hour monitor run #13
+**Data status:** deploy #52 succeeded; live checks green. Search Console data through 2026-11-23. GA4 not set up.
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-21 | 201 | 0 | 39.4 |
+| 2026-11-22 | 375 | 1 | 36.4 |
+| 2026-11-23 | **406** (record) | **1** | **26.4** (best average so far) |
+
+**Pages, Nov 1–24**
+
+| Page | Impr | Clicks | Pos |
+|---|---|---|---|
+| ADHD | 382 | 0 | 27.3 |
+| anxiety | 135 | 0 | 45.3 |
+| radiology | 133 | 0 | 40.2 |
+| void claim | **91** | **1** | **7.9** |
+| rendering vs referring | **85** | 0 | **17.6** |
+| reversal vs recoupment | 75 | 1 | 34.5 |
+| denial-codes blog | 64 | 0 | |
+| pain management | 53 | 0 | |
+| paid-claim reversal | 31 | 0 | 15.3 |
+| virtual medical receptionist | 28 | 0 | 22.7 |
+| /denial-codes/co-16 | 13 | 0 | 60.7 |
+| /denial-codes/co-45 | 1 | 0 | 1 |
+| CPT updates post | 4 | 0 | 4.5 (new) |
+
+Total clicks this month: 6.
+
+**Notable queries (Nov 18–24):**
+- "adhd icd 10" 13 impr #23.8, "adhd icd 10 code" #19.7
+- "diagnosis f41.9" #18.2
+- "best virtual medical receptionist in florida" #13.6
+- "rendering provider vs referring provider" #7.8, "rendering provider meaning" #45.7, "what is rendering provider" #49
+
+**Change (data-justified)**
+1. Rendering vs referring: about 10 of its 22 queries are definition searches ("meaning", "what is", "definition") ranking 40–50 while the comparison queries rank 7–10. The FAQs already define both terms, so the title gained "Meaning": "Rendering vs. Referring Provider: Meaning in Billing" (52 characters).
