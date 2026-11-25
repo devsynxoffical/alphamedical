@@ -468,3 +468,42 @@ Total clicks this month: 6.
 
 **Change (data-justified)**
 1. Rendering vs referring: about 10 of its 22 queries are definition searches ("meaning", "what is", "definition") ranking 40–50 while the comparison queries rank 7–10. The FAQs already define both terms, so the title gained "Meaning": "Rendering vs. Referring Provider: Meaning in Billing" (52 characters).
+
+## 2026-11-25 00:41 UTC: 12-hour monitor run #14
+**Data status:** deploy #53 succeeded; live checks green. Search Console data through 2026-11-24. GA4 not set up.
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-22 | 375 | 1 | 36.4 |
+| 2026-11-23 | **412** (record) | 1 | **26.4** |
+| 2026-11-24 | 280 (may still fill in) | 0 | 30.3 |
+
+**Pages, Nov 1–25**
+
+| Page | Impr | Clicks | Pos |
+|---|---|---|---|
+| ADHD | 426 | 0 | 27.1 |
+| anxiety | 219 | 0 | 46.5 |
+| radiology | 152 | 0 | 39.4 |
+| void claim | 121 | 1 | **7.2** |
+| rendering vs referring | 111 | 0 | **14.7** (was 17.6) |
+| reversal vs recoupment | 98 | 1 | 33.6 |
+| denial-codes blog | 72 | 0 | |
+| pain management | 53 | 0 | |
+| paid-claim reversal | 43 | 0 | 13.2 |
+| authorization | 31 | 0 | 82.1 |
+| CO-16 | 16 | 0 | 53.8 |
+| CO-109 | 1 | 0 | 11 (first) |
+
+Total clicks this month: 6.
+
+**Queries (Nov 18–25):**
+- "rendering provider vs referring provider" #6.4
+- "icd code for adhd" #16.6
+- "adhd icd 10" 18 impr #23.1
+- "radiology billing services" 28 impr #34.9
+- "recoupment meaning in medical billing" 30 impr #54.6 (title changed 24 Nov; not yet re-crawled)
+- "prior authorization in medical billing" 19 impr **#92.2**
+
+**Change (data-justified)**
+1. The prior authorization article ranks #92 for its main query with only 3 internal links. Added a contextual link from the CO-197 guide (authorization absent) and a "Prior authorization in medical billing" link in the related-links block on every specialty page. It is now linked from 26 pages.

@@ -17,6 +17,7 @@ export const specialtyRelatedLinks: RelatedLink[] = [
   { label: 'Denial codes: meanings and fixes', path: '/denial-codes' },
   { label: 'CO-16 denial code: missing information', path: '/denial-codes/co-16' },
   { label: 'CO-97 denial code: bundled services', path: '/denial-codes/co-97' },
+  { label: 'Prior authorization in medical billing', path: '/blog/what-is-authorization-in-medical-billing' },
   { label: 'How much does medical billing cost?', path: '/blog/how-much-does-medical-billing-cost' },
 ]
 

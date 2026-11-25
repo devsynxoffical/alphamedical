@@ -754,7 +754,6 @@ export const denialCodes: DenialCode[] = [
       'Check authorization requirements by payer and CPT code at scheduling, not at check-in.',
       'Track authorization numbers, approved codes, units and dates, and link them to the visit in your system.',
       'Re-check authorization when the planned procedure changes.',
-      'Read our guide to authorization in medical billing for payer timelines and rules.',
     ],
     faqs: [
       { question: 'What does denial code CO-197 mean?', answer: 'CO-197 means precertification, authorization, notification or pre-treatment was absent: the payer has no required authorization on record for the service billed.' },
@@ -781,7 +780,7 @@ export const DENIAL_HUB_PATH = '/denial-codes'
  * Per-code example scenario (illustrative, not a client case) and the
  * specialty pages where the code is common (internal-link map, plan 24 Nov).
  */
-export const denialCodeExtras: Record<string, { example: string; specialties: { label: string; path: string }[] }> = {
+export const denialCodeExtras: Record<string, { example: string; specialties: { label: string; path: string }[]; guide?: { label: string; path: string } }> = {
   'co-16': {
     example: 'A secondary claim is sent to the second insurer without the primary payer\'s payment information. The remittance shows CO-16 with remark MA04. The biller adds the primary remittance data to the claim and resubmits, and the secondary pays.',
     specialties: [{ label: 'Internal medicine billing', path: '/specialties/internal-medicine' }, { label: 'Radiology billing', path: '/specialties/radiology' }],
@@ -829,5 +828,6 @@ export const denialCodeExtras: Record<string, { example: string; specialties: { 
   'co-197': {
     example: 'An MRI is scheduled without checking the payer\'s authorization list, and the claim is denied CO-197. The payer does not allow retro-authorization for this service, so the practice adds an authorization check at scheduling for all advanced imaging.',
     specialties: [{ label: 'Radiology billing', path: '/specialties/radiology' }, { label: 'Rheumatology billing', path: '/specialties/rheumatology' }],
+    guide: { label: 'prior authorization in medical billing', path: '/blog/what-is-authorization-in-medical-billing' },
   },
 }

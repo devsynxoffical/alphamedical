@@ -137,6 +137,7 @@ const DenialCodePage: React.FC = () => {
                     </React.Fragment>
                   ))}
                   . See how our <Link to="/denial-management-services">denial management service</Link> works these denials end to end.
+                  {extra.guide && (<> For payer rules and timelines, read our guide to <Link to={extra.guide.path}>{extra.guide.label}</Link>.</>)}
                 </p>
               </section>
             )}
