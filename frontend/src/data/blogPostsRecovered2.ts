@@ -131,6 +131,8 @@ export const recoveredPosts2: BlogPost[] = [
       'Alpha Medi Assist\'s certified coders review behavioral health documentation and claims before submission so the diagnosis, procedure and authorization line up the first time.',
     ],
     related: [
+      { label: 'ICD-10 code for depression', path: '/blog/what-is-the-icd-10-code-for-depression' },
+      { label: 'ICD-10 code for PTSD', path: '/blog/what-is-the-icd-10-code-for-ptsd' },
       { label: 'Medical coding services', path: '/medical-coding-services' },
       { label: 'Psychiatry billing services', path: '/specialties/psychiatry' },
       { label: 'Mental health counseling billing', path: '/specialties/mental-health-counseling' },
@@ -265,6 +267,8 @@ export const recoveredPosts2: BlogPost[] = [
       'Alpha Medi Assist codes and bills for psychiatrists, therapists and counseling practices, and reviews diagnosis specificity and session documentation before claims go out.',
     ],
     related: [
+      { label: 'ICD-10 code for depression', path: '/blog/what-is-the-icd-10-code-for-depression' },
+      { label: 'ICD-10 code for PTSD', path: '/blog/what-is-the-icd-10-code-for-ptsd' },
       { label: 'Mental health counseling billing', path: '/specialties/mental-health-counseling' },
       { label: 'Psychiatry billing services', path: '/specialties/psychiatry' },
       { label: 'Medical coding services', path: '/medical-coding-services' },

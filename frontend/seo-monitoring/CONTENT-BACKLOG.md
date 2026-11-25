@@ -22,4 +22,4 @@ No item that needs owner facts (prices, results, offices, states, credentials) m
 - Case studies, results, pricing, software list, reviewer box
 
 ## Done
-- 2026-11-25: denial codes PR-2, PR-3, CO-24, CO-59, CO-96, CO-151, CO-252; ICD-10 depression and PTSD guides (pending publication this run)
+- 2026-11-25: /denial-codes/pr-2, /pr-3, /co-24, /co-59, /co-96, /co-151, /co-252; /blog/what-is-the-icd-10-code-for-depression; /blog/what-is-the-icd-10-code-for-ptsd

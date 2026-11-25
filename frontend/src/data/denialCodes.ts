@@ -50,6 +50,13 @@ export const denialCodeSources: Record<string, { label: string; url: string }[]>
   'co-50': [X12_CARC, X12_RARC, CMS_MANUAL],
   'co-109': [X12_CARC, X12_RARC, CMS_MANUAL],
   'co-197': [X12_CARC, X12_RARC, CMS_MANUAL],
+  'pr-2': [X12_CARC, CMS_MANUAL],
+  'pr-3': [X12_CARC, CMS_MANUAL],
+  'co-24': [X12_CARC, CMS_MANUAL],
+  'co-59': [X12_CARC, CMS_MANUAL],
+  'co-96': [X12_CARC, X12_RARC, CMS_MANUAL],
+  'co-151': [X12_CARC, X12_RARC, CMS_NCCI],
+  'co-252': [X12_CARC, X12_RARC],
 }
 
 export const denialCodes: DenialCode[] = [
@@ -290,7 +297,7 @@ export const denialCodes: DenialCode[] = [
       { question: 'What are PR-2 and PR-3?', answer: 'PR-2 is coinsurance and PR-3 is copayment. Like PR-1, both are patient responsibility amounts.' },
       { question: 'How can a practice reduce unpaid PR-1 balances?', answer: 'Verify remaining deductibles before the visit, give patients an estimate, and collect at the time of service with easy payment options.' },
     ],
-    relatedCodes: ['co-45', 'co-16', 'co-97'],
+    relatedCodes: ['pr-2', 'pr-3', 'co-45'],
   },
 
   // ------------------------------------------------------------------ CO-4
@@ -763,6 +770,413 @@ export const denialCodes: DenialCode[] = [
     ],
     relatedCodes: ['co-50', 'co-16', 'co-109'],
   },
+
+  // ------------------------------------------------------------------ PR-2
+  {
+    slug: 'pr-2',
+    code: 'PR-2',
+    carc: '2',
+    group: 'PR',
+    name: 'Coinsurance amount',
+    official: 'Coinsurance Amount.',
+    definition:
+      'Code PR-2 means the payer applied the patient\'s coinsurance, the percentage of the allowed amount the patient shares under the plan, so the patient owes that amount; it is not a denial, and the practice should bill the patient or a secondary payer rather than appeal.',
+    seoTitle: 'PR-2 Denial Code: Coinsurance Amount Explained',
+    seoDescription:
+      'PR-2 means the amount is the patient\'s coinsurance. What it means, how it differs from deductible and copay, and how to bill secondary insurance first.',
+    glance: [
+      { label: 'Group code', value: 'PR (Patient Responsibility)' },
+      { label: 'Bill the patient?', value: 'Yes (after any secondary payer)' },
+      { label: 'Usual fix', value: 'Bill secondary insurance, then the patient' },
+      { label: 'Appeal needed?', value: 'No (unless coinsurance was applied in error)' },
+    ],
+    intro: [
+      'PR-2 is a patient-responsibility adjustment, not a denial. The payer processed the claim, calculated the allowed amount, paid its share and reported the patient\'s share as coinsurance with CARC 2. Coinsurance is a percentage of the allowed amount, for example 20% for most services under Medicare Part B once the Part B deductible is met.',
+      'Because coinsurance is a percentage, PR-2 amounts grow with the cost of the service, so they can be large for surgery, imaging and infusions. Many patients have a secondary plan or Medicare supplement that covers some or all of it, so the order of billing matters before a statement goes to the patient.',
+    ],
+    causes: [
+      { title: 'Plan coinsurance applies', text: 'The plan pays a set percentage of the allowed amount and the patient pays the rest, up to the plan\'s out-of-pocket maximum.' },
+      { title: 'Deductible already met', text: 'Once the deductible is met, many plans move from deductible (PR-1) to coinsurance (PR-2) for the same kind of service.' },
+      { title: 'Medicare Part B cost sharing', text: 'For most Part B services, the patient owes 20% of the Medicare-approved amount after the Part B deductible.' },
+      { title: 'Out-of-network benefits', text: 'Many plans apply a higher coinsurance percentage for out-of-network services.' },
+      { title: 'Service-specific cost sharing', text: 'Some plans set different coinsurance for categories such as imaging, outpatient surgery or therapy.' },
+    ],
+    fix: [
+      { title: 'Post to patient responsibility', text: 'Move the PR-2 amount from insurance A/R to the patient balance, linked to the claim and date of service.' },
+      { title: 'Bill the secondary payer', text: 'If the patient has secondary coverage or a Medicare supplement, send the secondary claim with the primary payer\'s payment information before billing the patient. Some secondary claims cross over automatically.' },
+      { title: 'Check the math', text: 'Confirm the coinsurance matches the plan percentage applied to the allowed amount, not to your billed charge.' },
+      { title: 'Send a clear statement', text: 'Show the date of service, allowed amount, what insurance paid and that the balance is coinsurance.' },
+      { title: 'Offer payment options', text: 'Card on file, online payment and payment plans help with larger coinsurance balances.' },
+    ],
+    appeal: [
+      'Only question PR-2 when it looks wrong: for example a preventive service that should have no cost sharing, a coinsurance percentage that does not match the plan, or a patient who has already reached the out-of-pocket maximum. Ask the payer to reprocess with the correct benefit.',
+    ],
+    prevent: [
+      'Check the coinsurance percentage, remaining deductible and out-of-pocket maximum during eligibility verification.',
+      'Give patients a cost estimate before higher-cost services and explain coinsurance in plain language.',
+      'Capture all secondary coverage at registration so coinsurance goes to the secondary payer first.',
+      'Collect a deposit toward expected coinsurance when your financial policy allows it.',
+    ],
+    faqs: [
+      { question: 'What does PR-2 mean on an EOB?', answer: 'PR-2 means coinsurance amount: the patient\'s share of the allowed amount under the plan, reported as patient responsibility.' },
+      { question: 'Is PR-2 a denial?', answer: 'No. The claim was processed and the payer paid its share. PR-2 shows the portion the patient owes as coinsurance.' },
+      { question: 'Can I bill the patient for PR-2?', answer: 'Yes. PR stands for Patient Responsibility. Bill any secondary insurance first, then send the patient a statement for the remaining amount.' },
+      { question: 'What is the difference between PR-1, PR-2 and PR-3?', answer: 'PR-1 is the deductible, PR-2 is coinsurance (a percentage of the allowed amount) and PR-3 is a copayment (a fixed dollar amount). All three are patient responsibility.' },
+      { question: 'Does a Medicare supplement pay PR-2 amounts?', answer: 'Often, yes. Many Medigap plans cover some or all of the Part B coinsurance, so bill the supplement, or confirm the claim crossed over, before billing the patient.' },
+    ],
+    relatedCodes: ['pr-1', 'pr-3', 'co-45'],
+  },
+
+  // ------------------------------------------------------------------ PR-3
+  {
+    slug: 'pr-3',
+    code: 'PR-3',
+    carc: '3',
+    group: 'PR',
+    name: 'Copayment amount',
+    official: 'Co-payment Amount.',
+    definition:
+      'Code PR-3 means the payer subtracted the patient\'s copayment, a fixed dollar amount set by the plan, from its payment, so the patient owes that amount; it is not a denial, and it is best collected at check-in.',
+    seoTitle: 'PR-3 Denial Code: Copayment Amount Explained',
+    seoDescription:
+      'PR-3 means the amount is the patient\'s copayment. What it means, how it differs from coinsurance, how to post it and how to collect copays at check-in.',
+    glance: [
+      { label: 'Group code', value: 'PR (Patient Responsibility)' },
+      { label: 'Bill the patient?', value: 'Yes (if not collected at the visit)' },
+      { label: 'Usual fix', value: 'Apply the copay collected, or bill the patient' },
+      { label: 'Appeal needed?', value: 'No (unless the copay was applied in error)' },
+    ],
+    intro: [
+      'PR-3 is a patient-responsibility adjustment, not a denial. The payer processed the claim and reduced its payment by the copayment the plan requires for that type of visit, such as a primary care visit, a specialist visit or urgent care.',
+      'Unlike coinsurance, a copay is a fixed amount that the patient usually knows from their insurance card or plan documents. That makes PR-3 the easiest patient balance to collect up front. When it is not collected at check-in, it turns into a small statement balance that costs more to collect than many practices realize.',
+    ],
+    causes: [
+      { title: 'Plan copay for the visit type', text: 'The plan sets a fixed copay for office visits, specialist visits, urgent care or other service types.' },
+      { title: 'Specialist copay applied', text: 'The visit was processed under the specialist benefit, which often has a higher copay than primary care.' },
+      { title: 'Copay plus other cost sharing', text: 'Some plans apply a copay and also deductible or coinsurance to other services on the same claim.' },
+      { title: 'Copay not collected at the visit', text: 'The copay was not collected at check-in, so it now shows as an open patient balance.' },
+    ],
+    fix: [
+      { title: 'Match the copay collected', text: 'If the copay was collected at the visit, apply that payment to the PR-3 amount so the patient is not billed twice.' },
+      { title: 'Refund overpayments', text: 'If the patient paid more than the PR-3 amount, refund or apply the credit according to your policy.' },
+      { title: 'Bill the secondary payer', text: 'If the patient has secondary coverage that pays copays, send it the claim with the primary payment details first.' },
+      { title: 'Bill the patient', text: 'Send a statement for any copay that was not collected, showing the date of service and that it is the plan copay.' },
+    ],
+    appeal: [
+      'Only question PR-3 when the copay looks wrong, for example a specialist copay on a primary care visit, a copay on a preventive visit that should have no cost sharing, or a copay that does not match the plan. Ask the payer to reprocess with the correct benefit.',
+    ],
+    prevent: [
+      'Verify the copay for the visit type during eligibility checks before the visit.',
+      'Collect copays at check-in, before the patient is seen, as a standard front-desk step.',
+      'Make sure visits are scheduled and registered under the right provider type so the correct copay is quoted.',
+      'Offer card-on-file and contactless payment to make collection quick.',
+    ],
+    faqs: [
+      { question: 'What does PR-3 mean on an EOB?', answer: 'PR-3 means copayment amount: a fixed amount the patient owes for the service under the plan, reported as patient responsibility.' },
+      { question: 'Is PR-3 a denial?', answer: 'No. The claim was processed and paid, minus the copay the plan requires the patient to pay.' },
+      { question: 'Can I bill the patient for PR-3?', answer: 'Yes. PR stands for Patient Responsibility. If the copay was already collected at the visit, apply it instead of billing again.' },
+      { question: 'What is the difference between a copay and coinsurance?', answer: 'A copay (PR-3) is a fixed dollar amount. Coinsurance (PR-2) is a percentage of the allowed amount, so it changes with the cost of the service.' },
+    ],
+    relatedCodes: ['pr-1', 'pr-2', 'co-45'],
+  },
+
+  // ------------------------------------------------------------------ CO-24
+  {
+    slug: 'co-24',
+    code: 'CO-24',
+    carc: '24',
+    group: 'CO',
+    name: 'Covered under capitation or a managed care plan',
+    official: 'Charges are covered under a capitation agreement/managed care plan.',
+    definition:
+      'Denial code CO-24 means the payer will not pay the service fee-for-service because it is covered by a capitation agreement or a managed care plan; if you are paid by capitation the line is written off, and if the patient belongs to a different plan the claim must be sent there.',
+    seoTitle: 'CO-24 Denial Code: Capitation and Managed Care Plans',
+    seoDescription:
+      'CO-24 means charges are covered under a capitation agreement or managed care plan. When to write it off, when to rebill another plan, and prevention.',
+    glance: [
+      { label: 'Group code', value: 'CO (Contractual Obligation)' },
+      { label: 'Bill the patient?', value: 'No' },
+      { label: 'Usual fix', value: 'Write off under capitation, or bill the correct plan' },
+      { label: 'Appeal needed?', value: 'Only if the service is carved out of capitation' },
+    ],
+    intro: [
+      'Under a capitation agreement, a payer pays a provider a fixed amount per member, usually each month, to cover a defined set of services, whether or not the patient comes in. Claims for those services are still submitted, often as encounter data, but each line is adjusted to zero with CO-24 because it has already been paid through the capitation payment.',
+      'CO-24 also appears when a payer sees that the patient is enrolled in a managed care plan that is responsible for the service. A common example is a claim sent to Original Medicare for a patient enrolled in a Medicare Advantage plan. In that case the claim needs to go to the plan, so the fix is a routing fix, much like CO-109.',
+    ],
+    causes: [
+      { title: 'Service included in capitation', text: 'The practice has a capitated contract and the service is one the capitation payment covers.' },
+      { title: 'Patient enrolled in a managed care plan', text: 'The patient is in a Medicare Advantage or Medicaid managed care plan, and the claim went to Original Medicare or fee-for-service Medicaid.' },
+      { title: 'Patient assigned to another provider', text: 'In some HMO-style plans the patient is assigned to a different primary care provider, who holds the capitation.' },
+      { title: 'Carve-out service billed under capitation', text: 'A service that the contract pays fee-for-service was processed as if it were included in the capitation.' },
+      { title: 'Outdated registration', text: 'The insurance on file was not updated after the patient enrolled in a managed care plan.' },
+    ],
+    fix: [
+      { title: 'Check the patient\'s coverage', text: 'Run an eligibility check for the date of service to confirm the plan, product and assigned provider.' },
+      { title: 'Check your contract', text: 'If you are capitated for this patient, confirm whether the service is included in the capitation or carved out for separate payment.' },
+      { title: 'Write off included services', text: 'When the service is covered by your capitation, post the CO-24 amount as a contractual adjustment. It cannot be billed to the patient.' },
+      { title: 'Rebill the correct plan', text: 'When the patient belongs to another managed care plan, update registration and send a new claim to that plan within its filing limit.' },
+      { title: 'Dispute carve-outs', text: 'When the contract pays the service fee-for-service, ask the payer to reprocess and cite the contract section.' },
+    ],
+    appeal: [
+      'Appeal or request reprocessing only when the contract shows the service is carved out of capitation, or when the patient was not enrolled in the managed care plan on the date of service. Attach the contract language or the eligibility response.',
+      'Do not appeal CO-24 for services the capitation already covers; the payment was made through the capitation.',
+    ],
+    prevent: [
+      'Verify eligibility before every visit and note Medicare Advantage, Medicaid managed care and HMO enrollment.',
+      'Keep a list of which services are included in each capitated contract and which are carved out.',
+      'Check that patients are assigned to your practice in capitated plans, and request reassignment when needed.',
+      'Reconcile monthly capitation payments against the member rosters the payer sends.',
+    ],
+    faqs: [
+      { question: 'What does denial code CO-24 mean?', answer: 'CO-24 means the charges are covered under a capitation agreement or a managed care plan, so the payer does not pay the service separately on this claim.' },
+      { question: 'How do I fix a CO-24 denial?', answer: 'Check the patient\'s coverage and your contract. If the service is included in your capitation, write it off. If the patient belongs to another managed care plan, bill that plan. If the service is carved out, ask the payer to reprocess.' },
+      { question: 'Can I bill the patient for CO-24?', answer: 'No. CO-24 uses the Contractual Obligation group code, so the amount cannot be billed to the patient. Any copay the plan requires is reported separately.' },
+      { question: 'Why do capitated claims still need to be submitted?', answer: 'Payers use encounter data from these claims to track care, quality measures and risk adjustment, and many capitated contracts require it even though the lines pay zero.' },
+      { question: 'What is the difference between CO-24 and CO-109?', answer: 'CO-24 says the service is covered under a capitation agreement or managed care plan. CO-109 says the claim must go to a different payer or contractor. Both can appear when a patient is in a managed care plan and the claim went to the wrong payer.' },
+    ],
+    relatedCodes: ['co-109', 'co-45', 'co-22'],
+  },
+
+  // ------------------------------------------------------------------ CO-59
+  {
+    slug: 'co-59',
+    code: 'CO-59',
+    carc: '59',
+    group: 'CO',
+    name: 'Multiple or concurrent procedure reduction',
+    official: 'Processed based on multiple or concurrent procedure rules. (For example multiple surgery or diagnostic imaging, concurrent anesthesia.)',
+    definition:
+      'Code CO-59 means the payer reduced payment for a procedure under its multiple-procedure or concurrent-procedure rules, such as paying the second surgery or imaging study at a lower rate; it is usually a correct contractual reduction, and only worth disputing when the codes were ranked or reduced incorrectly.',
+    seoTitle: 'CO-59 Denial Code: Multiple Procedure Reductions Explained',
+    seoDescription:
+      'CO-59 means payment was reduced under multiple or concurrent procedure rules. How surgery and imaging reductions work and when to dispute.',
+    glance: [
+      { label: 'Group code', value: 'CO (Contractual Obligation)' },
+      { label: 'Bill the patient?', value: 'No' },
+      { label: 'Usual fix', value: 'Verify the reduction, then post as contractual' },
+      { label: 'Appeal needed?', value: 'Only when the reduction was applied wrongly' },
+    ],
+    intro: [
+      'When more than one procedure is performed in the same session, payers usually do not pay each one at the full rate, because some of the work, such as preparation and recovery, overlaps. CO-59 is how the remittance reports that reduction. Under the Medicare Physician Fee Schedule, for example, multiple surgeries are generally paid at 100% for the highest-valued procedure and 50% for each additional one, and multiple-procedure payment reductions also apply to certain diagnostic imaging and therapy services.',
+      'CARC 59 also covers concurrent procedure rules, most often in anesthesia, where an anesthesiologist medically directs several cases at the same time and payment for each case is adjusted. Do not confuse CARC 59 with modifier 59: the modifier marks a distinct procedural service, while the reason code reports a payment reduction.',
+    ],
+    causes: [
+      { title: 'Multiple surgery rules', text: 'Two or more surgical procedures in the same session, with the additional procedures paid at a reduced rate.' },
+      { title: 'Diagnostic imaging reductions', text: 'Several imaging studies in the same session, with reductions applied to the additional studies.' },
+      { title: 'Concurrent anesthesia', text: 'Anesthesia cases medically directed at the same time, with payment adjusted for concurrency.' },
+      { title: 'Therapy or other payer reductions', text: 'Payer policies that reduce payment for additional units or services in the same day.' },
+      { title: 'Ranking errors', text: 'The payer, or the claim, ranked the procedures in the wrong order so the full rate went to a lower-valued code.' },
+      { title: 'Codes exempt from reduction', text: 'Add-on codes or codes the fee schedule exempts from multiple-procedure rules were reduced anyway.' },
+    ],
+    fix: [
+      { title: 'Identify the reduced lines', text: 'Find which lines carry CARC 59 and how much each one was reduced.' },
+      { title: 'Check the payer rules', text: 'Look up the multiple-procedure indicator for each code in the Medicare fee schedule, or the payer\'s reimbursement policy, to see which reduction should apply.' },
+      { title: 'Check the ranking', text: 'Confirm that the highest-valued procedure was paid at the full rate and that exempt codes, such as add-on codes, were not reduced.' },
+      { title: 'Post or dispute', text: 'If the reduction is correct, post it as a contractual adjustment. If not, request reprocessing with the fee schedule or policy that shows the correct calculation.' },
+      { title: 'Review the coding', text: 'Make sure the procedures and modifiers on the claim reflect what was done, since modifier errors can change how reductions apply.' },
+    ],
+    appeal: [
+      'Dispute only when the reduction does not follow the fee schedule or the payer\'s published policy, for example when the wrong code was paid at the full rate or an exempt code was reduced.',
+      'Attach the fee schedule indicators or policy section and a short calculation showing the expected payment by line.',
+      'Do not appeal a correctly applied reduction; it reflects the payment rules in your contract or the fee schedule.',
+    ],
+    prevent: [
+      'Load multiple-procedure rules by payer so your billing system calculates expected payment for each line.',
+      'List procedures in the order your payers expect, usually the highest-valued procedure first, when payer rules call for it.',
+      'Review contracts for multiple-procedure terms, since commercial payers can differ from Medicare.',
+      'Track CO-59 variances by payer to catch systematic ranking or reduction errors.',
+    ],
+    faqs: [
+      { question: 'What does denial code CO-59 mean?', answer: 'CO-59 means the payer processed the service under multiple or concurrent procedure rules, so payment for one or more procedures was reduced. Examples are multiple surgeries, multiple imaging studies and concurrent anesthesia.' },
+      { question: 'Is CO-59 a denial?', answer: 'Usually not. The service was paid, but at a reduced amount because other procedures were performed in the same session.' },
+      { question: 'Is CARC 59 the same as modifier 59?', answer: 'No. Modifier 59 tells the payer a procedure was distinct from another service. CARC 59 is a reason code that explains a payment reduction under multiple or concurrent procedure rules.' },
+      { question: 'Can I bill the patient for CO-59?', answer: 'No. CO-59 uses the Contractual Obligation group code, so the reduction is written off.' },
+      { question: 'When should I dispute a CO-59 reduction?', answer: 'When the reduction does not match the fee schedule or payer policy, for example when the highest-valued procedure was reduced instead of a lower-valued one, or an exempt code was reduced.' },
+    ],
+    relatedCodes: ['co-45', 'co-97', 'co-4'],
+  },
+
+  // ------------------------------------------------------------------ CO-96
+  {
+    slug: 'co-96',
+    code: 'CO-96',
+    carc: '96',
+    group: 'CO',
+    name: 'Non-covered charges',
+    official: 'Non-covered charge(s). At least one Remark Code must be provided.',
+    definition:
+      'Denial code CO-96 means the payer considers the service not covered under the patient\'s plan, and the remark code sent with it explains why; the provider cannot bill the patient unless liability was properly shifted, for example with a valid advance notice, so the fix is to read the remark code and correct, appeal or write off.',
+    seoTitle: 'CO-96 Denial Code: Non-Covered Charges and How to Fix',
+    seoDescription:
+      'CO-96 means non-covered charges. How to read the remark code, when the patient can be billed, how CO-96 differs from CO-50, and how to prevent it.',
+    glance: [
+      { label: 'Group code', value: 'CO (PR when the patient is liable)' },
+      { label: 'Bill the patient?', value: 'Not when CO; possibly when PR' },
+      { label: 'Usual fix', value: 'Read the remark code, then correct, appeal or write off' },
+      { label: 'Appeal needed?', value: 'When the service is covered under the plan' },
+    ],
+    intro: [
+      'CO-96 is a broad non-coverage denial. The payer is saying the service is not a covered benefit for this patient, for this plan or in these circumstances. X12 requires at least one remark code with CARC 96, and that remark code is the starting point: it may point to a benefit exclusion, a plan limitation, a provider type the plan does not cover, or another reason.',
+      'CO-96 differs from a medical-necessity denial (CO-50). With CO-50, the service can be covered but the documentation did not meet the criteria. With CO-96, the payer is saying it does not cover the service at all, or not under these conditions. When the group code is CO, the provider is liable; when the patient agreed in advance to pay, payers may report it as PR-96 instead.',
+    ],
+    causes: [
+      { title: 'Plan benefit exclusion', text: 'The patient\'s plan excludes the service, such as some cosmetic, routine or elective services.' },
+      { title: 'Statutory exclusion', text: 'For Medicare, some services are excluded by law, such as most routine physical exams, routine foot care and cosmetic surgery.' },
+      { title: 'Provider or setting not covered', text: 'The plan does not cover the service from that provider type, or in that place of service.' },
+      { title: 'Wrong code for a covered service', text: 'A covered service was billed with a code the plan does not cover, such as a code the payer wants billed another way.' },
+      { title: 'Coverage ended or changed', text: 'The service is not part of the benefits the patient had on the date of service.' },
+    ],
+    remarks: [
+      { code: 'N130', meaning: 'Consult plan benefit documents/guidelines for information about restrictions for this service.' },
+    ],
+    fix: [
+      { title: 'Read the remark code', text: 'Find the RARC sent with CARC 96; it explains why the payer considers the service non-covered.' },
+      { title: 'Check the benefits', text: 'Review the patient\'s plan benefits or, for Medicare, the coverage rules for the service.' },
+      { title: 'Check the coding', text: 'Make sure the procedure, diagnosis, place of service and modifiers describe the service correctly. If they were wrong, send a corrected claim.' },
+      { title: 'Check for a signed notice', text: 'If the patient signed a valid advance notice or financial waiver before the service, and the claim showed it where required, ask whether the line should be reprocessed as patient responsibility.' },
+      { title: 'Appeal or write off', text: 'Appeal when the plan covers the service. Otherwise, post the CO-96 amount as a write-off; it cannot be billed to the patient.' },
+    ],
+    appeal: [
+      'Appeal when the plan documents show the service is covered for this patient. Quote the benefit language and attach it.',
+      'Include the clinical notes if the coverage depends on the patient\'s condition.',
+      'For Medicare, a valid Advance Beneficiary Notice matters for services that may be denied as not reasonable and necessary. For statutorily excluded services an ABN is not required, but it can be used as a courtesy notice.',
+    ],
+    prevent: [
+      'Check benefits for services that plans often exclude before scheduling them.',
+      'Give patients a written notice and cost estimate for services the plan may not cover, and get a signature before the service.',
+      'Use the correct modifiers for Medicare notices (GA, GX, GY, GZ) when they apply.',
+      'Track CO-96 by remark code and payer to find recurring benefit or coding gaps.',
+    ],
+    faqs: [
+      { question: 'What does denial code CO-96 mean?', answer: 'CO-96 means non-covered charges: the payer does not cover the service under the patient\'s plan or in the circumstances billed. The remark code sent with it gives the reason.' },
+      { question: 'How do I fix a CO-96 denial?', answer: 'Read the remark code, check the patient\'s benefits and the coding. Correct and resubmit if the coding was wrong, appeal if the plan covers the service, and otherwise write off the line.' },
+      { question: 'Can I bill the patient for CO-96?', answer: 'Not when the group code is CO. If the patient agreed in writing before the service to pay for a non-covered service, the payer may report the line as PR-96, and the patient can then be billed.' },
+      { question: 'What is the difference between CO-96 and CO-50?', answer: 'CO-50 means the service was not considered medically necessary based on the diagnosis and documentation. CO-96 means the service is not covered under the plan at all, or not under these conditions.' },
+    ],
+    relatedCodes: ['co-50', 'co-11', 'co-197'],
+  },
+
+  // ------------------------------------------------------------------ CO-151
+  {
+    slug: 'co-151',
+    code: 'CO-151',
+    carc: '151',
+    group: 'CO',
+    name: 'Units or frequency not supported',
+    official: 'Payment adjusted because the payer deems the information submitted does not support this many/frequency of services.',
+    definition:
+      'Denial code CO-151 means the payer decided the claim does not support the number of units or the frequency of the service billed, often because of a Medicare Medically Unlikely Edit (MUE) or a payer frequency limit; it is fixed by correcting the units, or by appealing with records that support the extra units.',
+    seoTitle: 'CO-151 Denial Code: Units or Frequency Not Supported',
+    seoDescription:
+      'CO-151 means the payer does not accept the units or frequency billed. How MUEs and frequency limits work, correcting units, and appeals.',
+    glance: [
+      { label: 'Group code', value: 'CO (Contractual Obligation)' },
+      { label: 'Bill the patient?', value: 'No' },
+      { label: 'Usual fix', value: 'Correct units, or appeal with documentation' },
+      { label: 'Appeal needed?', value: 'When the units were truly provided and necessary' },
+    ],
+    intro: [
+      'CO-151 is about quantity. The payer accepts that the service can be paid, but not as many units, or not as often, as the claim shows. For Medicare claims, the most common source is a Medically Unlikely Edit (MUE), which sets the maximum units of a code that a provider would report for one patient on one date of service. Commercial payers apply their own unit and frequency limits.',
+      'Many CO-151 denials are data entry problems, such as units entered as minutes or a dose billed in the wrong unit of measure. Others are real cases where a patient needed more than the usual amount of a service. For Medicare MUE denials, CMS has said an Advance Beneficiary Notice does not shift liability to the patient, so the amount cannot be billed to the patient.',
+    ],
+    causes: [
+      { title: 'Units over the MUE', text: 'The units billed for a code on one date exceed the Medicare MUE value for that code.' },
+      { title: 'Unit-of-measure errors', text: 'Drug units billed in milligrams instead of the HCPCS unit, or time-based codes billed in minutes instead of units.' },
+      { title: 'Frequency limits', text: 'The service was repeated sooner than the payer\'s policy allows, such as a test limited to once per year.' },
+      { title: 'Bilateral or repeat services reported wrongly', text: 'Bilateral or repeat procedures reported in a way the payer counts as too many units on one line.' },
+      { title: 'Units split across lines incorrectly', text: 'Units reported on several lines without the modifiers that show they were separate services, where the edit allows it.' },
+    ],
+    remarks: [
+      { code: 'N362', meaning: 'The number of Days or Units of Service exceeds our acceptable maximum.' },
+    ],
+    fix: [
+      { title: 'Check the units', text: 'Compare the units billed with the documentation and the code descriptor, including the HCPCS unit for drugs and time rules for timed codes.' },
+      { title: 'Check the limit', text: 'Look up the MUE value for the code and its adjudication indicator, or the payer\'s frequency policy.' },
+      { title: 'Correct data entry errors', text: 'If the units were wrong, send a corrected claim with the right units.' },
+      { title: 'Report separate services correctly', text: 'If services were truly separate (for example a different site or session) and the edit allows it, report them as the payer requires, with supported modifiers.' },
+      { title: 'Appeal supported units', text: 'If the patient needed and received more units than the limit, appeal with the records that show why.' },
+    ],
+    appeal: [
+      'Appeal when the documentation shows the units were provided and medically necessary, for example a higher drug dose or an unusual number of lesions treated. Attach the notes, orders and administration records.',
+      'Explain in the letter why this case differs from the usual one, since unit limits are based on what is typical.',
+      'Do not split units across lines or add modifiers just to get around an edit; that creates compliance risk.',
+    ],
+    prevent: [
+      'Load MUE values and payer frequency limits into your claim scrubber.',
+      'Set up drug billing to convert doses into the correct HCPCS units.',
+      'Check frequency limits before scheduling services that payers restrict, such as screening tests.',
+      'Review CO-151 denials by code to find charge-entry or template errors.',
+    ],
+    faqs: [
+      { question: 'What does denial code CO-151 mean?', answer: 'CO-151 means the payer deems the information submitted does not support the number or frequency of services billed, so payment was adjusted.' },
+      { question: 'Is CO-151 related to Medically Unlikely Edits?', answer: 'Often, yes. For Medicare claims, services that exceed an MUE are commonly denied with CARC 151. Commercial payers also use it for their own unit and frequency limits.' },
+      { question: 'How do I fix a CO-151 denial?', answer: 'Check the units against the documentation and the code rules. Send a corrected claim if the units were wrong, or appeal with records if the extra units were truly provided and necessary.' },
+      { question: 'Can I bill the patient for CO-151?', answer: 'No. CO-151 uses the Contractual Obligation group code. For Medicare MUE denials, CMS has said an ABN does not shift liability to the patient.' },
+    ],
+    relatedCodes: ['co-50', 'co-4', 'co-97'],
+  },
+
+  // ------------------------------------------------------------------ CO-252
+  {
+    slug: 'co-252',
+    code: 'CO-252',
+    carc: '252',
+    group: 'CO',
+    name: 'Attachment or other documentation required',
+    official: 'An attachment/other documentation is required to adjudicate this claim/service. At least one Remark Code must be provided.',
+    definition:
+      'Denial code CO-252 means the payer needs an attachment or other documentation, such as medical records or an invoice, before it can decide the claim; the remark code names what is missing, and the fix is to send that documentation the way the payer asks, within its deadline.',
+    seoTitle: 'CO-252 Denial Code: Attachment or Documentation Required',
+    seoDescription:
+      'CO-252 means the payer needs an attachment or documentation to process the claim. How to read the remark code, what to send, and prevention.',
+    glance: [
+      { label: 'Group code', value: 'CO (Contractual Obligation)' },
+      { label: 'Bill the patient?', value: 'No' },
+      { label: 'Usual fix', value: 'Send the requested documentation' },
+      { label: 'Appeal needed?', value: 'Sometimes, depending on the payer process' },
+    ],
+    intro: [
+      'CO-252 tells you the payer cannot finish processing the claim without more paperwork. X12 requires at least one remark code with CARC 252, and the remark code tells you what the payer wants, such as the medical record for the service, an operative report, an invoice for a supply or drug, or a consent form.',
+      'Payers handle CO-252 in different ways. Some deny the claim and expect a resubmission or appeal with the documents attached; others send a separate records request and reprocess when the documents arrive. Read the remittance and any letter carefully, because sending the right documents to the wrong place or after the deadline usually means starting over.',
+    ],
+    causes: [
+      { title: 'Payer policy requires records', text: 'The payer\'s policy requires documentation for the code, such as unlisted procedures or services with modifier 22.' },
+      { title: 'Unlisted codes', text: 'An unlisted procedure code was billed without a description and the operative or procedure note.' },
+      { title: 'Invoice needed for pricing', text: 'A drug, implant or supply without a set price needs an invoice so the payer can price it.' },
+      { title: 'Attachment indicated but not received', text: 'The claim said documentation would follow, but it never reached the payer or could not be matched to the claim.' },
+      { title: 'Prepayment review', text: 'The payer selected the claim for review and needs records before paying.' },
+    ],
+    remarks: [
+      { code: 'M127', meaning: 'Missing patient medical record for this service.' },
+      { code: 'N706', meaning: 'Missing documentation.' },
+    ],
+    fix: [
+      { title: 'Read the remark code', text: 'Find the RARC on the line and any payer letter to see exactly which documents are required.' },
+      { title: 'Gather the documents', text: 'Pull the complete, signed record for the date of service, plus any invoice, report or form named in the request.' },
+      { title: 'Check the documentation', text: 'Make sure the records support the codes, units and modifiers billed before sending them.' },
+      { title: 'Send them the way the payer asks', text: 'Use the payer\'s portal, fax cover sheet, electronic attachment process or mailing address, and include the claim number on every page or cover sheet.' },
+      { title: 'Track the deadline', text: 'Note the response deadline and follow up until the claim is reprocessed.' },
+    ],
+    appeal: [
+      'Appeal when the documentation was already sent and received, and include proof such as a portal confirmation or fax report.',
+      'If the payer requires a new claim with attachments rather than an appeal, follow that process instead; check its provider manual.',
+      'Send only the records for the date of service in question, and make sure they are complete and signed.',
+    ],
+    prevent: [
+      'Keep a list of codes and payers that always need documentation, and attach it on the first submission.',
+      'Use the claim\'s attachment indicator (the PWK segment on the 837) and send the attachment promptly with the matching control number.',
+      'Make sure provider notes are signed and complete before claims go out.',
+      'Respond to every records request quickly and log what was sent and when.',
+    ],
+    faqs: [
+      { question: 'What does denial code CO-252 mean?', answer: 'CO-252 means an attachment or other documentation is required to adjudicate the claim or service. The remark code sent with it names what is needed.' },
+      { question: 'How do I fix a CO-252 denial?', answer: 'Read the remark code and any payer letter, gather the requested records or invoice, and send them through the payer\'s required channel with the claim number, within its deadline.' },
+      { question: 'What documents are usually requested with CO-252?', answer: 'Common requests are the medical record or progress note, operative reports for unlisted procedures, and invoices for drugs or supplies that need pricing.' },
+      { question: 'Can I bill the patient for CO-252?', answer: 'No. CO-252 uses the Contractual Obligation group code. Send the documentation so the payer can process the claim.' },
+      { question: 'What is the difference between CO-252 and CO-16?', answer: 'CO-16 means the claim itself lacks information or has a billing error. CO-252 means the claim may be complete, but the payer needs separate documentation to decide it.' },
+    ],
+    relatedCodes: ['co-16', 'co-50', 'co-197'],
+  },
 ]
 
 /** Codes summarised on the hub that do not have their own page yet. */
@@ -771,7 +1185,6 @@ export const otherCodes: { code: string; meaning: string }[] = [
   { code: 'CO-198', meaning: 'Precertification/notification/authorization/pre-treatment exceeded.' },
   { code: 'CO-216', meaning: 'Based on the findings of a review organization.' },
   { code: 'CO-253', meaning: 'Sequestration: reduction in federal payment.' },
-  { code: 'PR-2 / PR-3', meaning: 'Coinsurance amount / copayment amount (patient responsibility).' },
 ]
 
 export const DENIAL_HUB_PATH = '/denial-codes'
@@ -829,5 +1242,33 @@ export const denialCodeExtras: Record<string, { example: string; specialties: { 
     example: 'An MRI is scheduled without checking the payer\'s authorization list, and the claim is denied CO-197. The payer does not allow retro-authorization for this service, so the practice adds an authorization check at scheduling for all advanced imaging.',
     specialties: [{ label: 'Radiology billing', path: '/specialties/radiology' }, { label: 'Rheumatology billing', path: '/specialties/rheumatology' }],
     guide: { label: 'prior authorization in medical billing', path: '/blog/what-is-authorization-in-medical-billing' },
+  },
+  'pr-2': {
+    example: 'After the deductible is met, a Medicare patient has an office visit. Medicare pays its share and reports the remaining 20% of the approved amount as PR-2. The claim crosses over to the patient\'s Medigap plan, which pays the coinsurance, so no statement goes to the patient.',
+    specialties: [{ label: 'Cardiology billing', path: '/specialties/cardiology' }, { label: 'Hematology and oncology billing', path: '/specialties/hematology-oncology' }],
+  },
+  'pr-3': {
+    example: 'A patient with a $40 specialist copay checks in for a follow-up visit and pays the copay at the front desk. The remittance shows $40 as PR-3. The biller applies the payment collected at check-in, so the visit balance is zero.',
+    specialties: [{ label: 'Dermatology billing', path: '/specialties/dermatology' }, { label: 'Allergy and immunology billing', path: '/specialties/allergy-immunology' }],
+  },
+  'co-24': {
+    example: 'A primary care practice is paid a monthly capitation amount for its HMO members. It submits a claim for a routine visit, and the line is adjusted to zero with CO-24. The biller confirms the visit is included in the capitation and posts the adjustment, while the claim still counts as encounter data.',
+    specialties: [{ label: 'Internal medicine billing', path: '/specialties/internal-medicine' }, { label: 'Pediatrics billing', path: '/specialties/pediatrics' }],
+  },
+  'co-59': {
+    example: 'A surgeon performs two procedures in the same session. The payer pays the higher-valued procedure in full and reduces the second, reporting the reduction with CO-59. The biller checks the fee-schedule indicators, confirms the ranking is correct and posts the reduction as contractual.',
+    specialties: [{ label: 'General surgery billing', path: '/specialties/general-surgery' }, { label: 'Anesthesiology billing', path: '/specialties/anesthesiology' }],
+  },
+  'co-96': {
+    example: 'A patient asks for a cosmetic procedure, and the claim is denied CO-96 with remark N130 because the plan excludes cosmetic services. The practice had not collected a signed waiver, so the line is written off, and the practice now gets a signed financial agreement before elective cosmetic work.',
+    specialties: [{ label: 'Plastic surgery billing', path: '/specialties/plastic-surgery' }, { label: 'Dermatology billing', path: '/specialties/dermatology' }],
+  },
+  'co-151': {
+    example: 'An infusion clinic bills a drug in milligrams instead of the HCPCS billing unit, so the units on the claim are far above the limit and the line is denied CO-151. The biller converts the dose to the correct units and sends a corrected claim.',
+    specialties: [{ label: 'Hematology and oncology billing', path: '/specialties/hematology-oncology' }, { label: 'Rheumatology billing', path: '/specialties/rheumatology' }],
+  },
+  'co-252': {
+    example: 'A surgeon bills an unlisted procedure code, and the payer denies it CO-252 with remark M127. The biller uploads the operative report and a short description of the procedure through the payer portal with the claim number, and the claim is reprocessed.',
+    specialties: [{ label: 'General surgery billing', path: '/specialties/general-surgery' }, { label: 'Gastroenterology billing', path: '/specialties/gastroenterology' }],
   },
 }
