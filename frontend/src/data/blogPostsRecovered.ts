@@ -94,9 +94,9 @@ export const recoveredPosts: BlogPost[] = [
     datePublished: '2026-11-19',
     category: 'Claims',
     title: 'What Is a Void Claim in Medical Billing? (And When to Use One)',
-    seoTitle: 'Void Claim in Medical Billing: Meaning & How to Void',
+    seoTitle: 'Void Claim in Medical Billing: Frequency Code 8 Explained',
     seoDescription:
-      'A void claim cancels a claim already sent to the payer. What voided means, void vs. corrected claims, frequency code 8, the ICN you need, and reasons.',
+      'A voided claim is canceled with frequency code 8 and the original claim number (ICN). When to void vs. send a corrected claim, step by step.',
     excerpt:
       'Void claims cancel a previously submitted claim entirely. How they differ from corrected claims, and how to submit one correctly.',
     intro: [
