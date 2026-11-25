@@ -5,7 +5,6 @@ Every item must target real demand: a query the site already gets impressions fo
 No item that needs owner facts (prices, results, offices, states, credentials) may be published from this list.
 
 ## Ready (verifiable content, no owner input needed)
-1. ICD-10 code for bipolar disorder (F31.x): extends the ADHD/anxiety/depression cluster (top-performing pages)
 2. ICD-10 code for autism spectrum disorder (F84.0): appears as a differential in the ADHD article
 3. Denial code CO-119 (benefit maximum reached)
 4. Denial code CO-26 / CO-27 (expenses before or after coverage)
@@ -23,3 +22,4 @@ No item that needs owner facts (prices, results, offices, states, credentials) m
 
 ## Done
 - 2026-11-25: /denial-codes/pr-2, /pr-3, /co-24, /co-59, /co-96, /co-151, /co-252; /blog/what-is-the-icd-10-code-for-depression; /blog/what-is-the-icd-10-code-for-ptsd
+- 2026-11-25: /blog/what-is-the-icd-10-code-for-bipolar-disorder

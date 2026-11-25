@@ -507,3 +507,37 @@ Total clicks this month: 6.
 
 **Change (data-justified)**
 1. The prior authorization article ranks #92 for its main query with only 3 internal links. Added a contextual link from the CO-197 guide (authorization absent) and a "Prior authorization in medical billing" link in the related-links block on every specialty page. It is now linked from 26 pages.
+
+## 2026-11-25 12:41 UTC: 12-hour monitor + growth run #15
+**Data status:** deploy #57 succeeded. Live checks green: 404 test, form healthcheck `ok:true`, and Googlebot/Bingbot get the real pages. Search Console data through 2026-11-24. GA4 not set up.
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-22 | 375 | 1 | 36.4 |
+| 2026-11-23 | 412 | 1 | 26.4 |
+| 2026-11-24 | **484** (record) | 0 | 29.2 |
+
+**Index status (full inspection, 25 Nov):** 51 of 83 sitemap URLs are indexed. Not indexed:
+- 13 discovered but not yet crawled
+- 16 unknown to Google (mostly published 24–25 Nov)
+- 2 crawled but not indexed (plastic surgery; the "how to reduce denials" post)
+- 1 duplicate (/about-us; Google's canonical from a September crawl is /about, which now 301s)
+
+**Pages, Nov 1–25**
+
+| Page | Impr | Clicks | Pos |
+|---|---|---|---|
+| ADHD | 488 | 0 | 27.0 |
+| anxiety | 254 | 0 | 45.6 |
+| void claim | **158** | 1 | **6.6** |
+| radiology | 155 | 0 | 39 |
+| rendering vs referring | 139 | 0 | **13.8** |
+| reversal vs recoupment | 109 | 1 | 31.9 |
+| paid-claim reversal | 54 | 0 | **11.5** |
+| virtual medical receptionist | 38 | 0 | 27.1 |
+
+**Change (data-justified)**
+1. Void claim ranks #6.6 with 158 impressions but a 0.6% CTR. The title is now "Void Claim in Medical Billing: Frequency Code 8 Explained" (matching "void claim code" and "claim voided meaning"), and the description leads with the answer (frequency code 8 + ICN, void vs. corrected).
+
+**Published (backlog item 1)**
+- /blog/what-is-the-icd-10-code-for-bipolar-disorder (F31 codes by episode, severity, psychotic features and remission; F31.81 bipolar II; differentials). Linked from the depression guide.

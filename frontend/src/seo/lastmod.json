@@ -156,7 +156,7 @@
     "date": "2026-11-23"
   },
   "/blog": {
-    "hash": "673128b39a506444",
+    "hash": "c49cfbacbaf2378f",
     "date": "2026-11-25"
   },
   "/blog/top-10-reasons-for-medical-claim-denials-and-how-to-fix-them": {
@@ -188,8 +188,8 @@
     "date": "2026-11-24"
   },
   "/blog/what-is-void-claim-in-medical-billing": {
-    "hash": "f4d9a78ce0a64e9e",
-    "date": "2026-11-24"
+    "hash": "cf92d20bb0cdca0f",
+    "date": "2026-11-25"
   },
   "/blog/difference-between-reversal-and-recoupment-in-medical-billing": {
     "hash": "20e14a3d5af77f70",
@@ -284,7 +284,7 @@
     "date": "2026-11-23"
   },
   "/sitemap": {
-    "hash": "37a7772886c28781",
+    "hash": "3536c8f47466ac05",
     "date": "2026-11-25"
   },
   "/privacy-policy": {
@@ -296,7 +296,7 @@
     "date": "2026-11-23"
   },
   "/blog/what-is-the-icd-10-code-for-depression": {
-    "hash": "c10d76a576d12b61",
+    "hash": "f0f2e28a15d01dbb",
     "date": "2026-11-25"
   },
   "/blog/what-is-the-icd-10-code-for-ptsd": {
@@ -329,6 +329,10 @@
   },
   "/denial-codes/co-252": {
     "hash": "d31b4c7537b1530c",
+    "date": "2026-11-25"
+  },
+  "/blog/what-is-the-icd-10-code-for-bipolar-disorder": {
+    "hash": "add46eb104f36390",
     "date": "2026-11-25"
   }
 }
