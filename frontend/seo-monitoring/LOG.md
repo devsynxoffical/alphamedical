@@ -579,3 +579,39 @@ Total clicks this month: 7.
 
 **Published (backlog)**
 - /blog/what-is-the-icd-10-code-for-autism (F84.0, F84.2, F84.3, F84.5, F84.8, F84.9; DSM-5-TR crosswalk; screening and ABA billing context; denials). Linked from the ADHD article.
+
+## 2026-11-26 12:41 UTC: 12-hour monitor + growth run #17
+**Data status:** deploy #61 succeeded; live checks green. Search Console data through 2026-11-25. GA4 not set up.
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-24 | 490 | 0 | 29.1 |
+| 2026-11-25 | 412 | 1 | 25.6 |
+
+**Pages, Nov 1–26**
+
+| Page | Impr | Clicks | Pos |
+|---|---|---|---|
+| ADHD | 592 | 0 | 27.4 |
+| anxiety | 313 | 0 | 44.4 |
+| void claim | 220 | 1 | **5.8** |
+| rendering vs referring | 208 | 0 | **11.9** |
+| radiology | 165 | 0 | 39.2 |
+| reversal vs recoupment | 136 | 1 | 31 |
+| paid-claim reversal | 71 | 0 | **9.9** (now page 1) |
+| virtual medical receptionist | 46 | 0 | 27.7 |
+
+**Striking distance (pos ≤20):**
+- "rendering provider vs referring provider" #5.9
+- "void claim in medical billing" #7.4
+- "best virtual medical receptionist in florida" #13.7
+- "history of adhd icd 10" #14.3
+- "icd code for adhd" #16.6
+- "diagnosis f41.9" #18.2
+- "icd-10 code for add" #19.2 (FAQ added last run)
+
+**Change (data-justified)**
+1. Virtual medical receptionist: ranks #13.7 for "best virtual medical receptionist in florida" but never mentioned Florida. Added an FAQ (St. Petersburg, FL office, which the site already lists; services as listed on the page).
+
+**Published (backlog)**
+- /denial-codes/co-119 (benefit maximum reached; PR-119 vs CO-119; visit limits; prevention). The hub now lists 20 guides.

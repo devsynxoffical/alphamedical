@@ -981,6 +981,10 @@ export const services: Service[] = [
     ],
     faqs: [
       {
+        question: 'Do you provide virtual medical receptionists for Florida practices?',
+        answer: 'Yes. Alpha Medi Assist has an office in St. Petersburg, Florida and supports practices across Florida and the rest of the US. Our virtual receptionists answer and route calls, schedule appointments, help with patient intake and handle insurance and general questions, following HIPAA requirements.'
+      },
+      {
         question: 'What are virtual medical receptionist services?',
         answer: 'They involve remote professionals managing calls, scheduling, and patient communication for medical practices.'
       },

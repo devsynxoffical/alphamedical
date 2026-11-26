@@ -48,8 +48,8 @@
     "date": "2026-11-23"
   },
   "/virtual-medical-receptionist-services": {
-    "hash": "e7f501646d5c7347",
-    "date": "2026-11-24"
+    "hash": "f2b584ef96b36c98",
+    "date": "2026-11-26"
   },
   "/healthcare-seo-services": {
     "hash": "1e574bd9ba87eab8",
@@ -224,8 +224,8 @@
     "date": "2026-11-24"
   },
   "/denial-codes": {
-    "hash": "b8b77071a53f612a",
-    "date": "2026-11-25"
+    "hash": "b62a727a24a3cf81",
+    "date": "2026-11-26"
   },
   "/denial-codes/co-16": {
     "hash": "e49c7036c5b078f1",
@@ -284,7 +284,7 @@
     "date": "2026-11-23"
   },
   "/sitemap": {
-    "hash": "918de7535de0d02a",
+    "hash": "3bdfe656c0cbe72f",
     "date": "2026-11-26"
   },
   "/privacy-policy": {
@@ -337,6 +337,10 @@
   },
   "/blog/what-is-the-icd-10-code-for-autism": {
     "hash": "aac04c64e8c82bc5",
+    "date": "2026-11-26"
+  },
+  "/denial-codes/co-119": {
+    "hash": "c805d705f57f58fb",
     "date": "2026-11-26"
   }
 }

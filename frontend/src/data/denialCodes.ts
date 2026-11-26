@@ -56,6 +56,7 @@ export const denialCodeSources: Record<string, { label: string; url: string }[]>
   'co-59': [X12_CARC, CMS_MANUAL],
   'co-96': [X12_CARC, X12_RARC, CMS_MANUAL],
   'co-151': [X12_CARC, X12_RARC, CMS_NCCI],
+  'co-119': [X12_CARC, CMS_MANUAL],
   'co-252': [X12_CARC, X12_RARC],
 }
 
@@ -1177,6 +1178,62 @@ export const denialCodes: DenialCode[] = [
     ],
     relatedCodes: ['co-16', 'co-50', 'co-197'],
   },
+
+  // ------------------------------------------------------------------ CO-119
+  {
+    slug: 'co-119',
+    code: 'CO-119',
+    carc: '119',
+    group: 'PR',
+    name: 'Benefit maximum reached',
+    official: 'Benefit maximum for this time period or occurrence has been reached.',
+    definition:
+      'Denial code 119 means the patient has used up the benefit their plan allows for this service in the current period (for example a yearly visit limit); it is usually reported as PR-119, so the balance can often be billed to the patient if they were informed, unless the plan allows more visits through an exception or a new benefit period has started.',
+    seoTitle: 'CO-119 / PR-119 Denial Code: Benefit Maximum Reached',
+    seoDescription:
+      'Code 119 means the plan’s benefit maximum for the period was reached. Why visit limits trigger it, when the patient can be billed, and how to prevent it.',
+    glance: [
+      { label: 'Group code', value: 'Usually PR (patient responsibility); CO if the contract says so' },
+      { label: 'Bill the patient?', value: 'Often, if the plan and your policy allow it' },
+      { label: 'Usual fix', value: 'Check benefits used; bill the patient or the next benefit period' },
+      { label: 'Appeal needed?', value: 'Only if the count or the limit is wrong' },
+    ],
+    intro: [
+      'Many health plans cap how much of a service they cover in a period: a number of physical therapy, chiropractic or behavioral health visits per year, a dollar maximum, or a limit per occurrence. When a claim pushes past that cap, the payer adjusts it with CARC 119.',
+      'Whether the practice or the patient absorbs the amount depends on the group code and the plan. With PR-119 the payer is telling you the amount is the patient’s responsibility. With CO-119 the contract makes it the provider’s responsibility. In both cases the best protection is checking remaining benefits before the visit, not after the denial.',
+    ],
+    causes: [
+      { title: 'Visit limit reached', text: 'The plan covers a set number of visits per year (common for therapy and behavioral health) and the patient has used them.' },
+      { title: 'Dollar or unit maximum', text: 'The plan has a dollar or unit cap for the service, such as durable medical equipment or certain drugs.' },
+      { title: 'Visits used at another provider', text: 'The patient used part of the benefit with a different practice earlier in the year, so your count is too low.' },
+      { title: 'Benefit period mix-up', text: 'The plan year is not the calendar year, so the reset date was later than expected.' },
+      { title: 'Payer counting error', text: 'The payer counted denied, duplicate or voided visits toward the limit.' },
+    ],
+    fix: [
+      { title: 'Confirm the limit', text: 'Check the plan’s benefit for the service, the benefit period and how many visits or dollars were used, through the portal or the 271 eligibility response.' },
+      { title: 'Check the payer’s count', text: 'Compare the payer’s count with your records and claims from other providers the patient mentions.' },
+      { title: 'Correct errors', text: 'If the payer counted voided, denied or duplicate visits, ask them to reprocess with the right count.' },
+      { title: 'Ask about exceptions', text: 'Some plans allow more visits with medical necessity review or a new authorization.' },
+      { title: 'Bill or adjust', text: 'With PR-119, bill the patient under your financial policy. With CO-119, adjust the amount off as the contract requires.' },
+    ],
+    appeal: [
+      'Appeal when the benefit was not actually used up: miscounted visits, a wrong benefit period, or a service that falls under a different benefit category.',
+      'If the plan allows extra visits for medical necessity, send the request with progress notes showing measurable improvement and the treatment plan.',
+    ],
+    prevent: [
+      'Check remaining visits or dollars at scheduling and again when a course of treatment is planned.',
+      'Track visit counts per patient and payer, and warn patients before they reach the limit.',
+      'Have patients sign a financial responsibility notice for visits beyond the plan limit, where your policy and payer rules allow it.',
+      'Note the plan year reset date in the patient account.',
+    ],
+    faqs: [
+      { question: 'What does denial code 119 mean?', answer: 'CARC 119 means the benefit maximum for this time period or occurrence has been reached: the patient has used up the coverage their plan allows for the service.' },
+      { question: 'What is the difference between PR-119 and CO-119?', answer: 'With PR-119 the amount is the patient’s responsibility, so it can usually be billed to the patient. With CO-119 the provider’s contract makes the provider responsible, so it is adjusted off.' },
+      { question: 'Can I bill the patient for a 119 denial?', answer: 'Usually yes when the group code is PR, under your financial policy and any payer rules. Telling the patient before the visit that the limit was reached avoids surprise bills.' },
+      { question: 'How do I prevent 119 denials?', answer: 'Verify the remaining benefit before each course of treatment, track visit counts by payer, and request extra visits before the limit when the plan allows exceptions.' },
+    ],
+    relatedCodes: ['pr-1', 'co-96', 'co-151'],
+  },
 ]
 
 /** Codes summarised on the hub that do not have their own page yet. */
@@ -1194,6 +1251,10 @@ export const DENIAL_HUB_PATH = '/denial-codes'
  * specialty pages where the code is common (internal-link map, plan 24 Nov).
  */
 export const denialCodeExtras: Record<string, { example: string; specialties: { label: string; path: string }[]; guide?: { label: string; path: string } }> = {
+  'co-119': {
+    example: 'A patient\u2019s plan covers 20 physical therapy visits a year. Visit 21 is denied PR-119. The practice confirms the count in the portal, bills the patient under the signed financial policy, and from now on checks remaining visits when a plan of care is set up.',
+    specialties: [{ label: 'Mental health billing', path: '/specialties/mental-health-counseling' }, { label: 'Orthopedic billing', path: '/specialties/orthopedics' }],
+  },
   'co-16': {
     example: 'A secondary claim is sent to the second insurer without the primary payer\'s payment information. The remittance shows CO-16 with remark MA04. The biller adds the primary remittance data to the claim and resubmits, and the secondary pays.',
     specialties: [{ label: 'Internal medicine billing', path: '/specialties/internal-medicine' }, { label: 'Radiology billing', path: '/specialties/radiology' }],
