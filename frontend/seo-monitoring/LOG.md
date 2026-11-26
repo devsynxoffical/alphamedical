@@ -541,3 +541,41 @@ Total clicks this month: 6.
 
 **Published (backlog item 1)**
 - /blog/what-is-the-icd-10-code-for-bipolar-disorder (F31 codes by episode, severity, psychotic features and remission; F31.81 bipolar II; differentials). Linked from the depression guide.
+
+## 2026-11-26 00:41 UTC: 12-hour monitor + growth run #16
+**Data status:** deploy #59 succeeded; live checks green (404 test, form healthcheck `ok:true`). Search Console data through 2026-11-25 (partial). GA4 not set up.
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-23 | 412 | 1 | 26.4 |
+| 2026-11-24 | **490** (record) | 0 | 29.1 |
+| 2026-11-25 | 180 (partial) | 1 | **18.5** |
+
+**Pages, Nov 1–26**
+
+| Page | Impr | Clicks | Pos |
+|---|---|---|---|
+| ADHD | 521 | 0 | 27 |
+| anxiety | 280 | 0 | 44.4 |
+| void claim | 194 | 1 | **6.1** |
+| rendering vs referring | 182 | 0 | **13** |
+| radiology | 160 | 0 | 39.2 |
+| reversal vs recoupment | 127 | 1 | 31.3 |
+| paid-claim reversal | 58 | 0 | **11** |
+| home | 26 | **5** | **8.4** |
+
+Total clicks this month: 7.
+
+**Queries:**
+- "void claim in medical billing" #7.4
+- "rendering provider vs referring provider" #6.4
+- "history of adhd icd 10" #14.3
+- "icd code for adhd" #16.6
+- "diagnosis f41.9" #18.2
+- "icd 10 code for add" 6 impr #24.5 (not answered until this run)
+
+**Change (data-justified)**
+1. ADHD article: added the FAQ "What is the ICD-10 code for ADD?" (F90.0; F90.1/F90.2 when hyperactivity is documented).
+
+**Published (backlog)**
+- /blog/what-is-the-icd-10-code-for-autism (F84.0, F84.2, F84.3, F84.5, F84.8, F84.9; DSM-5-TR crosswalk; screening and ABA billing context; denials). Linked from the ADHD article.

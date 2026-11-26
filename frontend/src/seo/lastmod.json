@@ -156,8 +156,8 @@
     "date": "2026-11-23"
   },
   "/blog": {
-    "hash": "c49cfbacbaf2378f",
-    "date": "2026-11-25"
+    "hash": "8b1c5275f90b59d3",
+    "date": "2026-11-26"
   },
   "/blog/top-10-reasons-for-medical-claim-denials-and-how-to-fix-them": {
     "hash": "ceb157d348636df1",
@@ -200,8 +200,8 @@
     "date": "2026-11-24"
   },
   "/blog/what-is-the-icd-10-code-for-adhd": {
-    "hash": "07580ef58efb94d6",
-    "date": "2026-11-25"
+    "hash": "b744ef8dd783c3c1",
+    "date": "2026-11-26"
   },
   "/blog/what-is-the-icd-10-code-for-anxiety": {
     "hash": "0865b1525bdbf7bd",
@@ -284,8 +284,8 @@
     "date": "2026-11-23"
   },
   "/sitemap": {
-    "hash": "3536c8f47466ac05",
-    "date": "2026-11-25"
+    "hash": "918de7535de0d02a",
+    "date": "2026-11-26"
   },
   "/privacy-policy": {
     "hash": "029d3b0993886d23",
@@ -334,5 +334,9 @@
   "/blog/what-is-the-icd-10-code-for-bipolar-disorder": {
     "hash": "add46eb104f36390",
     "date": "2026-11-25"
+  },
+  "/blog/what-is-the-icd-10-code-for-autism": {
+    "hash": "aac04c64e8c82bc5",
+    "date": "2026-11-26"
   }
 }

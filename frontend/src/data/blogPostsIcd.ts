@@ -456,4 +456,133 @@ export const icdPosts: BlogPost[] = [
       X12_CARC,
     ],
   },
+  {
+    slug: 'what-is-the-icd-10-code-for-autism',
+    datePublished: '2026-11-26',
+    category: 'Coding',
+    title: 'What Is the ICD-10 Code for Autism? F84.0 and Related Codes',
+    seoTitle: 'ICD-10 Code for Autism Spectrum Disorder: F84.0 Explained',
+    seoDescription:
+      'Autism spectrum disorder is F84.0 in ICD-10-CM. F84.2, F84.3, F84.5, F84.8 and F84.9 explained, plus co-occurring codes, ABA billing and common denials.',
+    excerpt:
+      'Autism spectrum disorder is coded F84.0. The F84 codes, how DSM-5-TR maps to them, co-occurring conditions coded separately, screening and ABA context, and the errors behind autism claim denials.',
+    intro: [
+      'Short answer: autism spectrum disorder is F84.0, autistic disorder. In ICD-10-CM, autism spectrum disorder, infantile autism, infantile psychosis and Kanner\'s syndrome are all inclusion terms under F84.0, and DSM-5-TR assigns F84.0 to autism spectrum disorder. The rest of category F84 (pervasive developmental disorders) covers Rett\'s syndrome (F84.2), other childhood disintegrative disorder (F84.3), Asperger\'s syndrome (F84.5), other pervasive developmental disorders (F84.8) and pervasive developmental disorder, unspecified (F84.9). F84 itself is a category heading and is not billable.',
+      'Autism claims are often for long courses of treatment, such as applied behavior analysis (ABA), speech therapy or psychiatric care, so the diagnosis is reviewed closely at authorization and on audit. This guide covers each F84 code, the DSM-5-TR crosswalk, co-occurring conditions that are coded separately, screening and treatment codes, documentation tips and the claim problems behind most autism denials. Codes are revised every October 1, so always check the current CMS/CDC code files.',
+    ],
+    sections: [
+      {
+        heading: 'F84: pervasive developmental disorders',
+        paragraphs: [
+          'Category F84 sits in the block F80-F89, pervasive and specific developmental disorders. It carries an instruction to use an additional code to identify any associated medical condition and intellectual disabilities. The billable codes:',
+        ],
+        bullets: [
+          'F84.0 - Autistic disorder. Inclusion terms: autism spectrum disorder, infantile autism, infantile psychosis and Kanner\'s syndrome. It has an Excludes1 note for Asperger\'s syndrome (F84.5).',
+          'F84.2 - Rett\'s syndrome.',
+          'F84.3 - Other childhood disintegrative disorder. Inclusion terms: dementia infantilis, disintegrative psychosis, Heller\'s syndrome and symbiotic psychosis. It carries an instruction to use an additional code to identify any associated neurological condition.',
+          'F84.5 - Asperger\'s syndrome. Inclusion terms: Asperger\'s disorder, autistic psychopathy and schizoid disorder of childhood.',
+          'F84.8 - Other pervasive developmental disorders.',
+          'F84.9 - Pervasive developmental disorder, unspecified. Atypical autism is an inclusion term here.',
+          'There is no F84.1 in ICD-10-CM. The WHO version of ICD-10 uses F84.1 for atypical autism, and older crosswalks sometimes still show it, but a U.S. claim with F84.1 will be rejected.',
+        ],
+      },
+      {
+        heading: 'F84.0 vs. F84.5: autism and Asperger\'s',
+        paragraphs: [
+          'DSM-5 (2013) folded Asperger\'s disorder into autism spectrum disorder, and DSM-5-TR keeps that approach. ICD-10-CM did not follow: F84.5, Asperger\'s syndrome, is still a valid, billable code, and the Excludes1 note under F84.0 means the two codes are never reported together.',
+          'Code what the provider documents. A current evaluation that diagnoses autism spectrum disorder is F84.0, even for a patient who was told years ago that they had Asperger\'s. If the provider\'s assessment still states Asperger\'s syndrome, F84.5 is the matching code, but some payer ABA and autism benefit policies list only certain F84 codes, so check the policy before treatment starts.',
+        ],
+      },
+      {
+        heading: 'Matching DSM-5-TR diagnoses to ICD-10-CM codes',
+        paragraphs: [
+          'Clinicians diagnose with DSM-5-TR, which uses the same ICD-10-CM codes on the claim. The crosswalks most often seen with autism:',
+        ],
+        bullets: [
+          'Autism spectrum disorder: F84.0, at every severity level and with any combination of specifiers.',
+          'Autism spectrum disorder with catatonia: F84.0, plus F06.1 for the catatonia, as DSM-5-TR instructs.',
+          'Social (pragmatic) communication disorder: F80.82. It is a separate DSM-5-TR diagnosis, not a mild form of autism.',
+          'Language disorder: F80.2.',
+          'Intellectual developmental disorder (intellectual disability): F70 (mild), F71 (moderate), F72 (severe), F73 (profound) or F79 (unspecified).',
+          'Attention-deficit/hyperactivity disorder: the F90 code for the documented presentation.',
+          'DSM-5-TR has no separate diagnosis for Asperger\'s disorder, Rett syndrome or childhood disintegrative disorder. Those F84 codes come from ICD-10-CM and are used when the provider documents those diagnoses.',
+        ],
+      },
+      {
+        heading: 'Co-occurring conditions are coded separately',
+        paragraphs: [
+          'Many patients with autism have other diagnoses that drive part of their care. Code each one the provider documents and treats, in addition to F84.0:',
+        ],
+        bullets: [
+          'ADHD - F90.0 (predominantly inattentive type), F90.1 (predominantly hyperactive type), F90.2 (combined type), F90.8 (other type) or F90.9 (unspecified type). Category F90 has an Excludes2 note for pervasive developmental disorders (F84.-), which means both can be reported when both are present.',
+          'Intellectual disabilities - F70 through F79. The F84 "use additional code" note calls for these when intellectual disability is diagnosed.',
+          'Language disorders - F80.x codes, such as F80.2 for language disorder, when the provider diagnoses a language disorder alongside autism. Speech-language claims often need both codes linked to the service.',
+          'Associated medical or genetic conditions - code the condition itself, such as a seizure disorder or a genetic syndrome, as the F84 instruction requires.',
+          'Anxiety, depression and other behavioral health conditions - the appropriate F code for each, when diagnosed and addressed.',
+        ],
+      },
+      {
+        heading: 'Screening and treatment codes',
+        bullets: [
+          'Z13.41 - Encounter for autism screening, for a screening done without an autism diagnosis. Z13.42 is encounter for screening for global developmental delays (milestones). At a well-child visit, the preventive exam code (Z00.121 or Z00.129) is usually reported first.',
+          'CPT 96110 - Developmental screening (for example, a developmental milestone survey or speech and language delay screen), with scoring and documentation, per standardized instrument. Many payers also accept 96110 for standardized autism-specific screening instruments, but policies vary.',
+          'CPT 96112 and 96113 - Developmental test administration, used for developmental testing rather than screening.',
+          'CPT 97151 and 97152 - Behavior identification assessment by a qualified health care professional and behavior identification supporting assessment by a technician under that professional\'s direction.',
+          'CPT 97153 through 97158 - Adaptive behavior treatment: by protocol, individual (97153) or group (97154); with protocol modification, individual (97155) or group (97158); and family adaptive behavior treatment guidance, single family (97156) or multiple-family group (97157). These are timed, 15-minute codes and most payers require prior authorization.',
+          'Once the provider diagnoses autism, report F84.0 rather than the screening Z code for the services that follow.',
+        ],
+      },
+      {
+        heading: 'Documentation that supports an autism code',
+        bullets: [
+          'The diagnosis stated in the assessment, matching the code billed (autism spectrum disorder, Asperger\'s syndrome, Rett\'s syndrome and so on).',
+          'The DSM-5-TR severity level, rated separately for social communication and for restricted, repetitive behaviors: Level 1 (requiring support), Level 2 (requiring substantial support) or Level 3 (requiring very substantial support).',
+          'Specifiers: with or without accompanying intellectual impairment, with or without accompanying language impairment, associated with a known genetic or other medical condition or environmental factor, associated with a neurodevelopmental, mental or behavioral problem, and with catatonia. Code the associated conditions as well.',
+          'The diagnostic evaluation: who performed it, the instruments used and the results. Many ABA policies require a diagnosis from a specific type of provider and a copy of the evaluation.',
+          'For ABA, the treatment plan with measurable goals, the hours requested by code, caregiver involvement and progress data for reauthorization.',
+          'Start and stop times or total time for timed services, and the rendering provider\'s credentials, since technician and qualified professional codes differ.',
+        ],
+      },
+      {
+        heading: 'Common autism claim denials and how to avoid them',
+        bullets: [
+          'No or expired authorization: ABA services billed without prior authorization, after the authorized units ran out, or past the authorization end date. Expect CARC 197 (precertification/notification/authorization/pre-treatment absent). Track units by code and request reauthorization early.',
+          'Diagnosis does not support the service: CARC 11, "the diagnosis is inconsistent with the procedure," for example an ABA code linked to F90.2 or a screening Z code instead of F84.0, or a policy that covers ABA only for listed F84 codes.',
+          'Unspecified F84.9 for ongoing treatment: many autism benefit and ABA policies expect a confirmed autism spectrum disorder diagnosis. When the evaluation supports autism spectrum disorder, code F84.0, not F84.9.',
+          'Invalid codes: billing F84 without a fourth character, or F84.1, which does not exist in ICD-10-CM. Expect a rejection or a denial such as CARC 146 (diagnosis invalid for the date of service) or CARC 16 (claim lacks information or has billing errors).',
+          'Conflicting codes: F84.0 and F84.5 on the same claim. The Excludes1 note means only one belongs there.',
+        ],
+      },
+    ],
+    faqs: [
+      { question: 'What is the ICD-10 code for autism?', answer: 'Autism spectrum disorder is F84.0, autistic disorder, in ICD-10-CM. Autism spectrum disorder, infantile autism and Kanner\'s syndrome are inclusion terms under F84.0, and DSM-5-TR maps autism spectrum disorder to F84.0 at every severity level.' },
+      { question: 'Is Asperger\'s syndrome still an ICD-10 code?', answer: 'Yes. F84.5, Asperger\'s syndrome, is still valid in ICD-10-CM, even though DSM-5-TR includes it in autism spectrum disorder. Code what the provider documents, and do not report F84.0 and F84.5 together; F84.0 has an Excludes1 note for F84.5.' },
+      { question: 'What is the difference between F84.0 and F84.9?', answer: 'F84.0 is autistic disorder, which includes autism spectrum disorder. F84.9 is pervasive developmental disorder, unspecified, which includes atypical autism. Use F84.9 only when the documentation does not support a more specific F84 code; many ABA policies expect F84.0.' },
+      { question: 'Can autism and ADHD be coded together?', answer: 'Yes. Category F90 has an Excludes2 note for pervasive developmental disorders (F84.-), which means both conditions can be reported when the provider documents both. Use F84.0 with the F90 code for the documented ADHD presentation.' },
+      { question: 'What is the ICD-10 code for autism screening?', answer: 'Z13.41 is encounter for autism screening, used when a patient without an autism diagnosis is screened. The screening instrument is commonly billed with CPT 96110. If the provider diagnoses autism, report F84.0 instead.' },
+      { question: 'Is there an ICD-10 code for autism severity level?', answer: 'No. DSM-5-TR severity levels (Level 1, 2 or 3) and specifiers do not change the code, which stays F84.0. Record them in the note, and code associated conditions such as intellectual disability or a language disorder separately.' },
+    ],
+    closing: [
+      'Autism coding starts with one code, F84.0, but the claim usually needs more: co-occurring diagnoses, the right screening or treatment codes and an authorization that matches the diagnosis. Most denials come from missing or expired authorizations, unspecified codes and diagnoses that do not support the service billed.',
+      'Alpha Medi Assist\'s certified coders review psychiatry, pediatrics and counseling documentation before claims go out, so the diagnosis on the claim matches the record and supports the service billed.',
+    ],
+    related: [
+      { label: 'Psychiatry billing services', path: '/specialties/psychiatry' },
+      { label: 'Pediatrics billing services', path: '/specialties/pediatrics' },
+      { label: 'Mental health counseling billing', path: '/specialties/mental-health-counseling' },
+      { label: 'Medical coding services', path: '/medical-coding-services' },
+      { label: 'ICD-10 codes for ADHD', path: '/blog/what-is-the-icd-10-code-for-adhd' },
+      { label: 'What is authorization in medical billing?', path: '/blog/what-is-authorization-in-medical-billing' },
+      { label: 'Denial code CO-197: authorization absent', path: '/denial-codes/co-197' },
+      { label: 'Denial code CO-11: diagnosis inconsistent with procedure', path: '/denial-codes/co-11' },
+    ],
+    references: [
+      CDC_ICD10CM_GUIDELINES,
+      CMS_ICD10,
+      { label: 'NIMH: Autism Spectrum Disorder', url: 'https://www.nimh.nih.gov/health/topics/autism-spectrum-disorders-asd' },
+      { label: 'CDC: Autism Spectrum Disorder', url: 'https://www.cdc.gov/autism/' },
+      APA_DSM,
+      X12_CARC,
+    ],
+  },
 ]

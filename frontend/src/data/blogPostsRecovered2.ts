@@ -132,6 +132,7 @@ export const recoveredPosts2: BlogPost[] = [
       'Alpha Medi Assist\'s certified coders review behavioral health documentation and claims before submission so the diagnosis, procedure and authorization line up the first time.',
     ],
     related: [
+      { label: 'ICD-10 code for autism', path: '/blog/what-is-the-icd-10-code-for-autism' },
       { label: 'ICD-10 code for depression', path: '/blog/what-is-the-icd-10-code-for-depression' },
       { label: 'ICD-10 code for PTSD', path: '/blog/what-is-the-icd-10-code-for-ptsd' },
       { label: 'Medical coding services', path: '/medical-coding-services' },
