@@ -117,6 +117,7 @@ export const recoveredPosts2: BlogPost[] = [
       },
     ],
     faqs: [
+      { question: 'What is the ICD-10 code for ADD?', answer: 'ICD-10-CM has no separate code for ADD. Attention deficit disorder without hyperactivity is coded F90.0 (ADHD, predominantly inattentive type). If hyperactivity is documented, use F90.1 or F90.2 instead.' },
       { question: 'What is the ICD-10 code for ADHD NOS?', answer: 'ADHD not otherwise specified, where the clinician does not document a presentation, is coded F90.9 (attention-deficit hyperactivity disorder, unspecified type). When the presentation is documented, use the specific code instead: F90.0 inattentive, F90.1 hyperactive-impulsive or F90.2 combined.' },
       { question: 'What is the ICD-10 code for a history of ADHD?', answer: 'There is no separate code for a history of ADHD. If the provider documents ADHD as a current condition being monitored or treated, code it with the appropriate F90 code. If the provider documents ADHD as a past condition that has resolved, Z86.59 (personal history of other mental and behavioral disorders) can be used.' },
       { question: 'What was the ICD-9 code for ADHD?', answer: 'In ICD-9-CM, attention deficit disorder was coded 314.00 (without mention of hyperactivity) and 314.01 (with hyperactivity). ICD-9-CM was replaced by ICD-10-CM for U.S. claims on October 1, 2015, so current claims must use the F90 codes.' },
