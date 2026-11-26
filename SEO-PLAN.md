@@ -264,3 +264,38 @@ Right now there are only **2 blog posts**. Build topic clusters that link up to 
 - [ ] `React.lazy` code splitting per route
 - [ ] Remove the duplicate chat-widget load; self-host fonts
 - [ ] JSON-LD builders for Organization, LocalBusiness, Service, FAQPage, BreadcrumbList, BlogPosting
+
+---
+
+## 8. Search Console baseline (last 28 days, pulled 2026-11-26 through Windsor.ai)
+
+**Property:** `https://alphamediassist.com/` (non-www, URL-prefix). **Totals:** about 1,800 impressions, 6 clicks, 545 queries, 42 pages with impressions. Almost all visibility comes from blog/informational content. The money pages are not ranking yet (position 30–80 or no impressions at all).
+
+### URLs Google sees that do NOT exist in this repo
+`/blog/what-is-void-claim-in-medical-billing`, `/blog/rendering-vs-referring-provider`, `/blog/what-is-the-icd-10-code-for-adhd`, `/blog/what-is-the-icd-10-code-for-anxiety`, `/blog/difference-between-reversal-and-recoupment-in-medical-billing`, `/blog/can-an-health-insurance-company-reverse-a-paid-claim`, `/blog/common-claim-denial-codes-and-how-to-fix-them`, `/blog/how-much-does-medical-billing-cost`, `/blog/what-is-authorization-in-medical-billing`, `/blog/medical-billing-vs-medical-coding`, `/blog/annual-cpt-code-updates-how-practices-should-prepare`, `/denial-codes/co-16`, `/co-45`, `/co-109`, `/co-197`, `/denial-management-services`, `/revenue-cycle-management-services`, `/medical-billing-services`, `/medical-billing-services-florida`, `/medical-billing-for-small-practices`, `/virtual-medical-assistant/`.
+
+**Before deploying anything from this repo, confirm whether the live site is newer than this repo.** If deploying this code removes these pages, they will 404 and **all current organic visibility will be lost**. They must either be kept in the code or 301-redirected.
+
+### Quick wins (page 1–2, almost no clicks: rewrite title and meta, improve content, add internal links)
+
+| Page | Impr. | Pos. | Action |
+|---|---|---|---|
+| /blog/what-is-void-claim-in-medical-billing | 158 | 6.6 | Already page 1 with 1 click: rewrite title/description for CTR, add FAQ schema |
+| /blog/rendering-vs-referring-provider | 138 | 13.7 | Add a comparison table, definitions box and FAQ to push it to page 1 |
+| /blog/can-an-health-insurance-company-reverse-a-paid-claim | 55 | 11.4 | Fix the slug grammar ("a health"), expand the content, link it from the void/recoupment posts |
+| / (home) | 21 | 9.9 | Branded; add Organization schema and sitelinks |
+
+### Big opportunities (high impressions, poor position)
+
+| Topic | Impr. | Pos. | Action |
+|---|---|---|---|
+| ADHD ICD-10 codes (F90.0/F90.1/F90.2/F90.9) | 488 | 27 | Restructure the post as a code table + per-subtype sections + FAQ, and link it to the psychiatry/mental-health billing pages |
+| Anxiety ICD-10 codes (F41.1/F41.9/F41.0/F41.8) | 255 | 45 | Same treatment. Consider an `/icd-10-codes/` hub for mental health codes |
+| Radiology billing services | 156 | 39 | Strongest commercial page: make the content unique (CPT 7xxxx, -26/-TC modifiers, prior auth for MRI/CT), add case study + FAQ |
+| Recoupment / reversal | 110 | 32 | Merge or interlink the reversal, recoupment and offset topics into one strong guide |
+| Denial codes (CO-16, 97, 197, 253, 216, 50…) | ~80 | 50–85 | Build out the `/denial-codes/` hub: one page per CARC with cause, fix and appeal steps |
+| Pain management billing company | 53 | 76 | Unique content + backlinks |
+| Virtual medical receptionist (incl. Florida / Orange County) | 38 | 27 | Add a Florida section, LocalBusiness schema, pricing, FAQ |
+| Prior authorization in medical billing | 35 | 81–92 | Rewrite the authorization post as a complete guide |
+
+Note: the Windsor.ai trial only returns the last 30 days. Upgrade it, or export 16 months from GSC directly, for a longer trend.
