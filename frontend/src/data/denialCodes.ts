@@ -58,6 +58,7 @@ export const denialCodeSources: Record<string, { label: string; url: string }[]>
   'co-151': [X12_CARC, X12_RARC, CMS_NCCI],
   'co-119': [X12_CARC, CMS_MANUAL],
   'co-27': [X12_CARC, CMS_MANUAL],
+  'co-23': [X12_CARC, CMS_MANUAL],
   'co-252': [X12_CARC, X12_RARC],
 }
 
@@ -1291,6 +1292,61 @@ export const denialCodes: DenialCode[] = [
     ],
     relatedCodes: ['co-109', 'co-22', 'co-29'],
   },
+
+  // ------------------------------------------------------------------ OA-23
+  {
+    slug: 'co-23',
+    code: 'OA-23',
+    carc: '23',
+    group: 'OA',
+    name: 'Impact of prior payer adjudication',
+    official: 'The impact of prior payer(s) adjudication including payments and/or adjustments. (Use only with Group Code OA)',
+    definition:
+      'Code 23 (reported as OA-23, often searched as CO-23) means the secondary payer reduced its payment because of what the primary payer already paid or adjusted; it is usually not an error, but the amount should be checked against the primary remittance and the secondary plan’s coordination of benefits rules.',
+    seoTitle: 'CO-23 / OA-23 Denial Code: Prior Payer Adjudication',
+    seoDescription:
+      'Code 23 means the secondary payer adjusted the claim for what the primary payer paid. How to read OA-23, check the math, and post secondary payments.',
+    glance: [
+      { label: 'Group code', value: 'OA (Other Adjustment), per X12' },
+      { label: 'Bill the patient?', value: 'Only the remaining patient share shown by the payers' },
+      { label: 'Usual fix', value: 'Reconcile with the primary remittance and post' },
+      { label: 'Appeal needed?', value: 'Only if the primary data was wrong or ignored' },
+    ],
+    intro: [
+      'When a patient has two plans, the secondary payer does not pay as if it were alone. It looks at what the primary payer allowed, paid and adjusted, and pays only what its coordination of benefits rules allow on top of that. CARC 23 is how the secondary payer reports that reduction. X12 says it is used only with group code OA, so it appears as OA-23 even though many people search for CO-23.',
+      'In most cases OA-23 is expected and correct. It becomes a problem when the secondary payer used the wrong primary amounts, did not receive the primary remittance data, or applied the wrong coordination method.',
+    ],
+    causes: [
+      { title: 'Normal secondary processing', text: 'The primary payer paid part of the claim, and the secondary payer reduced its payment by that amount.' },
+      { title: 'Primary paid in full', text: 'The primary payment met or exceeded what the secondary would allow, so the secondary pays nothing more.' },
+      { title: 'Wrong primary amounts', text: 'The secondary claim carried the wrong primary paid or adjusted amounts in the COB fields.' },
+      { title: 'Missing primary data', text: 'The primary remittance information was not sent with the secondary claim.' },
+      { title: 'Medicare secondary rules', text: 'When Medicare is secondary, it applies its own calculation based on the primary payment and the Medicare allowed amount.' },
+    ],
+    fix: [
+      { title: 'Pull both remittances', text: 'Put the primary and secondary remittances side by side for the same claim lines.' },
+      { title: 'Check the COB data sent', text: 'Confirm the primary paid amount, adjustments and patient responsibility on the secondary claim matched the primary remittance.' },
+      { title: 'Recalculate', text: 'Compare the secondary payment with the plan’s coordination method, if you know it.' },
+      { title: 'Correct and resubmit', text: 'If the COB amounts on the secondary claim were wrong or missing, send a corrected claim with the right data.' },
+      { title: 'Post and bill the remainder', text: 'Post OA-23 as an adjustment and bill the patient only for the remaining patient responsibility.' },
+    ],
+    appeal: [
+      'Ask for reprocessing when the secondary payer used incorrect primary amounts or ignored primary data you sent. Attach the primary remittance.',
+      'There is usually nothing to appeal when the math matches the primary remittance and the plan’s rules.',
+    ],
+    prevent: [
+      'Send primary remittance data with every secondary claim, ideally electronically from the 835.',
+      'Keep coordination of benefits information current at registration.',
+      'Review OA-23 lines in payment posting rather than writing them off automatically.',
+    ],
+    faqs: [
+      { question: 'What does denial code 23 mean?', answer: 'CARC 23 means the impact of prior payer adjudication, including payments and adjustments. The secondary payer reduced its payment because of what the primary payer already paid or adjusted.' },
+      { question: 'Why is code 23 reported as OA instead of CO?', answer: 'X12 instructs payers to use CARC 23 only with group code OA (Other Adjustment). Many people still search for it as CO-23.' },
+      { question: 'Is OA-23 a denial?', answer: 'Usually not. It is a normal adjustment on a secondary claim. Check that it matches the primary remittance before posting it.' },
+      { question: 'Can I bill the patient for an OA-23 adjustment?', answer: 'Not for the adjustment itself. Bill only the remaining patient responsibility (deductible, coinsurance or copay) that the payers report.' },
+    ],
+    relatedCodes: ['co-22', 'co-45', 'pr-2'],
+  },
 ]
 
 /** Codes summarised on the hub that do not have their own page yet. */
@@ -1307,6 +1363,10 @@ export const DENIAL_HUB_PATH = '/denial-codes'
  * specialty pages where the code is common (internal-link map, plan 24 Nov).
  */
 export const denialCodeExtras: Record<string, { example: string; specialties: { label: string; path: string }[]; guide?: { label: string; path: string } }> = {
+  'co-23': {
+    example: 'An allowed amount of $200 is paid $160 by the primary plan, with $40 left as coinsurance. The secondary plan pays $40 and adjusts the rest with OA-23. The biller matches both remittances, posts the OA-23 adjustment, and the patient owes nothing.',
+    specialties: [{ label: 'Internal medicine billing', path: '/specialties/internal-medicine' }, { label: 'Cardiology billing', path: '/specialties/cardiology' }],
+  },
   'co-27': {
     example: 'A patient changed jobs in March and kept using the old card. An April visit is denied CO-27. An eligibility check for the date of service shows a new plan effective April 1, so the practice updates the registration and bills the new plan.',
     specialties: [{ label: 'Internal medicine billing', path: '/specialties/internal-medicine' }, { label: 'Pediatric billing', path: '/specialties/pediatrics' }],

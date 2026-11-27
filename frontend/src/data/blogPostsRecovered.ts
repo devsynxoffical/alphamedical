@@ -276,6 +276,7 @@ export const recoveredPosts: BlogPost[] = [
       },
     ],
     faqs: [
+      { question: 'What is the difference between a rendering provider and a billing provider?', answer: 'The rendering provider is the individual clinician who performed the service; their NPI goes in item 24J of the CMS-1500 (loop 2310B on the 837P when it differs from the billing provider). The billing provider is the practice, group or individual that bills and is paid for the claim; it goes in item 33 (loop 2010AA). In a solo practice they can be the same; in a group the billing provider is usually the group NPI.' },
       { question: 'What does rendering provider mean in medical billing?', answer: 'The rendering provider is the individual clinician who performed the service. Their NPI goes in Item 24J of the CMS-1500 (or the rendering provider loop on an 837P claim).' },
       { question: 'What is a referring provider?', answer: 'The referring provider is the clinician who sent the patient to another provider for care. Their name and NPI go in Item 17 and 17b of the CMS-1500 with qualifier DN.' },
       { question: 'Can the rendering and billing provider be the same?', answer: 'Yes. A solo provider billing under their own NPI can be both. In a group practice, the billing provider is usually the group NPI and the rendering provider is the individual clinician.' },

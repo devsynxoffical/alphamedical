@@ -651,3 +651,43 @@ Total clicks this month: 7.
 
 **Published (backlog)**
 - /denial-codes/co-27 (coverage terminated, and CO-26 prior to coverage). CO-27 removed from the hub's "other codes" table. The hub now lists 21 guides.
+
+## 2026-11-27 12:41 UTC: 12-hour monitor + growth run #19
+**Data status:** deploy #63 succeeded; live checks green. Search Console data through 2026-11-26. GA4 not set up.
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-24 | 490 | 0 | 29.1 |
+| 2026-11-25 | 419 | 1 | 25.6 |
+| 2026-11-26 | 407 | 0 | 36.9 |
+
+**Pages, Nov 1–27**
+
+| Page | Impr | Clicks | Pos |
+|---|---|---|---|
+| ADHD | 716 | 0 | 28.4 |
+| anxiety | 352 | 0 | 44.3 |
+| void claim | 248 | 1 | **5.7** |
+| rendering vs referring | 243 | 0 | 12.5 |
+| radiology | 177 | 0 | 40 |
+| reversal vs recoupment | 167 | 1 | 31 |
+| paid-claim reversal | 81 | 0 | **9.5** |
+| virtual medical receptionist | 67 | 0 | 29.2 |
+| gastroenterology | 43 | 0 | 77.8 (rising) |
+
+Total clicks this month: 7.
+
+**Striking distance:**
+- "rendering provider vs referring provider" #6.5
+- "void claim in medical billing" #7.4
+- "best virtual medical receptionist in florida" #15.1
+- "icd code for adhd" #16.6
+- "other specified anxiety disorder" #16.8
+- "what is recoupment in medical billing" #19.6 (new after the heading change)
+- "rendering provider vs billing provider" #21.1
+
+**Change (data-justified)**
+1. Rendering vs referring: added the FAQ "What is the difference between a rendering provider and a billing provider?" (24J/loop 2310B vs item 33/loop 2010AA) for the query at #21.1.
+
+**Published (backlog)**
+- /denial-codes/co-23 (OA-23: impact of prior payer adjudication on secondary claims). The hub now lists 22 guides.

@@ -196,8 +196,8 @@
     "date": "2026-11-27"
   },
   "/blog/rendering-vs-referring-provider": {
-    "hash": "658837a8e2dd8717",
-    "date": "2026-11-24"
+    "hash": "2296288f33f1ffc2",
+    "date": "2026-11-27"
   },
   "/blog/what-is-the-icd-10-code-for-adhd": {
     "hash": "b744ef8dd783c3c1",
@@ -224,7 +224,7 @@
     "date": "2026-11-24"
   },
   "/denial-codes": {
-    "hash": "f30e229ddcd65cb4",
+    "hash": "b3fafda516f68488",
     "date": "2026-11-27"
   },
   "/denial-codes/co-16": {
@@ -284,7 +284,7 @@
     "date": "2026-11-23"
   },
   "/sitemap": {
-    "hash": "0c190fd95488b0ea",
+    "hash": "306657d34632ae5a",
     "date": "2026-11-27"
   },
   "/privacy-policy": {
@@ -346,5 +346,9 @@
   "/denial-codes/co-27": {
     "hash": "b725d6d2d710e830",
     "date": "2026-11-26"
+  },
+  "/denial-codes/co-23": {
+    "hash": "ac82b3dda5283dd2",
+    "date": "2026-11-27"
   }
 }
