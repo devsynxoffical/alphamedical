@@ -1440,6 +1440,24 @@
    }
   ]
  },
+ "/denial-codes/co-119": {
+  "kind": "guide",
+  "label": "CO-119 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "CO-119 Denial Code",
+    "path": "/denial-codes/co-119"
+   }
+  ]
+ },
  "/free-consultation": {
   "kind": "conversion",
   "label": "Free Consultation",

@@ -57,6 +57,7 @@ export const denialCodeSources: Record<string, { label: string; url: string }[]>
   'co-96': [X12_CARC, X12_RARC, CMS_MANUAL],
   'co-151': [X12_CARC, X12_RARC, CMS_NCCI],
   'co-252': [X12_CARC, X12_RARC],
+  'co-119': [X12_CARC, CMS_MANUAL],
 }
 
 export const denialCodes: DenialCode[] = [
@@ -1177,6 +1178,62 @@ export const denialCodes: DenialCode[] = [
     ],
     relatedCodes: ['co-16', 'co-50', 'co-197'],
   },
+  // ------------------------------------------------------------------ CO-119
+  {
+    slug: 'co-119',
+    code: 'CO-119',
+    carc: '119',
+    group: 'CO',
+    name: 'Benefit maximum reached',
+    official: 'Benefit maximum for this time period or occurrence has been reached.',
+    definition:
+      'Denial code CO-119 means the patient has already used the maximum benefit their plan allows for this service in the time period or occurrence, such as a yearly visit limit, so the payer will not pay more; it is handled by checking the benefit count, billing any secondary coverage, or requesting an exception when the plan allows one.',
+    seoTitle: 'CO-119 Denial Code: Benefit Maximum Reached (Fixes)',
+    seoDescription:
+      'CO-119 means the plan benefit maximum for the period was reached. How to verify visit counts, bill secondary coverage, and when the patient pays.',
+    glance: [
+      { label: 'Group code', value: 'CO (Contractual Obligation); PR-119 when the patient is liable' },
+      { label: 'Bill the patient?', value: 'Not with CO-119; possible with PR-119 and a prior agreement' },
+      { label: 'Usual fix', value: 'Verify the benefit count, then bill secondary or request an exception' },
+      { label: 'Appeal needed?', value: 'When visits were counted in error or the plan allows extensions' },
+    ],
+    intro: [
+      'CO-119 is about plan limits, not coding. Many health plans cap certain benefits per year or per condition, such as a number of physical therapy, chiropractic or speech therapy visits, a dollar maximum for durable medical equipment or hearing aids, or a lifetime limit for specific services. Once the patient reaches that cap, further claims for the same benefit are adjusted with CARC 119.',
+      'The group code decides who carries the balance. With CO-119 the payer is saying the contract does not let the provider bill the patient. With PR-119 the amount is patient responsibility, which the practice can usually collect when the patient was told in advance. Original Medicare no longer has a hard cap on outpatient therapy: since 2018, claims above the yearly threshold need the KX modifier to confirm medical necessity.',
+    ],
+    causes: [
+      { title: 'Visit limit used up', text: 'The patient reached the yearly number of visits the plan covers for a benefit such as physical therapy, chiropractic care or speech therapy.' },
+      { title: 'Dollar maximum reached', text: 'A benefit with a dollar cap, such as durable medical equipment or hearing aids, has already paid out its maximum for the period.' },
+      { title: 'Visits counted in error', text: 'Denied, duplicate or other providers\' visits were counted toward the limit, so the payer\'s count is higher than the real number.' },
+      { title: 'Benefit period misread', text: 'The plan year resets on a date other than January 1, so the practice expected a fresh limit that has not started yet.' },
+      { title: 'Shared limits across providers', text: 'The patient also saw another provider for the same benefit, and both providers\' visits count toward one limit.' },
+    ],
+    fix: [
+      { title: 'Check the benefit count', text: 'Ask the payer, through the portal or by phone, how many visits or dollars were used, with dates and providers, and when the benefit period resets.' },
+      { title: 'Correct counting errors', text: 'If denied, duplicate or wrong-patient visits were counted, ask the payer to correct the accumulator and reprocess the claim.' },
+      { title: 'Bill secondary coverage', text: 'If the patient has another plan, send the claim with the primary remittance; the secondary plan may cover visits beyond the primary limit.' },
+      { title: 'Request an exception', text: 'Some plans allow extra visits when medical necessity is documented. Follow the plan\'s exception or extension process.' },
+      { title: 'Apply the right liability', text: 'With CO-119, post the adjustment as a write-off. With PR-119, bill the patient only if your financial policy and any notice given before the visit allow it.' },
+    ],
+    appeal: [
+      'Appeal when the payer counted visits that should not count, such as denied or duplicate claims, or when the plan\'s own policy allows more visits for documented medical necessity. Attach the visit history and clinical notes showing continued progress or need.',
+      'Point to the benefit period and the specific visits in question, so the reviewer can see the count is wrong.',
+      'If the limit was correctly reached and the plan has no exception process, an appeal will not change the outcome; focus on secondary coverage or patient agreements instead.',
+    ],
+    prevent: [
+      'Verify remaining visits or dollars at intake and again during long treatment plans, not only at the first visit.',
+      'Track visits used per patient for capped benefits, including visits at other practices when the patient reports them.',
+      'Tell patients before they reach the limit and get a signed financial agreement for visits the plan will not cover.',
+      'Note each plan\'s benefit period start date, since not every plan resets on January 1.',
+    ],
+    faqs: [
+      { question: 'What does denial code CO-119 mean?', answer: 'CO-119 means the benefit maximum for this time period or occurrence has been reached, so the plan will not pay more for this service in that period.' },
+      { question: 'Can I bill the patient for CO-119?', answer: 'Not when the group code is CO, which assigns the amount to the provider. When the payer sends PR-119 instead, the amount is patient responsibility and can usually be billed if the patient was told in advance.' },
+      { question: 'How do I fix a CO-119 denial?', answer: 'Confirm how many visits or dollars the payer counted and when the period resets. Correct any counting errors, bill secondary insurance if there is one, or use the plan\'s exception process if more visits are medically necessary.' },
+      { question: 'Does Medicare still have a therapy cap?', answer: 'No. The hard cap on Medicare outpatient therapy was removed in 2018. Claims above the yearly threshold need the KX modifier, and higher amounts can be reviewed for medical necessity.' },
+    ],
+    relatedCodes: ['co-151', 'co-96', 'co-22'],
+  },
 ]
 
 /** Codes summarised on the hub that do not have their own page yet. */
@@ -1270,5 +1327,9 @@ export const denialCodeExtras: Record<string, { example: string; specialties: { 
   'co-252': {
     example: 'A surgeon bills an unlisted procedure code, and the payer denies it CO-252 with remark M127. The biller uploads the operative report and a short description of the procedure through the payer portal with the claim number, and the claim is reprocessed.',
     specialties: [{ label: 'General surgery billing', path: '/specialties/general-surgery' }, { label: 'Gastroenterology billing', path: '/specialties/gastroenterology' }],
+  },
+  'co-119': {
+    example: 'A patient\'s plan covers 20 physical therapy visits a year. Visit 21 is denied PR-119. The biller checks the payer portal, confirms 20 visits were paid this plan year, and bills the patient\'s secondary plan; the patient had also signed a financial agreement for visits beyond the limit.',
+    specialties: [{ label: 'Orthopedic billing', path: '/specialties/orthopedics' }, { label: 'Mental health and therapy billing', path: '/specialties/mental-health-counseling' }],
   },
 }

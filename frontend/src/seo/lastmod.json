@@ -224,8 +224,8 @@
     "date": "2026-11-24"
   },
   "/denial-codes": {
-    "hash": "b8b77071a53f612a",
-    "date": "2026-11-25"
+    "hash": "c50f7ed9091e1a77",
+    "date": "2026-11-27"
   },
   "/denial-codes/co-16": {
     "hash": "e49c7036c5b078f1",
@@ -284,8 +284,8 @@
     "date": "2026-11-23"
   },
   "/sitemap": {
-    "hash": "918de7535de0d02a",
-    "date": "2026-11-26"
+    "hash": "3bdfe656c0cbe72f",
+    "date": "2026-11-27"
   },
   "/privacy-policy": {
     "hash": "029d3b0993886d23",
@@ -338,5 +338,9 @@
   "/blog/what-is-the-icd-10-code-for-autism": {
     "hash": "aac04c64e8c82bc5",
     "date": "2026-11-26"
+  },
+  "/denial-codes/co-119": {
+    "hash": "08bff80bbc7170c5",
+    "date": "2026-11-27"
   }
 }
