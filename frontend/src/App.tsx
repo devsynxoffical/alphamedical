@@ -1,52 +1,55 @@
+import { Suspense } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
-import Home from './pages/Home'
-import Services from './pages/Services'
-import ServiceDetail from './pages/ServiceDetail'
-import Specialties from './pages/Specialties'
-import SpecialtyDetail from './pages/SpecialtyDetail'
-import BookAppointment from './pages/BookAppointment'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Blog from './pages/Blog'
-import BlogPostDetail from './pages/BlogPostDetail'
-import FreeConsultation from './pages/FreeConsultation'
-import TermsAndConditions from './pages/TermsAndConditions'
-import PrivacyPolicy from './pages/PrivacyPolicy'
-import InternalMedicine from './pages/InternalMedicine'
-import AllergyImmunology from './pages/AllergyImmunology'
-import Orthopedics from './pages/Orthopedics'
-import PainManagement from './pages/PainManagement'
-import Neurology from './pages/Neurology'
-import Gastroenterology from './pages/Gastroenterology'
-import GeneralSurgery from './pages/GeneralSurgery'
-import Anesthesiology from './pages/Anesthesiology'
-import Cardiology from './pages/Cardiology'
-import Dermatology from './pages/Dermatology'
-import EmergencyMedicine from './pages/EmergencyMedicine'
-import OBGYN from './pages/OBGYN'
-import HematologyOncology from './pages/HematologyOncology'
-import Pediatrics from './pages/Pediatrics'
-import PlasticSurgery from './pages/PlasticSurgery'
-import Psychiatry from './pages/Psychiatry'
-import MentalHealthCounseling from './pages/MentalHealthCounseling'
-import Radiology from './pages/Radiology'
-import ReproductiveEndocrinology from './pages/ReproductiveEndocrinology'
-import Rheumatology from './pages/Rheumatology'
-import Urology from './pages/Urology'
-import NursePractitioner from './pages/NursePractitioner'
 import './App.css'
 import ChatWidgetEmbed from './components/ChatWidgetEmbed'
 import StickyCta from './components/StickyCta'
-import DenialCodesHub from './pages/DenialCodesHub'
-import HtmlSitemap from './pages/HtmlSitemap'
-import DenialCodePage from './pages/DenialCodePage'
 import NotFound from './pages/NotFound'
-import LandingPage from './pages/LandingPage'
-import { landingPages } from './data/landingPages'
-import { redirects } from './seo/routes'
+import { landingPagePaths } from './data/landingPagePaths'
+import { redirects } from './seo/redirects'
+import {
+  Home,
+  Services,
+  ServiceDetail,
+  Specialties,
+  SpecialtyDetail,
+  BookAppointment,
+  About,
+  Contact,
+  Blog,
+  BlogPostDetail,
+  FreeConsultation,
+  TermsAndConditions,
+  PrivacyPolicy,
+  InternalMedicine,
+  AllergyImmunology,
+  Orthopedics,
+  PainManagement,
+  Neurology,
+  Gastroenterology,
+  GeneralSurgery,
+  Anesthesiology,
+  Cardiology,
+  Dermatology,
+  EmergencyMedicine,
+  OBGYN,
+  HematologyOncology,
+  Pediatrics,
+  PlasticSurgery,
+  Psychiatry,
+  MentalHealthCounseling,
+  Radiology,
+  ReproductiveEndocrinology,
+  Rheumatology,
+  Urology,
+  NursePractitioner,
+  DenialCodesHub,
+  HtmlSitemap,
+  DenialCodePage,
+  LandingPage,
+} from './pageRegistry'
 
 function App() {
   return (
@@ -56,12 +59,13 @@ function App() {
       <div className="App">
         <Header />
         <main>
+          <Suspense fallback={<div className="page-loading" style={{ minHeight: '60vh' }} />}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<About />} />
             <Route path="/services" element={<Services />} />
-            {landingPages.map((page) => (
-              <Route key={page.path} path={page.path} element={<LandingPage page={page} />} />
+            {landingPagePaths.map((path) => (
+              <Route key={path} path={path} element={<LandingPage path={path} />} />
             ))}
             <Route path="/medical-coding-services" element={<ServiceDetail serviceId="medical-coding" />} />
             <Route path="/virtual-medical-assistant-services" element={<ServiceDetail serviceId="virtual-assistant" />} />
@@ -108,6 +112,7 @@ function App() {
             ))}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </Suspense>
         </main>
         <Footer />
         <StickyCta />

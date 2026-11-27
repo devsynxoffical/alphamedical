@@ -4,8 +4,8 @@ import { CheckCircle, ArrowRight, Phone, ShieldCheck, Award, Stethoscope, Chevro
 import PageTitle from '../components/PageTitle'
 import LeadSection from '../components/LeadSection'
 import RevenueLeakCalculator from '../components/RevenueLeakCalculator'
-import type { LandingPageData, LandingSection } from '../data/landingPages'
-import { breadcrumbTrail } from '../seo/routes'
+import { landingPages, type LandingPageData, type LandingSection } from '../data/landingPages'
+import { breadcrumbTrail } from '../seo/routeMeta'
 import { BRAND } from '../seo/site'
 import { LEAD_ANCHOR } from '../utils/leadEvents'
 import hipaaBadge from '../Images/HIPAA-1-768x296 - Edited.png'
@@ -92,7 +92,8 @@ const SectionBody: React.FC<{ section: LandingSection; image?: string }> = ({ se
   )
 }
 
-const LandingPage: React.FC<{ page: LandingPageData }> = ({ page }) => {
+const LandingPage: React.FC<{ path: string }> = ({ path }) => {
+  const page = landingPages.find((p) => p.path === path) as LandingPageData
   const crumbs = breadcrumbTrail(page.path)
   const [heroImg, secondImg, heroAlt] = PAGE_IMAGES[page.path] ?? DEFAULT_IMAGES
   // The calculator goes after the second content section; the secondary image

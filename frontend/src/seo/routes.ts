@@ -22,7 +22,20 @@ export interface SiteRoute {
   changefreq: 'weekly' | 'monthly' | 'yearly'
 }
 
-export const SPECIALTY_HUB_PATH = '/medical-billing-specialities'
+import { SPECIALTY_HUB_PATH, redirects } from './redirects'
+import { specialtyNav } from '../data/specialtyNav'
+import { landingPagePaths } from '../data/landingPagePaths'
+
+export { SPECIALTY_HUB_PATH, redirects }
+
+// Build-time guards: the light lists used by the router and header must match the full data.
+const sameList = (a: string[], b: string[]) => a.length === b.length && a.every((v, i) => v === b[i])
+if (!sameList(landingPagePaths, landingPages.map((p) => p.path))) {
+  throw new Error('src/data/landingPagePaths.ts is out of sync with src/data/landingPages.ts')
+}
+if (!sameList(specialtyNav.map((s) => `${s.id}|${s.name}`), specialties.map((s) => `${s.id}|${s.name}`))) {
+  throw new Error('src/data/specialtyNav.ts is out of sync with src/data/specialties.ts')
+}
 
 export const landingRoutes: SiteRoute[] = landingPages.map((p) => ({
   path: p.path,
@@ -89,41 +102,6 @@ export const siteRoutes: SiteRoute[] = [
   { path: '/privacy-policy', kind: 'legal', label: 'Privacy Policy', priority: 0.2, changefreq: 'yearly' },
   { path: '/terms-and-conditions', kind: 'legal', label: 'Terms and Conditions', priority: 0.2, changefreq: 'yearly' },
 ]
-
-/** Old / duplicate URLs -> canonical URL (emitted as 301s in server configs). */
-export const redirects: Record<string, string> = {
-  '/about': '/about-us',
-  '/specialties': SPECIALTY_HUB_PATH,
-  '/services/medical-billing': '/medical-billing-services',
-  '/services/virtual-assistant': '/virtual-medical-assistant-services',
-  '/services/medical-coding': '/medical-coding-services',
-  '/services/payment-posting': '/medical-payment-posting-services',
-  '/services/virtual-receptionist': '/virtual-medical-receptionist-services',
-  '/services/healthcare-seo': '/healthcare-seo-services',
-  '/services/credentialing': '/medical-credentialing-service',
-  // Legacy URL from the previous site, still shown by Google (Search Console, Nov 2026)
-  '/virtual-medical-assistant': '/virtual-medical-assistant-services',
-  // Old WordPress URLs with Search Console history (Jul 2025 to Jun 2026). Each
-  // maps to the closest current page so its ranking signals are not lost.
-  '/medical-credentialing-services': '/medical-credentialing-service',
-  '/get-free-consultation': '/free-consultation',
-  '/book-a-meeting': '/book-appointment',
-  '/healthcare-seo': '/healthcare-seo-services',
-  '/allergy-immunology': '/specialties/allergy-immunology',
-  // Plan 23 Nov 2026: two near-identical orthopedic pages competed; merged into one.
-  '/specialties/orthopedic-surgery': '/specialties/orthopedics',
-  '/faq': '/services',
-  '/faqs': '/services',
-  '/customer-stories': '/about-us',
-  '/category/blog': '/blog',
-  '/category/specialties': SPECIALTY_HUB_PATH,
-  '/blog/medical-virtual-assistant-vs-in-office-assistant': '/virtual-medical-assistant-services',
-  '/uncategorized/how-medical-virtual-assistants-enhance-patient-care-experience': '/virtual-medical-assistant-services',
-  '/uncategorized/medical-virtual-assistant-responsibilities': '/virtual-medical-assistant-services',
-  '/uncategorized/what-is-a-virtual-medical-assistant-and-how-they-streamline-healthcare-operations': '/virtual-medical-assistant-services',
-  '/uncategorized/caqh-hcpcs-and-npi-explained-the-ultimate-guide-to-medical-billing-and-credentialing': '/blog/how-long-does-medical-credentialing-take',
-  '/uncategorized/rendering-and-referring-providers-explained-who-they-are-and-why-they-matter-in-billing': '/blog/rendering-vs-referring-provider',
-}
 
 export const findRoute = (path: string) => {
   const normalized = path !== '/' ? path.replace(/\/+$/, '') : path

@@ -55,6 +55,13 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Diagnosis codes that match coverage policy for the test (symptoms, findings, or condition being monitored)',
       'Clear separation of the E/M note from the procedure note when modifier 25 is used',
     ],
+    denialCodes: ['co-197', 'co-50', 'co-59', 'co-151'],
+    denialWhy: {
+      'co-197': 'Nuclear stress tests, echocardiograms, cardiac CT or MRI, or catheterizations done without the payer\'s required prior authorization',
+      'co-50': 'Testing that does not meet the Medicare NCD or LCD, or the payer\'s coverage criteria, for the diagnosis billed',
+      'co-59': 'Medicare\'s multiple procedure payment reduction on the technical component when several cardiovascular tests are done on the same day',
+      'co-151': 'Repeat echocardiograms, Holter monitoring or device checks billed more often than the payer\'s frequency limits',
+    },
     faqs: [
       { question: 'When should cardiology practices bill the professional component (modifier 26)?', answer: 'Bill with modifier 26 when the cardiologist only interprets a test performed on equipment owned by a hospital or another facility. The facility bills the technical component (TC). Bill globally, without either modifier, only when the practice owns the equipment and performs both parts.' },
       { question: 'Why are echocardiograms denied for medical necessity?', answer: 'Most echo denials come from diagnosis codes that do not support the test under the payer\'s coverage policy, or from repeat studies without a documented change in clinical status. Linking the right diagnosis and documenting the reason for a repeat study prevents most of them.' },
@@ -225,6 +232,13 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Medication management decision-making (supports the E/M level)',
       'Telehealth consent and patient location for virtual visits',
     ],
+    denialCodes: ['co-197', 'co-151', 'co-4', 'co-50'],
+    denialWhy: {
+      'co-197': 'Psychotherapy, TMS or intensive outpatient services started without authorization, or after the authorized visits ran out',
+      'co-151': 'Sessions billed beyond the number or frequency the plan allows, or psychotherapy time the note does not support',
+      'co-4': 'Telehealth modifiers (95 or 93) or the right place of service missing on virtual visits',
+      'co-50': 'TMS or other treatment where the record does not show the payer\'s coverage criteria were met',
+    },
     faqs: [
       { question: 'Can a psychiatrist bill E/M and psychotherapy on the same day?', answer: 'Yes. Bill the E/M code for medication management plus the psychotherapy add-on (90833, 90836 or 90838) based on psychotherapy time. Time spent on psychotherapy cannot also be counted toward the E/M level.' },
       { question: 'What is the difference between 90791 and 90792?', answer: '90791 is a psychiatric diagnostic evaluation without medical services, typically by therapists. 90792 includes medical services such as medication review or physical assessment and is billed by physicians and other prescribers.' },
@@ -260,6 +274,13 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Treatment plan, diagnosis and progress toward goals',
       'For family sessions: who attended and whether the patient was present',
     ],
+    denialCodes: ['co-197', 'co-151', 'co-252', 'co-16'],
+    denialWhy: {
+      'co-197': 'Therapy sessions started without a required authorization, or after the authorized sessions were used up',
+      'co-151': 'More sessions per week, or longer session codes such as 90837, than the plan allows or the note supports',
+      'co-252': 'Payer requests for treatment plans or progress notes before paying for ongoing therapy',
+      'co-16': 'Missing rendering clinician NPI, license level or supervising provider details on the claim',
+    },
     faqs: [
       { question: 'What is the difference between 90834 and 90837?', answer: '90834 is for psychotherapy of about 45 minutes (38–52 minutes of face-to-face time). 90837 is for 53 minutes or more. Billing 90837 requires documented session time that meets the threshold, and some payers review it more closely.' },
       { question: 'Can licensed counselors and marriage and family therapists bill Medicare?', answer: 'Yes. Since January 1, 2024, mental health counselors (including LPCs) and marriage and family therapists can enroll in Medicare and bill for their services. They must enroll through PECOS before billing.' },
@@ -389,6 +410,13 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Each lesion\'s location, size and removal technique',
       'Pathology linked to procedure lines',
     ],
+    denialCodes: ['co-59', 'co-50', 'co-197', 'co-11'],
+    denialWhy: {
+      'co-59': 'Several endoscopies in one session, where Medicare\'s endoscopy family rule reduces payment for the additional procedures',
+      'co-50': 'Diagnostic colonoscopy or EGD where the diagnosis on the claim does not meet the payer\'s coverage policy',
+      'co-197': 'Capsule endoscopy, advanced imaging or outpatient procedures performed without a required authorization',
+      'co-11': 'Screening and diagnostic diagnosis codes that do not match the colonoscopy actually billed',
+    },
     faqs: [
       { question: 'What happens when a screening colonoscopy turns into a polypectomy?', answer: 'The procedure is billed with the therapeutic code (for example 45385) and the screening diagnosis listed first. Medicare requires modifier PT; commercial payers typically use modifier 33 so the service is processed under preventive benefits.' },
       { question: 'What is the difference between G0121 and G0105?', answer: 'Both are Medicare screening colonoscopy codes. G0105 is for patients at high risk for colorectal cancer, and G0121 is for patients not at high risk. They have different frequency limits.' },
@@ -470,6 +498,13 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Medical direction steps (pre-anesthetic exam, induction, emergence) when billing QK/QY',
       'Physical status and any qualifying circumstances',
     ],
+    denialCodes: ['co-59', 'co-4', 'co-151', 'co-16'],
+    denialWhy: {
+      'co-59': 'Concurrent cases, where medical direction of overlapping rooms reduces the allowed amount',
+      'co-4': 'Missing or wrong anesthesia modifiers (AA, QK, QX, QY, QZ) or physical status modifiers (P1 to P6)',
+      'co-151': 'Anesthesia time units the record does not support, such as missing or overlapping start and stop times',
+      'co-16': 'Claims missing anesthesia time, the CRNA or the medical direction details the payer requires',
+    },
     faqs: [
       { question: 'How is anesthesia payment calculated?', answer: 'Payment is (base units + time units + any modifying units) × the payer\'s conversion factor. Base units come from the anesthesia code, and time units are usually counted in 15-minute increments for Medicare.' },
       { question: 'What is the difference between QK and QY?', answer: 'QK is used by an anesthesiologist medically directing two to four concurrent cases. QY is used when an anesthesiologist medically directs one CRNA. The CRNA bills with QX in both situations.' },
@@ -504,6 +539,13 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Delivery method and complications',
       'Medical indication for each ultrasound and non-stress test',
     ],
+    denialCodes: ['co-97', 'co-197', 'co-96', 'co-4'],
+    denialWhy: {
+      'co-97': 'Prenatal visits billed separately when they are included in the global obstetric package (59400, 59510, 59610)',
+      'co-197': 'Hysterectomies, advanced imaging or other procedures performed without a required authorization',
+      'co-96': 'Services the patient\'s plan excludes, such as some fertility treatments or elective procedures',
+      'co-4': 'Missing or wrong modifiers on surgical and postpartum services (for example 24, 25 or 79) or bilateral procedures',
+    },
     faqs: [
       { question: 'What is included in the global obstetric package?', answer: 'Global codes such as 59400 and 59510 include routine antepartum visits, the delivery and routine postpartum care. Ultrasounds, non-stress tests, labs and visits for unrelated problems are billed separately.' },
       { question: 'How do you bill when a patient transfers care mid-pregnancy?', answer: 'Bill only the components your practice provided: antepartum-only codes based on the number of visits (59425 or 59426), delivery-only codes, or postpartum-only care, instead of the global package.' },
@@ -540,6 +582,13 @@ export const specialtyInsights: Record<string, SpecialtyInsight> = {
       'Infusion start and stop times for each drug',
       'Diagnosis, disease activity and prior therapies supporting the biologic and authorization',
     ],
+    denialCodes: ['co-197', 'co-151', 'co-4', 'co-50'],
+    denialWhy: {
+      'co-197': 'Biologic infusions or injections given without a current prior authorization',
+      'co-151': 'Drug units (J-codes) that do not match the dose given or exceed the payer\'s per-dose limits',
+      'co-4': 'Missing JW or JZ modifiers on single-dose drug vials, or modifier 25 on an E/M visit billed with an infusion',
+      'co-50': 'Biologics, advanced imaging or lab tests where the diagnosis does not meet the payer\'s coverage policy',
+    },
     faqs: [
       { question: "Can I bill an E/M visit on an infusion day?", answer: "Only when the provider performs a significant, separately identifiable evaluation beyond the routine pre-infusion assessment. Then bill the E/M with modifier 25 and document the separate decision-making. Otherwise the assessment is part of the infusion service." },
       { question: "What do modifiers JW and JZ mean?", answer: "On Medicare Part B claims for drugs from single-dose containers, JW reports the amount of drug discarded and not given, and JZ states that no drug was discarded. One of them is required on these drug lines." },

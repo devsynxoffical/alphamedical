@@ -1,7 +1,7 @@
 // JSON-LD builders (schema.org). Entities are linked by @id so search engines
 // and AI answer engines see one consistent "Alpha Medi Assist" entity graph.
 import { BRAND, ORG_ID, WEBSITE_ID, SITE_URL, absoluteUrl } from './site'
-import { breadcrumbTrail, findRoute } from './routes'
+import { breadcrumbTrail, findRoute } from './routeMeta'
 
 type JsonLd = Record<string, unknown>
 

@@ -1,0 +1,1513 @@
+{
+ "/": {
+  "kind": "home",
+  "label": "Home",
+  "serviceType": "Medical billing services",
+  "trail": []
+ },
+ "/services": {
+  "kind": "hub",
+  "label": "Services",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Services",
+    "path": "/services"
+   }
+  ]
+ },
+ "/medical-billing-services": {
+  "kind": "service",
+  "label": "Medical Billing Services",
+  "serviceType": "Medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Services",
+    "path": "/services"
+   },
+   {
+    "name": "Medical Billing Services",
+    "path": "/medical-billing-services"
+   }
+  ]
+ },
+ "/revenue-cycle-management-services": {
+  "kind": "service",
+  "label": "Revenue Cycle Management Services",
+  "serviceType": "Revenue cycle management",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Services",
+    "path": "/services"
+   },
+   {
+    "name": "Revenue Cycle Management Services",
+    "path": "/revenue-cycle-management-services"
+   }
+  ]
+ },
+ "/medical-billing-for-small-practices": {
+  "kind": "service",
+  "label": "Medical Billing for Small Practices",
+  "serviceType": "Medical billing for small practices",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Services",
+    "path": "/services"
+   },
+   {
+    "name": "Medical Billing for Small Practices",
+    "path": "/medical-billing-for-small-practices"
+   }
+  ]
+ },
+ "/medical-billing-services-florida": {
+  "kind": "location",
+  "label": "Medical Billing Services in Florida",
+  "serviceType": "Medical billing",
+  "areaServed": "Florida",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Services",
+    "path": "/medical-billing-services"
+   },
+   {
+    "name": "Medical Billing Services in Florida",
+    "path": "/medical-billing-services-florida"
+   }
+  ]
+ },
+ "/medical-billing-services-virginia": {
+  "kind": "location",
+  "label": "Medical Billing Services in Virginia",
+  "serviceType": "Medical billing",
+  "areaServed": "Virginia",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Services",
+    "path": "/medical-billing-services"
+   },
+   {
+    "name": "Medical Billing Services in Virginia",
+    "path": "/medical-billing-services-virginia"
+   }
+  ]
+ },
+ "/denial-management-services": {
+  "kind": "service",
+  "label": "Denial Management Services",
+  "serviceType": "Medical claim denial management",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Services",
+    "path": "/services"
+   },
+   {
+    "name": "Denial Management Services",
+    "path": "/denial-management-services"
+   }
+  ]
+ },
+ "/medical-coding-services": {
+  "kind": "service",
+  "label": "Medical Coding Services",
+  "serviceType": "Medical coding",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Services",
+    "path": "/services"
+   },
+   {
+    "name": "Medical Coding Services",
+    "path": "/medical-coding-services"
+   }
+  ]
+ },
+ "/medical-credentialing-service": {
+  "kind": "service",
+  "label": "Medical Credentialing Services",
+  "serviceType": "Provider credentialing and payer enrollment",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Services",
+    "path": "/services"
+   },
+   {
+    "name": "Medical Credentialing Services",
+    "path": "/medical-credentialing-service"
+   }
+  ]
+ },
+ "/medical-payment-posting-services": {
+  "kind": "service",
+  "label": "Medical Payment Posting Services",
+  "serviceType": "Payment posting",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Services",
+    "path": "/services"
+   },
+   {
+    "name": "Medical Payment Posting Services",
+    "path": "/medical-payment-posting-services"
+   }
+  ]
+ },
+ "/virtual-medical-assistant-services": {
+  "kind": "service",
+  "label": "Virtual Medical Assistant Services",
+  "serviceType": "Virtual medical assistant",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Services",
+    "path": "/services"
+   },
+   {
+    "name": "Virtual Medical Assistant Services",
+    "path": "/virtual-medical-assistant-services"
+   }
+  ]
+ },
+ "/virtual-medical-receptionist-services": {
+  "kind": "service",
+  "label": "Virtual Medical Receptionist Services",
+  "serviceType": "Virtual medical receptionist",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Services",
+    "path": "/services"
+   },
+   {
+    "name": "Virtual Medical Receptionist Services",
+    "path": "/virtual-medical-receptionist-services"
+   }
+  ]
+ },
+ "/healthcare-seo-services": {
+  "kind": "service",
+  "label": "Healthcare SEO Services",
+  "serviceType": "Healthcare search engine optimization",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Services",
+    "path": "/services"
+   },
+   {
+    "name": "Healthcare SEO Services",
+    "path": "/healthcare-seo-services"
+   }
+  ]
+ },
+ "/medical-billing-specialities": {
+  "kind": "hub",
+  "label": "Medical Billing Specialties",
+  "serviceType": "Specialty medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   }
+  ]
+ },
+ "/specialties/internal-medicine": {
+  "kind": "specialty",
+  "label": "Internal Medicine Medical Billing",
+  "serviceType": "Internal Medicine medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Internal Medicine Medical Billing",
+    "path": "/specialties/internal-medicine"
+   }
+  ]
+ },
+ "/specialties/allergy-immunology": {
+  "kind": "specialty",
+  "label": "Allergy & Immunology Medical Billing",
+  "serviceType": "Allergy & Immunology medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Allergy & Immunology Medical Billing",
+    "path": "/specialties/allergy-immunology"
+   }
+  ]
+ },
+ "/specialties/orthopedics": {
+  "kind": "specialty",
+  "label": "Orthopedics Medical Billing",
+  "serviceType": "Orthopedics medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Orthopedics Medical Billing",
+    "path": "/specialties/orthopedics"
+   }
+  ]
+ },
+ "/specialties/pain-management": {
+  "kind": "specialty",
+  "label": "Pain Management Medical Billing",
+  "serviceType": "Pain Management medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Pain Management Medical Billing",
+    "path": "/specialties/pain-management"
+   }
+  ]
+ },
+ "/specialties/neurology": {
+  "kind": "specialty",
+  "label": "Neurology Medical Billing",
+  "serviceType": "Neurology medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Neurology Medical Billing",
+    "path": "/specialties/neurology"
+   }
+  ]
+ },
+ "/specialties/gastroenterology": {
+  "kind": "specialty",
+  "label": "Gastroenterology Medical Billing",
+  "serviceType": "Gastroenterology medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Gastroenterology Medical Billing",
+    "path": "/specialties/gastroenterology"
+   }
+  ]
+ },
+ "/specialties/general-surgery": {
+  "kind": "specialty",
+  "label": "General Surgery Medical Billing",
+  "serviceType": "General Surgery medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "General Surgery Medical Billing",
+    "path": "/specialties/general-surgery"
+   }
+  ]
+ },
+ "/specialties/anesthesiology": {
+  "kind": "specialty",
+  "label": "Anesthesiology Medical Billing",
+  "serviceType": "Anesthesiology medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Anesthesiology Medical Billing",
+    "path": "/specialties/anesthesiology"
+   }
+  ]
+ },
+ "/specialties/cardiology": {
+  "kind": "specialty",
+  "label": "Cardiology Medical Billing",
+  "serviceType": "Cardiology medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Cardiology Medical Billing",
+    "path": "/specialties/cardiology"
+   }
+  ]
+ },
+ "/specialties/dermatology": {
+  "kind": "specialty",
+  "label": "Dermatology Medical Billing",
+  "serviceType": "Dermatology medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Dermatology Medical Billing",
+    "path": "/specialties/dermatology"
+   }
+  ]
+ },
+ "/specialties/emergency-medicine": {
+  "kind": "specialty",
+  "label": "Emergency Medicine Medical Billing",
+  "serviceType": "Emergency Medicine medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Emergency Medicine Medical Billing",
+    "path": "/specialties/emergency-medicine"
+   }
+  ]
+ },
+ "/specialties/gynecology-obstetrics": {
+  "kind": "specialty",
+  "label": "Gynecology/Obstetrics Medical Billing",
+  "serviceType": "Gynecology/Obstetrics medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Gynecology/Obstetrics Medical Billing",
+    "path": "/specialties/gynecology-obstetrics"
+   }
+  ]
+ },
+ "/specialties/hematology-oncology": {
+  "kind": "specialty",
+  "label": "Hematology/Oncology Medical Billing",
+  "serviceType": "Hematology/Oncology medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Hematology/Oncology Medical Billing",
+    "path": "/specialties/hematology-oncology"
+   }
+  ]
+ },
+ "/specialties/pediatrics": {
+  "kind": "specialty",
+  "label": "Pediatrics Medical Billing",
+  "serviceType": "Pediatrics medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Pediatrics Medical Billing",
+    "path": "/specialties/pediatrics"
+   }
+  ]
+ },
+ "/specialties/plastic-surgery": {
+  "kind": "specialty",
+  "label": "Plastic Surgery Medical Billing",
+  "serviceType": "Plastic Surgery medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Plastic Surgery Medical Billing",
+    "path": "/specialties/plastic-surgery"
+   }
+  ]
+ },
+ "/specialties/psychiatry": {
+  "kind": "specialty",
+  "label": "Psychiatry Medical Billing",
+  "serviceType": "Psychiatry medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Psychiatry Medical Billing",
+    "path": "/specialties/psychiatry"
+   }
+  ]
+ },
+ "/specialties/mental-health-counseling": {
+  "kind": "specialty",
+  "label": "Mental Health Counseling Medical Billing",
+  "serviceType": "Mental Health Counseling medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Mental Health Counseling Medical Billing",
+    "path": "/specialties/mental-health-counseling"
+   }
+  ]
+ },
+ "/specialties/radiology": {
+  "kind": "specialty",
+  "label": "Radiology Medical Billing",
+  "serviceType": "Radiology medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Radiology Medical Billing",
+    "path": "/specialties/radiology"
+   }
+  ]
+ },
+ "/specialties/reproductive-endocrinology": {
+  "kind": "specialty",
+  "label": "Reproductive Endocrinology Medical Billing",
+  "serviceType": "Reproductive Endocrinology medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Reproductive Endocrinology Medical Billing",
+    "path": "/specialties/reproductive-endocrinology"
+   }
+  ]
+ },
+ "/specialties/rheumatology": {
+  "kind": "specialty",
+  "label": "Rheumatology Medical Billing",
+  "serviceType": "Rheumatology medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Rheumatology Medical Billing",
+    "path": "/specialties/rheumatology"
+   }
+  ]
+ },
+ "/specialties/urology": {
+  "kind": "specialty",
+  "label": "Urology Medical Billing",
+  "serviceType": "Urology medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Urology Medical Billing",
+    "path": "/specialties/urology"
+   }
+  ]
+ },
+ "/specialties/nurse-practitioner": {
+  "kind": "specialty",
+  "label": "Nurse Practitioner Medical Billing",
+  "serviceType": "Nurse Practitioner medical billing",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Medical Billing Specialties",
+    "path": "/medical-billing-specialities"
+   },
+   {
+    "name": "Nurse Practitioner Medical Billing",
+    "path": "/specialties/nurse-practitioner"
+   }
+  ]
+ },
+ "/about-us": {
+  "kind": "page",
+  "label": "About Us",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "About Us",
+    "path": "/about-us"
+   }
+  ]
+ },
+ "/contact": {
+  "kind": "page",
+  "label": "Contact",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Contact",
+    "path": "/contact"
+   }
+  ]
+ },
+ "/blog": {
+  "kind": "blog-index",
+  "label": "Blog",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   }
+  ]
+ },
+ "/blog/top-10-reasons-for-medical-claim-denials-and-how-to-fix-them": {
+  "kind": "blog-post",
+  "label": "Top 10 Reasons for Medical Claim Denials and How to Fix Them",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "Top 10 Reasons for Medical Claim Denials and How to Fix Them",
+    "path": "/blog/top-10-reasons-for-medical-claim-denials-and-how-to-fix-them"
+   }
+  ]
+ },
+ "/blog/how-to-reduce-medical-claim-denials-complete-guide": {
+  "kind": "blog-post",
+  "label": "How to Reduce Medical Claim Denials: A Complete Guide for Practices",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "How to Reduce Medical Claim Denials: A Complete Guide for Practices",
+    "path": "/blog/how-to-reduce-medical-claim-denials-complete-guide"
+   }
+  ]
+ },
+ "/blog/how-much-does-medical-billing-cost": {
+  "kind": "blog-post",
+  "label": "How Much Does Medical Billing Cost? Outsourced Pricing Explained",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "How Much Does Medical Billing Cost? Outsourced Pricing Explained",
+    "path": "/blog/how-much-does-medical-billing-cost"
+   }
+  ]
+ },
+ "/blog/how-long-does-medical-credentialing-take": {
+  "kind": "blog-post",
+  "label": "How Long Does Medical Credentialing Take? Timeline by Payer",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "How Long Does Medical Credentialing Take? Timeline by Payer",
+    "path": "/blog/how-long-does-medical-credentialing-take"
+   }
+  ]
+ },
+ "/blog/medical-billing-vs-medical-coding": {
+  "kind": "blog-post",
+  "label": "Medical Billing vs. Medical Coding: What Is the Difference?",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "Medical Billing vs. Medical Coding: What Is the Difference?",
+    "path": "/blog/medical-billing-vs-medical-coding"
+   }
+  ]
+ },
+ "/blog/common-claim-denial-codes-and-how-to-fix-them": {
+  "kind": "blog-post",
+  "label": "Common Claim Denial Codes (CARC) and How to Fix Each One",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "Common Claim Denial Codes (CARC) and How to Fix Each One",
+    "path": "/blog/common-claim-denial-codes-and-how-to-fix-them"
+   }
+  ]
+ },
+ "/blog/can-an-health-insurance-company-reverse-a-paid-claim": {
+  "kind": "blog-post",
+  "label": "Can a Health Insurance Company Reverse a Paid Claim?",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "Can a Health Insurance Company Reverse a Paid Claim?",
+    "path": "/blog/can-an-health-insurance-company-reverse-a-paid-claim"
+   }
+  ]
+ },
+ "/blog/what-is-void-claim-in-medical-billing": {
+  "kind": "blog-post",
+  "label": "What Is a Void Claim in Medical Billing? (And When to Use One)",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "What Is a Void Claim in Medical Billing? (And When to Use One)",
+    "path": "/blog/what-is-void-claim-in-medical-billing"
+   }
+  ]
+ },
+ "/blog/difference-between-reversal-and-recoupment-in-medical-billing": {
+  "kind": "blog-post",
+  "label": "Reversal vs. Recoupment in Medical Billing: What's the Difference?",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "Reversal vs. Recoupment in Medical Billing: What's the Difference?",
+    "path": "/blog/difference-between-reversal-and-recoupment-in-medical-billing"
+   }
+  ]
+ },
+ "/blog/rendering-vs-referring-provider": {
+  "kind": "blog-post",
+  "label": "Rendering vs. Referring Provider: What's the Difference in Billing?",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "Rendering vs. Referring Provider: What's the Difference in Billing?",
+    "path": "/blog/rendering-vs-referring-provider"
+   }
+  ]
+ },
+ "/blog/what-is-the-icd-10-code-for-adhd": {
+  "kind": "blog-post",
+  "label": "What Is the ICD-10 Code for ADHD? F90.0 to F90.9 Explained",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "What Is the ICD-10 Code for ADHD? F90.0 to F90.9 Explained",
+    "path": "/blog/what-is-the-icd-10-code-for-adhd"
+   }
+  ]
+ },
+ "/blog/what-is-the-icd-10-code-for-anxiety": {
+  "kind": "blog-post",
+  "label": "What Is the ICD-10 Code for Anxiety? F41.9, F41.1 and Related Codes",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "What Is the ICD-10 Code for Anxiety? F41.9, F41.1 and Related Codes",
+    "path": "/blog/what-is-the-icd-10-code-for-anxiety"
+   }
+  ]
+ },
+ "/blog/what-is-authorization-in-medical-billing": {
+  "kind": "blog-post",
+  "label": "What Is Authorization in Medical Billing? Prior Auth Explained",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "What Is Authorization in Medical Billing? Prior Auth Explained",
+    "path": "/blog/what-is-authorization-in-medical-billing"
+   }
+  ]
+ },
+ "/blog/steps-involved-in-the-medical-billing-cycle": {
+  "kind": "blog-post",
+  "label": "Steps Involved in the Medical Billing Cycle (12-Step Guide)",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "Steps Involved in the Medical Billing Cycle (12-Step Guide)",
+    "path": "/blog/steps-involved-in-the-medical-billing-cycle"
+   }
+  ]
+ },
+ "/blog/in-house-vs-outsourced-medical-billing": {
+  "kind": "blog-post",
+  "label": "In-House vs. Outsourced Medical Billing: Costs, Risks and How to Decide",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "In-House vs. Outsourced Medical Billing: Costs, Risks and How to Decide",
+    "path": "/blog/in-house-vs-outsourced-medical-billing"
+   }
+  ]
+ },
+ "/blog/annual-cpt-code-updates-how-practices-should-prepare": {
+  "kind": "blog-post",
+  "label": "Annual Medical Code Updates: How Practices Should Prepare for CPT, ICD-10 and HCPCS Changes",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "Annual Medical Code Updates: How Practices Should Prepare for CPT, ICD-10 and HCPCS Changes",
+    "path": "/blog/annual-cpt-code-updates-how-practices-should-prepare"
+   }
+  ]
+ },
+ "/blog/what-is-the-icd-10-code-for-depression": {
+  "kind": "blog-post",
+  "label": "What Is the ICD-10 Code for Depression? F32, F33 and F32.A",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "What Is the ICD-10 Code for Depression? F32, F33 and F32.A",
+    "path": "/blog/what-is-the-icd-10-code-for-depression"
+   }
+  ]
+ },
+ "/blog/what-is-the-icd-10-code-for-ptsd": {
+  "kind": "blog-post",
+  "label": "What Is the ICD-10 Code for PTSD? F43.10, F43.11, F43.12",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "What Is the ICD-10 Code for PTSD? F43.10, F43.11, F43.12",
+    "path": "/blog/what-is-the-icd-10-code-for-ptsd"
+   }
+  ]
+ },
+ "/blog/what-is-the-icd-10-code-for-bipolar-disorder": {
+  "kind": "blog-post",
+  "label": "What Is the ICD-10 Code for Bipolar Disorder? F31 Codes Explained",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "What Is the ICD-10 Code for Bipolar Disorder? F31 Codes Explained",
+    "path": "/blog/what-is-the-icd-10-code-for-bipolar-disorder"
+   }
+  ]
+ },
+ "/blog/what-is-the-icd-10-code-for-autism": {
+  "kind": "blog-post",
+  "label": "What Is the ICD-10 Code for Autism? F84.0 and Related Codes",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Blog",
+    "path": "/blog"
+   },
+   {
+    "name": "What Is the ICD-10 Code for Autism? F84.0 and Related Codes",
+    "path": "/blog/what-is-the-icd-10-code-for-autism"
+   }
+  ]
+ },
+ "/denial-codes": {
+  "kind": "hub",
+  "label": "Denial Codes",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   }
+  ]
+ },
+ "/denial-codes/co-16": {
+  "kind": "guide",
+  "label": "CO-16 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "CO-16 Denial Code",
+    "path": "/denial-codes/co-16"
+   }
+  ]
+ },
+ "/denial-codes/co-97": {
+  "kind": "guide",
+  "label": "CO-97 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "CO-97 Denial Code",
+    "path": "/denial-codes/co-97"
+   }
+  ]
+ },
+ "/denial-codes/co-45": {
+  "kind": "guide",
+  "label": "CO-45 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "CO-45 Denial Code",
+    "path": "/denial-codes/co-45"
+   }
+  ]
+ },
+ "/denial-codes/pr-1": {
+  "kind": "guide",
+  "label": "PR-1 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "PR-1 Denial Code",
+    "path": "/denial-codes/pr-1"
+   }
+  ]
+ },
+ "/denial-codes/co-4": {
+  "kind": "guide",
+  "label": "CO-4 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "CO-4 Denial Code",
+    "path": "/denial-codes/co-4"
+   }
+  ]
+ },
+ "/denial-codes/co-11": {
+  "kind": "guide",
+  "label": "CO-11 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "CO-11 Denial Code",
+    "path": "/denial-codes/co-11"
+   }
+  ]
+ },
+ "/denial-codes/co-18": {
+  "kind": "guide",
+  "label": "CO-18 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "CO-18 Denial Code",
+    "path": "/denial-codes/co-18"
+   }
+  ]
+ },
+ "/denial-codes/co-22": {
+  "kind": "guide",
+  "label": "CO-22 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "CO-22 Denial Code",
+    "path": "/denial-codes/co-22"
+   }
+  ]
+ },
+ "/denial-codes/co-29": {
+  "kind": "guide",
+  "label": "CO-29 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "CO-29 Denial Code",
+    "path": "/denial-codes/co-29"
+   }
+  ]
+ },
+ "/denial-codes/co-50": {
+  "kind": "guide",
+  "label": "CO-50 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "CO-50 Denial Code",
+    "path": "/denial-codes/co-50"
+   }
+  ]
+ },
+ "/denial-codes/co-109": {
+  "kind": "guide",
+  "label": "CO-109 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "CO-109 Denial Code",
+    "path": "/denial-codes/co-109"
+   }
+  ]
+ },
+ "/denial-codes/co-197": {
+  "kind": "guide",
+  "label": "CO-197 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "CO-197 Denial Code",
+    "path": "/denial-codes/co-197"
+   }
+  ]
+ },
+ "/denial-codes/pr-2": {
+  "kind": "guide",
+  "label": "PR-2 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "PR-2 Denial Code",
+    "path": "/denial-codes/pr-2"
+   }
+  ]
+ },
+ "/denial-codes/pr-3": {
+  "kind": "guide",
+  "label": "PR-3 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "PR-3 Denial Code",
+    "path": "/denial-codes/pr-3"
+   }
+  ]
+ },
+ "/denial-codes/co-24": {
+  "kind": "guide",
+  "label": "CO-24 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "CO-24 Denial Code",
+    "path": "/denial-codes/co-24"
+   }
+  ]
+ },
+ "/denial-codes/co-59": {
+  "kind": "guide",
+  "label": "CO-59 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "CO-59 Denial Code",
+    "path": "/denial-codes/co-59"
+   }
+  ]
+ },
+ "/denial-codes/co-96": {
+  "kind": "guide",
+  "label": "CO-96 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "CO-96 Denial Code",
+    "path": "/denial-codes/co-96"
+   }
+  ]
+ },
+ "/denial-codes/co-151": {
+  "kind": "guide",
+  "label": "CO-151 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "CO-151 Denial Code",
+    "path": "/denial-codes/co-151"
+   }
+  ]
+ },
+ "/denial-codes/co-252": {
+  "kind": "guide",
+  "label": "CO-252 Denial Code",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Denial Codes",
+    "path": "/denial-codes"
+   },
+   {
+    "name": "CO-252 Denial Code",
+    "path": "/denial-codes/co-252"
+   }
+  ]
+ },
+ "/free-consultation": {
+  "kind": "conversion",
+  "label": "Free Consultation",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Free Consultation",
+    "path": "/free-consultation"
+   }
+  ]
+ },
+ "/book-appointment": {
+  "kind": "conversion",
+  "label": "Book a Meeting",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Book a Meeting",
+    "path": "/book-appointment"
+   }
+  ]
+ },
+ "/sitemap": {
+  "kind": "page",
+  "label": "Sitemap",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Sitemap",
+    "path": "/sitemap"
+   }
+  ]
+ },
+ "/privacy-policy": {
+  "kind": "legal",
+  "label": "Privacy Policy",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Privacy Policy",
+    "path": "/privacy-policy"
+   }
+  ]
+ },
+ "/terms-and-conditions": {
+  "kind": "legal",
+  "label": "Terms and Conditions",
+  "trail": [
+   {
+    "name": "Home",
+    "path": "/"
+   },
+   {
+    "name": "Terms and Conditions",
+    "path": "/terms-and-conditions"
+   }
+  ]
+ }
+}

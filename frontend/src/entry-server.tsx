@@ -3,6 +3,7 @@ import { StrictMode } from 'react'
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 import App from './App'
+import { preloadAllPages } from './pageRegistry'
 import { HeadContext, type HeadCollector } from './seo/HeadContext'
 import { renderHeadTags } from './seo/headTags'
 import { globalSchema, faqSchema } from './seo/schema'
@@ -31,4 +32,4 @@ export function render(url: string) {
   }
 }
 
-export { globalSchema, faqSchema, siteRoutes, redirects, blogPosts, BRAND, SITE_URL }
+export { preloadAllPages, globalSchema, faqSchema, siteRoutes, redirects, blogPosts, BRAND, SITE_URL }

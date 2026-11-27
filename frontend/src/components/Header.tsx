@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import logo from '../Images/ALPHA-MEDI-ASSIST-LOGO-PNG.png'
-import { specialties } from '../data/specialties'
+import { specialtyNav as specialties } from '../data/specialtyNav'
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

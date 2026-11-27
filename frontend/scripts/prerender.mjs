@@ -17,9 +17,12 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const dist = path.join(root, 'dist')
 const ssrEntry = path.join(root, 'dist-ssr', 'entry-server.js')
 
-const { render, globalSchema, faqSchema, siteRoutes, redirects, blogPosts, BRAND, SITE_URL } = await import(
+const { render, preloadAllPages, globalSchema, faqSchema, siteRoutes, redirects, blogPosts, BRAND, SITE_URL } = await import(
   pathToFileURL(ssrEntry).href
 )
+
+// Code-split pages must be loaded before rendering to static HTML.
+await preloadAllPages()
 
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8')
 const safeJson = (obj) => JSON.stringify(obj).replace(/</g, '\\u003c')

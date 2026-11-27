@@ -80,20 +80,20 @@
     "date": "2026-11-25"
   },
   "/specialties/gastroenterology": {
-    "hash": "4007f0dddc690fb1",
-    "date": "2026-11-25"
+    "hash": "641effb6289595cc",
+    "date": "2026-11-27"
   },
   "/specialties/general-surgery": {
     "hash": "e3e0c61d57606431",
     "date": "2026-11-25"
   },
   "/specialties/anesthesiology": {
-    "hash": "b6dad94bff31159f",
-    "date": "2026-11-25"
+    "hash": "923e6cfc6295f164",
+    "date": "2026-11-27"
   },
   "/specialties/cardiology": {
-    "hash": "03918b139c72eecb",
-    "date": "2026-11-25"
+    "hash": "bcdb7c38530cd6b4",
+    "date": "2026-11-27"
   },
   "/specialties/dermatology": {
     "hash": "8bcbcc0f96e46fe3",
@@ -104,8 +104,8 @@
     "date": "2026-11-25"
   },
   "/specialties/gynecology-obstetrics": {
-    "hash": "9b16cd772a28186a",
-    "date": "2026-11-25"
+    "hash": "0355bc1e61193abb",
+    "date": "2026-11-27"
   },
   "/specialties/hematology-oncology": {
     "hash": "b84868b885bcc74a",
@@ -120,12 +120,12 @@
     "date": "2026-11-25"
   },
   "/specialties/psychiatry": {
-    "hash": "8d98248c61c8b6a5",
-    "date": "2026-11-25"
+    "hash": "edeece749178a96e",
+    "date": "2026-11-27"
   },
   "/specialties/mental-health-counseling": {
-    "hash": "dac58d7f0ff2d74f",
-    "date": "2026-11-25"
+    "hash": "9388527727629773",
+    "date": "2026-11-27"
   },
   "/specialties/radiology": {
     "hash": "a529af0e8f42c085",
@@ -136,8 +136,8 @@
     "date": "2026-11-25"
   },
   "/specialties/rheumatology": {
-    "hash": "5392fed798783766",
-    "date": "2026-11-25"
+    "hash": "22adc25b84d705bd",
+    "date": "2026-11-27"
   },
   "/specialties/urology": {
     "hash": "38d5446af8282ddf",
