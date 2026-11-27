@@ -5,7 +5,6 @@ Every item must target real demand: a query the site already gets impressions fo
 No item that needs owner facts (prices, results, offices, states, credentials) may be published from this list.
 
 ## Ready (verifiable content, no owner input needed)
-4. Denial code CO-26 / CO-27 (expenses before or after coverage)
 5. Denial code CO-23 (impact of prior payer adjudication)
 6. Modifier 25 in medical billing: when it applies and why it is denied (supports CO-97/CO-4 guides)
 7. Modifier 59 vs XE/XS/XP/XU (supports CO-97 guide)
@@ -23,3 +22,4 @@ No item that needs owner facts (prices, results, offices, states, credentials) m
 - 2026-11-25: /blog/what-is-the-icd-10-code-for-bipolar-disorder
 - 2026-11-26: /blog/what-is-the-icd-10-code-for-autism
 - 2026-11-26: /denial-codes/co-119
+- 2026-11-27: /denial-codes/co-27 (covers CO-26 too)

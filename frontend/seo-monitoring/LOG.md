@@ -615,3 +615,39 @@ Total clicks this month: 7.
 
 **Published (backlog)**
 - /denial-codes/co-119 (benefit maximum reached; PR-119 vs CO-119; visit limits; prevention). The hub now lists 20 guides.
+
+## 2026-11-27 00:40 UTC: 12-hour monitor + growth run #18
+**Data status:** deploy #62 succeeded; live checks green. Search Console data through 2026-11-26 (partial). GA4 not set up.
+
+| Date | Impressions | Clicks | Avg pos |
+|---|---|---|---|
+| 2026-11-24 | 490 | 0 | 29.1 |
+| 2026-11-25 | 419 | 1 | 25.6 |
+| 2026-11-26 | 187 (partial) | 0 | 34.3 |
+
+**Pages, Nov 1–27**
+
+| Page | Impr | Clicks | Pos |
+|---|---|---|---|
+| ADHD | 654 | 0 | 28.1 |
+| anxiety | 326 | 0 | 44.3 |
+| rendering vs referring | 236 | 0 | 12.5 |
+| void claim | 233 | 1 | **5.7** |
+| radiology | 171 | 0 | 39.2 |
+| reversal vs recoupment | 157 | 1 | 31.4 |
+| paid-claim reversal | 76 | 0 | 9.9 |
+| virtual medical receptionist | 55 | 0 | 28.7 |
+
+Total clicks this month: 7.
+
+**Queries:**
+- "recoupment meaning in medical billing" 46 impr #52.1
+- "difference between reversal and recoupment" 46 impr #31.8
+- "other specified anxiety disorder" #16.8
+- "rendering provider vs referring provider" #6.5
+
+**Change (data-justified)**
+1. Reversal vs recoupment: renamed the section heading "What is a recoupment?" to "Recoupment meaning in medical billing" to match the query (46 impressions, #52).
+
+**Published (backlog)**
+- /denial-codes/co-27 (coverage terminated, and CO-26 prior to coverage). CO-27 removed from the hub's "other codes" table. The hub now lists 21 guides.

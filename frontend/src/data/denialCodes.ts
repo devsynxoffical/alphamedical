@@ -57,6 +57,7 @@ export const denialCodeSources: Record<string, { label: string; url: string }[]>
   'co-96': [X12_CARC, X12_RARC, CMS_MANUAL],
   'co-151': [X12_CARC, X12_RARC, CMS_NCCI],
   'co-119': [X12_CARC, CMS_MANUAL],
+  'co-27': [X12_CARC, CMS_MANUAL],
   'co-252': [X12_CARC, X12_RARC],
 }
 
@@ -1234,11 +1235,66 @@ export const denialCodes: DenialCode[] = [
     ],
     relatedCodes: ['pr-1', 'co-96', 'co-151'],
   },
+
+  // ------------------------------------------------------------------ CO-27 (and CO-26)
+  {
+    slug: 'co-27',
+    code: 'CO-27',
+    carc: '27',
+    group: 'CO',
+    name: 'Expenses incurred after coverage terminated',
+    official: 'Expenses incurred after coverage terminated.',
+    definition:
+      'Denial code CO-27 means the patient’s coverage with this payer had ended before the date of service (its twin, CO-26, means coverage had not started yet); the fix is to find the coverage that was active on that date and bill it, or bill the patient if they had none.',
+    seoTitle: 'CO-27 Denial Code: Coverage Terminated (and CO-26)',
+    seoDescription:
+      'CO-27 means coverage ended before the date of service; CO-26 means it had not started. How to find the right coverage, rebill, and prevent both denials.',
+    glance: [
+      { label: 'Group code', value: 'Usually CO (sometimes PR)' },
+      { label: 'Bill the patient?', value: 'Only if no other coverage applied on that date' },
+      { label: 'Usual fix', value: 'Verify eligibility for the date and bill the right payer' },
+      { label: 'Appeal needed?', value: 'Only if the payer’s dates are wrong' },
+    ],
+    intro: [
+      'CARC 27 tells you the payer has the patient on file, but their coverage ended before the date of service. Its counterpart, CARC 26 ("Expenses incurred prior to coverage."), means the coverage had not begun yet. Both are eligibility problems, not coding problems, so the claim itself is usually fine; it went to a payer that was not responsible on that date.',
+      'These denials are common at the start of a year, after job changes, and when patients move between Medicaid, marketplace and employer plans. The fastest fix is an eligibility check for the exact date of service, followed by a new claim to the payer that was active then.',
+    ],
+    causes: [
+      { title: 'Plan ended', text: 'The patient left a job, missed premiums or changed plans, and the old card was still on file.' },
+      { title: 'New plan not started', text: 'A new plan begins on the first of the next month, but the visit happened before that date (CO-26).' },
+      { title: 'Retroactive termination', text: 'The payer ended coverage retroactively, for example after unpaid marketplace premiums or a Medicaid redetermination.' },
+      { title: 'Eligibility not rechecked', text: 'Eligibility was checked at the first visit but not at later visits.' },
+      { title: 'Wrong subscriber or member ID', text: 'An old member ID or the wrong subscriber was billed.' },
+    ],
+    fix: [
+      { title: 'Check eligibility for the date', text: 'Run an eligibility check (270/271 or portal) for the exact date of service, not today.' },
+      { title: 'Find the active coverage', text: 'Ask the patient for any new or other coverage and confirm its effective dates.' },
+      { title: 'Update registration', text: 'Correct the payer, member ID and effective dates in the practice-management system.' },
+      { title: 'Bill the right payer', text: 'Send a new claim to the payer that was active on the date of service, within its filing limit.' },
+      { title: 'Bill the patient if uninsured', text: 'If no coverage applied, bill the patient under your financial policy.' },
+    ],
+    appeal: [
+      'Appeal or ask for reprocessing only when the payer’s eligibility dates are wrong. Attach the eligibility response, card or enrollment confirmation that shows active coverage on the date of service.',
+      'For retroactive terminations, check your contract and state rules on recoupment and on payment for services already authorized.',
+    ],
+    prevent: [
+      'Verify eligibility before every visit, and again at the start of each month and plan year.',
+      'Ask patients at check-in whether their insurance has changed.',
+      'Scan new insurance cards and record effective dates.',
+      'Watch for Medicaid redetermination and marketplace premium grace-period notices in eligibility responses.',
+    ],
+    faqs: [
+      { question: 'What does denial code CO-27 mean?', answer: 'CO-27 means expenses incurred after coverage terminated: the patient’s coverage with this payer had ended before the date of service.' },
+      { question: 'What does CO-26 mean?', answer: 'CO-26 means expenses incurred prior to coverage: the patient’s coverage had not started yet on the date of service.' },
+      { question: 'How do I fix a CO-27 denial?', answer: 'Check eligibility for the exact date of service, find the coverage that was active then, update the registration and bill that payer. If the patient had no coverage, bill the patient.' },
+      { question: 'Can I bill the patient for CO-27?', answer: 'Not for the denied amount as such. First look for other coverage on that date. If there was none, the visit is self-pay and can be billed to the patient under your financial policy.' },
+    ],
+    relatedCodes: ['co-109', 'co-22', 'co-29'],
+  },
 ]
 
 /** Codes summarised on the hub that do not have their own page yet. */
 export const otherCodes: { code: string; meaning: string }[] = [
-  { code: 'CO-27', meaning: 'Expenses incurred after coverage terminated.' },
   { code: 'CO-198', meaning: 'Precertification/notification/authorization/pre-treatment exceeded.' },
   { code: 'CO-216', meaning: 'Based on the findings of a review organization.' },
   { code: 'CO-253', meaning: 'Sequestration: reduction in federal payment.' },
@@ -1251,6 +1307,10 @@ export const DENIAL_HUB_PATH = '/denial-codes'
  * specialty pages where the code is common (internal-link map, plan 24 Nov).
  */
 export const denialCodeExtras: Record<string, { example: string; specialties: { label: string; path: string }[]; guide?: { label: string; path: string } }> = {
+  'co-27': {
+    example: 'A patient changed jobs in March and kept using the old card. An April visit is denied CO-27. An eligibility check for the date of service shows a new plan effective April 1, so the practice updates the registration and bills the new plan.',
+    specialties: [{ label: 'Internal medicine billing', path: '/specialties/internal-medicine' }, { label: 'Pediatric billing', path: '/specialties/pediatrics' }],
+  },
   'co-119': {
     example: 'A patient\u2019s plan covers 20 physical therapy visits a year. Visit 21 is denied PR-119. The practice confirms the count in the portal, bills the patient under the signed financial policy, and from now on checks remaining visits when a plan of care is set up.',
     specialties: [{ label: 'Mental health billing', path: '/specialties/mental-health-counseling' }, { label: 'Orthopedic billing', path: '/specialties/orthopedics' }],

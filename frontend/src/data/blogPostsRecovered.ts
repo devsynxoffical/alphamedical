@@ -183,7 +183,7 @@ export const recoveredPosts: BlogPost[] = [
         ],
       },
       {
-        heading: 'What is a recoupment?',
+        heading: 'Recoupment meaning in medical billing',
         paragraphs: [
           'A recoupment is the recovery of an overpayment. Instead of waiting for a refund, the payer withholds the amount from a future payment, sometimes on an unrelated patient\'s claim. On the remittance this usually appears as a provider-level adjustment (PLB segment), often with adjustment reason WO (overpayment recovery), which reduces the check total.',
         ],

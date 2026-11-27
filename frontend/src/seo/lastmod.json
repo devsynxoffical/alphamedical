@@ -192,8 +192,8 @@
     "date": "2026-11-25"
   },
   "/blog/difference-between-reversal-and-recoupment-in-medical-billing": {
-    "hash": "20e14a3d5af77f70",
-    "date": "2026-11-19"
+    "hash": "16e48dc974f359bd",
+    "date": "2026-11-27"
   },
   "/blog/rendering-vs-referring-provider": {
     "hash": "658837a8e2dd8717",
@@ -224,8 +224,8 @@
     "date": "2026-11-24"
   },
   "/denial-codes": {
-    "hash": "b62a727a24a3cf81",
-    "date": "2026-11-26"
+    "hash": "f30e229ddcd65cb4",
+    "date": "2026-11-27"
   },
   "/denial-codes/co-16": {
     "hash": "e49c7036c5b078f1",
@@ -284,8 +284,8 @@
     "date": "2026-11-23"
   },
   "/sitemap": {
-    "hash": "3bdfe656c0cbe72f",
-    "date": "2026-11-26"
+    "hash": "0c190fd95488b0ea",
+    "date": "2026-11-27"
   },
   "/privacy-policy": {
     "hash": "029d3b0993886d23",
@@ -341,6 +341,10 @@
   },
   "/denial-codes/co-119": {
     "hash": "c805d705f57f58fb",
+    "date": "2026-11-26"
+  },
+  "/denial-codes/co-27": {
+    "hash": "b725d6d2d710e830",
     "date": "2026-11-26"
   }
 }
