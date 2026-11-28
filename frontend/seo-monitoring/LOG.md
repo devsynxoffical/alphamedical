@@ -747,3 +747,43 @@ The ADHD and anxiety pages already answer the ADD, history-of-ADHD and F41.9 que
 - /denial-codes and /denial-management-services: still "Discovered, not indexed".
 - /denial-codes/co-23 and the new Modifier 25 article: unknown to Google.
 - IndexNow submitted 4 URLs (Modifier 25, co-97, co-4, /blog).
+
+**Update:** deploy #66 (7d622fe) passed every check: 404 for a missing page, form healthcheck OK, crawler check OK. The #65 bot-check failure was temporary.
+
+## Run #21: 2026-11-28 12:41 UTC (scheduled)
+
+**Deploy:** #66 succeeded and all verify checks passed.
+
+**Search Console, daily**
+
+| Day | Impr | Clicks | Pos |
+|---|---|---|---|
+| 22 Nov | 375 | 1 | 36.4 |
+| 23 Nov | 412 | 1 | 26.4 |
+| 24 Nov | 490 | 0 | 29.1 |
+| 25 Nov | 419 | 1 | 25.6 |
+| 26 Nov | 423 | 0 | 37.7 |
+| 27 Nov | 443 | 1 | 39.1 (partial) |
+
+**Queries, 28 days, 8+ impressions**
+- "radiology billing services": 49 impressions, #41.5
+- "difference between reversal and recoupment...": 38, #32.2
+- "recoupment meaning in medical billing": 38, #53
+- "pain management billing company": 32, #78.9
+- "adhd icd 10": 25, #27.1
+- "prior authorization in medical billing": 19, #92.2
+- "rendering provider vs referring provider": 12, **#5.9**
+- "void claim in medical billing": 8, **#7.4**
+
+**Checks:** no query has 2 or more ranking URLs (no cannibalization). The recoupment, rendering and ADHD pages already answer their queries in visible text and FAQs. The radiology page title and H1 already match "radiology billing services", so the gap there is authority, not on-page.
+
+**Changes**
+1. Internal links to striking-distance pages:
+   - CO-18 (duplicate claim) Example section now links to the void claim article (#7.4).
+   - CO-16 now links to rendering vs referring (#5.9).
+   - Before this, the void claim article had 5 internal linking pages and rendering vs referring had 3.
+2. CO-4 guide link switched to the new Modifier 59 article. CO-97 still links to Modifier 25.
+3. Modifier 25 article now links to Modifier 59.
+
+**Published (backlog)**
+- /blog/modifier-59-vs-x-modifiers, sourced from CPT, NCCI and CMS MM8863. Covers the 59 definition, XE/XS/XP/XU, which modifier to choose, NCCI column 2 and modifier indicators 0/1/9, when not to use it, examples, the CO-97/CO-4/CO-236 denials and fixes, and 6 FAQs. The site now has 90 pages.

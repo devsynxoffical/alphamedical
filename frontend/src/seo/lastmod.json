@@ -156,7 +156,7 @@
     "date": "2026-11-23"
   },
   "/blog": {
-    "hash": "7f4c71c8b2d8fd5e",
+    "hash": "ac49726ddc6f6e9c",
     "date": "2026-11-28"
   },
   "/blog/top-10-reasons-for-medical-claim-denials-and-how-to-fix-them": {
@@ -228,8 +228,8 @@
     "date": "2026-11-27"
   },
   "/denial-codes/co-16": {
-    "hash": "e49c7036c5b078f1",
-    "date": "2026-11-24"
+    "hash": "7e6f86b91c2ee9b6",
+    "date": "2026-11-28"
   },
   "/denial-codes/co-97": {
     "hash": "31eee08c3a3bf10a",
@@ -244,7 +244,7 @@
     "date": "2026-11-25"
   },
   "/denial-codes/co-4": {
-    "hash": "4e32fd2896f8dd19",
+    "hash": "feef13d47f1e5c2a",
     "date": "2026-11-28"
   },
   "/denial-codes/co-11": {
@@ -252,8 +252,8 @@
     "date": "2026-11-24"
   },
   "/denial-codes/co-18": {
-    "hash": "c126f3263317a257",
-    "date": "2026-11-24"
+    "hash": "b721178854f59a1f",
+    "date": "2026-11-28"
   },
   "/denial-codes/co-22": {
     "hash": "99d509da4840b09a",
@@ -284,7 +284,7 @@
     "date": "2026-11-23"
   },
   "/sitemap": {
-    "hash": "c845c972073202af",
+    "hash": "9fcf6e5b4ed227e1",
     "date": "2026-11-28"
   },
   "/privacy-policy": {
@@ -352,7 +352,11 @@
     "date": "2026-11-27"
   },
   "/blog/modifier-25-in-medical-billing": {
-    "hash": "9c69f66ecee2519b",
+    "hash": "babfedd575c40be9",
+    "date": "2026-11-28"
+  },
+  "/blog/modifier-59-vs-x-modifiers": {
+    "hash": "5f819ed692dd995d",
     "date": "2026-11-28"
   }
 }

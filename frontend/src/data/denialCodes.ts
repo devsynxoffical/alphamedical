@@ -1378,6 +1378,7 @@ export const denialCodeExtras: Record<string, { example: string; specialties: { 
   'co-16': {
     example: 'A secondary claim is sent to the second insurer without the primary payer\'s payment information. The remittance shows CO-16 with remark MA04. The biller adds the primary remittance data to the claim and resubmits, and the secondary pays.',
     specialties: [{ label: 'Internal medicine billing', path: '/specialties/internal-medicine' }, { label: 'Radiology billing', path: '/specialties/radiology' }],
+    guide: { label: 'rendering vs. referring provider NPIs', path: '/blog/rendering-vs-referring-provider' },
   },
   'co-97': {
     example: 'A patient gets a knee injection and an office visit on the same day, and the visit line is denied CO-97. The note documents a separate problem that was evaluated and managed. The biller adds modifier 25 to the visit and sends a corrected claim.',
@@ -1395,7 +1396,7 @@ export const denialCodeExtras: Record<string, { example: string; specialties: { 
   'co-4': {
     example: 'A radiologist reads a CT scan performed on hospital equipment, but the claim goes out without modifier 26. The line is denied CO-4. The biller adds modifier 26 and sends a corrected claim for the professional component only.',
     specialties: [{ label: 'Radiology billing', path: '/specialties/radiology' }, { label: 'Orthopedic billing', path: '/specialties/orthopedics' }],
-    guide: { label: 'modifier 25 in medical billing', path: '/blog/modifier-25-in-medical-billing' },
+    guide: { label: 'modifier 59 vs. XE, XS, XP and XU', path: '/blog/modifier-59-vs-x-modifiers' },
   },
   'co-11': {
     example: 'A urine drug screen is billed with a diagnosis for low back pain only, and the payer denies it CO-11 because its policy requires a monitoring diagnosis. The record documents long-term opioid therapy, so the biller adds the supported diagnosis and resubmits.',
@@ -1404,6 +1405,7 @@ export const denialCodeExtras: Record<string, { example: string; specialties: { 
   'co-18': {
     example: 'A claim shows "pending" in the portal, so a staff member sends it again. The second claim comes back OA-18. The biller confirms the first claim is processing, closes the duplicate and adds a rule to check status before resubmitting.',
     specialties: [{ label: 'Internal medicine billing', path: '/specialties/internal-medicine' }, { label: 'Mental health billing', path: '/specialties/mental-health-counseling' }],
+    guide: { label: 'voiding and replacing a claim', path: '/blog/what-is-void-claim-in-medical-billing' },
   },
   'co-22': {
     example: 'A 67-year-old patient who still works is billed to Medicare first, and Medicare denies with CO-22 because the employer plan is primary. The front desk completes the Medicare Secondary Payer questionnaire, the claim goes to the employer plan, and Medicare is billed second.',
