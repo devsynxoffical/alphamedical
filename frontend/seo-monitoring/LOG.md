@@ -691,3 +691,47 @@ Total clicks this month: 7.
 
 **Published (backlog)**
 - /denial-codes/co-23 (OA-23: impact of prior payer adjudication on secondary claims). The hub now lists 22 guides.
+
+## Run #20: 2026-11-28 00:41 UTC (scheduled)
+
+**Deploy:** #64 (74081f6) succeeded. Verify step and citation check passed.
+
+**Search Console, daily (all data; the last 3 days may be incomplete)**
+
+| Day | Impr | Clicks | Pos |
+|---|---|---|---|
+| 22 Nov | 375 | 1 | 36.4 |
+| 23 Nov | 412 | 1 | 26.4 |
+| 24 Nov | 490 | 0 | 29.1 |
+| 25 Nov | 419 | 1 | 25.6 |
+| 26 Nov | 423 | 0 | 37.7 |
+| 27 Nov | 212 | 0 | 34 (partial) |
+
+**Pages, last 7 days (19–25 Nov)**
+- ADHD: 594 impressions, #27.3
+- anxiety: 313, #44.4
+- void claim: 220, **#5.8**, 1 click
+- rendering vs referring: 209, #11.9
+- reversal vs recoupment: 137, #31.2, 1 click
+- common denial codes: 87, #71
+- paid-claim reversal: 71, **#9.9**
+- homepage: 17, #6.1, 2 clicks
+
+**Striking distance, 28 days**
+- "rendering provider vs referring provider" #5.9
+- "void claim in medical billing" #7.4
+- "best virtual medical receptionist in florida" #13.7
+- "history of adhd icd 10" #14.3
+- "icd code for adhd" #16.6
+- "void claim" #17
+- "diagnosis f41.9" #18.2
+- "icd-10 code for add" #19.2
+
+The ADHD and anxiety pages already answer the ADD, history-of-ADHD and F41.9 questions in visible text and FAQs, so no change there.
+
+**Changes**
+1. CO-97 title shortened to 50 characters (it rendered at 62 and broke the 60-character rule): "CO-97 Denial Code: Meaning, Bundling Rules & Fixes".
+2. CO-97 and CO-4 guides now link to the new Modifier 25 article from their Example section.
+
+**Published (backlog)**
+- /blog/modifier-25-in-medical-billing: CPT descriptor, Medicare global-surgery bundling, when to use and when not to use it (57 and 59 vs 25), the different-diagnosis question, documentation, and the CO-97/CO-4/CO-16/CO-50 denials with fixes. Includes an example and 6 FAQs. The site now has 89 pages.

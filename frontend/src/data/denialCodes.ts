@@ -140,7 +140,7 @@ export const denialCodes: DenialCode[] = [
     official: 'The benefit for this service is included in the payment/allowance for another service/procedure that has already been adjudicated.',
     definition:
       'Denial code CO-97 means the payer bundled the service into another procedure it already paid, usually because of an NCCI or payer bundling edit; it is fixed with a supported modifier only when the services were truly separate, otherwise the adjustment stands.',
-    seoTitle: 'CO-97 Denial Code: Meaning, Bundling Rules & How to Fix It',
+    seoTitle: 'CO-97 Denial Code: Meaning, Bundling Rules & Fixes',
     seoDescription:
       'CO-97 means the service was bundled into another paid procedure. Why it happens (NCCI, global periods, E/M on procedure days) and when 25 or 59/X apply.',
     glance: [
@@ -1382,6 +1382,7 @@ export const denialCodeExtras: Record<string, { example: string; specialties: { 
   'co-97': {
     example: 'A patient gets a knee injection and an office visit on the same day, and the visit line is denied CO-97. The note documents a separate problem that was evaluated and managed. The biller adds modifier 25 to the visit and sends a corrected claim.',
     specialties: [{ label: 'Orthopedic billing', path: '/specialties/orthopedics' }, { label: 'Pain management billing', path: '/specialties/pain-management' }],
+    guide: { label: 'modifier 25 in medical billing', path: '/blog/modifier-25-in-medical-billing' },
   },
   'co-45': {
     example: 'A practice bills $250 for an office visit and the payer allows $142, adjusting $108 with CO-45. The biller posts $108 as a contractual write-off and checks that $142 matches the contracted rate for that code.',
@@ -1394,6 +1395,7 @@ export const denialCodeExtras: Record<string, { example: string; specialties: { 
   'co-4': {
     example: 'A radiologist reads a CT scan performed on hospital equipment, but the claim goes out without modifier 26. The line is denied CO-4. The biller adds modifier 26 and sends a corrected claim for the professional component only.',
     specialties: [{ label: 'Radiology billing', path: '/specialties/radiology' }, { label: 'Orthopedic billing', path: '/specialties/orthopedics' }],
+    guide: { label: 'modifier 25 in medical billing', path: '/blog/modifier-25-in-medical-billing' },
   },
   'co-11': {
     example: 'A urine drug screen is billed with a diagnosis for low back pain only, and the payer denies it CO-11 because its policy requires a monitoring diagnosis. The record documents long-term opioid therapy, so the biller adds the supported diagnosis and resubmits.',
