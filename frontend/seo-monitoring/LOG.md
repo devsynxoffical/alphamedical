@@ -735,3 +735,15 @@ The ADHD and anxiety pages already answer the ADD, history-of-ADHD and F41.9 que
 
 **Published (backlog)**
 - /blog/modifier-25-in-medical-billing: CPT descriptor, Medicare global-surgery bundling, when to use and when not to use it (57 and 59 vs 25), the different-diagnosis question, documentation, and the CO-97/CO-4/CO-16/CO-50 denials with fixes. Includes an example and 6 FAQs. The site now has 89 pages.
+
+**Deploy #65 (00b6481): upload succeeded, but "Verify live site" FAILED on both attempts.**
+- The host's bot-check interstitial (`wsidchk` JS challenge) answered the runner's plain curl requests.
+- `/this-page-does-not-exist` returned 200 (the challenge page) instead of 404.
+- The form healthcheck got the challenge instead of `{"ok":true}` ("LEAD FORM ENDPOINT DOWN").
+- The crawler check passed: Googlebot and Bingbot get the real pages.
+- Owner action: in cPanel, look at the bot protection settings (Imunify360 / "Web Shield") and allow `/api/form-submission.php`, or turn off the JS challenge. Then submit a real test lead from a browser.
+
+**Index (inspect_urls):**
+- /denial-codes and /denial-management-services: still "Discovered, not indexed".
+- /denial-codes/co-23 and the new Modifier 25 article: unknown to Google.
+- IndexNow submitted 4 URLs (Modifier 25, co-97, co-4, /blog).
