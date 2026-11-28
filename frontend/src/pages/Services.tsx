@@ -60,7 +60,7 @@ const ServiceRoom = memo(({
           className="service-image"
           loading={priority ? "eager" : "lazy"}
           decoding="async"
-          {...(priority ? { fetchpriority: "high" } : {})}
+          {...(priority ? { fetchPriority: "high" as const } : {})}
         />
       </div>
       <div className="service-content">
@@ -215,8 +215,8 @@ const Services: React.FC = () => {
   return (
     <>
       <PageTitle
-        title="Digital Medical Services | Medical Billing & Coding Solutions"
-        description="Maximize revenue with Alpha Medi Assist digital medical services, including billing, coding, virtual reception, and credentialing."
+        title="All Services: Billing, Coding & Staffing | Alpha Medi Assist"
+        description="All Alpha Medi Assist services in one place: medical billing, coding, payment posting, credentialing, virtual assistants, receptionists and healthcare SEO."
       />
 
       <div className="services-page">
@@ -224,7 +224,7 @@ const Services: React.FC = () => {
         <section className="services-hero">
           <div className="container">
             <div className="services-hero-content text-center animate-in">
-              <h1>Digital Medical Services for Healthcare Practices</h1>
+              <h1>Revenue &amp; Practice Support Services for Healthcare Practices</h1>
               <p className="lead">Maximize revenue and streamline operations with expert digital medical services. Focus on patient care while our specialists handle billing, coding, and practice management efficiently.</p>
               <div className="services-hero-actions">
                 <Link to="/free-consultation" className="btn btn-primary btn-large">
@@ -368,8 +368,8 @@ const Services: React.FC = () => {
             <div className="faq-list">
               {faqs.map((faq, index) => (
                 <div key={index} className="faq-item card">
-                  <h4>{faq.q}</h4>
-                  <p>{faq.a}</p>
+                  <h4 data-faq-q>{faq.q}</h4>
+                  <p data-faq-a>{faq.a}</p>
                 </div>
               ))}
             </div>

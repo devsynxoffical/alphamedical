@@ -2,6 +2,10 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import LeadSection from '../components/LeadSection'
+import SpecialtyInsights from '../components/SpecialtyInsights'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drJohn from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -21,7 +25,7 @@ const Dermatology: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Dermatology Medical Billing Services | AlphaMedi Assist"
+                title="Dermatology Medical Billing Services | Alpha Medi Assist"
                 description="Expert dermatology medical billing services by AlphaMedi Assist. Accurate coding, faster claims, and optimized revenue cycle management."
             />
 
@@ -30,7 +34,7 @@ const Dermatology: React.FC = () => {
                 <section className="specialty-hero-enhanced">
                     <div className="container">
                         <div className="specialty-hero-content">
-                            <Link to="/specialties" className="back-link-enhanced">
+                            <Link to="/medical-billing-specialities" className="back-link-enhanced">
                                 <ArrowLeft size={16} />
                                 Back to Specialties
                             </Link>
@@ -44,7 +48,7 @@ const Dermatology: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drJohn} alt="Dr. John" />
+                                            <img loading="lazy" decoding="async" src={drJohn} alt="Dr. John" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -72,7 +76,7 @@ const Dermatology: React.FC = () => {
                                     Alpha Medi Assist is a trusted provider of specialty medical billing solutions for dermatology practices across the United States. We deliver end-to-end billing, coding, and revenue cycle support for private dermatology clinics, cosmetic dermatology centers, medical spas, and multi-provider practices.
                                 </p>
                                 <div className="about-cta-wrapper">
-                                    <Link to="/about" className="btn btn-primary">Learn more</Link>
+                                    <Link to="/about-us" className="btn btn-primary">Learn more</Link>
                                 </div>
                             </div>
 
@@ -387,33 +391,35 @@ const Dermatology: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are dermatology medical billing services?",
+                                    q: "What are dermatology medical billing services?",
                                     a: "They include coding, claims submission, patient billing, and revenue cycle management for dermatology practices."
                                 },
                                 {
-                                    q: "2. Do you support cosmetic and aesthetic billing?",
+                                    q: "Do you support cosmetic and aesthetic billing?",
                                     a: "Yes, we manage billings dermatology & aesthetics and medical dermatology services."
                                 },
                                 {
-                                    q: "3. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Yes, all workflows meet strict HIPAA guidelines."
                                 },
                                 {
-                                    q: "4. Can you support multi-provider dermatology clinics?",
+                                    q: "Can you support multi-provider dermatology clinics?",
                                     a: "Absolutely. Our services scale to any practice size."
                                 },
                                 {
-                                    q: "5. How quickly can services start?",
+                                    q: "How quickly can services start?",
                                     a: "Most practices are onboarded within a few days."
                                 },
                                 {
-                                    q: "6. Do you provide detailed reporting?",
+                                    q: "Do you provide detailed reporting?",
                                     a: "Yes, we provide transparent financial and performance reports."
                                 }
                             ].map((item, index) => (
                                 <div key={index} className="faq-item" style={{ marginBottom: '1rem', border: '1px solid #e0e0e0', borderRadius: '8px', overflow: 'hidden', background: 'white' }}>
                                     <button
                                         onClick={() => toggleFaq(index)}
+                                        aria-expanded={openFaq === index}
+                                        data-faq-q
                                         style={{
                                             width: '100%',
                                             display: 'flex',
@@ -432,8 +438,8 @@ const Dermatology: React.FC = () => {
                                         {item.q}
                                         {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                     </button>
-                                    {openFaq === index && (
-                                        <div style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
+                                    {(
+                                        <div data-faq-a hidden={openFaq !== index} style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
                                             {item.a}
                                         </div>
                                     )}
@@ -442,6 +448,12 @@ const Dermatology: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <SpecialtyInsights id="dermatology" name="Dermatology" />
+
+                <LeadSection title="Get a free Dermatology billing assessment" />
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

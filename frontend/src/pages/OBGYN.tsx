@@ -2,6 +2,10 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import LeadSection from '../components/LeadSection'
+import SpecialtyInsights from '../components/SpecialtyInsights'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drEmily from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -21,8 +25,8 @@ const OBGYN: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="OB-GYN Medical Billing Services | AlphaMedi Assist"
-                description="Streamline OB-GYN medical billing services with AlphaMedi Assist. Expert coding, claims, and revenue cycle management for obstetrics and gynecology practices."
+                title="OB-GYN Medical Billing Services | Alpha Medi Assist"
+                description="OB-GYN medical billing services from Alpha Medi Assist: coding, claims and revenue cycle management for obstetrics and gynecology practices."
             />
 
             <div className="specialty-detail-page internal-medicine-page">
@@ -30,7 +34,7 @@ const OBGYN: React.FC = () => {
                 <section className="specialty-hero-enhanced">
                     <div className="container">
                         <div className="specialty-hero-content">
-                            <Link to="/specialties" className="back-link-enhanced">
+                            <Link to="/medical-billing-specialities" className="back-link-enhanced">
                                 <ArrowLeft size={16} />
                                 Back to Specialties
                             </Link>
@@ -44,7 +48,7 @@ const OBGYN: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drEmily} alt="Dr. Emily" />
+                                            <img loading="lazy" decoding="async" src={drEmily} alt="Dr. Emily" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -72,7 +76,7 @@ const OBGYN: React.FC = () => {
                                     AlphaMedi Assist is a leading provider of OB/GYN billing services across the United States. Our team of experienced billing specialists delivers comprehensive gynecology medical billing services designed to optimize financial performance for private clinics, multi-provider facilities, and hospital-affiliated OB-GYN practices.
                                 </p>
                                 <div className="about-cta-wrapper">
-                                    <Link to="/about" className="btn btn-primary">Learn more</Link>
+                                    <Link to="/about-us" className="btn btn-primary">Learn more</Link>
                                 </div>
                             </div>
 
@@ -412,6 +416,8 @@ const OBGYN: React.FC = () => {
                                 <div key={index} className="faq-item" style={{ marginBottom: '1rem', border: '1px solid #e0e0e0', borderRadius: '8px', overflow: 'hidden', background: 'white' }}>
                                     <button
                                         onClick={() => toggleFaq(index)}
+                                        aria-expanded={openFaq === index}
+                                        data-faq-q
                                         style={{
                                             width: '100%',
                                             display: 'flex',
@@ -430,8 +436,8 @@ const OBGYN: React.FC = () => {
                                         {index + 1}. {item.q}
                                         {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                     </button>
-                                    {openFaq === index && (
-                                        <div style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
+                                    {(
+                                        <div data-faq-a hidden={openFaq !== index} style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
                                             {item.a}
                                         </div>
                                     )}
@@ -440,6 +446,12 @@ const OBGYN: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <SpecialtyInsights id="gynecology-obstetrics" name="OB/GYN" />
+
+                <LeadSection title="Get a free OB-GYN billing assessment" />
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

@@ -2,6 +2,9 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import LeadSection from '../components/LeadSection'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drJoe from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -21,7 +24,7 @@ const ReproductiveEndocrinology: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Endocrinology Medical Billing Services | AlphaMedi Assist"
+                title="Endocrinology Medical Billing Services | Alpha Medi Assist"
                 description="Expert endocrinology medical billing services for fertility clinics. Accurate coding, claims management, and RCM by AlphaMedi Assist."
             />
 
@@ -30,7 +33,7 @@ const ReproductiveEndocrinology: React.FC = () => {
                 <section className="specialty-hero-enhanced">
                     <div className="container">
                         <div className="specialty-hero-content">
-                            <Link to="/specialties" className="back-link-enhanced">
+                            <Link to="/medical-billing-specialities" className="back-link-enhanced">
                                 <ArrowLeft size={16} />
                                 Back to Specialties
                             </Link>
@@ -44,7 +47,7 @@ const ReproductiveEndocrinology: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drJoe} alt="Dr. Amanda Lewis" />
+                                            <img loading="lazy" decoding="async" src={drJoe} alt="Dr. Amanda Lewis" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -72,7 +75,7 @@ const ReproductiveEndocrinology: React.FC = () => {
                                     Alpha Medi Assist is a trusted provider of endocrinology medical billing services across the United States, supporting reproductive endocrinologists, fertility specialists, and IVF clinics. Our experienced billing professionals deliver end-to-end billing, coding, and revenue cycle solutions tailored specifically to the complexities of fertility treatments and hormonal care.
                                 </p>
                                 <div className="about-cta-wrapper">
-                                    <Link to="/about" className="btn btn-primary">Learn more</Link>
+                                    <Link to="/about-us" className="btn btn-primary">Learn more</Link>
                                 </div>
                             </div>
 
@@ -396,33 +399,35 @@ const ReproductiveEndocrinology: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are endocrinology medical billing services?",
+                                    q: "What are endocrinology medical billing services?",
                                     a: "They include coding, claims submission, insurance verification, patient billing, and revenue cycle management for endocrinology and fertility practices."
                                 },
                                 {
-                                    q: "2. Do you support fertility clinic billing?",
+                                    q: "Do you support fertility clinic billing?",
                                     a: "Yes, we specialize in fertility clinic billing, including IVF, IUI, diagnostics, and hormone therapy services."
                                 },
                                 {
-                                    q: "3. Are your billing services HIPAA-compliant?",
+                                    q: "Are your billing services HIPAA-compliant?",
                                     a: "Absolutely. All endocrinology billing services follow strict HIPAA and data security standards."
                                 },
                                 {
-                                    q: "4. Can you handle multi-location fertility practices?",
+                                    q: "Can you handle multi-location fertility practices?",
                                     a: "Yes, our services are scalable for single clinics and multi-provider, multi-location practices."
                                 },
                                 {
-                                    q: "5. How quickly can billing services begin?",
+                                    q: "How quickly can billing services begin?",
                                     a: "Most practices can be onboard within a few days after assessment and system integration."
                                 },
                                 {
-                                    q: "6. Do you provide financial reporting?",
+                                    q: "Do you provide financial reporting?",
                                     a: "Yes, we provide detailed reports covering claims, reimbursements, denials, and outstanding balances."
                                 }
                             ].map((item, index) => (
                                 <div key={index} className="faq-item" style={{ marginBottom: '1rem', border: '1px solid #e0e0e0', borderRadius: '8px', overflow: 'hidden', background: 'white' }}>
                                     <button
                                         onClick={() => toggleFaq(index)}
+                                        aria-expanded={openFaq === index}
+                                        data-faq-q
                                         style={{
                                             width: '100%',
                                             display: 'flex',
@@ -441,8 +446,8 @@ const ReproductiveEndocrinology: React.FC = () => {
                                         {item.q}
                                         {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                     </button>
-                                    {openFaq === index && (
-                                        <div style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
+                                    {(
+                                        <div data-faq-a hidden={openFaq !== index} style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
                                             {item.a}
                                         </div>
                                     )}
@@ -451,6 +456,10 @@ const ReproductiveEndocrinology: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <LeadSection title="Get a free Reproductive Endocrinology billing assessment" />
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

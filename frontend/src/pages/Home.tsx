@@ -30,7 +30,7 @@ import heartbeatVideo from '../Images/heartbeat.mp4'
 import brokenBoneVideo from '../Images/broken-bone.mp4'
 import healthcareVideo from '../Images/healthcare.mp4'
 import experimentVideo from '../Images/experiment.mp4'
-import generalSurgeryGif from '../Images/tools_17405975.gif'
+import generalSurgeryGif from '../Images/tools_17405975.webp'
 
 const Home: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -48,6 +48,19 @@ const Home: React.FC = () => {
     setCurrentSlide(index)
   }
 
+  // Load the 1 MB hero video only after the page has finished loading, so it
+  // does not compete with critical resources (the poster frame paints first).
+  const [heroSrc, setHeroSrc] = useState<string | undefined>(undefined)
+  useEffect(() => {
+    const start = () => setHeroSrc(heroVideo)
+    if (document.readyState === 'complete') {
+      const t = window.setTimeout(start, 200)
+      return () => window.clearTimeout(t)
+    }
+    window.addEventListener('load', start, { once: true })
+    return () => window.removeEventListener('load', start)
+  }, [])
+
   // Auto-slide functionality
   useEffect(() => {
     const interval = setInterval(() => {
@@ -60,8 +73,8 @@ const Home: React.FC = () => {
   return (
     <>
       <PageTitle
-        title="Medical Billing Services & Healthcare Virtual Assistants"
-        description="Boost revenue with AlphaMedi Assist’s medical billing, coding, and virtual healthcare solutions. Streamline operations and maximize efficiency."
+        title="Medical Billing Company for US Practices | Alpha Medi Assist"
+        description="Outsourced medical billing, coding, credentialing and RCM for US practices in 90+ specialties. HIPAA-compliant, 98% net collection rate. Free consultation."
       />
       <div className="home">
         {/* Split-Screen Hero Section */}
@@ -72,10 +85,12 @@ const Home: React.FC = () => {
               <div className="hero-content-left">
                 <h1 className="hero-title-split">
                   Medical Billing<br />
-                  <span className="highlight-split">Services</span> for Healthcare Practices
+                  <span className="highlight-split">Company</span> for Healthcare Practices
                 </h1>
                 <p className="hero-subtext-split">
-                  Maximize revenue and streamline operations with expert medical billing services and medical coding services.
+                  Maximize revenue and streamline operations with expert{' '}
+                  <Link to="/medical-billing-services" className="hero-inline-link">medical billing services</Link> and{' '}
+                  <Link to="/medical-coding-services" className="hero-inline-link">medical coding services</Link>.
                 </p>
                 <p className="hero-description-split">
                   Focus on patient care while our specialists handle claims and payments efficiently.
@@ -90,7 +105,9 @@ const Home: React.FC = () => {
             <div className="hero-right-side">
               <div className="doctor-image-container">
                 <video
-                  src={heroVideo}
+                  src={heroSrc}
+                  poster="/hero-poster.jpg"
+                  aria-label="Medical billing specialist working at a laptop"
                   autoPlay
                   muted
                   loop
@@ -145,7 +162,7 @@ const Home: React.FC = () => {
               {/* 1. Medical Billing Services */}
               <div className="service-card">
                 <div className="service-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={medicalExpanseIcon}
                     alt="Medical Billing"
                     style={{ width: '45px', height: '45px', objectFit: 'contain' }}
@@ -171,7 +188,7 @@ const Home: React.FC = () => {
               {/* 3. Payment Posting */}
               <div className="service-card">
                 <div className="service-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={cardPaymentIcon}
                     alt="Payment Posting"
                     style={{ width: '45px', height: '45px', objectFit: 'contain' }}
@@ -197,7 +214,7 @@ const Home: React.FC = () => {
               {/* 6. Healthcare SEO */}
               <div className="service-card">
                 <div className="service-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={growthIcon}
                     alt="Healthcare SEO"
                     style={{ width: '45px', height: '45px', objectFit: 'contain' }}
@@ -223,7 +240,7 @@ const Home: React.FC = () => {
               {/* 2. Medical Coding Services */}
               <div className="service-card">
                 <div className="service-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={brainIcon}
                     alt="Medical Coding"
                     style={{ width: '45px', height: '45px', objectFit: 'contain' }}
@@ -249,7 +266,7 @@ const Home: React.FC = () => {
               {/* 4. Credentialing Services */}
               <div className="service-card">
                 <div className="service-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={credentialIcon}
                     alt="Credentialing"
                     style={{ width: '45px', height: '45px', objectFit: 'contain' }}
@@ -275,7 +292,7 @@ const Home: React.FC = () => {
               {/* 5. Virtual Medical Receptionist Services */}
               <div className="service-card">
                 <div className="service-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={efficiencyIcon}
                     alt="Virtual Medical Receptionist"
                     style={{ width: '45px', height: '45px', objectFit: 'contain' }}
@@ -435,43 +452,35 @@ const Home: React.FC = () => {
             <div className="specialties-grid">
               <div className="specialty-card">
                 <div className="specialty-icon">
-                  <video autoPlay muted loop playsInline style={{ width: '60px', height: '60px', objectFit: 'contain' }}>
-                    <source src={heartbeatVideo} type="video/mp4" />
-                  </video>
+                  <video autoPlay muted loop playsInline preload="none" src={heroSrc ? heartbeatVideo : undefined} aria-hidden="true" style={{ width: '60px', height: '60px', objectFit: 'contain' }} />
                 </div>
                 <h3>Cardiology</h3>
                 <p>Accurate billing for complex cardiac procedures, including EKGs, echocardiograms, interventional cardiology, and electrophysiology services. Our medical billing specialists ensure timely reimbursements while reducing claim denials for cardiac care providers.</p>
               </div>
               <div className="specialty-card">
                 <div className="specialty-icon">
-                  <video autoPlay muted loop playsInline style={{ width: '60px', height: '60px', objectFit: 'contain' }}>
-                    <source src={brokenBoneVideo} type="video/mp4" />
-                  </video>
+                  <video autoPlay muted loop playsInline preload="none" src={heroSrc ? brokenBoneVideo : undefined} aria-hidden="true" style={{ width: '60px', height: '60px', objectFit: 'contain' }} />
                 </div>
                 <h3>Orthopedics</h3>
                 <p>Efficient coding for musculoskeletal treatments such as joint replacements, arthroscopy, fracture care, and spinal surgeries. Our medical coding services optimize revenue by applying precise CPT, ICD-10, and HCPCS codes.</p>
               </div>
               <div className="specialty-card">
                 <div className="specialty-icon">
-                  <video autoPlay muted loop playsInline style={{ width: '60px', height: '60px', objectFit: 'contain' }}>
-                    <source src={healthcareVideo} type="video/mp4" />
-                  </video>
+                  <video autoPlay muted loop playsInline preload="none" src={heroSrc ? healthcareVideo : undefined} aria-hidden="true" style={{ width: '60px', height: '60px', objectFit: 'contain' }} />
                 </div>
                 <h3>Urology</h3>
                 <p>Streamlined claims for urological care including kidney, bladder, and prostate procedures. Our specialty medical billing handles complex procedures like lithotripsy, cystoscopy, and robotic surgeries with high accuracy.</p>
               </div>
               <div className="specialty-card">
                 <div className="specialty-icon">
-                  <video autoPlay muted loop playsInline style={{ width: '60px', height: '60px', objectFit: 'contain' }}>
-                    <source src={experimentVideo} type="video/mp4" />
-                  </video>
+                  <video autoPlay muted loop playsInline preload="none" src={heroSrc ? experimentVideo : undefined} aria-hidden="true" style={{ width: '60px', height: '60px', objectFit: 'contain' }} />
                 </div>
                 <h3>Laboratory Billing</h3>
                 <p>Customized solutions for lab testing requirements including blood tests, pathology, microbiology, and molecular diagnostics. Our team ensures proper coding, accurate claims, and timely reimbursement for laboratories of all sizes.</p>
               </div>
               <div className="specialty-card">
                 <div className="specialty-icon">
-                  <img src={generalSurgeryGif} alt="General Surgery" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '50%' }} />
+                  <img loading="lazy" decoding="async" src={generalSurgeryGif} alt="General Surgery" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '50%' }} />
                 </div>
                 <h3>General Surgery</h3>
                 <p>Precise coding for surgical procedures, including minimally invasive surgeries, laparoscopic procedures, and complex inpatient surgeries. We reduce claim errors and improve reimbursement rates for surgical practices.</p>
@@ -493,7 +502,7 @@ const Home: React.FC = () => {
             <div className="benefits-grid">
               <div className="benefit-card">
                 <div className="benefit-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={growthIcon}
                     alt="Maximize Revenue"
                     style={{ width: '60px', height: '60px', objectFit: 'contain' }}
@@ -504,7 +513,7 @@ const Home: React.FC = () => {
               </div>
               <div className="benefit-card">
                 <div className="benefit-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={performanceIcon}
                     alt="Faster Reimbursements"
                     style={{ width: '60px', height: '60px', objectFit: 'contain' }}
@@ -515,7 +524,7 @@ const Home: React.FC = () => {
               </div>
               <div className="benefit-card">
                 <div className="benefit-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={leftRightArrowsIcon}
                     alt="Minimize Denials"
                     style={{ width: '60px', height: '60px', objectFit: 'contain' }}
@@ -526,7 +535,7 @@ const Home: React.FC = () => {
               </div>
               <div className="benefit-card">
                 <div className="benefit-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={efficiencyIcon}
                     alt="Operational Efficiency"
                     style={{ width: '60px', height: '60px', objectFit: 'contain' }}
@@ -537,7 +546,7 @@ const Home: React.FC = () => {
               </div>
               <div className="benefit-card">
                 <div className="benefit-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={governanceIcon}
                     alt="Compliance & Accuracy"
                     style={{ width: '60px', height: '60px', objectFit: 'contain' }}
@@ -548,7 +557,7 @@ const Home: React.FC = () => {
               </div>
               <div className="benefit-card">
                 <div className="benefit-icon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={scalableIcon}
                     alt="Scalability"
                     style={{ width: '60px', height: '60px', objectFit: 'contain' }}
@@ -677,6 +686,28 @@ const Home: React.FC = () => {
         </section>
 
         {/* FAQs Section */}
+        <section className="related-links" aria-labelledby="home-explore">
+          <div className="container">
+            <h2 id="home-explore">Explore our billing services</h2>
+            <ul>
+              <li><Link to="/medical-billing-services">Medical billing services</Link></li>
+              <li><Link to="/denial-management-services">Denial management services</Link></li>
+              <li><Link to="/medical-credentialing-service">Medical credentialing services</Link></li>
+              <li><Link to="/denial-codes">Denial codes: meanings and fixes</Link></li>
+              <li><Link to="/specialties/radiology">Radiology billing</Link></li>
+              <li><Link to="/specialties/pain-management">Pain management billing</Link></li>
+              <li><Link to="/specialties/anesthesiology">Anesthesia billing</Link></li>
+              <li><Link to="/specialties/dermatology">Dermatology billing</Link></li>
+              <li><Link to="/specialties/orthopedics">Orthopedic billing</Link></li>
+              <li><Link to="/specialties/rheumatology">Rheumatology billing</Link></li>
+              <li><Link to="/specialties/internal-medicine">Internal medicine billing</Link></li>
+              <li><Link to="/specialties/mental-health-counseling">Mental health billing</Link></li>
+              <li><Link to="/medical-billing-services-florida">Medical billing in Florida</Link></li>
+              <li><Link to="/medical-billing-services-virginia">Medical billing in Virginia</Link></li>
+            </ul>
+          </div>
+        </section>
+
         <section className="faq-section" style={{ padding: '4rem 0', background: '#f9f9f9' }}>
           <div className="container">
             <div className="section-header">
@@ -754,7 +785,7 @@ const Home: React.FC = () => {
                     <span className="stat-desc">Clean Claim Rate</span>
                   </div>
                 </div>
-                <img
+                <img loading="lazy" decoding="async"
                   src={ctaImage}
                   alt="Professional billing support"
                   className="cta-main-img"

@@ -2,6 +2,9 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import LeadSection from '../components/LeadSection'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drEmma from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -21,8 +24,8 @@ const Pediatrics: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Pediatrics Medical Billing Services | AlphaMedi Assist"
-                description="Streamline pediatrics medical billing services with AlphaMedi Assist. Expert pediatric coding, claims, and revenue cycle management for pediatric practices."
+                title="Pediatrics Medical Billing Services | Alpha Medi Assist"
+                description="Pediatric medical billing services from Alpha Medi Assist: pediatric coding, claims and revenue cycle management for pediatric practices."
             />
 
             <div className="specialty-detail-page internal-medicine-page">
@@ -30,7 +33,7 @@ const Pediatrics: React.FC = () => {
                 <section className="specialty-hero-enhanced">
                     <div className="container">
                         <div className="specialty-hero-content">
-                            <Link to="/specialties" className="back-link-enhanced">
+                            <Link to="/medical-billing-specialities" className="back-link-enhanced">
                                 <ArrowLeft size={16} />
                                 Back to Specialties
                             </Link>
@@ -44,7 +47,7 @@ const Pediatrics: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drEmma} alt="Dr. Emma Joe" />
+                                            <img loading="lazy" decoding="async" src={drEmma} alt="Dr. Emma Joe" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -72,7 +75,7 @@ const Pediatrics: React.FC = () => {
                                     AlphaMedi Assist is a trusted provider of pediatric medical billing services across the United States. Our team of experts delivers end-to-end billing, coding, and pediatric revenue cycle management solutions tailored specifically for pediatric clinics, including private practices, multi-provider offices, and hospital-affiliated pediatric centers.
                                 </p>
                                 <div className="about-cta-wrapper">
-                                    <Link to="/about" className="btn btn-primary">Learn more</Link>
+                                    <Link to="/about-us" className="btn btn-primary">Learn more</Link>
                                 </div>
                             </div>
 
@@ -412,6 +415,8 @@ const Pediatrics: React.FC = () => {
                                 <div key={index} className="faq-item" style={{ marginBottom: '1rem', border: '1px solid #e0e0e0', borderRadius: '8px', overflow: 'hidden', background: 'white' }}>
                                     <button
                                         onClick={() => toggleFaq(index)}
+                                        aria-expanded={openFaq === index}
+                                        data-faq-q
                                         style={{
                                             width: '100%',
                                             display: 'flex',
@@ -430,8 +435,8 @@ const Pediatrics: React.FC = () => {
                                         {item.q}
                                         {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                     </button>
-                                    {openFaq === index && (
-                                        <div style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
+                                    {(
+                                        <div data-faq-a hidden={openFaq !== index} style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
                                             {item.a}
                                         </div>
                                     )}
@@ -440,6 +445,10 @@ const Pediatrics: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <LeadSection title="Get a free Pediatrics billing assessment" />
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

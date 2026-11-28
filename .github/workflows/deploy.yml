@@ -1,0 +1,135 @@
+name: Build & deploy to FTP
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # allows a manual "Run workflow" button in the Actions tab
+
+concurrency:
+  group: ftp-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history: sitemap.xml <lastmod> is taken from git
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (client + prerender + sitemap + llms.txt)
+        run: npm run build
+        env:
+          # URL of the form/mail API (server.js). Set it under
+          # Settings > Secrets and variables > Actions > Variables.
+          VITE_MAIL_API_URL: ${{ vars.VITE_MAIL_API_URL }}
+          # GA4 measurement ID (G-XXXXXXX); tracking stays off until this variable is set.
+          VITE_GA_MEASUREMENT_ID: ${{ vars.VITE_GA_MEASUREMENT_ID }}
+
+      - name: Check build output
+        run: |
+          test -f dist/index.html
+          test -f dist/sitemap.xml
+          test -f dist/llms.txt
+          ls -la dist
+
+      - name: Check FTP server is reachable
+        env:
+          FTP_SERVER: ${{ vars.FTP_SERVER || 's4549.lon1.stableserver.net' }}
+        run: |
+          getent hosts "$FTP_SERVER"
+          timeout 15 bash -c "exec 3<>/dev/tcp/$FTP_SERVER/21 && timeout 5 head -c 80 <&3" && echo && echo "FTP port 21 reachable"
+
+      - name: Upload to server (FTPS)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          # Verified working host (deploys #19-#27). Override with the repository
+          # *variable* FTP_SERVER if the host changes. The FTP_SERVER secret is not used:
+          # it was set to a host whose FTP port does not answer (209.42.21.22).
+          server: ${{ vars.FTP_SERVER || 's4549.lon1.stableserver.net' }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          protocol: ftps # explicit FTPS on port 21 (encrypted)
+          timeout: 120000 # ms; shared hosts can be slow to answer
+          log-level: verbose
+          local-dir: ./frontend/dist/
+          # Folder on the server that the domain serves. Must end with "/".
+          server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+
+      - name: Verify live site
+        run: |
+          sleep 5
+          B=https://alphamediassist.com
+          fail=0
+          check() { code=$(curl -s -o /tmp/body -w '%{http_code}' "$B$1"); echo "$1 -> HTTP $code"; [ "$code" = "$2" ] || fail=1; }
+          check / 200
+          check /medical-billing-services 200
+          check /medical-billing-services-florida 200
+          check /blog/how-much-does-medical-billing-cost 200
+          check /sitemap.xml 200
+          check /llms.txt 200
+          check /robots.txt 200
+          check /c89d9636854147c59b95ff08cb40c0e8.txt 200
+          check /this-page-does-not-exist 404
+          echo "--- www -> bare domain redirect ---"; curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}\n' "https://www.alphamediassist.com/medical-billing-services"
+          echo "--- legacy /virtual-medical-assistant/ ---"; curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}\n' "$B/virtual-medical-assistant/"
+          echo "--- redirect /about ---"; curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}\n' "$B/about"
+          echo "--- lead form endpoint (healthcheck only: no email sent) ---"
+          HC=$(curl -s "$B/api/form-submission?healthcheck=1"); echo "healthcheck: $HC"
+          echo "$HC" | grep -q '"ok":true' || { echo "LEAD FORM ENDPOINT DOWN"; fail=1; }
+          echo "--- recovered URLs (expect 200 or 301) ---"
+          for u in /blog/can-an-health-insurance-company-reverse-a-paid-claim/ /blog/what-is-void-claim-in-medical-billing/ /blog/difference-between-reversal-and-recoupment-in-medical-billing/ /uncategorized/rendering-and-referring-providers-explained-who-they-are-and-why-they-matter-in-billing/ /medical-credentialing-services/ /get-free-consultation/ /specialities/internal-medicine/ /healthcare-seo/ /tag/icn-meaning/ /denial-management-services /blog/what-is-the-icd-10-code-for-adhd/ /blog/what-is-the-icd-10-code-for-anxiety/ /blog/what-is-authorization-in-medical-billing/ /blog/steps-involved-in-the-medical-billing-cycle/ /denial-codes /denial-codes/co-16 /denial-codes/co-97 /denial-codes/co-45 /denial-codes/pr-1 /denial-codes/co-4 /denial-codes/co-11 /denial-codes/co-18 /denial-codes/co-22 /denial-codes/co-29 /denial-codes/co-50 /denial-codes/co-109 /denial-codes/co-197 /denial-codes/pr-2 /denial-codes/co-96 /denial-codes/co-252 /blog/what-is-the-icd-10-code-for-depression /blog/what-is-the-icd-10-code-for-ptsd /specialties/orthopedic-surgery /virtual-medical-assistant/ /sitemap /blog/in-house-vs-outsourced-medical-billing /blog/annual-cpt-code-updates-how-practices-should-prepare; do
+            echo "$u -> $(curl -s -o /dev/null -L -w '%{http_code} (final %{url_effective})' "$B$u")"
+          done
+          echo "--- injected spam URLs (expect 410) ---"
+          for u in /boyslove.html /63187604 /uncategorized/stargames-erleben-sie-moderne-slots-mit-klassischen-spielmechaniken/ /tag/icd-11-adhd/; do
+            echo "$u -> $(curl -s -o /dev/null -w '%{http_code}' "$B$u")"
+          done
+          echo "--- search engine crawlers get the real page (no bot-check interstitial) ---"
+          for ua in "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)"; do
+            for u in / /specialties/radiology /denial-codes/co-16; do
+              body=$(curl -s -A "$ua" "$B$u")
+              if echo "$body" | grep -qi "one moment, please"; then echo "WARNING: bot-check shown to ${ua%%;*} on $u (runner IP is not a real Google/Bing IP; confirm with URL Inspection live test)"
+              elif echo "$body" | grep -q "<h1"; then echo "ok ${ua#*compatible; } $u"; else echo "WARNING: no H1 for ${ua%%;*} on $u"; fi
+            done
+          done
+          echo "--- prerendered content check ---"
+          curl -s "$B/medical-billing-services" | grep -o '<h1[^>]*>[^<]*' | head -1 || fail=1
+          curl -s "$B/" | grep -c 'google-site-verification' || fail=1
+          curl -s "$B/" | grep -o '<link data-seo rel="canonical"[^>]*>' || fail=1
+          exit $fail
+
+      - name: Check external citation links
+        if: always()
+        continue-on-error: true
+        run: |
+          grep -rhoE "https://[a-zA-Z0-9./?=_%:+&-]+" src/data | grep -v alphamediassist | sort -u | while read -r u; do
+            code=$(curl -s -o /dev/null -L --max-time 20 -A "Mozilla/5.0 (link check)" -w '%{http_code}' "$u" || echo "ERR")
+            echo "$code $u"
+          done
+
+      - name: Search Console sync (sitemap submit + index status)
+        if: success()
+        continue-on-error: true
+        env:
+          GOOGLE_SA_JSON: ${{ secrets.GOOGLE_SA_JSON }}
+        run: node scripts/gsc-sync.mjs

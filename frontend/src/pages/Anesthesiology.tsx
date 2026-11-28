@@ -2,6 +2,10 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import LeadSection from '../components/LeadSection'
+import SpecialtyInsights from '../components/SpecialtyInsights'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drEmma from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -21,8 +25,8 @@ const Anesthesiology: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Anesthesiology Medical Billing Services | AlphaMedi Assist"
-                description="Expert anesthesiology medical billing services by AlphaMedi Assist. Accurate anesthesia coding, faster claims, and optimized revenue cycle management."
+                title="Anesthesia Billing Services & Coding | Alpha Medi Assist"
+                description="Outsourced anesthesia billing and coding for anesthesiologists and CRNA groups: time and base units, modifiers, denial management and A/R follow-up."
             />
 
             <div className="specialty-detail-page internal-medicine-page">
@@ -30,21 +34,21 @@ const Anesthesiology: React.FC = () => {
                 <section className="specialty-hero-enhanced">
                     <div className="container">
                         <div className="specialty-hero-content">
-                            <Link to="/specialties" className="back-link-enhanced">
+                            <Link to="/medical-billing-specialities" className="back-link-enhanced">
                                 <ArrowLeft size={16} />
                                 Back to Specialties
                             </Link>
 
                             <div className="specialty-hero-main">
                                 <div className="specialty-hero-text">
-                                    <h1 className="specialty-title">Anesthesiology Medical Billing Services</h1>
+                                    <h1 className="specialty-title">Anesthesia Billing Company &amp; Coding Services</h1>
                                     <p className="specialty-description">
                                         Efficient billing is essential for anesthesiology practices to maintain financial stability and uninterrupted clinical operations. At Alpha Medi Assist, we specialize in anesthesiology medical billing services to manage claims, coding, and revenue cycle workflows with precision. Our solutions reduce administrative pressure, improve reimbursement accuracy, and ensure HIPAA-compliant billing for anesthesia providers.
                                     </p>
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drEmma} alt="Dr. Emma Jenn" />
+                                            <img loading="lazy" decoding="async" src={drEmma} alt="Dr. Emma Jenn" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -72,7 +76,7 @@ const Anesthesiology: React.FC = () => {
                                     AlphaMedi Assist is a trusted partner for anesthesia providers across the United States, delivering specialized anesthesiology medical billing services tailored to hospital-based anesthesiologists, ambulatory surgery centers, and private anesthesia groups. Our experienced team understands the time-based nature of anesthesia billing and the documentation precision required for compliance.
                                 </p>
                                 <div className="about-cta-wrapper">
-                                    <Link to="/about" className="btn btn-primary">Learn more</Link>
+                                    <Link to="/about-us" className="btn btn-primary">Learn more</Link>
                                 </div>
                             </div>
 
@@ -387,33 +391,35 @@ const Anesthesiology: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are anesthesiology medical billing services?",
+                                    q: "What are anesthesiology medical billing services?",
                                     a: "They include anesthesia coding, claims submission, insurance verification, patient billing, and revenue cycle management."
                                 },
                                 {
-                                    q: "2. Do you support hospital-based anesthesiologists?",
+                                    q: "Do you support hospital-based anesthesiologists?",
                                     a: "Yes, we work with hospitals, surgery centers, and private anesthesia practices."
                                 },
                                 {
-                                    q: "3. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Yes, all workflows meet strict HIPAA security standards."
                                 },
                                 {
-                                    q: "4. Can you manage large anesthesia groups?",
+                                    q: "Can you manage large anesthesia groups?",
                                     a: "Yes, our anesthesiology billing services scale for practices of any size."
                                 },
                                 {
-                                    q: "5. How fast can services begin?",
+                                    q: "How fast can services begin?",
                                     a: "Onboarding typically starts within a few days after assessment."
                                 },
                                 {
-                                    q: "6. Do you provide detailed financial reporting?",
+                                    q: "Do you provide detailed financial reporting?",
                                     a: "Yes, we provide comprehensive reports on claims, reimbursements, and outstanding balances."
                                 }
                             ].map((item, index) => (
                                 <div key={index} className="faq-item" style={{ marginBottom: '1rem', border: '1px solid #e0e0e0', borderRadius: '8px', overflow: 'hidden', background: 'white' }}>
                                     <button
                                         onClick={() => toggleFaq(index)}
+                                        aria-expanded={openFaq === index}
+                                        data-faq-q
                                         style={{
                                             width: '100%',
                                             display: 'flex',
@@ -432,8 +438,8 @@ const Anesthesiology: React.FC = () => {
                                         {item.q}
                                         {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                     </button>
-                                    {openFaq === index && (
-                                        <div style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
+                                    {(
+                                        <div data-faq-a hidden={openFaq !== index} style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
                                             {item.a}
                                         </div>
                                     )}
@@ -442,6 +448,12 @@ const Anesthesiology: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <SpecialtyInsights id="anesthesiology" name="Anesthesia" />
+
+                <LeadSection title="Get a free Anesthesiology billing assessment" />
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

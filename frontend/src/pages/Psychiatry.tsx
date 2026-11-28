@@ -2,6 +2,10 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import LeadSection from '../components/LeadSection'
+import SpecialtyInsights from '../components/SpecialtyInsights'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drLissa from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -21,8 +25,8 @@ const Psychiatry: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Psychiatry Medical Billing Services | AlphaMedi Assist"
-                description="Expert psychiatry medical billing services by AlphaMedi Assist. Accurate coding, efficient claims, and optimized RCM for psychiatry practices."
+                title="Psychiatry Medical Billing Services | Alpha Medi Assist"
+                description="Psychiatry billing for prescribers: psychiatric evaluations, E/M with psychotherapy add-on codes, telepsychiatry and prior authorizations coded correctly."
             />
 
             <div className="specialty-detail-page internal-medicine-page">
@@ -30,7 +34,7 @@ const Psychiatry: React.FC = () => {
                 <section className="specialty-hero-enhanced">
                     <div className="container">
                         <div className="specialty-hero-content">
-                            <Link to="/specialties" className="back-link-enhanced">
+                            <Link to="/medical-billing-specialities" className="back-link-enhanced">
                                 <ArrowLeft size={16} />
                                 Back to Specialties
                             </Link>
@@ -44,7 +48,7 @@ const Psychiatry: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drLissa} alt="Dr. Lissa Jenn" />
+                                            <img loading="lazy" decoding="async" src={drLissa} alt="Dr. Lissa Jenn" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -72,7 +76,7 @@ const Psychiatry: React.FC = () => {
                                     Alpha Medi Assist is a trusted psychiatry billing company delivering comprehensive billing, coding, and RCM solutions to psychiatry and behavioral health practices across the United States. Our team understands the unique complexities of psychiatric care, including time-based coding, telepsychiatry services, payer variability, and strict documentation requirements.
                                 </p>
                                 <div className="about-cta-wrapper">
-                                    <Link to="/about" className="btn btn-primary">Learn more</Link>
+                                    <Link to="/about-us" className="btn btn-primary">Learn more</Link>
                                 </div>
                             </div>
 
@@ -418,6 +422,8 @@ const Psychiatry: React.FC = () => {
                                 <div key={index} className="faq-item" style={{ marginBottom: '1rem', border: '1px solid #e0e0e0', borderRadius: '8px', overflow: 'hidden', background: 'white' }}>
                                     <button
                                         onClick={() => toggleFaq(index)}
+                                        aria-expanded={openFaq === index}
+                                        data-faq-q
                                         style={{
                                             width: '100%',
                                             display: 'flex',
@@ -436,8 +442,8 @@ const Psychiatry: React.FC = () => {
                                         {item.q}
                                         {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                     </button>
-                                    {openFaq === index && (
-                                        <div style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
+                                    {(
+                                        <div data-faq-a hidden={openFaq !== index} style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
                                             {item.a}
                                         </div>
                                     )}
@@ -446,6 +452,12 @@ const Psychiatry: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <SpecialtyInsights id="psychiatry" name="Psychiatry" />
+
+                <LeadSection title="Get a free Psychiatry billing assessment" />
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

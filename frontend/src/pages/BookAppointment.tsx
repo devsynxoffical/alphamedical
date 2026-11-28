@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowLeft, User, Mail, Phone, MapPin, Check } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
 import { sendFormSubmission } from '../api/sendFormSubmission'
 
 const BookAppointment: React.FC = () => {
+  // Dates depend on "today", so compute them in the browser only; the
+  // prerendered HTML is built on a different day and would not match.
+  const [isClient, setIsClient] = useState(false)
+  useEffect(() => setIsClient(true), [])
   const [step, setStep] = useState(1) // 1: Select date, 2: Select time, 3: User details, 4: Confirmation
   const [selectedDate, setSelectedDate] = useState('')
   const [selectedTime, setSelectedTime] = useState('')
@@ -93,13 +97,16 @@ const BookAppointment: React.FC = () => {
 
   return (
     <>
-      <PageTitle title="Book Appointment - Consultation Phone Call | Alpha Medi Assist" />
+      <PageTitle
+        title="Book a Call with a Billing Expert | Alpha Medi Assist"
+        description="Schedule a free phone call with an Alpha Medi Assist medical billing specialist to discuss billing, coding, credentialing or virtual assistant support."
+      />
       <div className="book-appointment-page">
       {/* Header */}
       <section className="booking-header">
         <div className="container">
           <div className="booking-header-content">
-            <Link to="/specialties" className="back-button">
+            <Link to="/medical-billing-specialities" className="back-button">
               <ArrowLeft size={16} />
               BACK
             </Link>
@@ -159,7 +166,7 @@ const BookAppointment: React.FC = () => {
               <div className="step-content">
                 <h2>Select a date</h2>
                 <div className="date-picker">
-                  {generateDates().map((date, index) => (
+                  {(isClient ? generateDates() : []).map((date, index) => (
                     <button
                       key={index}
                       className={`date-option ${selectedDate === date.toDateString() ? 'selected' : ''}`}
@@ -352,7 +359,7 @@ const BookAppointment: React.FC = () => {
                   You will receive a confirmation email shortly with further details.
                 </p>
                 <div className="confirmation-actions">
-                  <Link to="/specialties" className="btn btn-primary">
+                  <Link to="/medical-billing-specialities" className="btn btn-primary">
                     Back to Specialties
                   </Link>
                   <Link to="/" className="btn btn-outline">

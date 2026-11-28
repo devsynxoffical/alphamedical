@@ -812,7 +812,7 @@ export const services: Service[] = [
     description: 'At Alpha Medi Assist, we deliver professional virtual medical receptionist services designed to help healthcare practices manage patient communications efficiently while reducing administrative overhead. A reliable front desk is essential for patient satisfaction, appointment management, and practice growth. Our virtual receptionists ensure your phones are always answered, appointments are scheduled accurately, and patient inquiries are handled professionally.\n\nOur virtual medical receptionist services support clinics, private practices, and multi specialty healthcare organizations across the United States. By outsourcing front desk responsibilities to our trained team, providers can focus on patient care while we manage calls, messages, and scheduling with complete HIPAA compliance.',
     icon: '/src/Images/efficiency-management.png',
     metaTitle: 'Virtual Medical Receptionist Services | Alpha Medi Assist',
-    metaDescription: 'Professional virtual medical receptionist services for healthcare practices. HIPAA compliant call handling, and front desk support by Alpha Medi Assist.',
+    metaDescription: 'HIPAA-compliant virtual medical receptionists for US practices: call answering, appointment scheduling, patient intake and insurance inquiries.',
     aboutSection: {
       title: 'About Alpha Medi Assist',
       content: 'Alpha Medi Assist is a trusted healthcare support company specializing in remote administrative services for medical practices nationwide. We help providers streamline front desk operations through dependable medical virtual receptionist solutions that improve patient engagement and operational efficiency. Our team consists of experienced professionals trained in medical communication, appointment scheduling, and patient support. Every virtual receptionist follows strict HIPAA guidelines and works seamlessly within your existing systems. Healthcare organizations choose Alpha Medi Assist because we provide:',
@@ -981,6 +981,10 @@ export const services: Service[] = [
     ],
     faqs: [
       {
+        question: 'Do you provide virtual medical receptionists for Florida practices?',
+        answer: 'Yes. Alpha Medi Assist has an office in St. Petersburg, Florida and supports practices across Florida and the rest of the US. Our virtual receptionists answer and route calls, schedule appointments, help with patient intake and handle insurance and general questions, following HIPAA requirements.'
+      },
+      {
         question: 'What are virtual medical receptionist services?',
         answer: 'They involve remote professionals managing calls, scheduling, and patient communication for medical practices.'
       },
@@ -1022,7 +1026,7 @@ export const services: Service[] = [
     shortDescription: 'Grow online visibility for clinics and practitioners.',
     description: 'At AlphaMedi Assist, we provide professional Healthcare SEO Services designed to help medical practices, clinics, and healthcare organizations increase their online visibility, attract new patients, and grow their practice. In today’s digital age, a strong online presence is essential for healthcare providers looking to reach potential patients, enhance credibility, and stay ahead of competitors.\n\nOur Healthcare SEO Services focus on optimizing websites, creating targeted strategies, and ensuring your practice ranks high on search engines. Whether you are a private practice, multi-specialty clinic, or hospital system, we deliver customized solutions tailored to your specific needs.',
     icon: '/src/Images/growth.png',
-    metaTitle: 'Healthcare SEO Services | AlphaMedi Assist',
+    metaTitle: 'Healthcare SEO Services | Alpha Medi Assist',
     metaDescription: 'Boost your medical practice online with expert Healthcare SEO Services. Improve visibility, attract patients, and grow your practice with AlphaMedi Assist.',
     aboutSection: {
       title: 'About AlphaMedi Assist',
@@ -1294,7 +1298,7 @@ export const services: Service[] = [
       'faqs'
     ],
     icon: '/src/Images/credential.png',
-    metaTitle: 'Medical Credentialing Services | AlphaMedi Assist',
+    metaTitle: 'Medical Credentialing Services | Alpha Medi Assist',
     metaDescription: 'Professional medical credentialing services for healthcare providers. Streamline provider insurance verification, and compliance with AlphaMedi Assist.',
     aboutSection: {
       title: 'About AlphaMedi Assist',
@@ -1537,7 +1541,7 @@ export const services: Service[] = [
     description: 'Alpha Medi Assist provides comprehensive medical billing specialties services designed to help healthcare providers maximize revenue, reduce administrative burdens, and maintain compliance. From primary care to complex surgical practices, our expert team ensures accurate claims, precise coding, and optimized revenue cycles tailored to your specialty.',
     icon: '/src/Images/Internal Medicine.jpg',
     heroCtaText: 'Get Your Free Consultation',
-    metaTitle: 'Medical Billing Specialties | AlphaMedi Assist',
+    metaTitle: 'Medical Billing Specialties | Alpha Medi Assist',
     metaDescription: 'Medical billing specialties services for 90+ practices. Accurate billing, coding, and RCM solutions to maximize revenue and reduce denials.',
     sectionOrder: [
       'why-choose',

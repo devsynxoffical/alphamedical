@@ -73,7 +73,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -132,7 +132,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -191,7 +191,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -250,7 +250,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -309,7 +309,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -368,7 +368,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -383,7 +383,7 @@ export const specialties: Specialty[] = [
     id: 'general-surgery',
     name: 'General Surgery',
     description: 'Medical Billing for General Surgery',
-    heroDescription: 'Surgeons operate in fast-paced environments, balancing preoperative, intraoperative, and postoperative care. Alpha Medi Assist provides end-to-end medical billing, prior authorization handling, and virtual documentation support, so surgeons can focus on what they do best—saving lives.',
+    heroDescription: 'Surgeons operate in fast-paced environments, balancing preoperative, intraoperative, and postoperative care. Alpha Medi Assist provides end-to-end medical billing, prior authorization handling, and virtual documentation support, so surgeons can focus on what they do best: saving lives.',
     testimonial: {
       rating: '5/5',
       doctor: 'Dr. Lissa Jenn',
@@ -427,7 +427,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -486,7 +486,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -545,7 +545,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -604,7 +604,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -663,7 +663,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -722,7 +722,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -781,66 +781,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
-        author: 'Emilia Munro'
-      },
-      {
-        quote: 'Reliable medical billing solutions that improved our collections and efficiency. Highly recommended!',
-        author: 'Dr. Branden Griffiths'
-      }
-    ],
-    ctaTitle: 'Ready to speak with a Medical Billing Expert?',
-    ctaDescription: 'Talk to Billing Expert'
-  },
-  {
-    id: 'orthopedic-surgery',
-    name: 'Orthopedic Surgery',
-    description: 'Medical Billing for Orthopedic Surgery',
-    heroDescription: 'Orthopedic surgeons require efficient documentation of surgical procedures, preoperative evaluations, and postoperative care. Alpha Medi Assist provides specialized medical billing, coding, and RCM services for orthopedic surgery practices, ensuring accurate reimbursement for musculoskeletal procedures.',
-    testimonial: {
-      rating: '5/5',
-      doctor: 'Dr. Lissa Jenn',
-      years: '6 Years working with Alpha Medi Assist'
-    },
-    supportSections: [
-      {
-        title: 'Surgical Procedure Documentation & Coding',
-        description: 'Our virtual assistants document joint replacements, fracture repairs, arthroscopic procedures, and spinal surgeries, ensuring accurate CPT coding and compliance with orthopedic billing guidelines.'
-      },
-      {
-        title: 'Prior Authorization & Insurance Management',
-        description: 'We handle prior authorizations for surgical procedures, manage insurance verification, and ensure compliance with payer requirements for orthopedic surgeries.'
-      },
-      {
-        title: 'Pre-Op & Post-Op Care Coordination',
-        description: 'Our team manages preoperative evaluations, surgical scheduling, and postoperative follow-ups, supporting comprehensive orthopedic care and accurate billing.'
-      }
-    ],
-    whyChoose: [
-      {
-        title: 'Specialty-Specific Virtual Assistants',
-        description: 'trained in urgent care, OB/GYN, pathology, radiology, and anesthesiology'
-      },
-      {
-        title: 'Comprehensive RCM Solutions',
-        description: 'including Medical billing Services, coding, and denial management'
-      },
-      {
-        title: 'HIPAA-Compliant services',
-        description: 'ensuring data security & patient confidentiality'
-      },
-      {
-        title: '24/7 Administrative Support',
-        description: 'to improve workflow efficiency & patient experience'
-      }
-    ],
-    testimonials: [
-      {
-        quote: 'AlphaMediAssist streamlined our medical billing process, reducing errors and boosting revenue!',
-        author: 'Dr. Theo James'
-      },
-      {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -899,7 +840,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -958,7 +899,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -1017,7 +958,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -1076,7 +1017,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -1135,7 +1076,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -1194,7 +1135,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -1253,7 +1194,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -1312,7 +1253,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {
@@ -1371,7 +1312,7 @@ export const specialties: Specialty[] = [
         author: 'Dr. Theo James'
       },
       {
-        quote: 'Fast, accurate, and hassle-free medical billing—AlphaMediAssist delivers exceptional service!',
+        quote: 'Fast, accurate, and hassle-free medical billing. AlphaMediAssist delivers exceptional service!',
         author: 'Emilia Munro'
       },
       {

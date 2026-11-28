@@ -2,6 +2,9 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import LeadSection from '../components/LeadSection'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drMichal from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -21,7 +24,7 @@ const EmergencyMedicine: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="Emergency Medicine Medical Billing Services | AlphaMedi Assist"
+                title="Emergency Medicine Billing Services | Alpha Medi Assist"
                 description="Expert emergency medicine medical billing services by AlphaMedi Assist. Accurate coding, faster claims, and optimized revenue cycle management."
             />
 
@@ -30,7 +33,7 @@ const EmergencyMedicine: React.FC = () => {
                 <section className="specialty-hero-enhanced">
                     <div className="container">
                         <div className="specialty-hero-content">
-                            <Link to="/specialties" className="back-link-enhanced">
+                            <Link to="/medical-billing-specialities" className="back-link-enhanced">
                                 <ArrowLeft size={16} />
                                 Back to Specialties
                             </Link>
@@ -44,7 +47,7 @@ const EmergencyMedicine: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drMichal} alt="Dr. Michal" />
+                                            <img loading="lazy" decoding="async" src={drMichal} alt="Dr. Michal" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -72,7 +75,7 @@ const EmergencyMedicine: React.FC = () => {
                                     AlphaMedi Assist is a trusted provider of emergency medicine medical billing services for hospitals, physician-owned emergency groups, freestanding emergency departments, and critical care facilities across the United States. Our billing experts understand the unique challenges emergency providers face, including time-based coding, medical necessity documentation, and frequent payer audits.
                                 </p>
                                 <div className="about-cta-wrapper">
-                                    <Link to="/about" className="btn btn-primary">Learn more</Link>
+                                    <Link to="/about-us" className="btn btn-primary">Learn more</Link>
                                 </div>
                             </div>
 
@@ -387,33 +390,35 @@ const EmergencyMedicine: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are emergency medicine medical billing services?",
+                                    q: "What are emergency medicine medical billing services?",
                                     a: "They include coding, claims submission, patient billing, and revenue cycle management for emergency departments and physician groups."
                                 },
                                 {
-                                    q: "2. Do you handle critical care billing?",
+                                    q: "Do you handle critical care billing?",
                                     a: "Yes, we specialize in emergency medicine critical care billing and time-based services."
                                 },
                                 {
-                                    q: "3. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Yes, all workflows meet strict HIPAA standards."
                                 },
                                 {
-                                    q: "4. Can you support hospital-based emergency departments?",
+                                    q: "Can you support hospital-based emergency departments?",
                                     a: "Absolutely. Our services scale for hospitals and freestanding emergency facilities."
                                 },
                                 {
-                                    q: "5. How quickly can services start?",
+                                    q: "How quickly can services start?",
                                     a: "Most emergency practices are onboarded within a few days."
                                 },
                                 {
-                                    q: "6. Do you provide detailed reporting?",
+                                    q: "Do you provide detailed reporting?",
                                     a: "Yes, we provide transparent financial and operational reports."
                                 }
                             ].map((item, index) => (
                                 <div key={index} className="faq-item" style={{ marginBottom: '1rem', border: '1px solid #e0e0e0', borderRadius: '8px', overflow: 'hidden', background: 'white' }}>
                                     <button
                                         onClick={() => toggleFaq(index)}
+                                        aria-expanded={openFaq === index}
+                                        data-faq-q
                                         style={{
                                             width: '100%',
                                             display: 'flex',
@@ -432,8 +437,8 @@ const EmergencyMedicine: React.FC = () => {
                                         {item.q}
                                         {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                     </button>
-                                    {openFaq === index && (
-                                        <div style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
+                                    {(
+                                        <div data-faq-a hidden={openFaq !== index} style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
                                             {item.a}
                                         </div>
                                     )}
@@ -442,6 +447,10 @@ const EmergencyMedicine: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <LeadSection title="Get a free Emergency Medicine billing assessment" />
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

@@ -39,7 +39,7 @@ const TermsAndConditions: React.FC = () => {
     return (
         <>
             <PageTitle
-                title="Terms and Conditions | AlphaMedi Assist"
+                title="Terms and Conditions | Alpha Medi Assist"
                 description="Review AlphaMedi Assist’s terms and conditions covering website use, medical billing services, compliance, data protection, and user responsibilities."
             />
 

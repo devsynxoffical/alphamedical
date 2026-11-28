@@ -2,6 +2,9 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Shield, TrendingUp, Users, Activity, FileText, Settings, ChevronDown, ChevronUp, Star, Database, DollarSign, ArrowLeft } from 'lucide-react'
 import PageTitle from '../components/PageTitle'
+import RelatedLinks from '../components/RelatedLinks'
+import LeadSection from '../components/LeadSection'
+import { specialtyRelatedLinks } from '../data/relatedLinks'
 import drLissa from '../Images/doc lessa jenn.jpg'
 import '../App.css'
 
@@ -21,7 +24,7 @@ const GeneralSurgery: React.FC = () => {
     return (
         <div className="internal-medicine-page">
             <PageTitle
-                title="General Surgery Medical Billing Services | AlphaMedi Assist"
+                title="General Surgery Medical Billing Services | Alpha Medi Assist"
                 description="Accurate general surgery medical billing services by AlphaMedi Assist. Streamlined coding, faster claims, and optimized revenue cycle management."
             />
 
@@ -30,7 +33,7 @@ const GeneralSurgery: React.FC = () => {
                 <section className="specialty-hero-enhanced">
                     <div className="container">
                         <div className="specialty-hero-content">
-                            <Link to="/specialties" className="back-link-enhanced">
+                            <Link to="/medical-billing-specialities" className="back-link-enhanced">
                                 <ArrowLeft size={16} />
                                 Back to Specialties
                             </Link>
@@ -44,7 +47,7 @@ const GeneralSurgery: React.FC = () => {
 
                                     <div className="testimonial-badge">
                                         <div className="doctor-image">
-                                            <img src={drLissa} alt="Dr. Sara" />
+                                            <img loading="lazy" decoding="async" src={drLissa} alt="Dr. Sara" />
                                         </div>
                                         <div className="rating">
                                             <Star size={20} fill="#ffc107" color="#ffc107" />
@@ -72,7 +75,7 @@ const GeneralSurgery: React.FC = () => {
                                     Alpha Medi Assist is a trusted general surgery medical billing company providing comprehensive billing, coding, and revenue cycle support to surgical practices across the United States. We work with hospital-based surgeons, ambulatory surgery centers, and private general surgery clinics to ensure accurate billing and predictable cash flow.
                                 </p>
                                 <div className="about-cta-wrapper">
-                                    <Link to="/about" className="btn btn-primary">Learn more</Link>
+                                    <Link to="/about-us" className="btn btn-primary">Learn more</Link>
                                 </div>
                             </div>
 
@@ -387,33 +390,35 @@ const GeneralSurgery: React.FC = () => {
                         <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                             {[
                                 {
-                                    q: "1. What are general surgery medical billing services?",
+                                    q: "What are general surgery medical billing services?",
                                     a: "They include coding, claims submission, insurance verification, patient billing, and revenue cycle management for surgical practices."
                                 },
                                 {
-                                    q: "2. Do you support hospital-based and outpatient surgeons?",
+                                    q: "Do you support hospital-based and outpatient surgeons?",
                                     a: "Yes, we support hospital settings, surgery centers, and private practices."
                                 },
                                 {
-                                    q: "3. Are your services HIPAA-compliant?",
+                                    q: "Are your services HIPAA-compliant?",
                                     a: "Absolutely. All workflows follow strict HIPAA security standards."
                                 },
                                 {
-                                    q: "4. Can you manage multi-provider surgery groups?",
+                                    q: "Can you manage multi-provider surgery groups?",
                                     a: "Yes, our services scale for practices of any size."
                                 },
                                 {
-                                    q: "5. How fast can onboarding begin?",
+                                    q: "How fast can onboarding begin?",
                                     a: "Most practices can begin within a few days after assessment and integration."
                                 },
                                 {
-                                    q: "6. Do you provide detailed financial reports?",
+                                    q: "Do you provide detailed financial reports?",
                                     a: "Yes, we provide clear reporting on claims, reimbursements, and outstanding balances."
                                 }
                             ].map((item, index) => (
                                 <div key={index} className="faq-item" style={{ marginBottom: '1rem', border: '1px solid #e0e0e0', borderRadius: '8px', overflow: 'hidden', background: 'white' }}>
                                     <button
                                         onClick={() => toggleFaq(index)}
+                                        aria-expanded={openFaq === index}
+                                        data-faq-q
                                         style={{
                                             width: '100%',
                                             display: 'flex',
@@ -432,8 +437,8 @@ const GeneralSurgery: React.FC = () => {
                                         {item.q}
                                         {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                     </button>
-                                    {openFaq === index && (
-                                        <div style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
+                                    {(
+                                        <div data-faq-a hidden={openFaq !== index} style={{ padding: '0 1.5rem 1.5rem', color: '#666', lineHeight: '1.6' }}>
                                             {item.a}
                                         </div>
                                     )}
@@ -442,6 +447,10 @@ const GeneralSurgery: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                <LeadSection title="Get a free General Surgery billing assessment" />
+
+                <RelatedLinks links={specialtyRelatedLinks} />
 
                 {/* Final CTA */}
                 <section className="specialties-cta-enhanced">

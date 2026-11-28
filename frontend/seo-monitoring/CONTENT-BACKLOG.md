@@ -1,0 +1,25 @@
+# Content backlog (worked automatically by the 12-hour monitor)
+
+Rule: each monitor run may publish **at most one** item from "Ready", top first, then move it to "Done" with the date and URL.
+Every item must target real demand: a query the site already gets impressions for, or a keyword-map entry with volume.
+No item that needs owner facts (prices, results, offices, states, credentials) may be published from this list.
+
+## Ready (verifiable content, no owner input needed)
+8. Timely filing limits by payer type (supports CO-29 guide; state only verified Medicare rules, describe others generally)
+9. CMS-1500 claim form box-by-box guide (supports the rendering vs referring article)
+10. ERA and EOB: how to read a remittance (supports all denial guides)
+
+## Blocked (owner input needed)
+- State pages (TX, CA, NY, PA, NJ, GA, NC, MD, OH, MI, IL, AZ, CO), city pages, /locations hub
+- Behavioral health, physical therapy and chiropractic specialty pages
+- Case studies, results, pricing, software list, reviewer box
+
+## Done
+- 2026-11-25: /denial-codes/pr-2, /pr-3, /co-24, /co-59, /co-96, /co-151, /co-252; /blog/what-is-the-icd-10-code-for-depression; /blog/what-is-the-icd-10-code-for-ptsd
+- 2026-11-25: /blog/what-is-the-icd-10-code-for-bipolar-disorder
+- 2026-11-26: /blog/what-is-the-icd-10-code-for-autism
+- 2026-11-26: /denial-codes/co-119
+- 2026-11-27: /denial-codes/co-27 (covers CO-26 too)
+- 2026-11-27: /denial-codes/co-23 (OA-23)
+- 2026-11-28: /blog/modifier-25-in-medical-billing
+- 2026-11-28: /blog/modifier-59-vs-x-modifiers
